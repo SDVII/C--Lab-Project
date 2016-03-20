@@ -63,6 +63,26 @@ namespace Student_Teacher_Form.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ic_add_circle_outline_black_24dp_2x {
+            get {
+                object obj = ResourceManager.GetObject("ic_add_circle_outline_black_24dp_2x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_check_black_24dp_2x1 {
+            get {
+                object obj = ResourceManager.GetObject("ic_check_black_24dp_2x1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ic_clear_black_48dp_2x {
             get {
                 object obj = ResourceManager.GetObject("ic_clear_black_48dp_2x", resourceCulture);
@@ -73,9 +93,79 @@ namespace Student_Teacher_Form.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ic_face_black_24dp_2x {
+        internal static System.Drawing.Bitmap ic_keyboard_arrow_left_black_24dp_2x1 {
             get {
-                object obj = ResourceManager.GetObject("ic_face_black_24dp_2x", resourceCulture);
+                object obj = ResourceManager.GetObject("ic_keyboard_arrow_left_black_24dp_2x1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_keyboard_arrow_right_black_24dp_2x1 {
+            get {
+                object obj = ResourceManager.GetObject("ic_keyboard_arrow_right_black_24dp_2x1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_keyboard_arrow_right_black_24dp_2x2 {
+            get {
+                object obj = ResourceManager.GetObject("ic_keyboard_arrow_right_black_24dp_2x2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_note_add_black_24dp_2x {
+            get {
+                object obj = ResourceManager.GetObject("ic_note_add_black_24dp_2x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_remove_circle_outline_black_24dp_2x {
+            get {
+                object obj = ResourceManager.GetObject("ic_remove_circle_outline_black_24dp_2x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_remove_circle_outline_black_24dp_2x1 {
+            get {
+                object obj = ResourceManager.GetObject("ic_remove_circle_outline_black_24dp_2x1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_remove_circle_outline_black_24dp_2x2 {
+            get {
+                object obj = ResourceManager.GetObject("ic_remove_circle_outline_black_24dp_2x2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_search_black_24dp_2x {
+            get {
+                object obj = ResourceManager.GetObject("ic_search_black_24dp_2x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -106,6 +196,16 @@ namespace Student_Teacher_Form.Properties {
         internal static System.Drawing.Bitmap Untitled_2 {
             get {
                 object obj = ResourceManager.GetObject("Untitled-2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitled_3 {
+            get {
+                object obj = ResourceManager.GetObject("Untitled-3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
