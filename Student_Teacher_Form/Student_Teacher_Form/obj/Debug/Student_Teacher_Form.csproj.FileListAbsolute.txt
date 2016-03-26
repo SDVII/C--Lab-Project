@@ -55,3 +55,6 @@ C:\Users\houma\OneDrive\Documents\GitHub\C--Lab-Project\Student_Teacher_Form\Stu
 C:\Users\houma\OneDrive\Documents\GitHub\C--Lab-Project\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ru\DevExpress.XtraSpellChecker.v15.2.resources.dll
 C:\Users\houma\OneDrive\Documents\GitHub\C--Lab-Project\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Document_Request.resources
 C:\Users\houma\OneDrive\Documents\GitHub\C--Lab-Project\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Settings.resources
+C:\Projects\csharp\C--Lab-Project\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\Student_Teacher_Form.exe.config
+C:\Projects\csharp\C--Lab-Project\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.exe
+C:\Projects\csharp\C--Lab-Project\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.pdb

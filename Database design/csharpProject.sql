@@ -280,7 +280,7 @@ PRIMARY KEY (`manager_id`)
 
 
 
-
+ALTER TABLE `teacher` ADD CONSTRAINT `msgr_teacher` FOREIGN KEY (`teacher_msgr_id`) REFERENCES `msgr` (`msgr_id`);
 
 ALTER TABLE `courseAnnouncements` ADD CONSTRAINT `teacher_courseAnnouncements` FOREIGN KEY (`courseAnnouncements_teacher_id`) REFERENCES `teacher` (`teacher_id`);
 
