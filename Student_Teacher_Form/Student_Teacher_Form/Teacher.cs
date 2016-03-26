@@ -12,7 +12,7 @@ namespace Student_Teacher_Form
         private String username, name, surname, password, email;
         private Msgr msgr;
 
-        public Teacher(int id, int msgrId, string name, string username, string surname, string email, Msgr msgr, string password)
+        public Teacher(int id, int msgrId, string username, string name, string surname, string password, string email, Msgr msgr)
         {
             this.id = id;
             msgr_id = msgrId;
