@@ -138,6 +138,7 @@
             this.Controls.Add(this.btnSbmRq);
             this.Controls.Add(this.txtTilRq);
             this.Controls.Add(this.tbBdyRq);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Send_Request";
             this.Text = "Send_Request";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

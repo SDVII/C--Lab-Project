@@ -138,6 +138,7 @@
             this.Controls.Add(this.btnSbmR);
             this.Controls.Add(this.txtTtlR);
             this.Controls.Add(this.tbBdyR);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Report_Issue";
             this.Text = "Report_Issue";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

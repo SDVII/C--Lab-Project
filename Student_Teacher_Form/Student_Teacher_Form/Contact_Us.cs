@@ -21,5 +21,10 @@ namespace Student_Teacher_Form
         {
 
         }
+
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
+        }
     }
 }
