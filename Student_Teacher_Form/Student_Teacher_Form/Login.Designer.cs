@@ -43,10 +43,12 @@
             this.txtPass = new System.Windows.Forms.TextBox();
             this.btnLogin = new DevExpress.XtraEditors.SimpleButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnClose = new System.Windows.Forms.Button();
+            this.cbUsrT = new System.Windows.Forms.ComboBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -61,10 +63,10 @@
             // txtUsername
             // 
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Location = new System.Drawing.Point(67, 223);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(175, 26);
+            this.txtUsername.Size = new System.Drawing.Size(175, 27);
             this.txtUsername.TabIndex = 1;
             this.txtUsername.Enter += new System.EventHandler(this.txtUsername__Enter);
             this.txtUsername.Leave += new System.EventHandler(this.txtUsername__Leave);
@@ -136,11 +138,11 @@
             // txtPass
             // 
             this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.Location = new System.Drawing.Point(69, 278);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '+';
-            this.txtPass.Size = new System.Drawing.Size(175, 26);
+            this.txtPass.Size = new System.Drawing.Size(175, 27);
             this.txtPass.TabIndex = 10;
             this.txtPass.Enter += new System.EventHandler(this.txtPass_Enter);
             this.txtPass.Leave += new System.EventHandler(this.txtPass_Leave);
@@ -152,7 +154,7 @@
             this.btnLogin.Appearance.Options.UseBackColor = true;
             this.btnLogin.Appearance.Options.UseFont = true;
             this.btnLogin.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.btnLogin.Location = new System.Drawing.Point(65, 330);
+            this.btnLogin.Location = new System.Drawing.Point(65, 397);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(145, 32);
             this.btnLogin.TabIndex = 15;
@@ -169,19 +171,30 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "\"Please Enter Your Username and Password\"";
             // 
-            // btnClose
+            // cbUsrT
             // 
-            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(91)))), ((int)(((byte)(96)))));
-            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
-            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(259, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(24, 19);
-            this.btnClose.TabIndex = 5;
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.button1_Click);
+            this.cbUsrT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbUsrT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbUsrT.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbUsrT.FormattingEnabled = true;
+            this.cbUsrT.Items.AddRange(new object[] {
+            "Student",
+            "Teacher"});
+            this.cbUsrT.Location = new System.Drawing.Point(65, 335);
+            this.cbUsrT.Name = "cbUsrT";
+            this.cbUsrT.Size = new System.Drawing.Size(184, 27);
+            this.cbUsrT.TabIndex = 18;
+            this.cbUsrT.Enter += new System.EventHandler(this.cbUsrT_Enter);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Student_Teacher_Form.Properties.Resources.Untitled_11;
+            this.pictureBox4.Location = new System.Drawing.Point(21, 324);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(237, 50);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 17;
+            this.pictureBox4.TabStop = false;
             // 
             // pictureBox3
             // 
@@ -218,7 +231,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(91)))), ((int)(((byte)(96)))));
-            this.ClientSize = new System.Drawing.Size(281, 391);
+            this.ClientSize = new System.Drawing.Size(281, 457);
+            this.Controls.Add(this.cbUsrT);
+            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.panel5);
@@ -231,13 +246,17 @@
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtUsername);
-            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Login";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -253,7 +272,6 @@
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
@@ -265,6 +283,8 @@
         private System.Windows.Forms.TextBox txtPass;
         private DevExpress.XtraEditors.SimpleButton btnLogin;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.ComboBox cbUsrT;
     }
 }
 

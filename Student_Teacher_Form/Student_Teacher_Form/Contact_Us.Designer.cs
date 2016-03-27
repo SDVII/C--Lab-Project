@@ -148,7 +148,7 @@
             this.btnAccR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAccR.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
             this.btnAccR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccR.Location = new System.Drawing.Point(229, 298);
+            this.btnAccR.Location = new System.Drawing.Point(222, 298);
             this.btnAccR.Name = "btnAccR";
             this.btnAccR.Size = new System.Drawing.Size(45, 44);
             this.btnAccR.TabIndex = 28;
@@ -168,12 +168,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(493, 355);
+            this.ClientSize = new System.Drawing.Size(493, 351);
             this.Controls.Add(this.btnAccR);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Contact_Us";
             this.Text = "Contact_Us";
             this.groupBox1.ResumeLayout(false);

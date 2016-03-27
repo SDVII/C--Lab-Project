@@ -12,20 +12,29 @@ namespace Student_Teacher_Form
 {
     public partial class Login : Form
     {
-        private const int WM_NCHITTEST = 0x84;
-        private const int HTCLIENT = 0x1;
-        private const int HTCAPTION = 0x2;
 
-        protected override void WndProc(ref Message message)//to make the form dragable after removing the title bar
-        {
-            base.WndProc(ref message);
+        Font watermark = new Font("Calibri", 12, FontStyle.Italic);
+        Font defaultF = new Font("Calibri", 12);
 
-            if (message.Msg == WM_NCHITTEST && (int)message.Result == HTCLIENT)
-                message.Result = (IntPtr)HTCAPTION;
-        }
         public Login()
         {
             InitializeComponent();
+
+            //For Default Watermark
+            pictureBox1.Select();
+            txtUsername.Text = "Username";
+            txtUsername.ForeColor = Color.Gray;
+            txtUsername.Font = watermark;
+
+            txtPass.Text = "Password";
+            txtPass.ForeColor = Color.Gray;
+            txtPass.PasswordChar = '\0';
+            txtPass.Font = watermark;
+
+            cbUsrT.SelectedIndex = 0;
+            cbUsrT.ForeColor = Color.Gray;
+            cbUsrT.Font = watermark;
+
         }
 
 
@@ -36,34 +45,57 @@ namespace Student_Teacher_Form
 
         private void txtUsername__Enter(object sender, System.EventArgs e)
         {
-
-            txtUsername.Text = "";
+            if (txtUsername.Text.Trim().Equals("")|| txtUsername.Text.Trim().Equals("Username"))
+            {
+                txtUsername.Text = "";
+                txtUsername.ForeColor = Color.Black;
+                txtUsername.Font = defaultF;
+            }
 
         }
 
         private void txtUsername__Leave(object sender, System.EventArgs e)
         {
-
-            txtUsername.Text = "Username";
-            txtUsername.ForeColor = Color.Gray;
-            Font f = new Font("Calibri", 11, FontStyle.Italic);
-            txtUsername.Font = f;
+            if (txtUsername.Text.Trim().Equals(""))
+            {
+                txtUsername.ForeColor = Color.Gray;
+                txtUsername.Text = "Username";
+                txtUsername.Font = watermark;
+            }
 
         }
 
         private void txtPass_Enter(object sender, EventArgs e)
         {
-            txtPass.Text = "";
-            txtPass.PasswordChar = '*';
+            if (txtPass.Text.Trim().Equals("")|| txtPass.Text.Trim().Equals("Password"))
+            {
+                txtPass.ForeColor = Color.Black;
+                txtPass.Text = "";
+                txtPass.PasswordChar = '*';
+                txtPass.Font = defaultF;
+            }
         }
 
         private void txtPass_Leave(object sender, EventArgs e)
         {
-            txtPass.Text = "Password";
-            txtPass.ForeColor = Color.Gray;
-            Font f = new Font("Calibri", 11, FontStyle.Italic);
-            txtPass.PasswordChar = '\0'; //default format
-            txtPass.Font = f;
+            if (txtPass.Text.Trim().Equals(""))
+            {
+                txtPass.Text = "Password";
+                txtPass.ForeColor = Color.Gray;
+                txtPass.PasswordChar = '\0'; //default format
+                txtPass.Font = watermark;
+            }
+
+        }
+
+        private void cbUsrT_Enter(object sender, EventArgs e)
+        {
+            cbUsrT.ForeColor = Color.Black;
+            cbUsrT.Font = defaultF;
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
 
         }
     }

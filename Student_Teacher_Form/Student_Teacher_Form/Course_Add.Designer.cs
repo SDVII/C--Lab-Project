@@ -179,6 +179,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnAccC);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Course_Add";
             this.Text = "laberl";
             this.groupBox1.ResumeLayout(false);

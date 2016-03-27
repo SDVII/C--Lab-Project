@@ -37,6 +37,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cbDocS = new System.Windows.Forms.ComboBox();
+            this.btnAddD = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lbDocL = new System.Windows.Forms.ListBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -46,7 +47,6 @@
             this.btnClrD = new System.Windows.Forms.Button();
             this.btnRmvD = new System.Windows.Forms.Button();
             this.btnSbmD = new System.Windows.Forms.Button();
-            this.btnAddD = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -154,6 +154,19 @@
             this.cbDocS.Size = new System.Drawing.Size(216, 26);
             this.cbDocS.TabIndex = 16;
             // 
+            // btnAddD
+            // 
+            this.btnAddD.BackgroundImage = global::Student_Teacher_Form.Properties.Resources.ic_note_add_black_24dp_2x;
+            this.btnAddD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAddD.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
+            this.btnAddD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddD.Location = new System.Drawing.Point(193, 180);
+            this.btnAddD.Name = "btnAddD";
+            this.btnAddD.Size = new System.Drawing.Size(39, 38);
+            this.btnAddD.TabIndex = 15;
+            this.btnAddD.UseVisualStyleBackColor = true;
+            this.btnAddD.Click += new System.EventHandler(this.btnAddCourse_Click);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.lbDocL);
@@ -258,19 +271,6 @@
             this.btnSbmD.TabIndex = 18;
             this.btnSbmD.UseVisualStyleBackColor = true;
             // 
-            // btnAddD
-            // 
-            this.btnAddD.BackgroundImage = global::Student_Teacher_Form.Properties.Resources.ic_note_add_black_24dp_2x;
-            this.btnAddD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAddD.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
-            this.btnAddD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddD.Location = new System.Drawing.Point(193, 180);
-            this.btnAddD.Name = "btnAddD";
-            this.btnAddD.Size = new System.Drawing.Size(39, 38);
-            this.btnAddD.TabIndex = 15;
-            this.btnAddD.UseVisualStyleBackColor = true;
-            this.btnAddD.Click += new System.EventHandler(this.btnAddCourse_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Student_Teacher_Form.Properties.Resources.Untitled_3;
@@ -296,6 +296,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Document_Request";
             this.Text = "Document_Request";
             this.groupBox1.ResumeLayout(false);

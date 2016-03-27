@@ -40,6 +40,7 @@
             this.lbSpr = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pbPrf = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -52,12 +53,11 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lbChanges = new System.Windows.Forms.Label();
             this.btnAccS = new System.Windows.Forms.Button();
-            this.pbPrf = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPrf)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPrf)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -195,6 +195,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Profile";
             // 
+            // pbPrf
+            // 
+            this.pbPrf.Image = global::Student_Teacher_Form.Properties.Resources.anon;
+            this.pbPrf.Location = new System.Drawing.Point(29, 39);
+            this.pbPrf.Name = "pbPrf";
+            this.pbPrf.Size = new System.Drawing.Size(162, 181);
+            this.pbPrf.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPrf.TabIndex = 0;
+            this.pbPrf.TabStop = false;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -327,15 +337,6 @@
             this.btnAccS.TabIndex = 24;
             this.btnAccS.UseVisualStyleBackColor = true;
             // 
-            // pbPrf
-            // 
-            this.pbPrf.Location = new System.Drawing.Point(29, 39);
-            this.pbPrf.Name = "pbPrf";
-            this.pbPrf.Size = new System.Drawing.Size(162, 181);
-            this.pbPrf.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbPrf.TabIndex = 0;
-            this.pbPrf.TabStop = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Student_Teacher_Form.Properties.Resources.Untitled_3;
@@ -358,15 +359,16 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Settings";
             this.Text = "Settings";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPrf)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbPrf)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
