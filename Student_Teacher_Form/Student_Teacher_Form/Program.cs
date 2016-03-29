@@ -16,7 +16,7 @@ namespace Student_Teacher_Form
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Transcript());
+            Application.Run(new Login());
         }
     }
 }
