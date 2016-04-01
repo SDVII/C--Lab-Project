@@ -15,6 +15,7 @@ namespace Student_Teacher_Form
 
         Font watermark = new Font("Calibri", 12, FontStyle.Italic);
         Font defaultF = new Font("Calibri", 12);
+        Boolean validated = true;
 
         public Login()
         {
@@ -37,6 +38,17 @@ namespace Student_Teacher_Form
 
         }
 
+        public void checkInput(String uName, String pass)
+        {
+            if(uName.Equals("Username")|| pass.Equals("Password")|| txtPass.Text.Trim().Equals("") || txtUsername.Text.Trim().Equals(""))
+            {
+                btnLogin.Enabled=false;
+            }
+            else
+            {
+                btnLogin.Enabled = true;
+            }
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -50,8 +62,8 @@ namespace Student_Teacher_Form
                 txtUsername.Text = "";
                 txtUsername.ForeColor = Color.Black;
                 txtUsername.Font = defaultF;
+                checkInput(txtUsername.Text, txtPass.Text);
             }
-
         }
 
         private void txtUsername__Leave(object sender, System.EventArgs e)
@@ -61,6 +73,7 @@ namespace Student_Teacher_Form
                 txtUsername.ForeColor = Color.Gray;
                 txtUsername.Text = "Username";
                 txtUsername.Font = watermark;
+                checkInput(txtUsername.Text, txtPass.Text);
             }
 
         }
@@ -73,6 +86,7 @@ namespace Student_Teacher_Form
                 txtPass.Text = "";
                 txtPass.PasswordChar = '*';
                 txtPass.Font = defaultF;
+                checkInput(txtUsername.Text, txtPass.Text);
             }
         }
 
@@ -84,6 +98,7 @@ namespace Student_Teacher_Form
                 txtPass.ForeColor = Color.Gray;
                 txtPass.PasswordChar = '\0'; //default format
                 txtPass.Font = watermark;
+                checkInput(txtUsername.Text, txtPass.Text);
             }
 
         }
@@ -92,11 +107,38 @@ namespace Student_Teacher_Form
         {
             cbUsrT.ForeColor = Color.Black;
             cbUsrT.Font = defaultF;
+            checkInput(txtUsername.Text, txtPass.Text);
         }
 
-        private void Login_Load(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
+            /*
+            Validate the username, password and occupation
+            For testing reasons, i'll make a Boolean "validated" which is always true. delete it after you insert the validate function.
+            I will also use a fake ID for testing as well.
+            */
 
+            if(validated==true)
+            {
+                if (cbUsrT.Text.Equals("Student"))
+                {
+                    Student_Portal f = new Student_Portal(1234);
+                    f.Visible = true;
+                    this.Visible = false;
+                }
+                else
+                {
+                    Teacher_Portal f = new Teacher_Portal(5678);
+                    f.Visible = true;
+                    this.Visible = false;
+                }
+            }
+
+        }
+
+        private void cbUsrT_Leave(object sender, EventArgs e)
+        {
+            checkInput(txtUsername.Text, txtPass.Text);
         }
     }
 }

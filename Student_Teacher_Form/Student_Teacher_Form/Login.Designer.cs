@@ -143,7 +143,7 @@
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '+';
             this.txtPass.Size = new System.Drawing.Size(175, 27);
-            this.txtPass.TabIndex = 10;
+            this.txtPass.TabIndex = 3;
             this.txtPass.Enter += new System.EventHandler(this.txtPass_Enter);
             this.txtPass.Leave += new System.EventHandler(this.txtPass_Leave);
             // 
@@ -170,8 +170,9 @@
             this.cbUsrT.Location = new System.Drawing.Point(65, 335);
             this.cbUsrT.Name = "cbUsrT";
             this.cbUsrT.Size = new System.Drawing.Size(184, 27);
-            this.cbUsrT.TabIndex = 18;
+            this.cbUsrT.TabIndex = 4;
             this.cbUsrT.Enter += new System.EventHandler(this.cbUsrT_Enter);
+            this.cbUsrT.Leave += new System.EventHandler(this.cbUsrT_Leave);
             // 
             // pictureBox4
             // 
@@ -217,6 +218,7 @@
             // 
             this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
             this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLogin.Enabled = false;
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -224,9 +226,10 @@
             this.btnLogin.Location = new System.Drawing.Point(79, 391);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(114, 40);
-            this.btnLogin.TabIndex = 30;
+            this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "LOGIN";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // Login
             // 
@@ -256,8 +259,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

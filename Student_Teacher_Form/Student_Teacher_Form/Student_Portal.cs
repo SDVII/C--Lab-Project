@@ -12,24 +12,18 @@ namespace Student_Teacher_Form
 {
     public partial class Student_Portal : Form
     {
-        public Student_Portal()
+        private int stuID;
+
+        public Student_Portal(int stuID)
         {
             InitializeComponent();
+            this.stuID = stuID;
+            this.Text = stuID + "";
         }
 
-        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        private void Student_Portal_FormClosed(object sender, FormClosedEventArgs e)
         {
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void splitContainer1_Panel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
+            Application.Exit();
         }
     }
 }
