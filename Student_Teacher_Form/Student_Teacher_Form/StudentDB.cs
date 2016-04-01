@@ -81,6 +81,25 @@ namespace Student_Teacher_Form
             return stu;
         }
 
+        public static Student GetWithUsername(String username)
+        {
+            String query = "SELECT * FROM student WHERE student_username = '" + username + "'";
+            Student stu = null;
+
+            if (databaseHandler.openConnection())
+            {
+                MySqlCommand cmd = new MySqlCommand(query, databaseHandler.connection);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    stu = new Student(reader.GetInt32(0), reader.GetInt32(7), reader.GetInt32(8), reader.GetInt32(9), reader.GetInt32(10), 
+                        reader.GetInt32(11), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(6), reader.GetFloat(5));
+                }
+            }
+            return stu;
+        }
+
         public static List<Student> GetAll()
         {
 

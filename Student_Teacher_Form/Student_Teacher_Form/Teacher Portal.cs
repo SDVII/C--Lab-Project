@@ -12,7 +12,7 @@ namespace Student_Teacher_Form
 {
     public partial class Teacher_Portal : Form
     {
-        public Teacher_Portal()
+        public Teacher_Portal(int teacher_id)
         {
             InitializeComponent();
         }

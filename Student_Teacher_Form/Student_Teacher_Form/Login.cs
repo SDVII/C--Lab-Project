@@ -101,7 +101,48 @@ namespace Student_Teacher_Form
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-        
+            string username = txtUsername.Text;
+            string password = txtPass.Text;
+
+            if (cbUsrT.SelectedIndex == 0)
+            {
+                Student stu = StudentDB.GetWithUsername(username);
+                if (stu == null)
+                {
+                    MessageBox.Show("No such student");
+                }
+                else
+                {
+                    if (stu.Password != password)
+                    {
+                        MessageBox.Show("Wrong password");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Correct");
+                    }
+                }
+            }
+            else
+            {
+                Teacher tea = TeacherDB.GetWithUsername(username);
+                if (tea == null)
+                {
+                    MessageBox.Show("No such teacher");
+                }
+                else
+                {
+                    if (tea.Password != password)
+                    {
+                        MessageBox.Show("Wrong password");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Correct");
+                        Teacher_Portal form = new Teacher_Portal(tea.Id);
+                    }
+                }
+            }
         }
     }
 }
