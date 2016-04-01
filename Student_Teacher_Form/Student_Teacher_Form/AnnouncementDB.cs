@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +7,7 @@ using MySql.Data.MySqlClient;
 
 namespace Student_Teacher_Form
 {
-    class TeacherDB
+    class AnnouncementDB
     {
         private static DatabaseHandler databaseHandler = new DatabaseHandler();
 
@@ -17,11 +16,10 @@ namespace Student_Teacher_Form
             return databaseHandler.connectionError;
         }
 
-
-        public static bool Add(Teacher teacher)
+        public static bool Add(Announcement announcement)
         {
             // query take variables $
-            string query = $"INSERT INTO teacher (teacher_username,teacher_name,teacher_surname,teacher_password,teacher_email,teacher_msgr_id) Values ('{teacher.Username}','{teacher.Name}','{teacher.Surname}','{teacher.Password}','{teacher.Email}','{teacher.MsgrId}')";
+            string query = $"INSERT INTO Announcements (Announcements_title, Announcements_msg) Values ('{announcement.Title}','{announcement.Msg}')";
             // check if the connection is open first
             if (databaseHandler.openConnection() == true)
             {
@@ -36,9 +34,9 @@ namespace Student_Teacher_Form
             return false;
         }
 
-        public static bool Update(Teacher teacher)
+        public static bool Update(Announcement announcement)
         {
-            string query = $"UPDATE teacher SET teacher_username='{teacher.Username}',teacher_name='{teacher.Name}',teacher_surname='{teacher.Surname}',teacher_password='{teacher.Password}',teacher_email='{teacher.Email}',teacher_msgr_id='{teacher.MsgrId}' WHERE teacher_id='{teacher.Id}'"; // create the query
+            string query = $"UPDATE Announcements SET Announcements_title='{announcement.Title}',Announcements_msg='{announcement.Msg}' WHERE Announcements_id='{announcement.Id}'"; // create the query
 
 
             if (databaseHandler.openConnection()) // check the connection
@@ -56,36 +54,18 @@ namespace Student_Teacher_Form
 
         public static void Delete(int id)
         {
-            databaseHandler.Delete("teacher", "teacher_id", id);
+            databaseHandler.Delete("Announcements", "Announcements_id", id);
         }
 
-        public static void Delete(Teacher teacher)
+        public static void Delete(Announcement announcement)
         {
-            Delete(teacher.Id);
+            Delete(announcement.Id);
         }
 
-        public static Teacher Get(int id)
+        public static Announcement Get(int id)
         {
-            String query = "SELECT * FROM teacher WHERE teacher_id = '" + id + "'";
-            Teacher teacher = null;
-
-            if (databaseHandler.openConnection())
-            {
-                MySqlCommand cmd = new MySqlCommand(query, databaseHandler.connection);
-                MySqlDataReader reader = cmd.ExecuteReader();
-                
-                while (reader.Read())
-                {
-                    teacher = new Teacher(reader.GetInt32(0), reader.GetInt32(6), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5));
-                }
-            }
-            return teacher;
-        }
-
-        public static List<Teacher> GetAll()
-        {
-            String query = "SELECT * FROM teacher";
-            List<Teacher> list = new List<Teacher>();
+            String query = "SELECT * FROM Announcements WHERE Announcements_id = '" + id + "'";
+            Announcement announcement = null;
 
             if (databaseHandler.openConnection())
             {
@@ -94,13 +74,30 @@ namespace Student_Teacher_Form
 
                 while (reader.Read())
                 {
-                    Teacher teacher = new Teacher(reader.GetInt32(0), reader.GetInt32(6), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5));
-                    list.Add(teacher);
-                    
+                    announcement = new Announcement(reader.GetInt32(0), reader.GetString(1), reader.GetString(2));
                 }
             }
+            return announcement;
+        }
 
+        public static List<Announcement> GetAll()
+        {
+            String query = "SELECT * FROM Announcements";
+            List<Announcement> list = new List<Announcement>();
+
+            if (databaseHandler.openConnection())
+            {
+                MySqlCommand cmd = new MySqlCommand(query, databaseHandler.connection);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Announcement announcement = new Announcement(reader.GetInt32(0), reader.GetString(1), reader.GetString(2));
+                    list.Add(announcement);
+
+                }
+            }
             return list;
-        } 
+        }
     }
 }

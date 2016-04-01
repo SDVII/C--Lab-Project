@@ -62,6 +62,7 @@ namespace Student_Teacher_Form
                 database + ";" + "UID=" + username + ";" + "PASSWORD=" + password + ";"; // store connection information
 
                 connection = new MySqlConnection(connectionString); // send connection request
+                connection.Open();
                 ConnectionStatus = true;
 
                 // it will start the conncetion  and return true

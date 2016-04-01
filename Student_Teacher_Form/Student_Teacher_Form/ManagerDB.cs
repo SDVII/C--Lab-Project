@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +7,7 @@ using MySql.Data.MySqlClient;
 
 namespace Student_Teacher_Form
 {
-    class TeacherDB
+    class ManagerDB
     {
         private static DatabaseHandler databaseHandler = new DatabaseHandler();
 
@@ -17,11 +16,10 @@ namespace Student_Teacher_Form
             return databaseHandler.connectionError;
         }
 
-
-        public static bool Add(Teacher teacher)
+        public static bool Add(Manager manager)
         {
             // query take variables $
-            string query = $"INSERT INTO teacher (teacher_username,teacher_name,teacher_surname,teacher_password,teacher_email,teacher_msgr_id) Values ('{teacher.Username}','{teacher.Name}','{teacher.Surname}','{teacher.Password}','{teacher.Email}','{teacher.MsgrId}')";
+            string query = $"INSERT INTO manager (manager_username, manager_password) Values ('{manager.Username}','{manager.Password}')";
             // check if the connection is open first
             if (databaseHandler.openConnection() == true)
             {
@@ -36,9 +34,9 @@ namespace Student_Teacher_Form
             return false;
         }
 
-        public static bool Update(Teacher teacher)
+        public static bool Update(Manager manager)
         {
-            string query = $"UPDATE teacher SET teacher_username='{teacher.Username}',teacher_name='{teacher.Name}',teacher_surname='{teacher.Surname}',teacher_password='{teacher.Password}',teacher_email='{teacher.Email}',teacher_msgr_id='{teacher.MsgrId}' WHERE teacher_id='{teacher.Id}'"; // create the query
+            string query = $"UPDATE manager SET manager_username='{manager.Username}',manager_password='{manager.Password}' WHERE manager_id='{manager.Id}'"; // create the query
 
 
             if (databaseHandler.openConnection()) // check the connection
@@ -56,36 +54,36 @@ namespace Student_Teacher_Form
 
         public static void Delete(int id)
         {
-            databaseHandler.Delete("teacher", "teacher_id", id);
+            databaseHandler.Delete("manager", "manager_id", id);
         }
 
-        public static void Delete(Teacher teacher)
+        public static void Delete(Manager manager)
         {
-            Delete(teacher.Id);
+            Delete(manager.Id);
         }
 
-        public static Teacher Get(int id)
+        public static Manager Get(int id)
         {
-            String query = "SELECT * FROM teacher WHERE teacher_id = '" + id + "'";
-            Teacher teacher = null;
+            String query = "SELECT * FROM manager WHERE manager_id = '" + id + "'";
+            Manager manager = null;
 
             if (databaseHandler.openConnection())
             {
                 MySqlCommand cmd = new MySqlCommand(query, databaseHandler.connection);
                 MySqlDataReader reader = cmd.ExecuteReader();
-                
+
                 while (reader.Read())
                 {
-                    teacher = new Teacher(reader.GetInt32(0), reader.GetInt32(6), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5));
+                    manager = new Manager(reader.GetInt32(0), reader.GetString(1), reader.GetString(2));
                 }
             }
-            return teacher;
+            return manager;
         }
 
-        public static List<Teacher> GetAll()
+        public static List<Manager> GetAll()
         {
-            String query = "SELECT * FROM teacher";
-            List<Teacher> list = new List<Teacher>();
+            String query = "SELECT * FROM manager";
+            List<Manager> list = new List<Manager>();
 
             if (databaseHandler.openConnection())
             {
@@ -94,13 +92,13 @@ namespace Student_Teacher_Form
 
                 while (reader.Read())
                 {
-                    Teacher teacher = new Teacher(reader.GetInt32(0), reader.GetInt32(6), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5));
-                    list.Add(teacher);
-                    
+                    Manager manager = new Manager(reader.GetInt32(0), reader.GetString(1), reader.GetString(2));
+                    list.Add(manager);
+
                 }
             }
 
             return list;
-        } 
+        }
     }
 }

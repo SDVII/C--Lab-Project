@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +7,7 @@ using MySql.Data.MySqlClient;
 
 namespace Student_Teacher_Form
 {
-    class TeacherDB
+    class EventsDB
     {
         private static DatabaseHandler databaseHandler = new DatabaseHandler();
 
@@ -17,11 +16,11 @@ namespace Student_Teacher_Form
             return databaseHandler.connectionError;
         }
 
-
-        public static bool Add(Teacher teacher)
+        public static bool Add(Events events)
         {
             // query take variables $
-            string query = $"INSERT INTO teacher (teacher_username,teacher_name,teacher_surname,teacher_password,teacher_email,teacher_msgr_id) Values ('{teacher.Username}','{teacher.Name}','{teacher.Surname}','{teacher.Password}','{teacher.Email}','{teacher.MsgrId}')";
+            string query = $"INSERT INTO events (events_name, events_info, events_organizer, events_place, events_time) " +
+                           $"Values ('{events.Name}','{events.Info}'','{events.Organizer}'','{events.Place}'','{events.Time}')";
             // check if the connection is open first
             if (databaseHandler.openConnection() == true)
             {
@@ -36,9 +35,10 @@ namespace Student_Teacher_Form
             return false;
         }
 
-        public static bool Update(Teacher teacher)
+        public static bool Update(Events events)
         {
-            string query = $"UPDATE teacher SET teacher_username='{teacher.Username}',teacher_name='{teacher.Name}',teacher_surname='{teacher.Surname}',teacher_password='{teacher.Password}',teacher_email='{teacher.Email}',teacher_msgr_id='{teacher.MsgrId}' WHERE teacher_id='{teacher.Id}'"; // create the query
+            string query = $"UPDATE events SET events_name='{events.Name}',events_info='{events.Info}',events_organizer='{events.Organizer}''" +
+                           $",events_place='{events.Place}',events_time='{events.Time}' WHERE events_id='{events.Id}'"; // create the query
 
 
             if (databaseHandler.openConnection()) // check the connection
@@ -56,36 +56,36 @@ namespace Student_Teacher_Form
 
         public static void Delete(int id)
         {
-            databaseHandler.Delete("teacher", "teacher_id", id);
+            databaseHandler.Delete("events", "events_id", id);
         }
 
-        public static void Delete(Teacher teacher)
+        public static void Delete(Events events)
         {
-            Delete(teacher.Id);
+            Delete(events.Id);
         }
 
-        public static Teacher Get(int id)
+        public static Events Get(int id)
         {
-            String query = "SELECT * FROM teacher WHERE teacher_id = '" + id + "'";
-            Teacher teacher = null;
+            String query = "SELECT * FROM events WHERE events_id = '" + id + "'";
+            Events events = null;
 
             if (databaseHandler.openConnection())
             {
                 MySqlCommand cmd = new MySqlCommand(query, databaseHandler.connection);
                 MySqlDataReader reader = cmd.ExecuteReader();
-                
+
                 while (reader.Read())
                 {
-                    teacher = new Teacher(reader.GetInt32(0), reader.GetInt32(6), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5));
+                    events = new Events(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetDateTime(5));
                 }
             }
-            return teacher;
+            return events;
         }
 
-        public static List<Teacher> GetAll()
+        public static List<Events> GetAll()
         {
-            String query = "SELECT * FROM teacher";
-            List<Teacher> list = new List<Teacher>();
+            String query = "SELECT * FROM events";
+            List<Events> list = new List<Events>();
 
             if (databaseHandler.openConnection())
             {
@@ -94,13 +94,13 @@ namespace Student_Teacher_Form
 
                 while (reader.Read())
                 {
-                    Teacher teacher = new Teacher(reader.GetInt32(0), reader.GetInt32(6), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5));
-                    list.Add(teacher);
-                    
+                    Events events = new Events(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetDateTime(5));
+                    list.Add(events);
+
                 }
             }
 
             return list;
-        } 
+        }
     }
 }
