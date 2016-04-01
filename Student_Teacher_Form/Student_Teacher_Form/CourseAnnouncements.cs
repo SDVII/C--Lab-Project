@@ -14,7 +14,7 @@ namespace Student_Teacher_Form
         private Teacher teacher;
         private Course course;
 
-        public CourseAnnouncements(int id, int teacherId, int courseId, string title, string msg, DateTime time, Teacher teacher, Course course)
+        public CourseAnnouncements(int id, int teacherId, int courseId, string title, string msg, DateTime time)
         {
             this.id = id;
             teacher_id = teacherId;
@@ -22,19 +22,19 @@ namespace Student_Teacher_Form
             this.title = title;
             this.msg = msg;
             this.time = time;
-            this.teacher = teacher;
-            this.course = course;
+            this.teacher = null;
+            this.course = null;
         }
 
-        public CourseAnnouncements(int teacherId, int courseId, string title, string msg, DateTime time, Teacher teacher, Course course)
+        public CourseAnnouncements(int teacherId, int courseId, string title, string msg, DateTime time)
         {
             teacher_id = teacherId;
             course_id = courseId;
             this.title = title;
             this.msg = msg;
             this.time = time;
-            this.teacher = teacher;
-            this.course = course;
+            this.teacher = null;
+            this.course = null;
         }
 
         public int Id

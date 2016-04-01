@@ -12,23 +12,23 @@ namespace Student_Teacher_Form
         private String name, code, info;
         private Department department;
 
-        public Course(int id, int departmentId, string name, string code, string info, Department department)
+        public Course(int id, int departmentId, string name, string code, string info)
         {
             this.id = id;
             department_id = departmentId;
             this.name = name;
             this.code = code;
             this.info = info;
-            this.department = department;
+            this.department = null;
         }
 
-        public Course(int departmentId, string name, string code, string info, Department department)
+        public Course(int departmentId, string name, string code, string info)
         {
             department_id = departmentId;
             this.name = name;
             this.code = code;
             this.info = info;
-            this.department = department;
+            this.department = null;
         }
 
         public int Id

@@ -134,11 +134,10 @@ namespace Student_Teacher_Form
                 {
                     if (tea.Password != password)
                     {
-                        MessageBox.Show("Wrong password");
+                        MessageBox.Show("Wrong password", "Error");
                     }
                     else
                     {
-                        MessageBox.Show("Correct");
                         Teacher_Portal form = new Teacher_Portal(tea);
                         form.Show();
                     }
