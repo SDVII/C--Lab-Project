@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Student_Teacher_Form
 {
-    class Msg
+    public class Msg
     {
         private int id, sender_id, receiver_id;
         private String title, message, file_name;

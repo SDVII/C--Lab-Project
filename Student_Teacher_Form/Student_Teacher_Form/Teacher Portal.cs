@@ -12,9 +12,11 @@ namespace Student_Teacher_Form
 {
     public partial class Teacher_Portal : Form
     {
-        public Teacher_Portal(int teacher_id)
+        public Teacher_Portal(Teacher teacher)
         {
             InitializeComponent();
+            lbName.Text = teacher.Name + " " + teacher.Surname;
+            lbID.Text = ""+teacher.Id;
         }
 
         private void splitContainer1_Panel1_Paint_1(object sender, PaintEventArgs e)

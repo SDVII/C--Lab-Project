@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Student_Teacher_Form
 {
-    class Slot
+    public class Slot
     {
         private int id, student_id, course_id;
         private String slotResult;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Student_Teacher_Form
 {
-    class Events
+    public class Events
     {
         private int id;
         private String name, info, organizer, place;

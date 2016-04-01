@@ -139,7 +139,8 @@ namespace Student_Teacher_Form
                     else
                     {
                         MessageBox.Show("Correct");
-                        Teacher_Portal form = new Teacher_Portal(tea.Id);
+                        Teacher_Portal form = new Teacher_Portal(tea);
+                        form.Show();
                     }
                 }
             }
