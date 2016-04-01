@@ -42,7 +42,7 @@ namespace Student_Teacher_Form
 
         public static bool Update(Student student)
         {
-            string query = $"UPDATE student SET student_username='{student.Username}',student_name='{student.Name}',student_surname='{student.Surname}',student_password='{student.Password}',student_gpa='{student.Gpa}',student_email='{student.Email}',student_department_id='{student.DepartmentId}',student_national_id={student.NationalId},student_financialAffairs_id='{student.FinancialAffairsId}',student_advisor_id='{student.AdvisorId}',student_msgr_id='{student.MsgrId}' WHERE teacher_id='{student.Id}'";
+            string query = $"UPDATE student SET student_username='{student.Username}',student_name='{student.Name}',student_surname='{student.Surname}',student_password='{student.Password}',student_gpa='{student.Gpa}',student_email='{student.Email}',student_department_id='{student.DepartmentId}',student_national_id={student.NationalId},student_financialAffairs_id='{student.FinancialAffairsId}',student_advisor_id='{student.AdvisorId}',student_msgr_id='{student.MsgrId}' WHERE student_id='{student.Id}'";
 
             if (databaseHandler.openConnection() == true) // check the connection
             {

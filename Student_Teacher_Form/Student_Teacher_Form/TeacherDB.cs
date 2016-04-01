@@ -66,7 +66,7 @@ namespace Student_Teacher_Form
 
         public static Teacher Get(int id)
         {
-            String query = "SELECT * FROM teacher WHERE teacher_id = '" + id + "'";
+            String query = "SELECT * FROM teacher WHERE teacher_id = " + id;
             Teacher teacher = null;
 
             if (databaseHandler.openConnection())

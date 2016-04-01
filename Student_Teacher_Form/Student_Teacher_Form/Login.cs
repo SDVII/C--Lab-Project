@@ -101,6 +101,7 @@ namespace Student_Teacher_Form
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            
             string username = txtUsername.Text;
             string password = txtPass.Text;
 
@@ -119,7 +120,8 @@ namespace Student_Teacher_Form
                     }
                     else
                     {
-                        MessageBox.Show("Correct");
+                        Settings form = new Settings(stu);
+                        form.Show();
                     }
                 }
             }
@@ -138,7 +140,7 @@ namespace Student_Teacher_Form
                     }
                     else
                     {
-                        Teacher_Portal form = new Teacher_Portal(tea);
+                        Settings form = new Settings(tea);
                         form.Show();
                     }
                 }

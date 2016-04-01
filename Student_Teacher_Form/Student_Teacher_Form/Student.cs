@@ -24,10 +24,11 @@ namespace Student_Teacher_Form
             this.password = password;
             this.email = email;
             this.gpa = gpa;
-            this.department = department;
-            this.financialAffairs = financialAffairs;
-            this.advisor = advisor;
-            this.msgr = msgr;
+            department_id = departmentId;
+            national_id = nationalId;
+            financialAffairs_id = financialAffairsId;
+            advisor_id = advisorId;
+            msgr_id = msgrId;
         }
 
         public Student(int id, int departmentId, int nationalId, int financialAffairsId, int advisorId, int msgrId, string username, string name, string surname, string password, string email, float gpa, Department department, FinancialAffairs financialAffairs, Teacher advisor, Msgr msgr)
@@ -146,7 +147,13 @@ namespace Student_Teacher_Form
 
         public Department Department
         {
-            get { return department; }
+            get {
+                if (this.department == null)
+                {
+                    this.department = DepartmentDB.Get(this.department_id);
+                }
+                return this.department;
+            }
             set { department = value; }
         }
 
@@ -158,7 +165,12 @@ namespace Student_Teacher_Form
 
         public Teacher Advisor
         {
-            get { return advisor; }
+            get {
+                if (this.advisor == null) {
+                    this.advisor = TeacherDB.Get(this.advisor_id);
+                }
+                return this.advisor;
+            }
             set { advisor = value; }
         }
 
