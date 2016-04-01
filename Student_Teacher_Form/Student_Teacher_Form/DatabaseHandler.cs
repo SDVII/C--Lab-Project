@@ -53,10 +53,10 @@ namespace Student_Teacher_Form
             {
                 string connectionString; // we will store in it all connection information
 
-                server = "localhost"; // set server ip 127.0.0.1
-                database = "sp"; // set DB name 
-                username = "root"; // set DB username
-                password = ""; // set DB password
+                server = "sql8.freemysqlhosting.net"; // set server ip 127.0.0.1
+                database = "sql8113217"; // set DB name 
+                username = "sql8113217"; // set DB username
+                password = "UiPYrWwZnp"; // set DB password
 
                 connectionString = "SERVER=" + server + ";" + "DATABASE=" +
                 database + ";" + "UID=" + username + ";" + "PASSWORD=" + password + ";"; // store connection information
@@ -190,7 +190,7 @@ namespace Student_Teacher_Form
 
 
 
-        protected void Delete(String tableName, String columnName, int columnValue)
+        public void Delete(String tableName, String columnName, int columnValue)
         {
             string query = $"DELETE FROM {tableName} WHERE {columnName} = {columnValue} "; // the query
 

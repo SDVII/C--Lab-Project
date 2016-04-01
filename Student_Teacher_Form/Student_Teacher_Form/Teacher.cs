@@ -12,7 +12,7 @@ namespace Student_Teacher_Form
         private String username, name, surname, password, email;
         private Msgr msgr;
 
-        public Teacher(int id, int msgrId, string username, string name, string surname, string password, string email, Msgr msgr)
+        public Teacher(int id, int msgrId, string username, string name, string surname, string password, string email)
         {
             this.id = id;
             msgr_id = msgrId;
@@ -20,11 +20,11 @@ namespace Student_Teacher_Form
             this.username = username;
             this.surname = surname;
             this.email = email;
-            this.msgr = msgr;
+            this.msgr = null;
             this.password = password;
         }
 
-        public Teacher(int msgrId, string username, string name, string surname, string password, string email, Msgr msgr)
+        public Teacher(int msgrId, string username, string name, string surname, string password, string email)
         {
             msgr_id = msgrId;
             this.username = username;
@@ -32,7 +32,7 @@ namespace Student_Teacher_Form
             this.surname = surname;
             this.password = password;
             this.email = email;
-            this.msgr = msgr;
+            this.msgr = null;
         }
 
         public int Id
