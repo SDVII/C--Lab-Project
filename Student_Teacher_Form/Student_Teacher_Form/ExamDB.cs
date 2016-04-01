@@ -1,14 +1,13 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DevExpress.Map.Native;
-using MySql.Data.MySqlClient;
 
 namespace Student_Teacher_Form
 {
-    class CourseDB
+    class ExamDB
     {
         private static DatabaseHandler databaseHandler = new DatabaseHandler();
 
@@ -17,11 +16,11 @@ namespace Student_Teacher_Form
             return databaseHandler.connectionError;
         }
 
-        public static bool Add(Course course)
+        public static bool Add(Exam exam)
         {
             // query take variables $
-            string query = $"INSERT INTO course (course_department_id, course_name, course_code, course_info) " +
-                           $"Values ('{course.DepartmentId}','{course.Name}'','{course.Code}'','{course.Info}')";
+            string query = $"INSERT INTO exam (exam_course_id, exam_time, exam_place) " +
+                           $"Values ('{exam.CourseId}','{exam.Time}'','{exam.Place}')";
             // check if the connection is open first
             if (databaseHandler.openConnection() == true)
             {
@@ -36,10 +35,10 @@ namespace Student_Teacher_Form
             return false;
         }
 
-        public static bool Update(Course course)
+        public static bool Update(Exam exam)
         {
-            string query = $"UPDATE course SET course_department_id='{course.DepartmentId}',course_name='{course.Name}',course_code='{course.Code}''" +
-                           $",course_info='{course.Info}' WHERE course_id='{course.Id}'"; // create the query
+            string query = $"UPDATE exam SET exam_course_id='{exam.CourseId}',exam_time='{exam.Time}',exam_place='{exam.Place}''" +
+                           $" WHERE exam_id='{exam.Id}'"; // create the query
 
 
             if (databaseHandler.openConnection()) // check the connection
@@ -57,18 +56,18 @@ namespace Student_Teacher_Form
 
         public static void Delete(int id)
         {
-            databaseHandler.Delete("course", "course_id", id);
+            databaseHandler.Delete("exam", "exam_id", id);
         }
 
-        public static void Delete(Course course)
+        public static void Delete(Exam exam)
         {
-            Delete(course.Id);
+            Delete(exam.Id);
         }
 
-        public static Course Get(int id)
+        public static Exam Get(int id)
         {
-            String query = "SELECT * FROM course WHERE course_id = '" + id + "'";
-            Course course = null;
+            String query = "SELECT * FROM exam WHERE exam_id = '" + id + "'";
+            Exam exam = null;
 
             if (databaseHandler.openConnection())
             {
@@ -77,16 +76,16 @@ namespace Student_Teacher_Form
 
                 while (reader.Read())
                 {
-                    course = new Course(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetString(3), reader.GetString(4));
+                    exam = new Exam(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetString(3));
                 }
             }
-            return course;
+            return exam;
         }
 
-        public static List<Course> GetAll()
+        public static List<Exam> GetAll()
         {
-            String query = "SELECT * FROM course";
-            List<Course> list = new List<Course>();
+            String query = "SELECT * FROM exam";
+            List<Exam> list = new List<Exam>();
 
             if (databaseHandler.openConnection())
             {
@@ -95,8 +94,8 @@ namespace Student_Teacher_Form
 
                 while (reader.Read())
                 {
-                    Course course = new Course(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetString(3), reader.GetString(4));
-                    list.Add(course);
+                    Exam exam = new Exam(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetString(3));
+                    list.Add(exam);
 
                 }
             }

@@ -79,7 +79,11 @@ namespace Student_Teacher_Form
 
         public Msgr Msgr
         {
-            get { return msgr; }
+            get {
+                if (msgr == null)
+                    msgr = MsgrDB.Get(msgr_id);
+                return msgr;
+            }
             set { msgr = value; }
         }
     }

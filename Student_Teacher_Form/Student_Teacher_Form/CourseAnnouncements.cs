@@ -75,13 +75,21 @@ namespace Student_Teacher_Form
 
         public Teacher Teacher
         {
-            get { return teacher; }
+            get {
+                if (teacher == null)
+                    teacher = TeacherDB.Get(teacher_id);
+                return teacher;
+            }
             set { teacher = value; }
         }
 
         public Course Course
         {
-            get { return course; }
+            get {
+                if (course == null)
+                    course = CourseDB.Get(course_id);
+                return course;
+            }
             set { course = value; }
         }
     }

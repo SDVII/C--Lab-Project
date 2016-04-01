@@ -9,24 +9,24 @@ namespace Student_Teacher_Form
     public class Exam
     {
         private int id, course_id;
-        private String time, place;
+        private string time, place;
         private Course course;
 
-        public Exam(int id, int courseId, string time, string place, Course course)
+        public Exam(int id, int courseId, string time, string place)
         {
             this.id = id;
             course_id = courseId;
             this.time = time;
             this.place = place;
-            this.course = course;
+            this.course = null;
         }
 
-        public Exam(int courseId, string time, string place, Course course)
+        public Exam(int courseId, string time, string place)
         {
             course_id = courseId;
             this.time = time;
             this.place = place;
-            this.course = course;
+            this.course = null;
         }
 
         public int Id
@@ -55,7 +55,11 @@ namespace Student_Teacher_Form
 
         public Course Course
         {
-            get { return course; }
+            get {
+                if (course == null)
+                    course = CourseDB.Get(course_id);
+                return course;
+            }
             set { course = value; }
         }
     }

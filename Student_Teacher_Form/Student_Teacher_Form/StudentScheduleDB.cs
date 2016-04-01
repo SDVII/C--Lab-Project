@@ -1,14 +1,13 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DevExpress.Map.Native;
-using MySql.Data.MySqlClient;
 
 namespace Student_Teacher_Form
 {
-    class CourseDB
+    class StudentScheduleDB
     {
         private static DatabaseHandler databaseHandler = new DatabaseHandler();
 
@@ -17,11 +16,11 @@ namespace Student_Teacher_Form
             return databaseHandler.connectionError;
         }
 
-        public static bool Add(Course course)
+        public static bool Add(StudentSchedule studentSchedule)
         {
             // query take variables $
-            string query = $"INSERT INTO course (course_department_id, course_name, course_code, course_info) " +
-                           $"Values ('{course.DepartmentId}','{course.Name}'','{course.Code}'','{course.Info}')";
+            string query = $"INSERT INTO studentSchedule (studentSchedule_student_id, studentSchedule_teacher_id, studentSchedule_course_id, studentSchedule_section_id) " +
+                           $"Values ('{studentSchedule.StudentId}','{studentSchedule.TeacherId}','{studentSchedule.CourseId}','{studentSchedule.SectionId}')";
             // check if the connection is open first
             if (databaseHandler.openConnection() == true)
             {
@@ -36,10 +35,10 @@ namespace Student_Teacher_Form
             return false;
         }
 
-        public static bool Update(Course course)
+        public static bool Update(StudentSchedule studentSchedule)
         {
-            string query = $"UPDATE course SET course_department_id='{course.DepartmentId}',course_name='{course.Name}',course_code='{course.Code}''" +
-                           $",course_info='{course.Info}' WHERE course_id='{course.Id}'"; // create the query
+            string query = $"UPDATE studentSchedule SET studentSchedule_student_id='{studentSchedule.StudentId}',studentSchedule_teacher_id='{studentSchedule.TeacherId}',studentSchedule_course_id='{studentSchedule.CourseId}',studentSchedule_section_id='{studentSchedule.SectionId}'" +
+                           $" WHERE studentSchedule_id='{studentSchedule.Id}'"; // create the query
 
 
             if (databaseHandler.openConnection()) // check the connection
@@ -57,18 +56,18 @@ namespace Student_Teacher_Form
 
         public static void Delete(int id)
         {
-            databaseHandler.Delete("course", "course_id", id);
+            databaseHandler.Delete("studentSchedule", "studentSchedule_id", id);
         }
 
-        public static void Delete(Course course)
+        public static void Delete(StudentSchedule studentSchedule)
         {
-            Delete(course.Id);
+            Delete(studentSchedule.Id);
         }
 
-        public static Course Get(int id)
+        public static StudentSchedule Get(int id)
         {
-            String query = "SELECT * FROM course WHERE course_id = '" + id + "'";
-            Course course = null;
+            String query = "SELECT * FROM studentSchedule WHERE studentSchedule_id = '" + id + "'";
+            StudentSchedule studentSchedule = null;
 
             if (databaseHandler.openConnection())
             {
@@ -77,16 +76,16 @@ namespace Student_Teacher_Form
 
                 while (reader.Read())
                 {
-                    course = new Course(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetString(3), reader.GetString(4));
+                    studentSchedule = new StudentSchedule(reader.GetInt32(0), reader.GetInt32(1), reader.GetInt32(2), reader.GetInt32(3), reader.GetInt32(4));
                 }
             }
-            return course;
+            return studentSchedule;
         }
 
-        public static List<Course> GetAll()
+        public static List<StudentSchedule> GetAll()
         {
-            String query = "SELECT * FROM course";
-            List<Course> list = new List<Course>();
+            String query = "SELECT * FROM studentSchedule";
+            List<StudentSchedule> list = new List<StudentSchedule>();
 
             if (databaseHandler.openConnection())
             {
@@ -95,8 +94,8 @@ namespace Student_Teacher_Form
 
                 while (reader.Read())
                 {
-                    Course course = new Course(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetString(3), reader.GetString(4));
-                    list.Add(course);
+                    StudentSchedule studentSchedule = new StudentSchedule(reader.GetInt32(0), reader.GetInt32(1), reader.GetInt32(2), reader.GetInt32(3), reader.GetInt32(4));
+                    list.Add(studentSchedule);
 
                 }
             }

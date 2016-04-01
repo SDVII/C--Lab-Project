@@ -1,14 +1,13 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DevExpress.Map.Native;
-using MySql.Data.MySqlClient;
 
 namespace Student_Teacher_Form
 {
-    class CourseDB
+    class MsgDB
     {
         private static DatabaseHandler databaseHandler = new DatabaseHandler();
 
@@ -17,11 +16,11 @@ namespace Student_Teacher_Form
             return databaseHandler.connectionError;
         }
 
-        public static bool Add(Course course)
+        public static bool Add(Msg msg)
         {
             // query take variables $
-            string query = $"INSERT INTO course (course_department_id, course_name, course_code, course_info) " +
-                           $"Values ('{course.DepartmentId}','{course.Name}'','{course.Code}'','{course.Info}')";
+            string query = $"INSERT INTO msg (msg_sender_id, msg_receiver_id, msg_time, msg_title, msg_message, msg_file_name) " +
+                           $"Values ('{msg.SenderId}','{msg.ReceiverId}'','{msg.Time}'','{msg.Title}'','{msg.Message}'','{msg.FileName}')";
             // check if the connection is open first
             if (databaseHandler.openConnection() == true)
             {
@@ -36,10 +35,10 @@ namespace Student_Teacher_Form
             return false;
         }
 
-        public static bool Update(Course course)
+        public static bool Update(Msg msg)
         {
-            string query = $"UPDATE course SET course_department_id='{course.DepartmentId}',course_name='{course.Name}',course_code='{course.Code}''" +
-                           $",course_info='{course.Info}' WHERE course_id='{course.Id}'"; // create the query
+            string query = $"UPDATE msg SET msg_sender_id='{msg.SenderId}',msg_receiver_id='{msg.ReceiverId}',msg_time='{msg.Time}''" +
+                           $",msg_title='{msg.Title}',msg_message='{msg.Message}',msg_file_name='{msg.FileName}' WHERE msg_id='{msg.Id}'"; // create the query
 
 
             if (databaseHandler.openConnection()) // check the connection
@@ -57,18 +56,18 @@ namespace Student_Teacher_Form
 
         public static void Delete(int id)
         {
-            databaseHandler.Delete("course", "course_id", id);
+            databaseHandler.Delete("msg", "msg_id", id);
         }
 
-        public static void Delete(Course course)
+        public static void Delete(Msg msg)
         {
-            Delete(course.Id);
+            Delete(msg.Id);
         }
 
-        public static Course Get(int id)
+        public static Msg Get(int id)
         {
-            String query = "SELECT * FROM course WHERE course_id = '" + id + "'";
-            Course course = null;
+            String query = "SELECT * FROM msg WHERE msg_id = '" + id + "'";
+            Msg msg = null;
 
             if (databaseHandler.openConnection())
             {
@@ -77,16 +76,16 @@ namespace Student_Teacher_Form
 
                 while (reader.Read())
                 {
-                    course = new Course(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetString(3), reader.GetString(4));
+                    msg = new Msg(reader.GetInt32(0), reader.GetInt32(1), reader.GetInt32(2), reader.GetDateTime(3), reader.GetString(4), reader.GetString(5), reader.GetString(6));
                 }
             }
-            return course;
+            return msg;
         }
 
-        public static List<Course> GetAll()
+        public static List<Msg> GetAll()
         {
-            String query = "SELECT * FROM course";
-            List<Course> list = new List<Course>();
+            String query = "SELECT * FROM msg";
+            List<Msg> list = new List<Msg>();
 
             if (databaseHandler.openConnection())
             {
@@ -95,8 +94,8 @@ namespace Student_Teacher_Form
 
                 while (reader.Read())
                 {
-                    Course course = new Course(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetString(3), reader.GetString(4));
-                    list.Add(course);
+                    Msg msg = new Msg(reader.GetInt32(0), reader.GetInt32(1), reader.GetInt32(2), reader.GetDateTime(3), reader.GetString(4), reader.GetString(5), reader.GetString(6));
+                    list.Add(msg);
 
                 }
             }

@@ -13,23 +13,23 @@ namespace Student_Teacher_Form
         private Student student;
         private Course course;
 
-        public Slot(int id, int studentId, int courseId, string slotResult, Course course, Student student)
+        public Slot(int id, int studentId, int courseId, string slotResult)
         {
             this.id = id;
             student_id = studentId;
             course_id = courseId;
             this.slotResult = slotResult;
-            this.course = course;
-            this.student = student;
+            this.course = null;
+            this.student = null;
         }
 
-        public Slot(int studentId, int courseId, string slotResult, Student student, Course course)
+        public Slot(int studentId, int courseId, string slotResult)
         {
             student_id = studentId;
             course_id = courseId;
             this.slotResult = slotResult;
-            this.student = student;
-            this.course = course;
+            this.student = null;
+            this.course = null;
         }
 
         public int Id
@@ -58,13 +58,21 @@ namespace Student_Teacher_Form
 
         public Student Student
         {
-            get { return student; }
+            get {
+                if (student == null)
+                    student = StudentDB.Get(student_id);
+                return student;
+            }
             set { student = value; }
         }
 
         public Course Course
         {
-            get { return course; }
+            get {
+                if (course == null)
+                    course = CourseDB.Get(course_id);
+                return course;
+            }
             set { course = value; }
         }
     }

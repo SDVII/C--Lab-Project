@@ -1,14 +1,13 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DevExpress.Map.Native;
-using MySql.Data.MySqlClient;
 
 namespace Student_Teacher_Form
 {
-    class CourseDB
+    class FinancialAffairsDB
     {
         private static DatabaseHandler databaseHandler = new DatabaseHandler();
 
@@ -17,11 +16,11 @@ namespace Student_Teacher_Form
             return databaseHandler.connectionError;
         }
 
-        public static bool Add(Course course)
+        public static bool Add(FinancialAffairs financialAffairs)
         {
             // query take variables $
-            string query = $"INSERT INTO course (course_department_id, course_name, course_code, course_info) " +
-                           $"Values ('{course.DepartmentId}','{course.Name}'','{course.Code}'','{course.Info}')";
+            string query = $"INSERT INTO financialAffairs (financialAffairs_paid, financialAffairs_rest) " +
+                           $"Values ('{financialAffairs.Paid}','{financialAffairs.Rest}')";
             // check if the connection is open first
             if (databaseHandler.openConnection() == true)
             {
@@ -36,10 +35,10 @@ namespace Student_Teacher_Form
             return false;
         }
 
-        public static bool Update(Course course)
+        public static bool Update(FinancialAffairs financialAffairs)
         {
-            string query = $"UPDATE course SET course_department_id='{course.DepartmentId}',course_name='{course.Name}',course_code='{course.Code}''" +
-                           $",course_info='{course.Info}' WHERE course_id='{course.Id}'"; // create the query
+            string query = $"UPDATE financialAffairs SET financialAffairs_paid='{financialAffairs.Paid}',financialAffairs_rest='{financialAffairs.Rest}'" +
+                           $" WHERE financialAffairs_id='{financialAffairs.Id}'"; // create the query
 
 
             if (databaseHandler.openConnection()) // check the connection
@@ -57,18 +56,18 @@ namespace Student_Teacher_Form
 
         public static void Delete(int id)
         {
-            databaseHandler.Delete("course", "course_id", id);
+            databaseHandler.Delete("financialAffairs", "financialAffairs_id", id);
         }
 
-        public static void Delete(Course course)
+        public static void Delete(FinancialAffairs financialAffairs)
         {
-            Delete(course.Id);
+            Delete(financialAffairs.Id);
         }
 
-        public static Course Get(int id)
+        public static FinancialAffairs Get(int id)
         {
-            String query = "SELECT * FROM course WHERE course_id = '" + id + "'";
-            Course course = null;
+            String query = "SELECT * FROM financialAffairs WHERE financialAffairs_id = '" + id + "'";
+            FinancialAffairs financialAffairs = null;
 
             if (databaseHandler.openConnection())
             {
@@ -77,16 +76,16 @@ namespace Student_Teacher_Form
 
                 while (reader.Read())
                 {
-                    course = new Course(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetString(3), reader.GetString(4));
+                    financialAffairs = new FinancialAffairs(reader.GetInt32(0), reader.GetInt32(1), reader.GetInt32(2));
                 }
             }
-            return course;
+            return financialAffairs;
         }
 
-        public static List<Course> GetAll()
+        public static List<FinancialAffairs> GetAll()
         {
-            String query = "SELECT * FROM course";
-            List<Course> list = new List<Course>();
+            String query = "SELECT * FROM financialAffairs";
+            List<FinancialAffairs> list = new List<FinancialAffairs>();
 
             if (databaseHandler.openConnection())
             {
@@ -95,8 +94,8 @@ namespace Student_Teacher_Form
 
                 while (reader.Read())
                 {
-                    Course course = new Course(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetString(3), reader.GetString(4));
-                    list.Add(course);
+                    FinancialAffairs financialAffairs = new FinancialAffairs(reader.GetInt32(0), reader.GetInt32(1), reader.GetInt32(2));
+                    list.Add(financialAffairs);
 
                 }
             }

@@ -14,29 +14,29 @@ namespace Student_Teacher_Form
         private Course course;
         private Section section;
 
-        public StudentSchedule(int id, int studentId, int teacherId, int courseId, int sectionId, Student student, Teacher teacher, Course course, Section section)
+        public StudentSchedule(int id, int studentId, int teacherId, int courseId, int sectionId)
         {
             this.id = id;
             student_id = studentId;
             teacher_id = teacherId;
             course_id = courseId;
             section_id = sectionId;
-            this.student = student;
-            this.teacher = teacher;
-            this.course = course;
-            this.section = section;
+            this.student = null;
+            this.teacher = null;
+            this.course = null;
+            this.section = null;
         }
 
-        public StudentSchedule(int studentId, int teacherId, int courseId, int sectionId, Student student, Teacher teacher, Course course, Section section)
+        public StudentSchedule(int studentId, int teacherId, int courseId, int sectionId)
         {
             student_id = studentId;
             teacher_id = teacherId;
             course_id = courseId;
             section_id = sectionId;
-            this.student = student;
-            this.teacher = teacher;
-            this.course = course;
-            this.section = section;
+            this.student = null;
+            this.teacher = null;
+            this.course = null;
+            this.section = null;
         }
 
         public int Id
@@ -71,25 +71,41 @@ namespace Student_Teacher_Form
 
         public Student Student
         {
-            get { return student; }
+            get {
+                if (student == null)
+                    student = StudentDB.Get(student_id);
+                return student;
+            }
             set { student = value; }
         }
 
         public Teacher Teacher
         {
-            get { return teacher; }
+            get {
+                if (teacher == null)
+                    teacher = TeacherDB.Get(teacher_id);
+                return teacher;
+            }
             set { teacher = value; }
         }
 
         public Course Course
         {
-            get { return course; }
+            get {
+                if (course == null)
+                    course = CourseDB.Get(course_id);
+                return course;
+            }
             set { course = value; }
         }
 
         public Section Section
         {
-            get { return section; }
+            get {
+                if (section == null)
+                    section = SectionDB.Get(section_id);
+                return section;
+            }
             set { section = value; }
         }
     }

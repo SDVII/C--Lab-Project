@@ -30,27 +30,7 @@ namespace Student_Teacher_Form
             advisor_id = advisorId;
             msgr_id = msgrId;
         }
-
-        public Student(int id, int departmentId, int nationalId, int financialAffairsId, int advisorId, int msgrId, string username, string name, string surname, string password, string email, float gpa, Department department, FinancialAffairs financialAffairs, Teacher advisor, Msgr msgr)
-        {
-            this.id = id;
-            department_id = departmentId;
-            national_id = nationalId;
-            financialAffairs_id = financialAffairsId;
-            advisor_id = advisorId;
-            msgr_id = msgrId;
-            this.username = username;
-            this.name = name;
-            this.surname = surname;
-            this.password = password;
-            this.email = email;
-            this.gpa = gpa;
-            this.department = department;
-            this.financialAffairs = financialAffairs;
-            this.advisor = advisor;
-            this.msgr = msgr;
-        }
-        public Student(int departmentId, int nationalId, int financialAffairsId, int advisorId, int msgrId, string username, string name, string surname, string password, string email, float gpa, Department department, FinancialAffairs financialAffairs, Teacher advisor, Msgr msgr)
+        public Student(int departmentId, int nationalId, int financialAffairsId, int advisorId, int msgrId, string username, string name, string surname, string password, string email, float gpa)
         {
             department_id = departmentId;
             national_id = nationalId;
@@ -63,10 +43,10 @@ namespace Student_Teacher_Form
             this.password = password;
             this.email = email;
             this.gpa = gpa;
-            this.department = department;
-            this.financialAffairs = financialAffairs;
-            this.advisor = advisor;
-            this.msgr = msgr;
+            this.department = null;
+            this.financialAffairs = null;
+            this.advisor = null;
+            this.msgr = null;
         }
 
 
@@ -159,7 +139,11 @@ namespace Student_Teacher_Form
 
         public FinancialAffairs FinancialAffairs
         {
-            get { return financialAffairs; }
+            get {
+                if (financialAffairs == null)
+                    financialAffairs = FinancialAffairsDB.Get(financialAffairs_id);
+                return financialAffairs;
+            }
             set { financialAffairs = value; }
         }
 
@@ -176,7 +160,11 @@ namespace Student_Teacher_Form
 
         public Msgr Msgr
         {
-            get { return msgr; }
+            get {
+                if (msgr == null)
+                    msgr = MsgrDB.Get(msgr_id);
+                return msgr;
+            }
             set { msgr = value; }
         }
     }

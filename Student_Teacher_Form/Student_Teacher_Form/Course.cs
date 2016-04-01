@@ -63,7 +63,11 @@ namespace Student_Teacher_Form
 
         public Department Department
         {
-            get { return department; }
+            get {
+                if (department == null)
+                    department = DepartmentDB.Get(department_id);
+                return department;
+            }
             set { department = value; }
         }
     }

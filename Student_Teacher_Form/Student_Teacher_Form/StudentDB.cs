@@ -16,12 +16,6 @@ namespace Student_Teacher_Form
             return databaseHandler.connectionError;
         }
 
-        public static void Create()
-        {
-            
-        }
-
-
         public static bool Add(Student student)
         {
             // query take variables $

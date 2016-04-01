@@ -1,14 +1,13 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DevExpress.Map.Native;
-using MySql.Data.MySqlClient;
 
 namespace Student_Teacher_Form
 {
-    class CourseDB
+    class SlotDB
     {
         private static DatabaseHandler databaseHandler = new DatabaseHandler();
 
@@ -17,11 +16,11 @@ namespace Student_Teacher_Form
             return databaseHandler.connectionError;
         }
 
-        public static bool Add(Course course)
+        public static bool Add(Slot slot)
         {
             // query take variables $
-            string query = $"INSERT INTO course (course_department_id, course_name, course_code, course_info) " +
-                           $"Values ('{course.DepartmentId}','{course.Name}'','{course.Code}'','{course.Info}')";
+            string query = $"INSERT INTO slot (slot_student_id, slot_course_id, slot_result) " +
+                           $"Values ('{slot.StudentId}','{slot.CourseId}','{slot.SlotResult}')";
             // check if the connection is open first
             if (databaseHandler.openConnection() == true)
             {
@@ -36,10 +35,10 @@ namespace Student_Teacher_Form
             return false;
         }
 
-        public static bool Update(Course course)
+        public static bool Update(Slot slot)
         {
-            string query = $"UPDATE course SET course_department_id='{course.DepartmentId}',course_name='{course.Name}',course_code='{course.Code}''" +
-                           $",course_info='{course.Info}' WHERE course_id='{course.Id}'"; // create the query
+            string query = $"UPDATE slot SET slot_student_id='{slot.StudentId}',slot_course_id='{slot.CourseId}',slot_result='{slot.SlotResult}'" +
+                           $" WHERE slot_id='{slot.Id}'"; // create the query
 
 
             if (databaseHandler.openConnection()) // check the connection
@@ -57,18 +56,18 @@ namespace Student_Teacher_Form
 
         public static void Delete(int id)
         {
-            databaseHandler.Delete("course", "course_id", id);
+            databaseHandler.Delete("slot", "slot_id", id);
         }
 
-        public static void Delete(Course course)
+        public static void Delete(Slot slot)
         {
-            Delete(course.Id);
+            Delete(slot.Id);
         }
 
-        public static Course Get(int id)
+        public static Slot Get(int id)
         {
-            String query = "SELECT * FROM course WHERE course_id = '" + id + "'";
-            Course course = null;
+            String query = "SELECT * FROM slot WHERE slot_id = '" + id + "'";
+            Slot slot = null;
 
             if (databaseHandler.openConnection())
             {
@@ -77,16 +76,16 @@ namespace Student_Teacher_Form
 
                 while (reader.Read())
                 {
-                    course = new Course(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetString(3), reader.GetString(4));
+                    slot = new Slot(reader.GetInt32(0), reader.GetInt32(1), reader.GetInt32(2), reader.GetString(3));
                 }
             }
-            return course;
+            return slot;
         }
 
-        public static List<Course> GetAll()
+        public static List<Slot> GetAll()
         {
-            String query = "SELECT * FROM course";
-            List<Course> list = new List<Course>();
+            String query = "SELECT * FROM slot";
+            List<Slot> list = new List<Slot>();
 
             if (databaseHandler.openConnection())
             {
@@ -95,8 +94,8 @@ namespace Student_Teacher_Form
 
                 while (reader.Read())
                 {
-                    Course course = new Course(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetString(3), reader.GetString(4));
-                    list.Add(course);
+                    Slot slot = new Slot(reader.GetInt32(0), reader.GetInt32(1), reader.GetInt32(2), reader.GetString(3));
+                    list.Add(slot);
 
                 }
             }

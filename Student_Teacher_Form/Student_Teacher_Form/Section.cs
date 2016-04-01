@@ -12,23 +12,23 @@ namespace Student_Teacher_Form
         private Course course;
         private Teacher teacher;
 
-        public Section(int id, int courseId, int teacherId, int number, Course course, Teacher teacher)
+        public Section(int id, int courseId, int teacherId, int number)
         {
             this.id = id;
             course_id = courseId;
             teacher_id = teacherId;
             this.number = number;
-            this.course = course;
-            this.teacher = teacher;
+            this.course = null;
+            this.teacher = null;
         }
 
-        public Section(int courseId, int teacherId, int number, Course course, Teacher teacher)
+        public Section(int courseId, int teacherId, int number)
         {
             course_id = courseId;
             teacher_id = teacherId;
             this.number = number;
-            this.course = course;
-            this.teacher = teacher;
+            this.course = null;
+            this.teacher = null;
         }
 
         public int Id
@@ -57,13 +57,21 @@ namespace Student_Teacher_Form
 
         public Course Course
         {
-            get { return course; }
+            get {
+                if (course == null)
+                    course = CourseDB.Get(course_id);
+                return course;
+            }
             set { course = value; }
         }
 
         public Teacher Teacher
         {
-            get { return teacher; }
+            get {
+                if (teacher == null)
+                    teacher = TeacherDB.Get(teacher_id);
+                return teacher;
+            }
             set { teacher = value; }
         }
     }

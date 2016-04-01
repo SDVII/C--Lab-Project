@@ -11,19 +11,19 @@ namespace Student_Teacher_Form
         private int id, section_id, time;
         private Section section;
 
-        public SectionTime(int id, int sectionId, int time, Section section)
+        public SectionTime(int id, int sectionId, int time)
         {
             this.id = id;
             section_id = sectionId;
             this.time = time;
-            this.section = section;
+            this.section = null;
         }
 
-        public SectionTime(int sectionId, int time, Section section)
+        public SectionTime(int sectionId, int time)
         {
             section_id = sectionId;
             this.time = time;
-            this.section = section;
+            this.section = null;
         }
 
         public int Id
@@ -46,7 +46,11 @@ namespace Student_Teacher_Form
 
         public Section Section
         {
-            get { return section; }
+            get {
+                if (section == null)
+                    section = SectionDB.Get(section_id);
+                return section;
+            }
             set { section = value; }
         }
     }
