@@ -9,13 +9,13 @@ namespace Student_Teacher_Form
 {
     class DatabaseHandler
     {
-        private MySqlConnection connection; // connection object open/close connection
+        public MySqlConnection connection; // connection object open/close connection
         private string server; // server ip
         private string database; // DB name
         private string username; // DB username
         private string password; // DB password
         public string connectionError; // connnection Error ..checkConnection()
-        public bool ConnectionStatus = false; // checking the status of the connection if it is on or of / true or false
+        public bool ConnectionStatus = false; // checking the status of the connection if it is on or off / true or false
 
 
 
@@ -27,6 +27,7 @@ namespace Student_Teacher_Form
         {
             return ConnectionStatus;
         }
+
 
 
 
@@ -108,21 +109,18 @@ namespace Student_Teacher_Form
 
 
 
-
-        public List<String>[] selectAllFromTeacher()
+        // it will take a query and array of the columns i want to bring
+        public List<String>[] selectAlllFromTeacher(String QueryWeWantToInserted, String[] Coulmns)
         {
 
-            String query = "SELECT * FROM teacher"; // query we send it to the database
+            List<string>[] list = new List<string>[Coulmns.Length]; // the array number = coulmns
 
-            List<string>[] list = new List<string>[8]; // it will contain all the teacher coulmns as a list
+            for (int i = 0; i < Coulmns.Length; i++) // make a list for each column
+            {
+                list[i] = new List<string>();
+            }
 
-            list[0] = new List<string>(); // we will store all the teachers ids
-            list[1] = new List<string>(); // we will store all the teachers username
-            list[2] = new List<string>(); // we will store all the teachers names
-            list[3] = new List<string>(); // we will store all the teachers surenames
-            list[4] = new List<string>(); // we will store all the teachers password
-            list[5] = new List<string>(); // we will store all the teachers email
-            list[6] = new List<string>(); // we will store all the teachers msgr_id
+            String query = QueryWeWantToInserted; // query we send it to the database
 
 
             if (this.openConnection() == true) // check if there is a connection
@@ -132,18 +130,15 @@ namespace Student_Teacher_Form
 
                 while (reader.Read()) // it will loop while there is a rows
                 {
-                    list[0].Add(reader["teacher_id"].ToString()); // store all the teachers ids
-                    list[1].Add(reader["teacher_username"].ToString()); // store all the teachers username
-                    list[2].Add(reader["teacher_name"].ToString()); // store all the teachers names
-                    list[3].Add(reader["teacher_surname"].ToString());// store all the teachers surenames
-                    list[4].Add(reader["teacher_password"].ToString());// store all the teachers password
-                    list[5].Add(reader["teacher_email"].ToString());// store all the teachers email
-                    list[6].Add(reader["teacher_msgr_id"].ToString()); // store all the teachers msgr_id
+                    for (int i = 0; i < Coulmns.Length; i++) // fill the lists accourding to the column name
+                    {
+                        list[i].Add(reader[Coulmns[i]].ToString());
+
+                    }
                 }
             }
             return list; // array contain a lists which contain a columns data
         }
-
 
 
 
@@ -195,9 +190,9 @@ namespace Student_Teacher_Form
 
 
 
-        public void Delete(int teacher_id)
+        public void Delete(String tableName, String columnName, int columnValue)
         {
-            string query = $"DELETE FROM teacher WHERE teacher_id = {teacher_id} "; // the query
+            string query = $"DELETE FROM {tableName} WHERE {columnName} = {columnValue} "; // the query
 
             if (this.openConnection() == true) // check if the connection is open first
             {

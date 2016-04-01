@@ -44,6 +44,10 @@
     <Reference Include="DevExpress.XtraMap.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraSpellChecker.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.8\lib\net45\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -66,36 +70,44 @@
     <Compile Include="Contact_Us.Designer.cs">
       <DependentUpon>Contact_Us.cs</DependentUpon>
     </Compile>
+    <Compile Include="Contact_UsDB.cs" />
+    <Compile Include="Course_AddDB.cs" />
     <Compile Include="Course_info_Stu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Course_info_Stu.Designer.cs">
       <DependentUpon>Course_info_Stu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Course_info_StuDB.cs" />
     <Compile Include="Course_info_Tch.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Course_info_Tch.Designer.cs">
       <DependentUpon>Course_info_Tch.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseHandler.cs" />
     <Compile Include="Document_Request.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Document_Request.Designer.cs">
       <DependentUpon>Document_Request.cs</DependentUpon>
     </Compile>
+    <Compile Include="Document_RequestDB.cs" />
     <Compile Include="Exam_Schedule.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Exam_Schedule.Designer.cs">
       <DependentUpon>Exam_Schedule.cs</DependentUpon>
     </Compile>
+    <Compile Include="Exam_ScheduleDB.cs" />
     <Compile Include="Financial_Affairs.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Financial_Affairs.Designer.cs">
       <DependentUpon>Financial_Affairs.cs</DependentUpon>
     </Compile>
+    <Compile Include="Financial_AffairsDB.cs" />
+    <Compile Include="LoginDB.cs" />
     <Compile Include="Move_Resize.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -117,48 +129,56 @@
     <Compile Include="Report_Issue.Designer.cs">
       <DependentUpon>Report_Issue.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report_IssueDB.cs" />
     <Compile Include="Schedule.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Schedule.Designer.cs">
       <DependentUpon>Schedule.cs</DependentUpon>
     </Compile>
+    <Compile Include="ScheduleDB.cs" />
     <Compile Include="Search_Students.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Search_Students.Designer.cs">
       <DependentUpon>Search_Students.cs</DependentUpon>
     </Compile>
+    <Compile Include="Search_StudentsDB.cs" />
     <Compile Include="Send_Request.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Send_Request.Designer.cs">
       <DependentUpon>Send_Request.cs</DependentUpon>
     </Compile>
+    <Compile Include="Send_RequestDB.cs" />
     <Compile Include="Settings.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Settings.Designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
+    <Compile Include="SettingsDB.cs" />
     <Compile Include="Student_Portal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Student_Portal.Designer.cs">
       <DependentUpon>Student_Portal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Student_PortalDB.cs" />
     <Compile Include="Teacher Portal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Teacher Portal.Designer.cs">
       <DependentUpon>Teacher Portal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Teacher PortalDB.cs" />
     <Compile Include="Transcript.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Transcript.Designer.cs">
       <DependentUpon>Transcript.cs</DependentUpon>
     </Compile>
+    <Compile Include="TranscriptDB.cs" />
     <Compile Include="Utilities.cs" />
     <EmbeddedResource Include="Contact_Us.resx">
       <DependentUpon>Contact_Us.cs</DependentUpon>
@@ -219,6 +239,7 @@
     <EmbeddedResource Include="Transcript.resx">
       <DependentUpon>Transcript.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

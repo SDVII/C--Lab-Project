@@ -45,7 +45,7 @@ namespace Student_Teacher_Form
 
         private void txtUsername__Enter(object sender, System.EventArgs e)
         {
-            if (txtUsername.Text.Trim().Equals("")|| txtUsername.Text.Trim().Equals("Username"))
+            if (txtUsername.Text.Trim().Equals("") || txtUsername.Text.Trim().Equals("Username"))
             {
                 txtUsername.Text = "";
                 txtUsername.ForeColor = Color.Black;
@@ -67,7 +67,7 @@ namespace Student_Teacher_Form
 
         private void txtPass_Enter(object sender, EventArgs e)
         {
-            if (txtPass.Text.Trim().Equals("")|| txtPass.Text.Trim().Equals("Password"))
+            if (txtPass.Text.Trim().Equals("") || txtPass.Text.Trim().Equals("Password"))
             {
                 txtPass.ForeColor = Color.Black;
                 txtPass.Text = "";
@@ -97,6 +97,19 @@ namespace Student_Teacher_Form
         private void Login_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if (txtPass.Text != null && txtUsername.Text != null)
+            {
+                if (cbUsrT.SelectedIndex.Equals("Student"))
+                {
+                   
+
+                }
+
+            }
         }
     }
 }
