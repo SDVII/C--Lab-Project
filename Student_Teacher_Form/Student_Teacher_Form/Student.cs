@@ -16,6 +16,19 @@ namespace Student_Teacher_Form
         private Teacher advisor;
         private Msgr msgr;
 
+        public Student(int id, int departmentId, int nationalId, int financialAffairsId, int advisorId, int msgrId, string username, string name, string surname, string password, string email, float gpa) {
+            this.id = id;
+            this.username = username;
+            this.name = name;
+            this.surname = surname;
+            this.password = password;
+            this.email = email;
+            this.gpa = gpa;
+            this.department = department;
+            this.financialAffairs = financialAffairs;
+            this.advisor = advisor;
+            this.msgr = msgr;
+        }
 
         public Student(int id, int departmentId, int nationalId, int financialAffairsId, int advisorId, int msgrId, string username, string name, string surname, string password, string email, float gpa, Department department, FinancialAffairs financialAffairs, Teacher advisor, Msgr msgr)
         {
@@ -54,6 +67,10 @@ namespace Student_Teacher_Form
             this.advisor = advisor;
             this.msgr = msgr;
         }
+
+
+
+        
 
         public int Id
         {
