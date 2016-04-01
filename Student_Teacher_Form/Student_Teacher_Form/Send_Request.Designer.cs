@@ -114,6 +114,7 @@
             this.btnAccRq.Size = new System.Drawing.Size(45, 44);
             this.btnAccRq.TabIndex = 33;
             this.btnAccRq.UseVisualStyleBackColor = true;
+            this.btnAccRq.Click += new System.EventHandler(this.btnAccRq_Click);
             // 
             // pictureBox1
             // 
@@ -141,6 +142,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Send_Request";
             this.Text = "Send_Request";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Send_Request_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

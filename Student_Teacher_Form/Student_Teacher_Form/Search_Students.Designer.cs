@@ -277,6 +277,7 @@
             this.btnAccSS.Size = new System.Drawing.Size(45, 44);
             this.btnAccSS.TabIndex = 29;
             this.btnAccSS.UseVisualStyleBackColor = true;
+            this.btnAccSS.Click += new System.EventHandler(this.btnAccSS_Click);
             // 
             // pictureBox1
             // 
@@ -301,6 +302,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Search_Students";
             this.Text = "Search_Students";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Search_Students_FormClosed);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbStuP)).EndInit();

@@ -122,13 +122,13 @@ namespace Student_Teacher_Form
             {
                 if (cbUsrT.Text.Equals("Student"))
                 {
-                    Student_Portal f = new Student_Portal(1234);
+                    Student_Portal f = new Student_Portal(1234,txtUsername.Text);
                     f.Visible = true;
                     this.Visible = false;
                 }
                 else
                 {
-                    Teacher_Portal f = new Teacher_Portal(5678);
+                    Teacher_Portal f = new Teacher_Portal(5678,txtUsername.Text);
                     f.Visible = true;
                     this.Visible = false;
                 }
