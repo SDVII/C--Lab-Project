@@ -96,7 +96,6 @@
     <Compile Include="Financial_Affairs.Designer.cs">
       <DependentUpon>Financial_Affairs.cs</DependentUpon>
     </Compile>
-    <Compile Include="Move_Resize.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
