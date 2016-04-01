@@ -21,6 +21,11 @@ namespace Student_Teacher_Form
             this.Text = stuID + "";
         }
 
+        public Student_Portal(int stuID, string text) : this(stuID)
+        {
+            this.Text = text;
+        }
+
         private void Student_Portal_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();

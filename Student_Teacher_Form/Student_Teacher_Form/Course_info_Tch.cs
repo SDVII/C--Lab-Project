@@ -21,9 +21,19 @@ namespace Student_Teacher_Form
         Boolean bClicked = false;
         Boolean uClicked = false;
 
-        public Course_info_Tch()
+        private int teachID;
+        private Teacher_Portal teacher_Portal;
+        private String courseName;
+
+
+        public Course_info_Tch(int teachID, Teacher_Portal teacher_Portal, string courseName)
         {
             InitializeComponent();
+            this.Text = teachID + "";
+            lbCrsCd.Text = courseName;
+            this.teachID = teachID;
+            this.teacher_Portal = teacher_Portal;
+            this.courseName = courseName;
         }
 
         private void btnBrwsD_Click(object sender, EventArgs e)
@@ -82,6 +92,17 @@ namespace Student_Teacher_Form
                 uClicked = false;
                 uName = "";
             }
+        }
+
+        private void btnAccCrsInTch_Click(object sender, EventArgs e)
+        {
+            teacher_Portal.Enabled = true;
+            this.Close();
+        }
+
+        private void Course_info_Tch_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            teacher_Portal.Enabled = true;
         }
     }
 }

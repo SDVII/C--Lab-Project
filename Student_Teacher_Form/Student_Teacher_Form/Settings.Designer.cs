@@ -54,6 +54,7 @@
             this.lbChanges = new System.Windows.Forms.Label();
             this.btnAccS = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnSbmtPass = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPrf)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -264,6 +265,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnSbmtPass);
             this.groupBox2.Controls.Add(this.txtNwPC);
             this.groupBox2.Controls.Add(this.txtNwP);
             this.groupBox2.Controls.Add(this.txtOldP);
@@ -273,7 +275,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(17, 346);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(335, 157);
+            this.groupBox2.Size = new System.Drawing.Size(335, 186);
             this.groupBox2.TabIndex = 20;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Password Operations:";
@@ -307,7 +309,7 @@
             this.groupBox3.Controls.Add(this.radioButton2);
             this.groupBox3.Controls.Add(this.rbShow);
             this.groupBox3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(383, 368);
+            this.groupBox3.Location = new System.Drawing.Point(383, 383);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(192, 111);
             this.groupBox3.TabIndex = 23;
@@ -318,7 +320,7 @@
             // 
             this.lbChanges.AutoSize = true;
             this.lbChanges.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbChanges.Location = new System.Drawing.Point(14, 522);
+            this.lbChanges.Location = new System.Drawing.Point(14, 559);
             this.lbChanges.Name = "lbChanges";
             this.lbChanges.Size = new System.Drawing.Size(25, 13);
             this.lbChanges.TabIndex = 25;
@@ -331,11 +333,12 @@
             this.btnAccS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAccS.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
             this.btnAccS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccS.Location = new System.Drawing.Point(275, 522);
+            this.btnAccS.Location = new System.Drawing.Point(275, 559);
             this.btnAccS.Name = "btnAccS";
             this.btnAccS.Size = new System.Drawing.Size(45, 44);
             this.btnAccS.TabIndex = 24;
             this.btnAccS.UseVisualStyleBackColor = true;
+            this.btnAccS.Click += new System.EventHandler(this.btnAccS_Click);
             // 
             // pictureBox1
             // 
@@ -347,11 +350,25 @@
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
+            // btnSbmtPass
+            // 
+            this.btnSbmtPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(91)))), ((int)(((byte)(96)))));
+            this.btnSbmtPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSbmtPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSbmtPass.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSbmtPass.ForeColor = System.Drawing.Color.White;
+            this.btnSbmtPass.Location = new System.Drawing.Point(159, 139);
+            this.btnSbmtPass.Name = "btnSbmtPass";
+            this.btnSbmtPass.Size = new System.Drawing.Size(157, 33);
+            this.btnSbmtPass.TabIndex = 42;
+            this.btnSbmtPass.Text = "Submit";
+            this.btnSbmtPass.UseVisualStyleBackColor = false;
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(593, 578);
+            this.ClientSize = new System.Drawing.Size(593, 609);
             this.Controls.Add(this.lbChanges);
             this.Controls.Add(this.btnAccS);
             this.Controls.Add(this.groupBox3);
@@ -362,6 +379,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Settings";
             this.Text = "Settings";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Settings_FormClosed);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPrf)).EndInit();
@@ -403,5 +421,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btnAccS;
         private System.Windows.Forms.Label lbChanges;
+        private System.Windows.Forms.Button btnSbmtPass;
     }
 }
