@@ -7,13 +7,13 @@ using MySql.Data.MySqlClient;
 
 namespace Student_Teacher_Form
 {
-    class DatabaseHandler
+     class DatabaseHandler
     {
         public MySqlConnection connection; // connection object open/close connection
-        private string server; // server ip
-        private string database; // DB name
-        private string username; // DB username
-        private string password; // DB password
+        protected string server; // server ip
+        protected string database; // DB name
+        protected string username; // DB username
+        protected string password; // DB password
         public string connectionError; // connnection Error ..checkConnection()
         public bool ConnectionStatus = false; // checking the status of the connection if it is on or off / true or false
 
@@ -34,26 +34,13 @@ namespace Student_Teacher_Form
         public DatabaseHandler()
         {
             // it will create the connection whenever the object created
-            createConnection();
+            
         }
 
 
 
 
-        public void createConnection()
-        {
-            string connectionString; // we will store in it all connection information
-
-            server = "localhost"; // set server ip 127.0.0.1
-            database = "sp"; // set DB name 
-            username = "root"; // set DB username
-            password = ""; // set DB password
-
-            connectionString = "SERVER=" + server + ";" + "DATABASE=" +
-            database + ";" + "UID=" + username + ";" + "PASSWORD=" + password + ";"; // store connection information
-
-            connection = new MySqlConnection(connectionString); // send connection request
-        }
+ 
 
 
 
@@ -64,12 +51,25 @@ namespace Student_Teacher_Form
         {
             try
             {
+                string connectionString; // we will store in it all connection information
+
+                server = "localhost"; // set server ip 127.0.0.1
+                database = "sp"; // set DB name 
+                username = "root"; // set DB username
+                password = ""; // set DB password
+
+                connectionString = "SERVER=" + server + ";" + "DATABASE=" +
+                database + ";" + "UID=" + username + ";" + "PASSWORD=" + password + ";"; // store connection information
+
+                connection = new MySqlConnection(connectionString); // send connection request
                 ConnectionStatus = true;
-                connection.Open(); // it will start the conncetion  and return true
-                return true;
+
+                // it will start the conncetion  and return true
+            return true;
             }
             catch (MySqlException e)
             {// catch errors
+                ConnectionStatus = false;
                 switch (e.Number)
                 { // e.Number --> error Number
                     case 0: //0 --> conection error
@@ -110,7 +110,7 @@ namespace Student_Teacher_Form
 
 
         // it will take a query and array of the columns i want to bring
-        public List<String>[] selectAlllFromTeacher(String QueryWeWantToInserted, String[] Coulmns)
+        public List<String>[] select(String QueryWeWantToInserted, String[] Coulmns)
         {
 
             List<string>[] list = new List<string>[Coulmns.Length]; // the array number = coulmns
@@ -145,10 +145,10 @@ namespace Student_Teacher_Form
 
 
         //INSERT into teacher table
-        public void InsertNewTeacher(String teacher_username, String teacher_name, String teacher_surename, String teacher_passowrd, String teacher_email, String teacher_msgr_id)
+        protected void InsertNewTeacher(Teacher teacher)
         {
             // query take variables $
-            string query = $"Insert INTO teacher (teacher_username,teacher_name,teacher_surname,teacher_password,teacher_email,teacher_msgr_id) Values ('{teacher_username}','{teacher_name}','{teacher_surename}','{teacher_passowrd}','{teacher_email}','{teacher_msgr_id}')";
+            string query = $"INSERT INTO teacher (teacher_username,teacher_name,teacher_surname,teacher_password,teacher_email,teacher_msgr_id) Values ('{teacher.Username}','{teacher.Name}','{teacher.Surname}','{teacher.Password}','{teacher.Email}','{teacher.MsgrId}')";
             // check if the connection is open first
             if (this.openConnection() == true)
             {
@@ -168,11 +168,11 @@ namespace Student_Teacher_Form
 
 
         //update row from teacher_table method
-        public void updateTeacher(int teacher_id, String teacher_username, String teacher_name, String teacher_surename, String teacher_passowrd, String teacher_email, String teacher_msgr_id)
+        protected void updateTeacher(Teacher teacher)
         {
 
 
-            string query = $"UPDATE teacher SET teacher_username='{teacher_username}',teacher_name='{teacher_name}',teacher_surname='{teacher_surename}',teacher_password='{teacher_passowrd}',teacher_email='{teacher_email}',teacher_msgr_id='{teacher_msgr_id}' WHERE teacher_id='{teacher_id}'"; // create the query
+            string query = $"UPDATE teacher SET teacher_username='{teacher.Username}',teacher_name='{teacher.Name}',teacher_surname='{teacher.Surname}',teacher_password='{teacher.Password}',teacher_email='{teacher.Email}',teacher_msgr_id='{teacher.MsgrId}' WHERE teacher_id='{teacher.Id}'"; // create the query
 
 
             if (this.openConnection() == true) // check the connection
@@ -190,7 +190,7 @@ namespace Student_Teacher_Form
 
 
 
-        public void Delete(String tableName, String columnName, int columnValue)
+        protected void Delete(String tableName, String columnName, int columnValue)
         {
             string query = $"DELETE FROM {tableName} WHERE {columnName} = {columnValue} "; // the query
 

@@ -101,15 +101,7 @@ namespace Student_Teacher_Form
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (txtPass.Text != null && txtUsername.Text != null)
-            {
-                if (cbUsrT.SelectedIndex.Equals("Student"))
-                {
-                   
-
-                }
-
-            }
+        
         }
     }
 }
