@@ -103,7 +103,9 @@ namespace Student_Teacher_Form
 
         private void btnPower_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Login f = new Login();
+            f.Visible = true;
+            this.Visible = false;
         }
 
         private void btnMenu_Click(object sender, EventArgs e)

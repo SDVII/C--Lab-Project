@@ -140,5 +140,10 @@ namespace Student_Teacher_Form
         {
             checkInput(txtUsername.Text, txtPass.Text);
         }
+
+        private void Login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

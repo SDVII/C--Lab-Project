@@ -190,6 +190,7 @@
             this.btnAccFA.Size = new System.Drawing.Size(45, 44);
             this.btnAccFA.TabIndex = 41;
             this.btnAccFA.UseVisualStyleBackColor = true;
+            this.btnAccFA.Click += new System.EventHandler(this.btnAccFA_Click);
             // 
             // pictureBox1
             // 
@@ -214,6 +215,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Financial_Affairs";
             this.Text = "Financial_Affairs";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Financial_Affairs_FormClosed);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

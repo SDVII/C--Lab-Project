@@ -233,6 +233,7 @@
             this.btnAccD.Size = new System.Drawing.Size(39, 39);
             this.btnAccD.TabIndex = 22;
             this.btnAccD.UseVisualStyleBackColor = true;
+            this.btnAccD.Click += new System.EventHandler(this.btnAccD_Click);
             // 
             // btnClrD
             // 
@@ -299,6 +300,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Document_Request";
             this.Text = "Document_Request";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Document_Request_FormClosed);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

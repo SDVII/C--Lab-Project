@@ -53,16 +53,16 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvCourses = new System.Windows.Forms.DataGridView();
-            this.clCourses = new System.Windows.Forms.DataGridViewLinkColumn();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lvSchedule = new System.Windows.Forms.ListView();
             this.chCrs = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chLocation = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label2 = new System.Windows.Forms.Label();
             this.lbNotification = new System.Windows.Forms.ListBox();
             this.lable7 = new System.Windows.Forms.Label();
+            this.dgvCourses = new System.Windows.Forms.DataGridView();
+            this.courses = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.main)).BeginInit();
             this.main.Panel1.SuspendLayout();
             this.main.Panel2.SuspendLayout();
@@ -91,8 +91,8 @@
             this.middle_events.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCourses)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCourses)).BeginInit();
             this.SuspendLayout();
             // 
             // main
@@ -139,7 +139,7 @@
             // btnMenu
             // 
             this.btnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
-            this.btnMenu.BackgroundImage = global::Student_Teacher_Form.Properties.Resources.menu;
+            this.btnMenu.BackgroundImage = global::Student_Teacher_Form.Properties.Resources.menu2;
             this.btnMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMenu.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
             this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -148,6 +148,7 @@
             this.btnMenu.Size = new System.Drawing.Size(40, 39);
             this.btnMenu.TabIndex = 49;
             this.btnMenu.UseVisualStyleBackColor = false;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // lbID
             // 
@@ -165,11 +166,11 @@
             // 
             this.lbName.AutoSize = true;
             this.lbName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
-            this.lbName.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbName.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.lbName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lbName.Location = new System.Drawing.Point(59, 9);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(111, 18);
+            this.lbName.Size = new System.Drawing.Size(141, 23);
             this.lbName.TabIndex = 50;
             this.lbName.Text = "Name - Surname";
             // 
@@ -186,7 +187,7 @@
             this.buttons.Panel2.Controls.Add(this.btnInfo);
             this.buttons.Panel2.Controls.Add(this.btnSettings);
             this.buttons.Size = new System.Drawing.Size(863, 53);
-            this.buttons.SplitterDistance = 707;
+            this.buttons.SplitterDistance = 710;
             this.buttons.SplitterWidth = 1;
             this.buttons.TabIndex = 0;
             // 
@@ -202,6 +203,7 @@
             this.btnPower.Size = new System.Drawing.Size(40, 39);
             this.btnPower.TabIndex = 52;
             this.btnPower.UseVisualStyleBackColor = false;
+            this.btnPower.Click += new System.EventHandler(this.btnPower_Click);
             // 
             // btnInfo
             // 
@@ -228,6 +230,7 @@
             this.btnSettings.Size = new System.Drawing.Size(40, 39);
             this.btnSettings.TabIndex = 53;
             this.btnSettings.UseVisualStyleBackColor = false;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // body
             // 
@@ -289,6 +292,7 @@
             this.btnContact.TabIndex = 47;
             this.btnContact.Text = "Contact Us";
             this.btnContact.UseVisualStyleBackColor = false;
+            this.btnContact.Click += new System.EventHandler(this.btnContact_Click);
             // 
             // btnRep
             // 
@@ -303,6 +307,7 @@
             this.btnRep.TabIndex = 46;
             this.btnRep.Text = "Report an Issue";
             this.btnRep.UseVisualStyleBackColor = false;
+            this.btnRep.Click += new System.EventHandler(this.btnRep_Click);
             // 
             // btnFinAff
             // 
@@ -317,6 +322,7 @@
             this.btnFinAff.TabIndex = 45;
             this.btnFinAff.Text = "Financial Affairs";
             this.btnFinAff.UseVisualStyleBackColor = false;
+            this.btnFinAff.Click += new System.EventHandler(this.btnFinAff_Click);
             // 
             // btnReqDoc
             // 
@@ -331,6 +337,7 @@
             this.btnReqDoc.TabIndex = 44;
             this.btnReqDoc.Text = "Request Documents";
             this.btnReqDoc.UseVisualStyleBackColor = false;
+            this.btnReqDoc.Click += new System.EventHandler(this.btnReqDoc_Click);
             // 
             // brnEx
             // 
@@ -345,6 +352,7 @@
             this.brnEx.TabIndex = 43;
             this.brnEx.Text = "Exam Schedule";
             this.brnEx.UseVisualStyleBackColor = false;
+            this.brnEx.Click += new System.EventHandler(this.brnEx_Click);
             // 
             // btnAddCrs
             // 
@@ -359,6 +367,7 @@
             this.btnAddCrs.TabIndex = 42;
             this.btnAddCrs.Text = "Add Courses";
             this.btnAddCrs.UseVisualStyleBackColor = false;
+            this.btnAddCrs.Click += new System.EventHandler(this.btnAddCrs_Click);
             // 
             // btnSchedule
             // 
@@ -373,6 +382,7 @@
             this.btnSchedule.TabIndex = 41;
             this.btnSchedule.Text = "Schedule";
             this.btnSchedule.UseVisualStyleBackColor = false;
+            this.btnSchedule.Click += new System.EventHandler(this.btnSchedule_Click);
             // 
             // rights
             // 
@@ -381,9 +391,6 @@
             this.rights.Location = new System.Drawing.Point(0, 0);
             this.rights.Name = "rights";
             this.rights.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // rights.Panel1
-            // 
             // 
             // rights.Panel2
             // 
@@ -443,8 +450,8 @@
             // 
             this.panel1.BackgroundImage = global::Student_Teacher_Form.Properties.Resources.table2;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.dgvCourses);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(13, 13);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(349, 218);
@@ -462,34 +469,11 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Courses";
             // 
-            // dgvCourses
-            // 
-            this.dgvCourses.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dgvCourses.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvCourses.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            this.dgvCourses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCourses.ColumnHeadersVisible = false;
-            this.dgvCourses.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clCourses});
-            this.dgvCourses.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvCourses.Location = new System.Drawing.Point(11, 43);
-            this.dgvCourses.Name = "dgvCourses";
-            this.dgvCourses.Size = new System.Drawing.Size(327, 167);
-            this.dgvCourses.TabIndex = 0;
-            // 
-            // clCourses
-            // 
-            this.clCourses.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.clCourses.HeaderText = "";
-            this.clCourses.Name = "clCourses";
-            this.clCourses.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.clCourses.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
             // panel2
             // 
             this.panel2.BackgroundImage = global::Student_Teacher_Form.Properties.Resources.table2;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Controls.Add(this.listView1);
+            this.panel2.Controls.Add(this.lvSchedule);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(405, 13);
             this.panel2.Margin = new System.Windows.Forms.Padding(40, 3, 3, 3);
@@ -497,19 +481,19 @@
             this.panel2.Size = new System.Drawing.Size(356, 218);
             this.panel2.TabIndex = 2;
             // 
-            // listView1
+            // lvSchedule
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvSchedule.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.chCrs,
             this.chTime,
             this.chLocation});
-            this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(10, 44);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(333, 165);
-            this.listView1.TabIndex = 2;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.lvSchedule.GridLines = true;
+            this.lvSchedule.Location = new System.Drawing.Point(10, 44);
+            this.lvSchedule.Name = "lvSchedule";
+            this.lvSchedule.Size = new System.Drawing.Size(333, 165);
+            this.lvSchedule.TabIndex = 2;
+            this.lvSchedule.UseCompatibleStateImageBehavior = false;
+            this.lvSchedule.View = System.Windows.Forms.View.Details;
             // 
             // chCrs
             // 
@@ -563,6 +547,30 @@
             this.lable7.TabIndex = 55;
             this.lable7.Text = "Notificatiions";
             // 
+            // dgvCourses
+            // 
+            this.dgvCourses.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgvCourses.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvCourses.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.dgvCourses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCourses.ColumnHeadersVisible = false;
+            this.dgvCourses.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.courses});
+            this.dgvCourses.GridColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvCourses.Location = new System.Drawing.Point(11, 42);
+            this.dgvCourses.Name = "dgvCourses";
+            this.dgvCourses.RowHeadersVisible = false;
+            this.dgvCourses.RowTemplate.Height = 30;
+            this.dgvCourses.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCourses.Size = new System.Drawing.Size(327, 167);
+            this.dgvCourses.TabIndex = 2;
+            // 
+            // courses
+            // 
+            this.courses.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.courses.HeaderText = "Column1";
+            this.courses.Name = "courses";
+            // 
             // Student_Portal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -605,9 +613,9 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCourses)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCourses)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -638,15 +646,15 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvCourses;
-        private System.Windows.Forms.DataGridViewLinkColumn clCourses;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lvSchedule;
         private System.Windows.Forms.ColumnHeader chCrs;
         private System.Windows.Forms.ColumnHeader chTime;
         private System.Windows.Forms.ColumnHeader chLocation;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox lbNotification;
         private System.Windows.Forms.Label lable7;
+        private System.Windows.Forms.DataGridView dgvCourses;
+        private System.Windows.Forms.DataGridViewButtonColumn courses;
     }
 }

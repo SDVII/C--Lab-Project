@@ -12,12 +12,22 @@ namespace Student_Teacher_Form
 {
     public partial class Settings : Form
     {
+        private Student_Portal student_Portal;
+        private int stuID = 0;
         private Teacher_Portal teacher_Portal;
-        private int teachID;
+        private int teachID = 0;
 
         public Settings()
         {
             InitializeComponent();
+        }
+
+        public Settings(int stuID, Student_Portal student_Portal)
+        {
+            InitializeComponent();
+            this.stuID = stuID;
+            this.student_Portal = student_Portal;
+            this.Text = stuID + "";
         }
 
         public Settings(int teachID, Teacher_Portal teacher_Portal)
@@ -30,13 +40,25 @@ namespace Student_Teacher_Form
 
         private void btnAccS_Click(object sender, EventArgs e)
         {
-            this.Close();
-            teacher_Portal.Enabled = true;
+            if(teachID!=0)
+            {
+                this.Close();
+                teacher_Portal.Enabled = true;
+            }
+            else
+            {
+                this.Close();
+                student_Portal.Enabled = true;
+            }
+            
         }
 
         private void Settings_FormClosed(object sender, FormClosedEventArgs e)
         {
-            teacher_Portal.Enabled = true;
+            if (teachID != 0)
+                teacher_Portal.Enabled = true;
+            else
+                student_Portal.Enabled = true;
         }
     }
 }
