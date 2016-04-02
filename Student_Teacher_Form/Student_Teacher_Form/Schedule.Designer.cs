@@ -133,6 +133,7 @@
             this.btnAccSchd.Size = new System.Drawing.Size(45, 44);
             this.btnAccSchd.TabIndex = 29;
             this.btnAccSchd.UseVisualStyleBackColor = true;
+            this.btnAccSchd.Click += new System.EventHandler(this.btnAccSchd_Click);
             // 
             // pictureBox1
             // 
@@ -143,7 +144,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Schedule
             // 
@@ -157,6 +157,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Schedule";
             this.Text = "Schedule";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Schedule_FormClosed);
             this.Load += new System.EventHandler(this.Schedule_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

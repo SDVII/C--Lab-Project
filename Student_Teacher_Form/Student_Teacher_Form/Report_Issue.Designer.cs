@@ -114,6 +114,7 @@
             this.btnAccR.Size = new System.Drawing.Size(45, 44);
             this.btnAccR.TabIndex = 25;
             this.btnAccR.UseVisualStyleBackColor = true;
+            this.btnAccR.Click += new System.EventHandler(this.btnAccR_Click);
             // 
             // pictureBox1
             // 
@@ -141,6 +142,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Report_Issue";
             this.Text = "Report_Issue";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Report_Issue_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -102,6 +102,7 @@
             this.btnAccExSchd.Size = new System.Drawing.Size(45, 44);
             this.btnAccExSchd.TabIndex = 30;
             this.btnAccExSchd.UseVisualStyleBackColor = true;
+            this.btnAccExSchd.Click += new System.EventHandler(this.btnAccExSchd_Click);
             // 
             // Exam_Schedule
             // 
@@ -115,7 +116,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Exam_Schedule";
             this.Text = "Exam_Schedule";
-            this.Load += new System.EventHandler(this.Exam_Schedule_Load);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Exam_Schedule_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

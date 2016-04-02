@@ -12,71 +12,53 @@ namespace Student_Teacher_Form
 {
     public partial class Settings : Form
     {
-        Teacher teacher = null;
-        Student student = null;
-        bool isTeacher = false;
+        private Student_Portal student_Portal;
+        private int stuID = 0;
+        private Teacher_Portal teacher_Portal;
+        private int teachID = 0;
 
-        public Settings(Teacher teacher)
+        public Settings()
         {
             InitializeComponent();
-            this.teacher = teacher;
-            this.isTeacher = true;
-
-            lbName.Text = teacher.Name;
-            lbID.Text = ""+teacher.Id;
-            label4.Visible = false;
-            label5.Visible = false;
-            lbSpr.Visible = false;
-            lbDep.Visible = false;
         }
-        public Settings(Student student)
+
+        public Settings(int stuID, Student_Portal student_Portal)
         {
             InitializeComponent();
-            this.student = student;
+            this.stuID = stuID;
+            this.student_Portal = student_Portal;
+            this.Text = stuID + "";
+        }
 
-            lbName.Text = student.Name;
-            lbID.Text = "" + student.Id;
-            lbSpr.Text = student.Advisor.Name;
-            lbDep.Text = student.Department.Name;
-            
+        public Settings(int teachID, Teacher_Portal teacher_Portal)
+        {
+            InitializeComponent();
+            this.teachID = teachID;
+            this.teacher_Portal = teacher_Portal;
+            this.Text = teachID + "";
         }
 
         private void btnAccS_Click(object sender, EventArgs e)
         {
-            String oldPassword = txtOldP.Text;
-
-            if ((isTeacher && oldPassword != teacher.Password) || (!isTeacher && oldPassword != student.Password))
+            if(teachID!=0)
             {
-                MessageBox.Show("Wrong old password");
-                return;
-            }
-
-            String newPassword = txtNwP.Text.Trim();
-
-            if (newPassword != txtNwPC.Text.Trim())
-            {
-                MessageBox.Show("Passwords doesn't match!");
-                return;
-            }
-
-            if (newPassword.Length < 6)
-            {
-                MessageBox.Show("New password should be longer than 6 characters!");
-                return;
-            }
-
-            if (isTeacher)
-            {
-                teacher.Password = newPassword;
-                TeacherDB.Update(teacher);
+                this.Close();
+                teacher_Portal.Enabled = true;
             }
             else
             {
-                student.Password = newPassword;
-                StudentDB.Update(student);
+                this.Close();
+                student_Portal.Enabled = true;
             }
+            
+        }
 
-            Application.Exit();
+        private void Settings_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (teachID != 0)
+                teacher_Portal.Enabled = true;
+            else
+                student_Portal.Enabled = true;
         }
     }
 }

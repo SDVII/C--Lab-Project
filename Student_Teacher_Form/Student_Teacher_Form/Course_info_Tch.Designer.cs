@@ -35,7 +35,6 @@ namespace Student_Teacher_Form
             this.ofd = new System.Windows.Forms.OpenFileDialog();
             this.txtPathD = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbCrsN = new System.Windows.Forms.ComboBox();
             this.btnSbmCM = new System.Windows.Forms.Button();
             this.txtTtCM = new System.Windows.Forms.TextBox();
             this.tbBdyCM = new System.Windows.Forms.TextBox();
@@ -105,16 +104,6 @@ namespace Student_Teacher_Form
             this.label1.Size = new System.Drawing.Size(40, 18);
             this.label1.TabIndex = 35;
             this.label1.Text = "Title:";
-            // 
-            // cbCrsN
-            // 
-            this.cbCrsN.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbCrsN.FormattingEnabled = true;
-            this.cbCrsN.Location = new System.Drawing.Point(21, 213);
-            this.cbCrsN.Name = "cbCrsN";
-            this.cbCrsN.Size = new System.Drawing.Size(362, 26);
-            this.cbCrsN.TabIndex = 34;
-            this.cbCrsN.Text = "Course";
             // 
             // btnSbmCM
             // 
@@ -260,7 +249,7 @@ namespace Student_Teacher_Form
             this.groupBox1.Controls.Add(this.btnBrwsD);
             this.groupBox1.Controls.Add(this.txtPathD);
             this.groupBox1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(38, 357);
+            this.groupBox1.Location = new System.Drawing.Point(38, 340);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(526, 78);
             this.groupBox1.TabIndex = 44;
@@ -270,14 +259,13 @@ namespace Student_Teacher_Form
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.cbCrsN);
             this.groupBox2.Controls.Add(this.btnSbmCM);
             this.groupBox2.Controls.Add(this.txtTtCM);
             this.groupBox2.Controls.Add(this.tbBdyCM);
             this.groupBox2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(38, 84);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(526, 264);
+            this.groupBox2.Size = new System.Drawing.Size(526, 247);
             this.groupBox2.TabIndex = 45;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Write Message";
@@ -288,7 +276,7 @@ namespace Student_Teacher_Form
             this.groupBox3.Controls.Add(this.btnBrwsM);
             this.groupBox3.Controls.Add(this.txtPathM);
             this.groupBox3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(38, 450);
+            this.groupBox3.Location = new System.Drawing.Point(38, 433);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(526, 71);
             this.groupBox3.TabIndex = 46;
@@ -301,7 +289,7 @@ namespace Student_Teacher_Form
             this.groupBox4.Controls.Add(this.dtpEx);
             this.groupBox4.Controls.Add(this.cbCrsEx);
             this.groupBox4.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(90, 541);
+            this.groupBox4.Location = new System.Drawing.Point(90, 524);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(418, 107);
             this.groupBox4.TabIndex = 47;
@@ -314,11 +302,12 @@ namespace Student_Teacher_Form
             this.btnAccCrsInTch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAccCrsInTch.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
             this.btnAccCrsInTch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccCrsInTch.Location = new System.Drawing.Point(285, 660);
+            this.btnAccCrsInTch.Location = new System.Drawing.Point(285, 639);
             this.btnAccCrsInTch.Name = "btnAccCrsInTch";
             this.btnAccCrsInTch.Size = new System.Drawing.Size(45, 44);
             this.btnAccCrsInTch.TabIndex = 48;
             this.btnAccCrsInTch.UseVisualStyleBackColor = true;
+            this.btnAccCrsInTch.Click += new System.EventHandler(this.btnAccCrsInTch_Click);
             // 
             // pictureBox1
             // 
@@ -334,7 +323,7 @@ namespace Student_Teacher_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(615, 716);
+            this.ClientSize = new System.Drawing.Size(615, 688);
             this.Controls.Add(this.btnAccCrsInTch);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -347,6 +336,7 @@ namespace Student_Teacher_Form
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Course_info_Tch";
             this.Text = "Course_info_Tch";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Course_info_Tch_FormClosed);
             this.Enter += new System.EventHandler(this.Course_info_Tch_Enter);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -369,7 +359,6 @@ namespace Student_Teacher_Form
         private System.Windows.Forms.OpenFileDialog ofd;
         private System.Windows.Forms.TextBox txtPathD;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cbCrsN;
         private System.Windows.Forms.Button btnSbmCM;
         private System.Windows.Forms.TextBox txtTtCM;
         private System.Windows.Forms.TextBox tbBdyCM;

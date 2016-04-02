@@ -165,6 +165,7 @@
             this.btnAccC.Size = new System.Drawing.Size(45, 44);
             this.btnAccC.TabIndex = 4;
             this.btnAccC.UseVisualStyleBackColor = true;
+            this.btnAccC.Click += new System.EventHandler(this.btnAccC_Click);
             // 
             // Course_Add
             // 
@@ -182,6 +183,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Course_Add";
             this.Text = "laberl";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Course_Add_FormClosed);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
