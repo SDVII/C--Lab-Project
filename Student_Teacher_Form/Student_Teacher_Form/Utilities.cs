@@ -11,9 +11,9 @@ namespace Student_Teacher_Form
         static public bool NullOrEmpty(String s)
         {
             if (s.Trim().Equals("") || s == null)
-                return false;
-            else
                 return true;
+            else
+                return false;
         }
     }
 }

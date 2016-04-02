@@ -27,6 +27,7 @@ namespace Student_Teacher_Form
             lbID.Text = stuID + "";
 
             body.Panel1Collapsed = true;
+            main.Panel2Collapsed = false;
 
             foreach (DataGridViewRow r in dgvCourses.Rows) //To set the column hight!
             {
@@ -123,7 +124,7 @@ namespace Student_Teacher_Form
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
-            Settings f = new Settings(stuID, this);
+            Settings f = new Settings(stuID, this, middle_events);
             f.Visible = true;
             this.Enabled = false;
         }
@@ -173,6 +174,13 @@ namespace Student_Teacher_Form
         private void btnContact_Click(object sender, EventArgs e)
         {
             Contact_Us f = new Contact_Us(stuID, this);
+            f.Visible = true;
+            this.Enabled = false;
+        }
+
+        private void btnTranscript_Click(object sender, EventArgs e)
+        {
+            Transcript f = new Transcript(stuID, this);
             f.Visible = true;
             this.Enabled = false;
         }

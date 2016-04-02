@@ -32,7 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.lbsem = new System.Windows.Forms.Label();
+            this.lbSem = new System.Windows.Forms.Label();
             this.lbPaid = new System.Windows.Forms.Label();
             this.lbRmnDbt = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -88,15 +88,15 @@
             this.label3.TabIndex = 37;
             this.label3.Text = "Remaining Debt:";
             // 
-            // lbsem
+            // lbSem
             // 
-            this.lbsem.AutoSize = true;
-            this.lbsem.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbsem.Location = new System.Drawing.Point(153, 45);
-            this.lbsem.Name = "lbsem";
-            this.lbsem.Size = new System.Drawing.Size(46, 18);
-            this.lbsem.TabIndex = 38;
-            this.lbsem.Text = "label4";
+            this.lbSem.AutoSize = true;
+            this.lbSem.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSem.Location = new System.Drawing.Point(153, 45);
+            this.lbSem.Name = "lbSem";
+            this.lbSem.Size = new System.Drawing.Size(46, 18);
+            this.lbSem.TabIndex = 38;
+            this.lbSem.Text = "label4";
             // 
             // lbPaid
             // 
@@ -125,7 +125,7 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.lbRmnDbt);
             this.groupBox1.Controls.Add(this.lbPaid);
-            this.groupBox1.Controls.Add(this.lbsem);
+            this.groupBox1.Controls.Add(this.lbSem);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
@@ -172,18 +172,21 @@
             this.btnRfshP.BackgroundImage = global::Student_Teacher_Form.Properties.Resources.refresh;
             this.btnRfshP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRfshP.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
+            this.btnRfshP.FlatAppearance.BorderSize = 0;
             this.btnRfshP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRfshP.Location = new System.Drawing.Point(380, 233);
             this.btnRfshP.Name = "btnRfshP";
             this.btnRfshP.Size = new System.Drawing.Size(39, 38);
             this.btnRfshP.TabIndex = 41;
             this.btnRfshP.UseVisualStyleBackColor = true;
+            this.btnRfshP.Click += new System.EventHandler(this.btnRfshP_Click);
             // 
             // btnAccFA
             // 
             this.btnAccFA.BackgroundImage = global::Student_Teacher_Form.Properties.Resources.ic_check_black_24dp_2x1;
             this.btnAccFA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAccFA.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
+            this.btnAccFA.FlatAppearance.BorderSize = 0;
             this.btnAccFA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAccFA.Location = new System.Drawing.Point(204, 270);
             this.btnAccFA.Name = "btnAccFA";
@@ -231,7 +234,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lbsem;
+        private System.Windows.Forms.Label lbSem;
         private System.Windows.Forms.Label lbPaid;
         private System.Windows.Forms.Label lbRmnDbt;
         private System.Windows.Forms.GroupBox groupBox1;

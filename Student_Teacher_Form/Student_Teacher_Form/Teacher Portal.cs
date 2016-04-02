@@ -27,6 +27,7 @@ namespace Student_Teacher_Form
             lbID.Text = teachID + "";
             this.Text = teachID + "";
             body.Panel1Collapsed = true;
+            main.Panel2Collapsed = false;
 
             foreach (DataGridViewRow r in dgvCourses.Rows) //To set the column hight!
             {
@@ -152,7 +153,7 @@ namespace Student_Teacher_Form
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
-            Settings f = new Settings(teachID, this);
+            Settings f = new Settings(teachID, this, middle_events);
             f.Visible = true;
             this.Enabled = false;
         }

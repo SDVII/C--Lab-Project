@@ -127,6 +127,7 @@
             this.btnAccSchd.BackgroundImage = global::Student_Teacher_Form.Properties.Resources.ic_check_black_24dp_2x1;
             this.btnAccSchd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAccSchd.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
+            this.btnAccSchd.FlatAppearance.BorderSize = 0;
             this.btnAccSchd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAccSchd.Location = new System.Drawing.Point(456, 442);
             this.btnAccSchd.Name = "btnAccSchd";
@@ -158,7 +159,6 @@
             this.Name = "Schedule";
             this.Text = "Schedule";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Schedule_FormClosed);
-            this.Load += new System.EventHandler(this.Schedule_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

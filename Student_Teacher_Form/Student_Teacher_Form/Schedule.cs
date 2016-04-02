@@ -23,6 +23,27 @@ namespace Student_Teacher_Form
             this.teachID = teachID;
             this.teacher_Portal = teacher_Portal;
             this.Text = teachID + "";
+
+            populateSchedule(lvSchd);
+        }
+
+        private void populateSchedule(ListView lvSchd)
+        {
+            /*
+             for (int i = 0; i < date and day; i++)
+             {
+                 ListViewItem lvi = new ListViewItem();
+                 lvi.Text = date;
+                 lvi.SubItems.Add(mon);
+                 lvi.SubItems.Add(tue);
+                 lvi.SubItems.Add(wen);
+                 lvi.SubItems.Add(thr);
+                 lvi.SubItems.Add(fri);
+                 lvi.SubItems.Add(sat);
+                 lvi.SubItems.Add(sun);
+                 lvSchedule.Items.Add(lvi);
+             }
+             */
         }
 
         public Schedule(int stuID, Student_Portal student_Portal)
@@ -31,12 +52,6 @@ namespace Student_Teacher_Form
             this.stuID = stuID;
             this.student_Portal = student_Portal;
             this.Text = stuID + "";
-        }
-
-        private void Schedule_Load(object sender, EventArgs e)
-        {
-            lvSchd.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
-            lvSchd.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
         }
 
         private void Schedule_FormClosed(object sender, FormClosedEventArgs e)

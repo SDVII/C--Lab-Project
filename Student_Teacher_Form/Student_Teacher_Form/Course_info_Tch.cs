@@ -33,9 +33,10 @@ namespace Student_Teacher_Form
             lbCrsCd.Text = courseName;
             this.teachID = teachID;
             this.teacher_Portal = teacher_Portal;
-            this.courseName = courseName;
+            this.courseName = courseName;   
 
             pouplateCourses(cbCrsEx);
+            //cbCrsEx.SelectedIndex = 0;
         }
 
         private void pouplateCourses(ComboBox cbCrsEx)
@@ -157,7 +158,7 @@ namespace Student_Teacher_Form
                 //string theDate = dtpEx.Value.ToString("yyyy-MM-dd"); to get date value
                 lbChanges.Visible = true;
                 lbChanges.Text = "Exam date submitted";
-                lbChanges.ForeColor = Color.Red;
+                lbChanges.ForeColor = Color.Black;
                 return;
             }
         }
