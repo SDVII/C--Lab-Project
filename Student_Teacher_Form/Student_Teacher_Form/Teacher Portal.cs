@@ -90,6 +90,7 @@ namespace Student_Teacher_Form
             { 
 
                 lbNotification.Items.Add(annoList[i].Title);
+                lbNotification.Items.Add("---------------------");
             }
         }
 
@@ -230,7 +231,8 @@ namespace Student_Teacher_Form
             var list = (ListBox)sender;
 
             // This is your selected item
-            MessageBox.Show(annoList[list.SelectedIndex].Msg, annoList[list.SelectedIndex].Title);
+            if (list.SelectedIndex % 2 == 0)
+                MessageBox.Show(annoList[list.SelectedIndex / 2].Msg, annoList[list.SelectedIndex / 2].Title);
         }
     }
 }

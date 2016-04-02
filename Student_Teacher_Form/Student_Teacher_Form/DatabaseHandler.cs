@@ -53,10 +53,10 @@ namespace Student_Teacher_Form
             {
                 string connectionString; // we will store in it all connection information
 
-                server = "sql8.freemysqlhosting.net"; // set server ip 127.0.0.1
-                database = "sql8113217"; // set DB name 
-                username = "sql8113217"; // set DB username
-                password = "UiPYrWwZnp"; // set DB password
+                server = "37.139.18.76"; // set server ip 127.0.0.1
+                database = "csp"; // set DB name 
+                username = "puser"; // set DB username
+                password = "password"; // set DB password
 
                 connectionString = "SERVER=" + server + ";" + "DATABASE=" +
                 database + ";" + "UID=" + username + ";" + "PASSWORD=" + password + ";"; // store connection information
