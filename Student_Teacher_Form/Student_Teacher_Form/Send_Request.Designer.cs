@@ -36,6 +36,7 @@
             this.tbBdyRq = new System.Windows.Forms.TextBox();
             this.btnAccRq = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbChanges = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,13 +64,18 @@
             // 
             // cbCtgRq
             // 
+            this.cbCtgRq.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCtgRq.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCtgRq.FormattingEnabled = true;
+            this.cbCtgRq.Items.AddRange(new object[] {
+            "Empty Class",
+            "Event",
+            "Samrt Class",
+            "Field Trip"});
             this.cbCtgRq.Location = new System.Drawing.Point(63, 273);
             this.cbCtgRq.Name = "cbCtgRq";
             this.cbCtgRq.Size = new System.Drawing.Size(229, 26);
             this.cbCtgRq.TabIndex = 29;
-            this.cbCtgRq.Text = "Catagory";
             // 
             // btnSbmRq
             // 
@@ -85,6 +91,7 @@
             this.btnSbmRq.TabIndex = 28;
             this.btnSbmRq.Text = "Submit";
             this.btnSbmRq.UseVisualStyleBackColor = false;
+            this.btnSbmRq.Click += new System.EventHandler(this.btnSbmRq_Click);
             // 
             // txtTilRq
             // 
@@ -108,6 +115,7 @@
             this.btnAccRq.BackgroundImage = global::Student_Teacher_Form.Properties.Resources.ic_check_black_24dp_2x1;
             this.btnAccRq.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAccRq.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
+            this.btnAccRq.FlatAppearance.BorderSize = 0;
             this.btnAccRq.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAccRq.Location = new System.Drawing.Point(224, 315);
             this.btnAccRq.Name = "btnAccRq";
@@ -126,11 +134,23 @@
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
             // 
+            // lbChanges
+            // 
+            this.lbChanges.AutoSize = true;
+            this.lbChanges.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbChanges.Location = new System.Drawing.Point(14, 332);
+            this.lbChanges.Name = "lbChanges";
+            this.lbChanges.Size = new System.Drawing.Size(25, 13);
+            this.lbChanges.TabIndex = 34;
+            this.lbChanges.Text = "null";
+            this.lbChanges.Visible = false;
+            // 
             // Send_Request
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(499, 379);
+            this.Controls.Add(this.lbChanges);
             this.Controls.Add(this.btnAccRq);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox1);
@@ -159,5 +179,6 @@
         private System.Windows.Forms.Button btnSbmRq;
         private System.Windows.Forms.TextBox txtTilRq;
         private System.Windows.Forms.TextBox tbBdyRq;
+        private System.Windows.Forms.Label lbChanges;
     }
 }

@@ -96,6 +96,7 @@
             this.btnAccExSchd.BackgroundImage = global::Student_Teacher_Form.Properties.Resources.ic_check_black_24dp_2x1;
             this.btnAccExSchd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAccExSchd.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
+            this.btnAccExSchd.FlatAppearance.BorderSize = 0;
             this.btnAccExSchd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAccExSchd.Location = new System.Drawing.Point(332, 319);
             this.btnAccExSchd.Name = "btnAccExSchd";

@@ -21,6 +21,17 @@ namespace Student_Teacher_Form
             this.stuID = stuID;
             this.student_Portal = student_Portal;
             this.Text = stuID + "";
+
+            populateFinancialStatus(lbSem, lbPaid, lbRmnDbt);
+        }
+
+        private void populateFinancialStatus(Label lbSem, Label lbPaid, Label lbRmnDbt)
+        {
+            /*
+            lbSem.Text = "";
+            lbPaid.Text = "";
+            lbRmnDbt.Text = "";
+            */
         }
 
         private void btnAccFA_Click(object sender, EventArgs e)
@@ -32,6 +43,11 @@ namespace Student_Teacher_Form
         private void Financial_Affairs_FormClosed(object sender, FormClosedEventArgs e)
         {
             student_Portal.Enabled = true;
+        }
+
+        private void btnRfshP_Click(object sender, EventArgs e)
+        {
+            //refresh DB
         }
     }
 }

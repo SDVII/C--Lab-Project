@@ -21,6 +21,19 @@ namespace Student_Teacher_Form
             this.stuID = stuID;
             this.student_Portal = student_Portal;
             this.Text = stuID + "";
+
+            populateCatagories(cbCtgR);
+            //cbCtgR.SelectedIndex = 0;
+        }
+
+        private void populateCatagories(ComboBox cbCtgR)
+        {
+            /*
+            for (int i = 0; i < number of catagories; i++)
+            {
+                cbCrsEx.Items.Add(catagories);
+            }
+            */
         }
 
         private void btnAccR_Click(object sender, EventArgs e)
@@ -32,6 +45,39 @@ namespace Student_Teacher_Form
         private void Report_Issue_FormClosed(object sender, FormClosedEventArgs e)
         {
             student_Portal.Enabled = true;
+        }
+
+        private void btnSbmR_Click(object sender, EventArgs e)
+        {
+            if (Utilities.NullOrEmpty(txtTtlR.Text))
+            {
+                lbChanges.Visible = true;
+                lbChanges.Text = "Title is Empty";
+                lbChanges.ForeColor = Color.Red;
+                return;
+            }
+            else if (Utilities.NullOrEmpty(tbBdyR.Text))
+            {
+                lbChanges.Visible = true;
+                lbChanges.Text = "Body is Empty";
+                lbChanges.ForeColor = Color.Red;
+                return;
+            }
+            else if (cbCtgR.SelectedIndex == -1)
+            {
+                lbChanges.Visible = true;
+                lbChanges.Text = "Select a Catagory";
+                lbChanges.ForeColor = Color.Red;
+                return;
+            }
+            else
+            {
+                //save to DB
+                lbChanges.Visible = true;
+                lbChanges.Text = "Report Submitted";
+                lbChanges.ForeColor = Color.Black;
+                return;
+            }
         }
     }
 }

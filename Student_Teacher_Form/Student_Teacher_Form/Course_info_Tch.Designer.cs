@@ -225,6 +225,7 @@ namespace Student_Teacher_Form
             // 
             // cbCrsEx
             // 
+            this.cbCrsEx.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCrsEx.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCrsEx.FormattingEnabled = true;
             this.cbCrsEx.Location = new System.Drawing.Point(18, 40);
@@ -232,7 +233,6 @@ namespace Student_Teacher_Form
             this.cbCrsEx.Name = "cbCrsEx";
             this.cbCrsEx.Size = new System.Drawing.Size(554, 36);
             this.cbCrsEx.TabIndex = 41;
-            this.cbCrsEx.Text = "Course";
             // 
             // dtpEx
             // 
