@@ -9,21 +9,24 @@ namespace Student_Teacher_Form
     class SectionTime
     {
         private int id, section_id, time;
+        private String location;
         private Section section;
 
-        public SectionTime(int id, int sectionId, int time)
+        public SectionTime(int id, int sectionId, int time, string location)
         {
             this.id = id;
             section_id = sectionId;
             this.time = time;
             this.section = null;
+            this.location = location;
         }
 
-        public SectionTime(int sectionId, int time)
+        public SectionTime(int sectionId, int time, string location)
         {
             section_id = sectionId;
             this.time = time;
             this.section = null;
+            this.location = location;
         }
 
         public int Id
@@ -42,6 +45,12 @@ namespace Student_Teacher_Form
         {
             get { return time; }
             set { time = value; }
+        }
+
+        public string Location
+        {
+            get { return location; }
+            set { location = value; }
         }
 
         public Section Section

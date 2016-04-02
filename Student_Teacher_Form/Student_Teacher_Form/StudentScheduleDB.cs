@@ -102,5 +102,26 @@ namespace Student_Teacher_Form
 
             return list;
         }
+
+        public static List<StudentSchedule> GetWithStudentId(int studentId)
+        {
+            String query = "SELECT * FROM studentSchedule WHERE studentSchedule_student_id = '" + studentId + "'";
+            List<StudentSchedule> list = new List<StudentSchedule>();
+
+            if (databaseHandler.openConnection())
+            {
+                MySqlCommand cmd = new MySqlCommand(query, databaseHandler.connection);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    StudentSchedule studentSchedule = new StudentSchedule(reader.GetInt32(0), reader.GetInt32(1), reader.GetInt32(2), reader.GetInt32(3), reader.GetInt32(4));
+                    list.Add(studentSchedule);
+
+                }
+            }
+
+            return list;
+        }
     }
 }

@@ -12,18 +12,25 @@ namespace Student_Teacher_Form
 {
     public partial class Student_Portal : Form
     {
-        private int stuID;
-        private String name;
+        private Student student;
+        List<StudentSchedule> stuScheduleList;
+        List<Section> sectionList;
+        List<SectionTime> sectionTimeList;
+        List<Course> courseList;
+        List<Msg> msgList;
+        List<Announcement> annoList;
+        List<CourseAnnouncements> coAnnoList;
+
         private bool clicked = false;
 
-        public Student_Portal(int stuID , String name)
+        public Student_Portal(Student student)
         {
             InitializeComponent();
-            this.stuID = stuID;
-            this.name = name;
-            this.Text = stuID + "";
-            lbName.Text = name;
-            lbID.Text = stuID + "";
+            this.student = student;
+            this.Text = student.Id + "";
+            lbName.Text = student.Name + " " + student.Surname;
+            lbID.Text = student.Id + "";
+            fetchData();
 
             body.Panel1Collapsed = true;
 
@@ -32,9 +39,32 @@ namespace Student_Teacher_Form
                 r.Height = 30;
             }
 
+
             populateCourses(dgvCourses);
             populateSchedule(lvSchedule);
             populateNotification(lbNotification);
+        }
+
+        private void fetchData()
+        {
+            //Student Schedule List
+            stuScheduleList = StudentScheduleDB.GetWithStudentId(student.Id);
+
+            //course and section List
+            courseList = new List<Course>();
+            sectionList = new List<Section>();
+            foreach(StudentSchedule ss in stuScheduleList)
+            {
+                courseList.Add(CourseDB.Get(ss.CourseId));
+                sectionList.Add(SectionDB.Get(ss.SectionId));
+            }
+
+            //sectionTime List
+            sectionTimeList = new List<SectionTime>();
+            foreach(Section s in sectionList)
+            {
+                sectionTimeList.AddRange(SectionTimeDB.GetWithSectionId(s.Id));
+            }
         }
 
         private void populateNotification(ListBox lbNotification)
@@ -64,9 +94,9 @@ namespace Student_Teacher_Form
 
         private void populateCourses(DataGridView dgvCourses)
         {
-            /* For populating course GridViewList. just replace the counter and course name
+            // For populating course GridViewList. just replace the counter and course name
 
-            for (int i = 0; i < courses in db ; i++)
+            for (int i = 0; i < courseList.Count ; i++)
             {
                 DataGridViewRow row = (DataGridViewRow)dgvCourses.Rows[i].Clone();
                 Button btn = new Button();
@@ -76,13 +106,13 @@ namespace Student_Teacher_Form
                 btn.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 btn.ForeColor = System.Drawing.Color.Black;
                 btn.Name = "btn_" + i;
-                btn.Text = "Name of the course";
+                Console.WriteLine(courseList[i].Name);
+                btn.Text = courseList[i].Name;
                 btn.UseVisualStyleBackColor = false;
-                btn.Click += new System.EventHandler(this.callCourse);
+                //btn.Click += new System.EventHandler(this.callCourse);
                 row.Cells[0].Value = btn;
                 dgvCourses.Rows.Add(row);
             }
-            */
         }
 
         private void Student_Portal_FormClosed(object sender, FormClosedEventArgs e)
@@ -113,56 +143,56 @@ namespace Student_Teacher_Form
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
-            Settings f = new Settings(stuID, this);
+            Settings f = new Settings(student.Id, this);
             f.Visible = true;
             this.Enabled = false;
         }
 
         private void btnSchedule_Click(object sender, EventArgs e)
         {
-            Schedule f = new Schedule(stuID, this);
+            Schedule f = new Schedule(student.Id, this);
             f.Visible = true;
             this.Enabled = false;
         }
 
         private void btnAddCrs_Click(object sender, EventArgs e)
         {
-            Course_Add f = new Course_Add(stuID, this);
+            Course_Add f = new Course_Add(student.Id, this);
             f.Visible = true;
             this.Enabled = false;
         }
 
         private void btnReqDoc_Click(object sender, EventArgs e)
         {
-            Document_Request f = new Document_Request(stuID, this);
+            Document_Request f = new Document_Request(student.Id, this);
             f.Visible = true;
             this.Enabled = false;
         }
 
         private void brnEx_Click(object sender, EventArgs e)
         {
-            Exam_Schedule f = new Exam_Schedule(stuID, this);
+            Exam_Schedule f = new Exam_Schedule(student.Id, this);
             f.Visible = true;
             this.Enabled = false;
         }
 
         private void btnFinAff_Click(object sender, EventArgs e)
         {
-            Financial_Affairs f = new Financial_Affairs(stuID, this);
+            Financial_Affairs f = new Financial_Affairs(student.Id, this);
             f.Visible = true;
             this.Enabled = false;
         }
 
         private void btnRep_Click(object sender, EventArgs e)
         {
-            Report_Issue f = new Report_Issue(stuID, this);
+            Report_Issue f = new Report_Issue(student.Id, this);
             f.Visible = true;
             this.Enabled = false;
         }
 
         private void btnContact_Click(object sender, EventArgs e)
         {
-            Contact_Us f = new Contact_Us(stuID, this);
+            Contact_Us f = new Contact_Us(student.Id, this);
             f.Visible = true;
             this.Enabled = false;
         }

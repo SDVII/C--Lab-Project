@@ -117,7 +117,6 @@
     </Compile>
     <Compile Include="Manager.cs" />
     <Compile Include="ManagerDB.cs" />
-    <Compile Include="Move_Resize.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>

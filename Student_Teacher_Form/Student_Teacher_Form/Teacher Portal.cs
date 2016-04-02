@@ -15,7 +15,14 @@ namespace Student_Teacher_Form
         private int teachID;
         private String name;
         Boolean clicked = false;
-        
+
+        List<Section> sectionList;
+        List<SectionTime> sectionTimeList;
+        List<Course> courseList;
+        List<Msg> msgList;
+        List<Announcement> annoList;
+        List<CourseAnnouncements> coAnnoList;
+
 
         public Teacher_Portal(int teachID, string name)
         {

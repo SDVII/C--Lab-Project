@@ -117,38 +117,6 @@ namespace Student_Teacher_Form
             For testing reasons, i'll make a Boolean "validated" which is always true. delete it after you insert the validate function.
             I will also use a fake ID for testing as well.
             */
-
-            if(validated==true)
-            {
-                if (cbUsrT.Text.Equals("Student"))
-                {
-                    Student_Portal f = new Student_Portal(1234,txtUsername.Text);
-                    f.Visible = true;
-                    this.Visible = false;
-                }
-                else
-                {
-                    Teacher_Portal f = new Teacher_Portal(5678,txtUsername.Text);
-                    f.Visible = true;
-                    this.Visible = false;
-                }
-            }
-
-        }
-
-        private void cbUsrT_Leave(object sender, EventArgs e)
-        {
-            checkInput(txtUsername.Text, txtPass.Text);
-        }
-
-        private void Login_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            
             string username = txtUsername.Text;
             string password = txtPass.Text;
 
@@ -167,8 +135,9 @@ namespace Student_Teacher_Form
                     }
                     else
                     {
-                        Settings form = new Settings(stu);
-                        form.Show();
+                        Student_Portal f = new Student_Portal(stu);
+                        f.Visible = true;
+                        this.Visible = false;
                     }
                 }
             }
@@ -187,11 +156,39 @@ namespace Student_Teacher_Form
                     }
                     else
                     {
-                        Settings form = new Settings(tea);
-                        form.Show();
+                        //Teacher_Portal f = new Teacher_Portal(tea);
+                        //f.Visible = true;
+                        //this.Visible = false;
                     }
                 }
             }
+
+            /*if (validated==true)
+            {
+                if (cbUsrT.Text.Equals("Student"))
+                {
+                    Student_Portal f = new Student_Portal();
+                    f.Visible = true;
+                    this.Visible = false;
+                }
+                else
+                {
+                    Teacher_Portal f = new Teacher_Portal(5678,txtUsername.Text);
+                    f.Visible = true;
+                    this.Visible = false;
+                }
+            }*/
+
+        }
+
+        private void cbUsrT_Leave(object sender, EventArgs e)
+        {
+            checkInput(txtUsername.Text, txtPass.Text);
+        }
+
+        private void Login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

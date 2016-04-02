@@ -217,4 +217,3 @@ C:\Users\Hani Al keddah\Documents\GitHub\C--Lab-Project\Student_Teacher_Form\Stu
 C:\Users\Hani Al keddah\Documents\GitHub\C--Lab-Project\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\es\DevExpress.Pdf.v15.2.Core.resources.dll
 C:\Users\Hani Al keddah\Documents\GitHub\C--Lab-Project\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ja\DevExpress.Pdf.v15.2.Core.resources.dll
 C:\Users\Hani Al keddah\Documents\GitHub\C--Lab-Project\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ru\DevExpress.Pdf.v15.2.Core.resources.dll
-C:\Users\Hani Al keddah\Documents\GitHub\C--Lab-Project\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\MySql.Data.dll

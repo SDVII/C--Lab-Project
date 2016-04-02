@@ -19,8 +19,8 @@ namespace Student_Teacher_Form
         public static bool Add(SectionTime sectionTime)
         {
             // query take variables $
-            string query = $"INSERT INTO sectionTime (sectionTime_section_id, sectionTime_time) " +
-                           $"Values ('{sectionTime.SectionId}','{sectionTime.Time}')";
+            string query = $"INSERT INTO sectionTime (sectionTime_section_id, sectionTime_time, sectionTime_location) " +
+                           $"Values ('{sectionTime.SectionId}','{sectionTime.Time}','{sectionTime.Location}')";
             // check if the connection is open first
             if (databaseHandler.openConnection() == true)
             {
@@ -37,7 +37,7 @@ namespace Student_Teacher_Form
 
         public static bool Update(SectionTime sectionTime)
         {
-            string query = $"UPDATE sectionTime SET sectionTime_section_id='{sectionTime.SectionId}',sectionTime_time='{sectionTime.Time}'" +
+            string query = $"UPDATE sectionTime SET sectionTime_section_id='{sectionTime.SectionId}',sectionTime_time='{sectionTime.Time}',sectionTime_location='{sectionTime.Location}'" +
                            $" WHERE sectionTime_id='{sectionTime.Id}'"; // create the query
 
 
@@ -76,7 +76,7 @@ namespace Student_Teacher_Form
 
                 while (reader.Read())
                 {
-                    sectionTime = new SectionTime(reader.GetInt32(0), reader.GetInt32(1), reader.GetInt32(2));
+                    sectionTime = new SectionTime(reader.GetInt32(0), reader.GetInt32(1), reader.GetInt32(2), reader.GetString(3));
                 }
             }
             return sectionTime;
@@ -94,7 +94,28 @@ namespace Student_Teacher_Form
 
                 while (reader.Read())
                 {
-                    SectionTime sectionTime = new SectionTime(reader.GetInt32(0), reader.GetInt32(1), reader.GetInt32(2));
+                    SectionTime sectionTime = new SectionTime(reader.GetInt32(0), reader.GetInt32(1), reader.GetInt32(2), reader.GetString(3));
+                    list.Add(sectionTime);
+
+                }
+            }
+
+            return list;
+        }
+
+        public static List<SectionTime> GetWithSectionId(int sectionId)
+        {
+            String query = "SELECT * FROM sectionTime WHERE sectionTime_section_id = '" + sectionId + "'";
+            List<SectionTime> list = new List<SectionTime>();
+
+            if (databaseHandler.openConnection())
+            {
+                MySqlCommand cmd = new MySqlCommand(query, databaseHandler.connection);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    SectionTime sectionTime = new SectionTime(reader.GetInt32(0), reader.GetInt32(1), reader.GetInt32(2), reader.GetString(3));
                     list.Add(sectionTime);
 
                 }

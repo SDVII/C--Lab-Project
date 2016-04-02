@@ -102,5 +102,25 @@ namespace Student_Teacher_Form
 
             return list;
         }
+        public static List<Section> GetWithTeacherId(int teacherId)
+        {
+            String query = "SELECT * FROM section WHERE section_teacher_id = " + teacherId;
+            List<Section> list = new List<Section>();
+
+            if (databaseHandler.openConnection())
+            {
+                MySqlCommand cmd = new MySqlCommand(query, databaseHandler.connection);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Section section = new Section(reader.GetInt32(0), reader.GetInt32(1), reader.GetInt32(3), reader.GetInt32(2));
+                    list.Add(section);
+
+                }
+            }
+
+            return list;
+        }
     }
 }
