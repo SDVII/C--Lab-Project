@@ -187,7 +187,7 @@
             this.buttons.Panel2.Controls.Add(this.btnInfo);
             this.buttons.Panel2.Controls.Add(this.btnSettings);
             this.buttons.Size = new System.Drawing.Size(863, 53);
-            this.buttons.SplitterDistance = 710;
+            this.buttons.SplitterDistance = 713;
             this.buttons.SplitterWidth = 1;
             this.buttons.TabIndex = 0;
             // 
@@ -549,6 +549,8 @@
             // 
             // dgvCourses
             // 
+            this.dgvCourses.AllowUserToResizeColumns = false;
+            this.dgvCourses.AllowUserToResizeRows = false;
             this.dgvCourses.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvCourses.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvCourses.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
@@ -557,7 +559,7 @@
             this.dgvCourses.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.courses});
             this.dgvCourses.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvCourses.Location = new System.Drawing.Point(11, 42);
+            this.dgvCourses.Location = new System.Drawing.Point(10, 44);
             this.dgvCourses.Name = "dgvCourses";
             this.dgvCourses.RowHeadersVisible = false;
             this.dgvCourses.RowTemplate.Height = 30;
@@ -567,9 +569,11 @@
             // 
             // courses
             // 
-            this.courses.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.courses.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.courses.HeaderText = "Column1";
+            this.courses.MinimumWidth = 327;
             this.courses.Name = "courses";
+            this.courses.Width = 327;
             // 
             // Student_Portal
             // 
