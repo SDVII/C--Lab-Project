@@ -52,6 +52,7 @@ namespace Student_Teacher_Form
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnAccCrsInTch = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbChanges = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -119,6 +120,7 @@ namespace Student_Teacher_Form
             this.btnSbmCM.TabIndex = 33;
             this.btnSbmCM.Text = "Submit";
             this.btnSbmCM.UseVisualStyleBackColor = false;
+            this.btnSbmCM.Click += new System.EventHandler(this.btnSbmCM_Click);
             // 
             // txtTtCM
             // 
@@ -242,6 +244,7 @@ namespace Student_Teacher_Form
             this.btnSbmtEx.TabIndex = 43;
             this.btnSbmtEx.Text = "Submit";
             this.btnSbmtEx.UseVisualStyleBackColor = false;
+            this.btnSbmtEx.Click += new System.EventHandler(this.btnSbmtEx_Click);
             // 
             // groupBox1
             // 
@@ -301,8 +304,9 @@ namespace Student_Teacher_Form
             this.btnAccCrsInTch.BackgroundImage = global::Student_Teacher_Form.Properties.Resources.ic_check_black_24dp_2x1;
             this.btnAccCrsInTch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAccCrsInTch.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
+            this.btnAccCrsInTch.FlatAppearance.BorderSize = 0;
             this.btnAccCrsInTch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccCrsInTch.Location = new System.Drawing.Point(285, 639);
+            this.btnAccCrsInTch.Location = new System.Drawing.Point(285, 638);
             this.btnAccCrsInTch.Name = "btnAccCrsInTch";
             this.btnAccCrsInTch.Size = new System.Drawing.Size(45, 44);
             this.btnAccCrsInTch.TabIndex = 48;
@@ -319,11 +323,23 @@ namespace Student_Teacher_Form
             this.pictureBox1.TabIndex = 25;
             this.pictureBox1.TabStop = false;
             // 
+            // lbChanges
+            // 
+            this.lbChanges.AutoSize = true;
+            this.lbChanges.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbChanges.Location = new System.Drawing.Point(35, 656);
+            this.lbChanges.Name = "lbChanges";
+            this.lbChanges.Size = new System.Drawing.Size(25, 13);
+            this.lbChanges.TabIndex = 36;
+            this.lbChanges.Text = "null";
+            this.lbChanges.Visible = false;
+            // 
             // Course_info_Tch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(615, 688);
+            this.Controls.Add(this.lbChanges);
             this.Controls.Add(this.btnAccCrsInTch);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -375,5 +391,6 @@ namespace Student_Teacher_Form
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btnAccCrsInTch;
+        private System.Windows.Forms.Label lbChanges;
     }
 }

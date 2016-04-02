@@ -34,6 +34,18 @@ namespace Student_Teacher_Form
             this.teachID = teachID;
             this.teacher_Portal = teacher_Portal;
             this.courseName = courseName;
+
+            pouplateCourses(cbCrsEx);
+        }
+
+        private void pouplateCourses(ComboBox cbCrsEx)
+        {
+            /*
+            for (int i = 0; i < number of courses; i++)
+            {
+                cbCrsEx.Items.Add(courses);
+            }
+            */
         }
 
         private void btnBrwsD_Click(object sender, EventArgs e)
@@ -103,6 +115,51 @@ namespace Student_Teacher_Form
         private void Course_info_Tch_FormClosed(object sender, FormClosedEventArgs e)
         {
             teacher_Portal.Enabled = true;
+        }
+
+        private void btnSbmCM_Click(object sender, EventArgs e)
+        {
+            if (Utilities.NullOrEmpty(txtTtCM.Text))
+            {
+                lbChanges.Visible = true;
+                lbChanges.Text = "Title is missing";
+                lbChanges.ForeColor = Color.Red;
+                return;
+            }
+            else if(Utilities.NullOrEmpty(tbBdyCM.Text))
+            {
+                lbChanges.Visible = true;
+                lbChanges.Text = "Body is missing";
+                lbChanges.ForeColor = Color.Red;
+                return;
+            }
+            else
+            {
+                lbChanges.Visible = true;
+                //send message
+                lbChanges.Text = "Message sent";
+                lbChanges.ForeColor = Color.Black;
+            }
+        }
+
+        private void btnSbmtEx_Click(object sender, EventArgs e)
+        {
+            if(cbCrsEx.SelectedIndex == -1)
+            {
+                lbChanges.Visible = true;
+                lbChanges.Text = "Please select a course";
+                lbChanges.ForeColor = Color.Red;
+                return;
+            }
+            else
+            {
+                //save to DB
+                //string theDate = dtpEx.Value.ToString("yyyy-MM-dd"); to get date value
+                lbChanges.Visible = true;
+                lbChanges.Text = "Exam date submitted";
+                lbChanges.ForeColor = Color.Red;
+                return;
+            }
         }
     }
 }
