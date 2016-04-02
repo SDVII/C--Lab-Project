@@ -83,6 +83,7 @@ namespace Student_Teacher_Form
             {              
 
                 lbNotification.Items.Add(annoList[i].Title);
+                lbNotification.Items.Add("---------------------");
             }
         }
 
@@ -212,14 +213,14 @@ namespace Student_Teacher_Form
 
         private void brnEx_Click(object sender, EventArgs e)
         {
-            Exam_Schedule f = new Exam_Schedule(student.Id, this);
+            Exam_Schedule f = new Exam_Schedule(courseList, this);
             f.Visible = true;
             this.Enabled = false;
         }
 
         private void btnFinAff_Click(object sender, EventArgs e)
         {
-            Financial_Affairs f = new Financial_Affairs(student.Id, this);
+            Financial_Affairs f = new Financial_Affairs(student.FinancialAffairs, this);
             f.Visible = true;
             this.Enabled = false;
         }
@@ -250,7 +251,8 @@ namespace Student_Teacher_Form
             var list = (ListBox)sender;
 
             // This is your selected item
-            MessageBox.Show(annoList[list.SelectedIndex].Msg, annoList[list.SelectedIndex].Title);
+            if(list.SelectedIndex%2==0)
+                MessageBox.Show(annoList[list.SelectedIndex / 2].Msg, annoList[list.SelectedIndex / 2].Title);
         }
 
         private void s(object sender, EventArgs e)

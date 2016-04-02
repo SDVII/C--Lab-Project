@@ -13,25 +13,23 @@ namespace Student_Teacher_Form
     public partial class Financial_Affairs : Form
     {
         private Student_Portal student_Portal;
-        private int stuID;
+        private FinancialAffairs fa;
 
-        public Financial_Affairs(int stuID, Student_Portal student_Portal)
+        public Financial_Affairs(FinancialAffairs fa, Student_Portal student_Portal)
         {
             InitializeComponent();
-            this.stuID = stuID;
+            this.fa = fa;
             this.student_Portal = student_Portal;
-            this.Text = stuID + "";
+            //this.Text = stuID + "";
 
             populateFinancialStatus(lbSem, lbPaid, lbRmnDbt);
         }
 
         private void populateFinancialStatus(Label lbSem, Label lbPaid, Label lbRmnDbt)
         {
-            /*
             lbSem.Text = "";
-            lbPaid.Text = "";
-            lbRmnDbt.Text = "";
-            */
+            lbPaid.Text = ""+fa.Paid;
+            lbRmnDbt.Text = ""+fa.Rest;
         }
 
         private void btnAccFA_Click(object sender, EventArgs e)
@@ -47,7 +45,8 @@ namespace Student_Teacher_Form
 
         private void btnRfshP_Click(object sender, EventArgs e)
         {
-            //refresh DB
+            fa = FinancialAffairsDB.Get(fa.Id);
+            populateFinancialStatus(lbSem, lbPaid, lbRmnDbt);
         }
     }
 }

@@ -102,5 +102,47 @@ namespace Student_Teacher_Form
 
             return list;
         }
+
+        public static List<Exam> GetWithCourseId(int courseId)
+        {
+            String query = "SELECT * FROM exam WHERE exam_course_id = '" + courseId + "'";
+            List<Exam> list = new List<Exam>();
+
+            if (databaseHandler.openConnection())
+            {
+                MySqlCommand cmd = new MySqlCommand(query, databaseHandler.connection);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Exam exam = new Exam(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetString(3));
+                    list.Add(exam);
+
+                }
+            }
+
+            return list;
+        }
+        public static List<Exam> GetWithCourseId(Course course)
+        {
+            String query = "SELECT * FROM exam WHERE exam_course_id = '" + course.Id + "'";
+            List<Exam> list = new List<Exam>();
+
+            if (databaseHandler.openConnection())
+            {
+                MySqlCommand cmd = new MySqlCommand(query, databaseHandler.connection);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Exam exam = new Exam(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetString(3));
+                    exam.Course = course;
+                    list.Add(exam);
+
+                }
+            }
+
+            return list;
+        }
     }
 }
