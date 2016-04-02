@@ -31,9 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Teacher_Portal));
             this.main = new System.Windows.Forms.SplitContainer();
             this.topMain = new System.Windows.Forms.SplitContainer();
+            this.btnMenu = new System.Windows.Forms.Button();
             this.lbID = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
             this.buttons = new System.Windows.Forms.SplitContainer();
+            this.btnInfo = new System.Windows.Forms.Button();
+            this.btnPower = new System.Windows.Forms.Button();
+            this.btnSettings = new System.Windows.Forms.Button();
             this.body = new System.Windows.Forms.SplitContainer();
             this.menu = new System.Windows.Forms.SplitContainer();
             this.btnContact = new System.Windows.Forms.Button();
@@ -44,12 +48,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.middle_events = new System.Windows.Forms.SplitContainer();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.lbNotification = new System.Windows.Forms.ListBox();
-            this.lable7 = new System.Windows.Forms.Label();
-            this.btnMenu = new System.Windows.Forms.Button();
-            this.btnInfo = new System.Windows.Forms.Button();
-            this.btnPower = new System.Windows.Forms.Button();
-            this.btnSettings = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvCourses = new System.Windows.Forms.DataGridView();
@@ -59,6 +57,8 @@
             this.chTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chLocation = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label2 = new System.Windows.Forms.Label();
+            this.lbNotification = new System.Windows.Forms.ListBox();
+            this.lable7 = new System.Windows.Forms.Label();
             this.courses = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.main)).BeginInit();
             this.main.Panel1.SuspendLayout();
@@ -133,6 +133,20 @@
             this.topMain.SplitterWidth = 1;
             this.topMain.TabIndex = 0;
             // 
+            // btnMenu
+            // 
+            this.btnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.btnMenu.BackgroundImage = global::Student_Teacher_Form.Properties.Resources.menu2;
+            this.btnMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMenu.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenu.Location = new System.Drawing.Point(13, 8);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(40, 39);
+            this.btnMenu.TabIndex = 55;
+            this.btnMenu.UseVisualStyleBackColor = false;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            // 
             // lbID
             // 
             this.lbID.AutoSize = true;
@@ -170,9 +184,50 @@
             this.buttons.Panel2.Controls.Add(this.btnPower);
             this.buttons.Panel2.Controls.Add(this.btnSettings);
             this.buttons.Size = new System.Drawing.Size(913, 53);
-            this.buttons.SplitterDistance = 760;
+            this.buttons.SplitterDistance = 763;
             this.buttons.SplitterWidth = 1;
             this.buttons.TabIndex = 0;
+            // 
+            // btnInfo
+            // 
+            this.btnInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.btnInfo.BackgroundImage = global::Student_Teacher_Form.Properties.Resources.info;
+            this.btnInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnInfo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInfo.Location = new System.Drawing.Point(7, 6);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Size = new System.Drawing.Size(40, 39);
+            this.btnInfo.TabIndex = 54;
+            this.btnInfo.UseVisualStyleBackColor = false;
+            // 
+            // btnPower
+            // 
+            this.btnPower.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.btnPower.BackgroundImage = global::Student_Teacher_Form.Properties.Resources.power;
+            this.btnPower.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPower.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.btnPower.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPower.Location = new System.Drawing.Point(95, 6);
+            this.btnPower.Name = "btnPower";
+            this.btnPower.Size = new System.Drawing.Size(40, 39);
+            this.btnPower.TabIndex = 52;
+            this.btnPower.UseVisualStyleBackColor = false;
+            this.btnPower.Click += new System.EventHandler(this.btnPower_Click);
+            // 
+            // btnSettings
+            // 
+            this.btnSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.btnSettings.BackgroundImage = global::Student_Teacher_Form.Properties.Resources.settings;
+            this.btnSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSettings.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
+            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSettings.Location = new System.Drawing.Point(52, 6);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(40, 39);
+            this.btnSettings.TabIndex = 53;
+            this.btnSettings.UseVisualStyleBackColor = false;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // body
             // 
@@ -340,86 +395,6 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(904, 599);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
-            // lbNotification
-            // 
-            this.lbNotification.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(91)))), ((int)(((byte)(96)))));
-            this.lbNotification.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lbNotification.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNotification.ForeColor = System.Drawing.SystemColors.Info;
-            this.lbNotification.FormattingEnabled = true;
-            this.lbNotification.ItemHeight = 15;
-            this.lbNotification.Location = new System.Drawing.Point(12, 44);
-            this.lbNotification.Name = "lbNotification";
-            this.lbNotification.Size = new System.Drawing.Size(132, 450);
-            this.lbNotification.TabIndex = 56;
-            // 
-            // lable7
-            // 
-            this.lable7.AutoSize = true;
-            this.lable7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(91)))), ((int)(((byte)(96)))));
-            this.lable7.Font = new System.Drawing.Font("Calibri", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lable7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lable7.Location = new System.Drawing.Point(31, 13);
-            this.lable7.Name = "lable7";
-            this.lable7.Size = new System.Drawing.Size(87, 18);
-            this.lable7.TabIndex = 55;
-            this.lable7.Text = "Notifications";
-            // 
-            // btnMenu
-            // 
-            this.btnMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
-            this.btnMenu.BackgroundImage = global::Student_Teacher_Form.Properties.Resources.menu2;
-            this.btnMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMenu.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
-            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenu.Location = new System.Drawing.Point(13, 8);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(40, 39);
-            this.btnMenu.TabIndex = 55;
-            this.btnMenu.UseVisualStyleBackColor = false;
-            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
-            // 
-            // btnInfo
-            // 
-            this.btnInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
-            this.btnInfo.BackgroundImage = global::Student_Teacher_Form.Properties.Resources.info;
-            this.btnInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnInfo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
-            this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInfo.Location = new System.Drawing.Point(7, 6);
-            this.btnInfo.Name = "btnInfo";
-            this.btnInfo.Size = new System.Drawing.Size(40, 39);
-            this.btnInfo.TabIndex = 54;
-            this.btnInfo.UseVisualStyleBackColor = false;
-            // 
-            // btnPower
-            // 
-            this.btnPower.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
-            this.btnPower.BackgroundImage = global::Student_Teacher_Form.Properties.Resources.power;
-            this.btnPower.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPower.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
-            this.btnPower.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPower.Location = new System.Drawing.Point(95, 6);
-            this.btnPower.Name = "btnPower";
-            this.btnPower.Size = new System.Drawing.Size(40, 39);
-            this.btnPower.TabIndex = 52;
-            this.btnPower.UseVisualStyleBackColor = false;
-            this.btnPower.Click += new System.EventHandler(this.btnPower_Click);
-            // 
-            // btnSettings
-            // 
-            this.btnSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
-            this.btnSettings.BackgroundImage = global::Student_Teacher_Form.Properties.Resources.settings;
-            this.btnSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSettings.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
-            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSettings.Location = new System.Drawing.Point(52, 6);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(40, 39);
-            this.btnSettings.TabIndex = 53;
-            this.btnSettings.UseVisualStyleBackColor = false;
-            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
-            // 
             // panel1
             // 
             this.panel1.BackgroundImage = global::Student_Teacher_Form.Properties.Resources.table2;
@@ -445,6 +420,8 @@
             // 
             // dgvCourses
             // 
+            this.dgvCourses.AllowUserToResizeColumns = false;
+            this.dgvCourses.AllowUserToResizeRows = false;
             this.dgvCourses.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvCourses.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvCourses.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
@@ -514,11 +491,38 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Schedule";
             // 
+            // lbNotification
+            // 
+            this.lbNotification.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(91)))), ((int)(((byte)(96)))));
+            this.lbNotification.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbNotification.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNotification.ForeColor = System.Drawing.SystemColors.Info;
+            this.lbNotification.FormattingEnabled = true;
+            this.lbNotification.ItemHeight = 15;
+            this.lbNotification.Location = new System.Drawing.Point(12, 44);
+            this.lbNotification.Name = "lbNotification";
+            this.lbNotification.Size = new System.Drawing.Size(132, 450);
+            this.lbNotification.TabIndex = 56;
+            // 
+            // lable7
+            // 
+            this.lable7.AutoSize = true;
+            this.lable7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(91)))), ((int)(((byte)(96)))));
+            this.lable7.Font = new System.Drawing.Font("Calibri", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lable7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lable7.Location = new System.Drawing.Point(31, 13);
+            this.lable7.Name = "lable7";
+            this.lable7.Size = new System.Drawing.Size(87, 18);
+            this.lable7.TabIndex = 55;
+            this.lable7.Text = "Notifications";
+            // 
             // courses
             // 
-            this.courses.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.courses.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.courses.HeaderText = "Column1";
+            this.courses.MinimumWidth = 327;
             this.courses.Name = "courses";
+            this.courses.Width = 327;
             // 
             // Teacher_Portal
             // 
