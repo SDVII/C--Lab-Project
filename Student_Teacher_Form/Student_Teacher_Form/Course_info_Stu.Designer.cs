@@ -43,12 +43,12 @@
             this.chInst = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chMessage = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.dgvAtch = new System.Windows.Forms.DataGridView();
-            this.clTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clInstructor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clLink = new System.Windows.Forms.DataGridViewLinkColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnAccCrsInStu = new System.Windows.Forms.Button();
+            this.clTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clInstructor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clLink = new System.Windows.Forms.DataGridViewLinkColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbTchrInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTchrP)).BeginInit();
@@ -102,7 +102,7 @@
             this.gbTchrInfo.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbTchrInfo.Location = new System.Drawing.Point(45, 94);
             this.gbTchrInfo.Name = "gbTchrInfo";
-            this.gbTchrInfo.Size = new System.Drawing.Size(439, 148);
+            this.gbTchrInfo.Size = new System.Drawing.Size(439, 141);
             this.gbTchrInfo.TabIndex = 25;
             this.gbTchrInfo.TabStop = false;
             this.gbTchrInfo.Text = "Instructor Info";
@@ -111,7 +111,7 @@
             // 
             this.lbF.AutoSize = true;
             this.lbF.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbF.Location = new System.Drawing.Point(228, 91);
+            this.lbF.Location = new System.Drawing.Point(228, 81);
             this.lbF.Name = "lbF";
             this.lbF.Size = new System.Drawing.Size(33, 19);
             this.lbF.TabIndex = 8;
@@ -121,7 +121,7 @@
             // 
             this.lbName.AutoSize = true;
             this.lbName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbName.Location = new System.Drawing.Point(228, 53);
+            this.lbName.Location = new System.Drawing.Point(228, 50);
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(33, 19);
             this.lbName.TabIndex = 6;
@@ -131,7 +131,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(119, 91);
+            this.label3.Location = new System.Drawing.Point(119, 81);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 19);
             this.label3.TabIndex = 3;
@@ -141,7 +141,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(119, 53);
+            this.label1.Location = new System.Drawing.Point(119, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 19);
             this.label1.TabIndex = 1;
@@ -150,7 +150,7 @@
             // pbTchrP
             // 
             this.pbTchrP.Image = global::Student_Teacher_Form.Properties.Resources.anon;
-            this.pbTchrP.Location = new System.Drawing.Point(29, 39);
+            this.pbTchrP.Location = new System.Drawing.Point(29, 34);
             this.pbTchrP.Name = "pbTchrP";
             this.pbTchrP.Size = new System.Drawing.Size(74, 84);
             this.pbTchrP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -204,36 +204,15 @@
             this.dgvAtch.Location = new System.Drawing.Point(13, 28);
             this.dgvAtch.Name = "dgvAtch";
             this.dgvAtch.ReadOnly = true;
+            this.dgvAtch.RowHeadersVisible = false;
             this.dgvAtch.Size = new System.Drawing.Size(682, 115);
             this.dgvAtch.TabIndex = 27;
-            // 
-            // clTitle
-            // 
-            this.clTitle.HeaderText = "Title";
-            this.clTitle.Name = "clTitle";
-            this.clTitle.ReadOnly = true;
-            this.clTitle.Width = 110;
-            // 
-            // clInstructor
-            // 
-            this.clInstructor.HeaderText = "Instructor";
-            this.clInstructor.Name = "clInstructor";
-            this.clInstructor.ReadOnly = true;
-            // 
-            // clLink
-            // 
-            this.clLink.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.clLink.HeaderText = "Download";
-            this.clLink.Name = "clLink";
-            this.clLink.ReadOnly = true;
-            this.clLink.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.clLink.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lvMsg);
             this.groupBox1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(45, 271);
+            this.groupBox1.Location = new System.Drawing.Point(45, 265);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(712, 157);
             this.groupBox1.TabIndex = 28;
@@ -244,7 +223,7 @@
             // 
             this.groupBox2.Controls.Add(this.dgvAtch);
             this.groupBox2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(45, 459);
+            this.groupBox2.Location = new System.Drawing.Point(45, 453);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(712, 156);
             this.groupBox2.TabIndex = 29;
@@ -256,18 +235,45 @@
             this.btnAccCrsInStu.BackgroundImage = global::Student_Teacher_Form.Properties.Resources.ic_check_black_24dp_2x1;
             this.btnAccCrsInStu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAccCrsInStu.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
+            this.btnAccCrsInStu.FlatAppearance.BorderSize = 0;
             this.btnAccCrsInStu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccCrsInStu.Location = new System.Drawing.Point(374, 626);
+            this.btnAccCrsInStu.Location = new System.Drawing.Point(374, 619);
             this.btnAccCrsInStu.Name = "btnAccCrsInStu";
             this.btnAccCrsInStu.Size = new System.Drawing.Size(45, 44);
             this.btnAccCrsInStu.TabIndex = 31;
             this.btnAccCrsInStu.UseVisualStyleBackColor = true;
+            this.btnAccCrsInStu.Click += new System.EventHandler(this.btnAccCrsInStu_Click);
+            // 
+            // clTitle
+            // 
+            this.clTitle.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.clTitle.HeaderText = "Title";
+            this.clTitle.Name = "clTitle";
+            this.clTitle.ReadOnly = true;
+            this.clTitle.Width = 61;
+            // 
+            // clInstructor
+            // 
+            this.clInstructor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.clInstructor.HeaderText = "Instructor";
+            this.clInstructor.Name = "clInstructor";
+            this.clInstructor.ReadOnly = true;
+            this.clInstructor.Width = 93;
+            // 
+            // clLink
+            // 
+            this.clLink.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.clLink.HeaderText = "Download";
+            this.clLink.Name = "clLink";
+            this.clLink.ReadOnly = true;
+            this.clLink.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.clLink.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // Course_info_Stu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(792, 681);
+            this.ClientSize = new System.Drawing.Size(792, 673);
             this.Controls.Add(this.btnAccCrsInStu);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -278,6 +284,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Course_info_Stu";
             this.Text = "Course_info_Stu";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Course_info_Stu_FormClosed);
             this.Load += new System.EventHandler(this.Course_info_Stu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gbTchrInfo.ResumeLayout(false);
@@ -308,11 +315,11 @@
         private System.Windows.Forms.ColumnHeader chInst;
         private System.Windows.Forms.ColumnHeader chMessage;
         private System.Windows.Forms.DataGridView dgvAtch;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clTitle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clInstructor;
-        private System.Windows.Forms.DataGridViewLinkColumn clLink;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnAccCrsInStu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clTitle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clInstructor;
+        private System.Windows.Forms.DataGridViewLinkColumn clLink;
     }
 }

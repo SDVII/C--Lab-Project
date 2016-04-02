@@ -68,6 +68,7 @@
             // 
             // cbDoc
             // 
+            this.cbDoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDoc.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbDoc.FormattingEnabled = true;
             this.cbDoc.Location = new System.Drawing.Point(16, 55);
@@ -147,6 +148,7 @@
             // 
             // cbDocS
             // 
+            this.cbDocS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDocS.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbDocS.FormattingEnabled = true;
             this.cbDocS.Location = new System.Drawing.Point(19, 124);
@@ -227,6 +229,7 @@
             this.btnAccD.BackgroundImage = global::Student_Teacher_Form.Properties.Resources.ic_check_black_24dp_2x1;
             this.btnAccD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAccD.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
+            this.btnAccD.FlatAppearance.BorderSize = 0;
             this.btnAccD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAccD.Location = new System.Drawing.Point(286, 503);
             this.btnAccD.Name = "btnAccD";
