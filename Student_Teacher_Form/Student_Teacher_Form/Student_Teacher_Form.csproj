@@ -64,21 +64,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Announcement.cs" />
+    <Compile Include="AnnouncementDB.cs" />
     <Compile Include="Contact_Us.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Contact_Us.Designer.cs">
       <DependentUpon>Contact_Us.cs</DependentUpon>
     </Compile>
-    <Compile Include="Contact_UsDB.cs" />
-    <Compile Include="Course_AddDB.cs" />
+    <Compile Include="Course.cs" />
+    <Compile Include="CourseAnnouncements.cs" />
+    <Compile Include="CourseAnnouncementsDB.cs" />
+    <Compile Include="CourseDB.cs" />
     <Compile Include="Course_info_Stu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Course_info_Stu.Designer.cs">
       <DependentUpon>Course_info_Stu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Course_info_StuDB.cs" />
     <Compile Include="Course_info_Tch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,28 +89,34 @@
       <DependentUpon>Course_info_Tch.cs</DependentUpon>
     </Compile>
     <Compile Include="DatabaseHandler.cs" />
+    <Compile Include="Department.cs" />
+    <Compile Include="DepartmentDB.cs" />
     <Compile Include="Document_Request.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Document_Request.Designer.cs">
       <DependentUpon>Document_Request.cs</DependentUpon>
     </Compile>
-    <Compile Include="Document_RequestDB.cs" />
+    <Compile Include="Events.cs" />
+    <Compile Include="EventsDB.cs" />
+    <Compile Include="Exam.cs" />
+    <Compile Include="ExamDB.cs" />
     <Compile Include="Exam_Schedule.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Exam_Schedule.Designer.cs">
       <DependentUpon>Exam_Schedule.cs</DependentUpon>
     </Compile>
-    <Compile Include="Exam_ScheduleDB.cs" />
+    <Compile Include="FinancialAffairs.cs" />
+    <Compile Include="FinancialAffairsDB.cs" />
     <Compile Include="Financial_Affairs.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Financial_Affairs.Designer.cs">
       <DependentUpon>Financial_Affairs.cs</DependentUpon>
     </Compile>
-    <Compile Include="Financial_AffairsDB.cs" />
-    <Compile Include="LoginDB.cs" />
+    <Compile Include="Manager.cs" />
+    <Compile Include="ManagerDB.cs" />
     <Compile Include="Move_Resize.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -121,6 +130,13 @@
     <Compile Include="Course_Add.Designer.cs">
       <DependentUpon>Course_Add.cs</DependentUpon>
     </Compile>
+    <Compile Include="Msg.cs" />
+    <Compile Include="MsgDB.cs" />
+    <Compile Include="Msgr.cs" />
+    <Compile Include="MsgrDB.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Report_Issue.cs">
@@ -129,56 +145,60 @@
     <Compile Include="Report_Issue.Designer.cs">
       <DependentUpon>Report_Issue.cs</DependentUpon>
     </Compile>
-    <Compile Include="Report_IssueDB.cs" />
     <Compile Include="Schedule.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Schedule.Designer.cs">
       <DependentUpon>Schedule.cs</DependentUpon>
     </Compile>
-    <Compile Include="ScheduleDB.cs" />
     <Compile Include="Search_Students.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Search_Students.Designer.cs">
       <DependentUpon>Search_Students.cs</DependentUpon>
     </Compile>
-    <Compile Include="Search_StudentsDB.cs" />
+    <Compile Include="Section.cs" />
+    <Compile Include="SectionDB.cs" />
+    <Compile Include="SectionTime.cs" />
+    <Compile Include="SectionTimeDB.cs" />
     <Compile Include="Send_Request.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Send_Request.Designer.cs">
       <DependentUpon>Send_Request.cs</DependentUpon>
     </Compile>
-    <Compile Include="Send_RequestDB.cs" />
     <Compile Include="Settings.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Settings.Designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
-    <Compile Include="SettingsDB.cs" />
+    <Compile Include="Slot.cs" />
+    <Compile Include="SlotDB.cs" />
+    <Compile Include="Student.cs" />
+    <Compile Include="StudentDB.cs" />
+    <Compile Include="StudentSchedule.cs" />
+    <Compile Include="StudentScheduleDB.cs" />
     <Compile Include="Student_Portal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Student_Portal.Designer.cs">
       <DependentUpon>Student_Portal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Student_PortalDB.cs" />
     <Compile Include="Teacher Portal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Teacher Portal.Designer.cs">
       <DependentUpon>Teacher Portal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Teacher PortalDB.cs" />
+    <Compile Include="Teacher.cs" />
+    <Compile Include="TeacherDB.cs" />
     <Compile Include="Transcript.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Transcript.Designer.cs">
       <DependentUpon>Transcript.cs</DependentUpon>
     </Compile>
-    <Compile Include="TranscriptDB.cs" />
     <Compile Include="Utilities.cs" />
     <EmbeddedResource Include="Contact_Us.resx">
       <DependentUpon>Contact_Us.cs</DependentUpon>
@@ -204,6 +224,23 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\Student_Teacher_Form.Contact_Us.resources" />
+    <EmbeddedResource Include="obj\Debug\Student_Teacher_Form.Course_Add.resources" />
+    <EmbeddedResource Include="obj\Debug\Student_Teacher_Form.Course_info_Stu.resources" />
+    <EmbeddedResource Include="obj\Debug\Student_Teacher_Form.Course_info_Tch.resources" />
+    <EmbeddedResource Include="obj\Debug\Student_Teacher_Form.Document_Request.resources" />
+    <EmbeddedResource Include="obj\Debug\Student_Teacher_Form.Exam_Schedule.resources" />
+    <EmbeddedResource Include="obj\Debug\Student_Teacher_Form.Financial_Affairs.resources" />
+    <EmbeddedResource Include="obj\Debug\Student_Teacher_Form.Login.resources" />
+    <EmbeddedResource Include="obj\Debug\Student_Teacher_Form.Properties.Resources.resources" />
+    <EmbeddedResource Include="obj\Debug\Student_Teacher_Form.Report_Issue.resources" />
+    <EmbeddedResource Include="obj\Debug\Student_Teacher_Form.Schedule.resources" />
+    <EmbeddedResource Include="obj\Debug\Student_Teacher_Form.Search_Students.resources" />
+    <EmbeddedResource Include="obj\Debug\Student_Teacher_Form.Send_Request.resources" />
+    <EmbeddedResource Include="obj\Debug\Student_Teacher_Form.Settings.resources" />
+    <EmbeddedResource Include="obj\Debug\Student_Teacher_Form.Student_Portal.resources" />
+    <EmbeddedResource Include="obj\Debug\Student_Teacher_Form.Teacher_Portal.resources" />
+    <EmbeddedResource Include="obj\Debug\Student_Teacher_Form.Transcript.resources" />
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -239,6 +276,14 @@
     <EmbeddedResource Include="Transcript.resx">
       <DependentUpon>Transcript.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="bin\Debug\Student_Teacher_Form.exe.config" />
+    <None Include="bin\Debug\Student_Teacher_Form.vshost.exe.config" />
+    <None Include="bin\Debug\Student_Teacher_Form.vshost.exe.manifest" />
+    <None Include="obj\Debug\build.force" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\Student_Teacher_Form.csproj.GenerateResource.Cache" />
+    <None Include="obj\Debug\Student_Teacher_Form.csprojResolveAssemblyReference.cache" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -249,6 +294,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Student_Teacher_Form.csproj.DotSettings" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -354,6 +400,110 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\DevExpress.Data.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.Data.v15.2.xml" />
+    <Content Include="bin\Debug\DevExpress.Map.v15.2.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.Map.v15.2.Core.xml" />
+    <Content Include="bin\Debug\DevExpress.Office.v15.2.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.Office.v15.2.Core.xml" />
+    <Content Include="bin\Debug\DevExpress.Pdf.v15.2.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.Pdf.v15.2.Core.xml" />
+    <Content Include="bin\Debug\DevExpress.Pdf.v15.2.Drawing.dll" />
+    <Content Include="bin\Debug\DevExpress.Pdf.v15.2.Drawing.xml" />
+    <Content Include="bin\Debug\DevExpress.Printing.v15.2.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.Printing.v15.2.Core.xml" />
+    <Content Include="bin\Debug\DevExpress.RichEdit.v15.2.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.RichEdit.v15.2.Core.xml" />
+    <Content Include="bin\Debug\DevExpress.Sparkline.v15.2.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.Sparkline.v15.2.Core.xml" />
+    <Content Include="bin\Debug\DevExpress.SpellChecker.v15.2.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.SpellChecker.v15.2.Core.xml" />
+    <Content Include="bin\Debug\DevExpress.Utils.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.Utils.v15.2.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraBars.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraBars.v15.2.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraEditors.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraEditors.v15.2.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraLayout.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraLayout.v15.2.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraMap.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraMap.v15.2.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraPrinting.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraPrinting.v15.2.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraSpellChecker.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraSpellChecker.v15.2.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraTreeList.v15.2.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraTreeList.v15.2.xml" />
+    <Content Include="bin\Debug\de\DevExpress.Data.v15.2.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.Map.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.Office.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.Pdf.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.Printing.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.RichEdit.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.Sparkline.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.Utils.v15.2.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.XtraBars.v15.2.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.XtraEditors.v15.2.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.XtraLayout.v15.2.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.XtraPrinting.v15.2.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.XtraSpellChecker.v15.2.resources.dll" />
+    <Content Include="bin\Debug\de\DevExpress.XtraTreeList.v15.2.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.Data.v15.2.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.Map.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.Office.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.Pdf.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.Printing.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.RichEdit.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.Sparkline.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.Utils.v15.2.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.XtraBars.v15.2.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.XtraEditors.v15.2.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.XtraLayout.v15.2.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.XtraPrinting.v15.2.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.XtraSpellChecker.v15.2.resources.dll" />
+    <Content Include="bin\Debug\es\DevExpress.XtraTreeList.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.Data.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.Map.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.Office.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.Pdf.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.Printing.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.RichEdit.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.Sparkline.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.Utils.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.XtraBars.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.XtraEditors.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.XtraLayout.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.XtraPrinting.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.XtraSpellChecker.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ja\DevExpress.XtraTreeList.v15.2.resources.dll" />
+    <Content Include="bin\Debug\MySql.Data.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.Data.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.Map.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.Office.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.Pdf.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.Printing.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.RichEdit.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.Sparkline.v15.2.Core.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.Utils.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.XtraBars.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.XtraEditors.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.XtraLayout.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.XtraPrinting.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.XtraSpellChecker.v15.2.resources.dll" />
+    <Content Include="bin\Debug\ru\DevExpress.XtraTreeList.v15.2.resources.dll" />
+    <Content Include="bin\Debug\Student_Teacher_Form.exe" />
+    <Content Include="bin\Debug\Student_Teacher_Form.pdb" />
+    <Content Include="bin\Debug\Student_Teacher_Form.vshost.exe" />
+    <Content Include="obj\Debug\Student_Teacher_Form.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Student_Teacher_Form.exe" />
+    <Content Include="obj\Debug\student_teacher_form.exe.licenses" />
+    <Content Include="obj\Debug\Student_Teacher_Form.pdb" />
+    <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
