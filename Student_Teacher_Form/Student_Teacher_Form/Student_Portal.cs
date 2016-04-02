@@ -110,7 +110,7 @@ namespace Student_Teacher_Form
                 Console.WriteLine(courseList[i].Name);
                 btn.Text = courseList[i].Name;
                 btn.UseVisualStyleBackColor = false;
-                //btn.Click += new System.EventHandler(this.callCourse);
+                btn.Click += new System.EventHandler(this.callCourse);
                 row.Cells[0].Value = btn;
                 dgvCourses.Rows.Add(row);
             }
@@ -124,7 +124,7 @@ namespace Student_Teacher_Form
         private void callCourse(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-            Course_info_Stu f = new Course_info_Stu(stuID, this, btn.Text);
+            Course_info_Stu f = new Course_info_Stu(student.Id, this, btn.Text);
             f.Visible = true;
             this.Enabled = false;
 
