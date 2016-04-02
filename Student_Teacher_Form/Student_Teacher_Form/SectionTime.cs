@@ -47,6 +47,17 @@ namespace Student_Teacher_Form
             set { time = value; }
         }
 
+        public String getTimeAsString()
+        {
+            String rtn = "";
+
+            int hour =  8 + (time % 17);
+
+            rtn = hour + ":30-" + (hour + 1) + ":30";
+
+            return rtn;
+        }
+
         public string Location
         {
             get { return location; }

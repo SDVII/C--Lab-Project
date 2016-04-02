@@ -10,18 +10,21 @@ namespace Student_Teacher_Form
     {
         private int id;
         private String title, msg;
+        private DateTime time;
 
-        public Announcement(int id, string title, string msg)
+        public Announcement(int id, string title, string msg, DateTime time)
         {
             this.id = id;
             this.title = title;
             this.msg = msg;
+            this.time = time;
         }
 
-        public Announcement(string title, string msg)
+        public Announcement(string title, string msg, DateTime time)
         {
             this.title = title;
             this.msg = msg;
+            this.time = time;
         }
 
 
@@ -41,6 +44,11 @@ namespace Student_Teacher_Form
         {
             get { return msg; }
             set { msg = value; }
+        }
+        public DateTime Time
+        {
+            get { return time; }
+            set { time = value; }
         }
     }
 }

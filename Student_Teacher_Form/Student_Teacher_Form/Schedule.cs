@@ -12,25 +12,30 @@ namespace Student_Teacher_Form
 {
     public partial class Schedule : Form
     {
-        private int teachID = 0;
+        private Teacher teacher = null;
         private Teacher_Portal teacher_Portal;
-        private int stuID = 0;
+        private Student student = null;
         private Student_Portal student_Portal;
 
-        public Schedule(int teachID, Teacher_Portal teacher_Portal)
+        public Schedule(Teacher teacher, Teacher_Portal teacher_Portal)
         {
             InitializeComponent();
-            this.teachID = teachID;
+            this.teacher = teacher;
             this.teacher_Portal = teacher_Portal;
-            this.Text = teachID + "";
+            this.Text = teacher.Id + "";
         }
 
-        public Schedule(int stuID, Student_Portal student_Portal)
+        public Schedule(Student student, Student_Portal student_Portal)
         {
             InitializeComponent();
-            this.stuID = stuID;
+            this.student = student;
             this.student_Portal = student_Portal;
-            this.Text = stuID + "";
+            this.Text = student.Id + "";
+        }
+
+        public void fillSchedule()
+        {
+
         }
 
         private void Schedule_Load(object sender, EventArgs e)
@@ -41,7 +46,7 @@ namespace Student_Teacher_Form
 
         private void Schedule_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if(teachID != 0)
+            if(teacher != null)
                 teacher_Portal.Enabled = true;
             else
                 student_Portal.Enabled = true;
@@ -49,7 +54,7 @@ namespace Student_Teacher_Form
 
         private void btnAccSchd_Click(object sender, EventArgs e)
         {
-            if (teachID != 0)
+            if (teacher != null)
             {
                 this.Close();
                 teacher_Portal.Enabled = true;

@@ -156,9 +156,9 @@ namespace Student_Teacher_Form
                     }
                     else
                     {
-                        //Teacher_Portal f = new Teacher_Portal(tea);
-                        //f.Visible = true;
-                        //this.Visible = false;
+                        Teacher_Portal f = new Teacher_Portal(tea);
+                        f.Visible = true;
+                        this.Visible = false;
                     }
                 }
             }

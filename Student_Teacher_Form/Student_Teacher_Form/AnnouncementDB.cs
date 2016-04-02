@@ -19,7 +19,7 @@ namespace Student_Teacher_Form
         public static bool Add(Announcement announcement)
         {
             // query take variables $
-            string query = $"INSERT INTO Announcements (Announcements_title, Announcements_msg) Values ('{announcement.Title}','{announcement.Msg}')";
+            string query = $"INSERT INTO Announcements (Announcements_title, Announcements_msg,Announcements_time) Values ('{announcement.Title}','{announcement.Msg}','{announcement.Time}')";
             // check if the connection is open first
             if (databaseHandler.openConnection() == true)
             {
@@ -36,7 +36,7 @@ namespace Student_Teacher_Form
 
         public static bool Update(Announcement announcement)
         {
-            string query = $"UPDATE Announcements SET Announcements_title='{announcement.Title}',Announcements_msg='{announcement.Msg}' WHERE Announcements_id='{announcement.Id}'"; // create the query
+            string query = $"UPDATE Announcements SET Announcements_title='{announcement.Title}',Announcements_msg='{announcement.Msg}',Announcements_time='{announcement.Time}' WHERE Announcements_id='{announcement.Id}'"; // create the query
 
 
             if (databaseHandler.openConnection()) // check the connection
@@ -74,7 +74,7 @@ namespace Student_Teacher_Form
 
                 while (reader.Read())
                 {
-                    announcement = new Announcement(reader.GetInt32(0), reader.GetString(1), reader.GetString(2));
+                    announcement = new Announcement(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetDateTime(3));
                 }
             }
             return announcement;
@@ -92,7 +92,27 @@ namespace Student_Teacher_Form
 
                 while (reader.Read())
                 {
-                    Announcement announcement = new Announcement(reader.GetInt32(0), reader.GetString(1), reader.GetString(2));
+                    Announcement announcement = new Announcement(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetDateTime(3));
+                    list.Add(announcement);
+
+                }
+            }
+            return list;
+        }
+
+        public static List<Announcement> GetLimited(int amount)
+        {
+            String query = "SELECT * FROM Announcements ORDER BY Announcements_time DESC LIMIT 0, " + amount;
+            List<Announcement> list = new List<Announcement>();
+
+            if (databaseHandler.openConnection())
+            {
+                MySqlCommand cmd = new MySqlCommand(query, databaseHandler.connection);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Announcement announcement = new Announcement(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetDateTime(3));
                     list.Add(announcement);
 
                 }

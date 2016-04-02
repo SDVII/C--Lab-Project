@@ -102,5 +102,46 @@ namespace Student_Teacher_Form
 
             return list;
         }
+
+        public static List<CourseAnnouncements> GetWithCourseId(int courseId)
+        {
+            String query = "SELECT * FROM courseAnnouncements WHERE courseAnnouncements_course_id = '" + courseId + "'";
+            List<CourseAnnouncements> list = new List<CourseAnnouncements>();
+
+            if (databaseHandler.openConnection())
+            {
+                MySqlCommand cmd = new MySqlCommand(query, databaseHandler.connection);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    CourseAnnouncements courseAnnouncements = new CourseAnnouncements(reader.GetInt32(0), reader.GetInt32(1), reader.GetInt32(2), reader.GetString(3), reader.GetString(4), reader.GetDateTime(5));
+                    list.Add(courseAnnouncements);
+
+                }
+            }
+
+            return list;
+        }
+
+        public static List<CourseAnnouncements> GetLimited(int courseId, int amount)
+        {
+            String query = "SELECT * FROM courseAnnouncements WHERE courseAnnouncements_id = '"+courseId+"' ORDER BY courseAnnouncements_time DESC LIMIT 0, " + amount;
+            List<CourseAnnouncements> list = new List<CourseAnnouncements>();
+
+            if (databaseHandler.openConnection())
+            {
+                MySqlCommand cmd = new MySqlCommand(query, databaseHandler.connection);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    CourseAnnouncements courseAnnouncements = new CourseAnnouncements(reader.GetInt32(0), reader.GetInt32(1), reader.GetInt32(2), reader.GetString(3), reader.GetString(4), reader.GetDateTime(5));
+                    list.Add(courseAnnouncements);
+
+                }
+            }
+            return list;
+        }
     }
 }

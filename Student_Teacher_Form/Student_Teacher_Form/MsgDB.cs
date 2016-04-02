@@ -102,5 +102,26 @@ namespace Student_Teacher_Form
 
             return list;
         }
+
+        public static List<Msg> GetWithReceiverId(int receiverId)
+        {
+            String query = "SELECT * FROM msg WHERE msg_receiver_id = '" + receiverId + "'";
+            List<Msg> list = new List<Msg>();
+
+            if (databaseHandler.openConnection())
+            {
+                MySqlCommand cmd = new MySqlCommand(query, databaseHandler.connection);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Msg msg = new Msg(reader.GetInt32(0), reader.GetInt32(1), reader.GetInt32(2), reader.GetDateTime(3), reader.GetString(4), reader.GetString(5), reader.GetString(6));
+                    list.Add(msg);
+
+                }
+            }
+
+            return list;
+        }
     }
 }
