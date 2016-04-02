@@ -48,13 +48,13 @@
             this.txtNwP = new System.Windows.Forms.TextBox();
             this.txtNwPC = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnSbmtPass = new System.Windows.Forms.Button();
             this.rbShow = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.rbHide = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lbChanges = new System.Windows.Forms.Label();
             this.btnAccS = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnSbmtPass = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPrf)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -280,6 +280,21 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Password Operations:";
             // 
+            // btnSbmtPass
+            // 
+            this.btnSbmtPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(91)))), ((int)(((byte)(96)))));
+            this.btnSbmtPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSbmtPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSbmtPass.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSbmtPass.ForeColor = System.Drawing.Color.White;
+            this.btnSbmtPass.Location = new System.Drawing.Point(159, 139);
+            this.btnSbmtPass.Name = "btnSbmtPass";
+            this.btnSbmtPass.Size = new System.Drawing.Size(157, 33);
+            this.btnSbmtPass.TabIndex = 42;
+            this.btnSbmtPass.Text = "Submit";
+            this.btnSbmtPass.UseVisualStyleBackColor = false;
+            this.btnSbmtPass.Click += new System.EventHandler(this.btnSbmtPass_Click);
+            // 
             // rbShow
             // 
             this.rbShow.AutoSize = true;
@@ -292,21 +307,20 @@
             this.rbShow.Text = "Show Newsfeed";
             this.rbShow.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbHide
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(29, 65);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(122, 22);
-            this.radioButton2.TabIndex = 22;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Hide Newsfeed";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbHide.AutoSize = true;
+            this.rbHide.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbHide.Location = new System.Drawing.Point(29, 65);
+            this.rbHide.Name = "rbHide";
+            this.rbHide.Size = new System.Drawing.Size(122, 22);
+            this.rbHide.TabIndex = 22;
+            this.rbHide.Text = "Hide Newsfeed";
+            this.rbHide.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.radioButton2);
+            this.groupBox3.Controls.Add(this.rbHide);
             this.groupBox3.Controls.Add(this.rbShow);
             this.groupBox3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(383, 383);
@@ -332,8 +346,9 @@
             this.btnAccS.BackgroundImage = global::Student_Teacher_Form.Properties.Resources.ic_check_black_24dp_2x1;
             this.btnAccS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAccS.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
+            this.btnAccS.FlatAppearance.BorderSize = 0;
             this.btnAccS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccS.Location = new System.Drawing.Point(275, 559);
+            this.btnAccS.Location = new System.Drawing.Point(275, 548);
             this.btnAccS.Name = "btnAccS";
             this.btnAccS.Size = new System.Drawing.Size(45, 44);
             this.btnAccS.TabIndex = 24;
@@ -350,25 +365,11 @@
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
             // 
-            // btnSbmtPass
-            // 
-            this.btnSbmtPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(91)))), ((int)(((byte)(96)))));
-            this.btnSbmtPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSbmtPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSbmtPass.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSbmtPass.ForeColor = System.Drawing.Color.White;
-            this.btnSbmtPass.Location = new System.Drawing.Point(159, 139);
-            this.btnSbmtPass.Name = "btnSbmtPass";
-            this.btnSbmtPass.Size = new System.Drawing.Size(157, 33);
-            this.btnSbmtPass.TabIndex = 42;
-            this.btnSbmtPass.Text = "Submit";
-            this.btnSbmtPass.UseVisualStyleBackColor = false;
-            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(593, 609);
+            this.ClientSize = new System.Drawing.Size(593, 604);
             this.Controls.Add(this.lbChanges);
             this.Controls.Add(this.btnAccS);
             this.Controls.Add(this.groupBox3);
@@ -417,7 +418,7 @@
         private System.Windows.Forms.TextBox txtNwPC;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton rbShow;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton rbHide;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btnAccS;
         private System.Windows.Forms.Label lbChanges;

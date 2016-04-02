@@ -52,6 +52,8 @@
             this.middle_events = new System.Windows.Forms.SplitContainer();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dgvCourses = new System.Windows.Forms.DataGridView();
+            this.courses = new System.Windows.Forms.DataGridViewButtonColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lvSchedule = new System.Windows.Forms.ListView();
@@ -61,8 +63,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lbNotification = new System.Windows.Forms.ListBox();
             this.lable7 = new System.Windows.Forms.Label();
-            this.dgvCourses = new System.Windows.Forms.DataGridView();
-            this.courses = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnTranscript = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.main)).BeginInit();
             this.main.Panel1.SuspendLayout();
             this.main.Panel2.SuspendLayout();
@@ -91,8 +92,8 @@
             this.middle_events.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCourses)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // main
@@ -187,7 +188,7 @@
             this.buttons.Panel2.Controls.Add(this.btnInfo);
             this.buttons.Panel2.Controls.Add(this.btnSettings);
             this.buttons.Size = new System.Drawing.Size(863, 53);
-            this.buttons.SplitterDistance = 710;
+            this.buttons.SplitterDistance = 716;
             this.buttons.SplitterWidth = 1;
             this.buttons.TabIndex = 0;
             // 
@@ -263,19 +264,20 @@
             // 
             // menu.Panel1
             // 
+            this.menu.Panel1.Controls.Add(this.btnTranscript);
             this.menu.Panel1.Controls.Add(this.btnContact);
-            this.menu.Panel1.Controls.Add(this.btnRep);
-            this.menu.Panel1.Controls.Add(this.btnFinAff);
-            this.menu.Panel1.Controls.Add(this.btnReqDoc);
             this.menu.Panel1.Controls.Add(this.brnEx);
             this.menu.Panel1.Controls.Add(this.btnAddCrs);
+            this.menu.Panel1.Controls.Add(this.btnRep);
             this.menu.Panel1.Controls.Add(this.btnSchedule);
+            this.menu.Panel1.Controls.Add(this.btnReqDoc);
+            this.menu.Panel1.Controls.Add(this.btnFinAff);
             // 
             // menu.Panel2
             // 
             this.menu.Panel2.Controls.Add(this.rights);
             this.menu.Size = new System.Drawing.Size(168, 515);
-            this.menu.SplitterDistance = 205;
+            this.menu.SplitterDistance = 235;
             this.menu.SplitterWidth = 1;
             this.menu.TabIndex = 0;
             // 
@@ -286,7 +288,7 @@
             this.btnContact.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnContact.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnContact.ForeColor = System.Drawing.Color.White;
-            this.btnContact.Location = new System.Drawing.Point(-6, 174);
+            this.btnContact.Location = new System.Drawing.Point(-7, 202);
             this.btnContact.Name = "btnContact";
             this.btnContact.Size = new System.Drawing.Size(175, 31);
             this.btnContact.TabIndex = 47;
@@ -301,7 +303,7 @@
             this.btnRep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRep.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRep.ForeColor = System.Drawing.Color.White;
-            this.btnRep.Location = new System.Drawing.Point(-5, 144);
+            this.btnRep.Location = new System.Drawing.Point(-6, 172);
             this.btnRep.Name = "btnRep";
             this.btnRep.Size = new System.Drawing.Size(175, 31);
             this.btnRep.TabIndex = 46;
@@ -316,7 +318,7 @@
             this.btnFinAff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFinAff.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFinAff.ForeColor = System.Drawing.Color.White;
-            this.btnFinAff.Location = new System.Drawing.Point(-5, 117);
+            this.btnFinAff.Location = new System.Drawing.Point(-6, 145);
             this.btnFinAff.Name = "btnFinAff";
             this.btnFinAff.Size = new System.Drawing.Size(175, 31);
             this.btnFinAff.TabIndex = 45;
@@ -331,7 +333,7 @@
             this.btnReqDoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReqDoc.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReqDoc.ForeColor = System.Drawing.Color.White;
-            this.btnReqDoc.Location = new System.Drawing.Point(-5, 87);
+            this.btnReqDoc.Location = new System.Drawing.Point(-6, 115);
             this.btnReqDoc.Name = "btnReqDoc";
             this.btnReqDoc.Size = new System.Drawing.Size(175, 31);
             this.btnReqDoc.TabIndex = 44;
@@ -395,8 +397,8 @@
             // rights.Panel2
             // 
             this.rights.Panel2.Controls.Add(this.label3);
-            this.rights.Size = new System.Drawing.Size(168, 309);
-            this.rights.SplitterDistance = 283;
+            this.rights.Size = new System.Drawing.Size(168, 279);
+            this.rights.SplitterDistance = 253;
             this.rights.SplitterWidth = 1;
             this.rights.TabIndex = 0;
             // 
@@ -456,6 +458,34 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(349, 218);
             this.panel1.TabIndex = 0;
+            // 
+            // dgvCourses
+            // 
+            this.dgvCourses.AllowUserToResizeColumns = false;
+            this.dgvCourses.AllowUserToResizeRows = false;
+            this.dgvCourses.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgvCourses.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvCourses.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.dgvCourses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCourses.ColumnHeadersVisible = false;
+            this.dgvCourses.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.courses});
+            this.dgvCourses.GridColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvCourses.Location = new System.Drawing.Point(10, 44);
+            this.dgvCourses.Name = "dgvCourses";
+            this.dgvCourses.RowHeadersVisible = false;
+            this.dgvCourses.RowTemplate.Height = 30;
+            this.dgvCourses.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCourses.Size = new System.Drawing.Size(327, 167);
+            this.dgvCourses.TabIndex = 2;
+            // 
+            // courses
+            // 
+            this.courses.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.courses.HeaderText = "Column1";
+            this.courses.MinimumWidth = 327;
+            this.courses.Name = "courses";
+            this.courses.Width = 327;
             // 
             // label1
             // 
@@ -547,29 +577,20 @@
             this.lable7.TabIndex = 55;
             this.lable7.Text = "Notificatiions";
             // 
-            // dgvCourses
+            // btnTranscript
             // 
-            this.dgvCourses.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dgvCourses.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvCourses.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            this.dgvCourses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCourses.ColumnHeadersVisible = false;
-            this.dgvCourses.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.courses});
-            this.dgvCourses.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvCourses.Location = new System.Drawing.Point(11, 42);
-            this.dgvCourses.Name = "dgvCourses";
-            this.dgvCourses.RowHeadersVisible = false;
-            this.dgvCourses.RowTemplate.Height = 30;
-            this.dgvCourses.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCourses.Size = new System.Drawing.Size(327, 167);
-            this.dgvCourses.TabIndex = 2;
-            // 
-            // courses
-            // 
-            this.courses.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.courses.HeaderText = "Column1";
-            this.courses.Name = "courses";
+            this.btnTranscript.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(91)))), ((int)(((byte)(96)))));
+            this.btnTranscript.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTranscript.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTranscript.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTranscript.ForeColor = System.Drawing.Color.White;
+            this.btnTranscript.Location = new System.Drawing.Point(-6, 85);
+            this.btnTranscript.Name = "btnTranscript";
+            this.btnTranscript.Size = new System.Drawing.Size(175, 31);
+            this.btnTranscript.TabIndex = 48;
+            this.btnTranscript.Text = "Transcript";
+            this.btnTranscript.UseVisualStyleBackColor = false;
+            this.btnTranscript.Click += new System.EventHandler(this.btnTranscript_Click);
             // 
             // Student_Portal
             // 
@@ -613,9 +634,9 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCourses)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCourses)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -656,5 +677,6 @@
         private System.Windows.Forms.Label lable7;
         private System.Windows.Forms.DataGridView dgvCourses;
         private System.Windows.Forms.DataGridViewButtonColumn courses;
+        private System.Windows.Forms.Button btnTranscript;
     }
 }

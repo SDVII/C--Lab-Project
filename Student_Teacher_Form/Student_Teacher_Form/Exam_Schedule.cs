@@ -21,6 +21,22 @@ namespace Student_Teacher_Form
             this.stuID = stuID;
             this.student_Portal = student_Portal;
             this.Text = stuID + "";
+
+            populateExams(lvExSchd);
+        }
+
+        private void populateExams(ListView lvExSchd)
+        {
+            /*
+            for (int i = 0; i < number of exams; i++)
+            {
+                ListViewItem lvi = new ListViewItem();
+                lvi.Text = id;
+                lvi.SubItems.Add(date);
+                lvi.SubItems.Add(location);
+                lvSchedule.Items.Add(lvi);
+            }
+            */
         }
 
         private void btnAccExSchd_Click(object sender, EventArgs e)

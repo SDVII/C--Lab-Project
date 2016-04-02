@@ -36,6 +36,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnAccR = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbChanges = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,16 +71,17 @@
             this.btnSbmR.TabIndex = 6;
             this.btnSbmR.Text = "Submit";
             this.btnSbmR.UseVisualStyleBackColor = false;
+            this.btnSbmR.Click += new System.EventHandler(this.btnSbmR_Click);
             // 
             // cbCtgR
             // 
+            this.cbCtgR.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCtgR.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCtgR.FormattingEnabled = true;
             this.cbCtgR.Location = new System.Drawing.Point(65, 272);
             this.cbCtgR.Name = "cbCtgR";
             this.cbCtgR.Size = new System.Drawing.Size(229, 26);
             this.cbCtgR.TabIndex = 7;
-            this.cbCtgR.Text = "Catagory";
             // 
             // label1
             // 
@@ -108,6 +110,7 @@
             this.btnAccR.BackgroundImage = global::Student_Teacher_Form.Properties.Resources.ic_check_black_24dp_2x1;
             this.btnAccR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAccR.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
+            this.btnAccR.FlatAppearance.BorderSize = 0;
             this.btnAccR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAccR.Location = new System.Drawing.Point(226, 314);
             this.btnAccR.Name = "btnAccR";
@@ -126,11 +129,23 @@
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
             // 
+            // lbChanges
+            // 
+            this.lbChanges.AutoSize = true;
+            this.lbChanges.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbChanges.Location = new System.Drawing.Point(16, 331);
+            this.lbChanges.Name = "lbChanges";
+            this.lbChanges.Size = new System.Drawing.Size(25, 13);
+            this.lbChanges.TabIndex = 37;
+            this.lbChanges.Text = "null";
+            this.lbChanges.Visible = false;
+            // 
             // Report_Issue
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(499, 370);
+            this.Controls.Add(this.lbChanges);
             this.Controls.Add(this.btnAccR);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox1);
@@ -159,5 +174,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnAccR;
+        private System.Windows.Forms.Label lbChanges;
     }
 }

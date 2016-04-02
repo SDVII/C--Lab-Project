@@ -30,7 +30,7 @@
         {
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lbCrs = new System.Windows.Forms.ListBox();
+            this.lbCrsTkn = new System.Windows.Forms.ListBox();
             this.lbGpa = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -49,6 +49,7 @@
             this.btnSrchS = new System.Windows.Forms.Button();
             this.btnAccSS = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbChanges = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbStuP)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -70,7 +71,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox1.Controls.Add(this.lbCrs);
+            this.groupBox1.Controls.Add(this.lbCrsTkn);
             this.groupBox1.Controls.Add(this.lbGpa);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
@@ -91,17 +92,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Student Info";
             // 
-            // lbCrs
+            // lbCrsTkn
             // 
-            this.lbCrs.BackColor = System.Drawing.SystemColors.Control;
-            this.lbCrs.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lbCrs.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCrs.FormattingEnabled = true;
-            this.lbCrs.ItemHeight = 18;
-            this.lbCrs.Location = new System.Drawing.Point(327, 207);
-            this.lbCrs.Name = "lbCrs";
-            this.lbCrs.Size = new System.Drawing.Size(213, 72);
-            this.lbCrs.TabIndex = 14;
+            this.lbCrsTkn.BackColor = System.Drawing.SystemColors.Menu;
+            this.lbCrsTkn.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.lbCrsTkn.FormattingEnabled = true;
+            this.lbCrsTkn.ItemHeight = 18;
+            this.lbCrsTkn.Location = new System.Drawing.Point(320, 206);
+            this.lbCrsTkn.Name = "lbCrsTkn";
+            this.lbCrsTkn.Size = new System.Drawing.Size(220, 72);
+            this.lbCrsTkn.TabIndex = 14;
             // 
             // lbGpa
             // 
@@ -233,13 +233,17 @@
             // 
             // cbSrchTyp
             // 
+            this.cbSrchTyp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSrchTyp.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSrchTyp.FormattingEnabled = true;
+            this.cbSrchTyp.Items.AddRange(new object[] {
+            "Name",
+            "ID",
+            "Department"});
             this.cbSrchTyp.Location = new System.Drawing.Point(366, 39);
             this.cbSrchTyp.Name = "cbSrchTyp";
             this.cbSrchTyp.Size = new System.Drawing.Size(121, 26);
             this.cbSrchTyp.TabIndex = 22;
-            this.cbSrchTyp.Text = "Search Type";
             // 
             // groupBox2
             // 
@@ -259,18 +263,21 @@
             this.btnSrchS.BackgroundImage = global::Student_Teacher_Form.Properties.Resources.ic_search_black_24dp_2x;
             this.btnSrchS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSrchS.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
+            this.btnSrchS.FlatAppearance.BorderSize = 0;
             this.btnSrchS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSrchS.Location = new System.Drawing.Point(502, 32);
             this.btnSrchS.Name = "btnSrchS";
             this.btnSrchS.Size = new System.Drawing.Size(39, 38);
             this.btnSrchS.TabIndex = 23;
             this.btnSrchS.UseVisualStyleBackColor = true;
+            this.btnSrchS.Click += new System.EventHandler(this.btnSrchS_Click);
             // 
             // btnAccSS
             // 
             this.btnAccSS.BackgroundImage = global::Student_Teacher_Form.Properties.Resources.ic_check_black_24dp_2x1;
             this.btnAccSS.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAccSS.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
+            this.btnAccSS.FlatAppearance.BorderSize = 0;
             this.btnAccSS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAccSS.Location = new System.Drawing.Point(285, 488);
             this.btnAccSS.Name = "btnAccSS";
@@ -289,11 +296,23 @@
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
             // 
+            // lbChanges
+            // 
+            this.lbChanges.AutoSize = true;
+            this.lbChanges.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbChanges.Location = new System.Drawing.Point(21, 505);
+            this.lbChanges.Name = "lbChanges";
+            this.lbChanges.Size = new System.Drawing.Size(25, 13);
+            this.lbChanges.TabIndex = 27;
+            this.lbChanges.Text = "null";
+            this.lbChanges.Visible = false;
+            // 
             // Search_Students
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(614, 538);
+            this.Controls.Add(this.lbChanges);
             this.Controls.Add(this.btnAccSS);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -336,6 +355,7 @@
         private System.Windows.Forms.Label lbGpa;
         private System.Windows.Forms.Button btnAccSS;
         private System.Windows.Forms.PictureBox pbStuP;
-        private System.Windows.Forms.ListBox lbCrs;
+        private System.Windows.Forms.Label lbChanges;
+        private System.Windows.Forms.ListBox lbCrsTkn;
     }
 }

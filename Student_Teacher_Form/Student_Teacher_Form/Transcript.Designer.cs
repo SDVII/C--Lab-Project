@@ -67,23 +67,23 @@
             // 
             // cbSemster
             // 
+            this.cbSemster.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSemster.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSemster.FormattingEnabled = true;
             this.cbSemster.Location = new System.Drawing.Point(151, 31);
             this.cbSemster.Name = "cbSemster";
             this.cbSemster.Size = new System.Drawing.Size(121, 26);
             this.cbSemster.TabIndex = 22;
-            this.cbSemster.Text = "Semester";
             // 
             // cbYear
             // 
+            this.cbYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbYear.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbYear.FormattingEnabled = true;
             this.cbYear.Location = new System.Drawing.Point(24, 31);
             this.cbYear.Name = "cbYear";
             this.cbYear.Size = new System.Drawing.Size(121, 26);
             this.cbYear.TabIndex = 23;
-            this.cbYear.Text = "Year";
             // 
             // lvGrades
             // 
@@ -143,18 +143,21 @@
             this.btnSbmSem.TabIndex = 29;
             this.btnSbmSem.Text = "Submit";
             this.btnSbmSem.UseVisualStyleBackColor = false;
+            this.btnSbmSem.Click += new System.EventHandler(this.btnSbmSem_Click);
             // 
             // btnAccTrn
             // 
             this.btnAccTrn.BackgroundImage = global::Student_Teacher_Form.Properties.Resources.ic_check_black_24dp_2x1;
             this.btnAccTrn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAccTrn.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
+            this.btnAccTrn.FlatAppearance.BorderSize = 0;
             this.btnAccTrn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAccTrn.Location = new System.Drawing.Point(219, 348);
             this.btnAccTrn.Name = "btnAccTrn";
             this.btnAccTrn.Size = new System.Drawing.Size(45, 44);
             this.btnAccTrn.TabIndex = 30;
             this.btnAccTrn.UseVisualStyleBackColor = true;
+            this.btnAccTrn.Click += new System.EventHandler(this.btnAccTrn_Click);
             // 
             // Transcript
             // 
@@ -168,6 +171,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Transcript";
             this.Text = "Transcript";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Transcript_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);

@@ -187,6 +187,7 @@
             this.lbDocL.ItemHeight = 18;
             this.lbDocL.Location = new System.Drawing.Point(17, 28);
             this.lbDocL.Name = "lbDocL";
+            this.lbDocL.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.lbDocL.Size = new System.Drawing.Size(219, 166);
             this.lbDocL.TabIndex = 0;
             // 
@@ -262,6 +263,7 @@
             this.btnRmvD.Size = new System.Drawing.Size(39, 38);
             this.btnRmvD.TabIndex = 19;
             this.btnRmvD.UseVisualStyleBackColor = true;
+            this.btnRmvD.Click += new System.EventHandler(this.btnRmvD_Click);
             // 
             // btnSbmD
             // 
@@ -274,6 +276,7 @@
             this.btnSbmD.Size = new System.Drawing.Size(39, 38);
             this.btnSbmD.TabIndex = 18;
             this.btnSbmD.UseVisualStyleBackColor = true;
+            this.btnSbmD.Click += new System.EventHandler(this.btnSbmD_Click);
             // 
             // pictureBox1
             // 

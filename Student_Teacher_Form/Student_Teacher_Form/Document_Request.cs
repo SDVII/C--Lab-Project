@@ -24,6 +24,17 @@ namespace Student_Teacher_Form
 
             pouplateDocuments(cbDoc);
             populateShipmentOptions(cbDocS);
+            populateReadyDocuments(lbRdyD);
+        }
+
+        private void populateReadyDocuments(ListBox lbRdyD)
+        {
+            /*
+            for (int i = 0; i < number of ready documents; i++)
+            {
+                lbRdyD.Items.Add("");
+            }
+            */
         }
 
         private void populateShipmentOptions(ComboBox cbDocS)
@@ -81,7 +92,10 @@ namespace Student_Teacher_Form
 
         private void btnClrD_Click(object sender, EventArgs e)
         {
-
+            for (int i = 0; i < lbDocL.Items.Count; i++)
+            {
+                lbDocL.Items.RemoveAt(i);
+            }
         }
 
         private void btnAccD_Click(object sender, EventArgs e)
@@ -94,6 +108,19 @@ namespace Student_Teacher_Form
         private void Document_Request_FormClosed(object sender, FormClosedEventArgs e)
         {
             student_Portal.Enabled = true;
+        }
+
+        private void btnSbmD_Click(object sender, EventArgs e)
+        {
+            //add all items to DB
+        }
+
+        private void btnRmvD_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < lbDocL.SelectedItems.Count; i++)
+            {
+                lbDocL.Items.Remove(lbDocL.SelectedItems[i]);
+            }
         }
     }
 }
