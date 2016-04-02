@@ -12,15 +12,26 @@ namespace Student_Teacher_Form
 {
     public partial class Exam_Schedule : Form
     {
-        public Exam_Schedule()
+        private int stuID;
+        private Student_Portal student_Portal;
+
+        public Exam_Schedule(int stuID, Student_Portal student_Portal)
         {
             InitializeComponent();
+            this.stuID = stuID;
+            this.student_Portal = student_Portal;
+            this.Text = stuID + "";
         }
 
-        private void Exam_Schedule_Load(object sender, EventArgs e)
+        private void btnAccExSchd_Click(object sender, EventArgs e)
         {
-            lvExSchd.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
-            lvExSchd.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+            this.Close();
+            student_Portal.Enabled = true;
+        }
+
+        private void Exam_Schedule_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            student_Portal.Enabled = true;
         }
     }
 }
