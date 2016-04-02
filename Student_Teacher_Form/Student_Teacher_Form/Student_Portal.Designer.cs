@@ -111,7 +111,7 @@
             // main.Panel2
             // 
             this.main.Panel2.Controls.Add(this.body);
-            this.main.Size = new System.Drawing.Size(1180, 572);
+            this.main.Size = new System.Drawing.Size(1139, 572);
             this.main.SplitterDistance = 53;
             this.main.TabIndex = 2;
             // 
@@ -132,7 +132,7 @@
             // topMain.Panel2
             // 
             this.topMain.Panel2.Controls.Add(this.buttons);
-            this.topMain.Size = new System.Drawing.Size(1180, 53);
+            this.topMain.Size = new System.Drawing.Size(1139, 53);
             this.topMain.SplitterDistance = 316;
             this.topMain.SplitterWidth = 1;
             this.topMain.TabIndex = 0;
@@ -187,8 +187,8 @@
             this.buttons.Panel2.Controls.Add(this.btnPower);
             this.buttons.Panel2.Controls.Add(this.btnInfo);
             this.buttons.Panel2.Controls.Add(this.btnSettings);
-            this.buttons.Size = new System.Drawing.Size(863, 53);
-            this.buttons.SplitterDistance = 716;
+            this.buttons.Size = new System.Drawing.Size(822, 53);
+            this.buttons.SplitterDistance = 670;
             this.buttons.SplitterWidth = 1;
             this.buttons.TabIndex = 0;
             // 
@@ -247,7 +247,7 @@
             // body.Panel2
             // 
             this.body.Panel2.Controls.Add(this.middle_events);
-            this.body.Size = new System.Drawing.Size(1180, 515);
+            this.body.Size = new System.Drawing.Size(1139, 515);
             this.body.SplitterDistance = 168;
             this.body.SplitterWidth = 1;
             this.body.TabIndex = 0;
@@ -431,8 +431,8 @@
             this.middle_events.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(91)))), ((int)(((byte)(96)))));
             this.middle_events.Panel2.Controls.Add(this.lbNotification);
             this.middle_events.Panel2.Controls.Add(this.lable7);
-            this.middle_events.Size = new System.Drawing.Size(1011, 515);
-            this.middle_events.SplitterDistance = 854;
+            this.middle_events.Size = new System.Drawing.Size(970, 515);
+            this.middle_events.SplitterDistance = 813;
             this.middle_events.TabIndex = 0;
             // 
             // flowLayoutPanel1
@@ -445,7 +445,7 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(10);
             this.flowLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(854, 515);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(813, 515);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // panel1
@@ -590,15 +590,15 @@
             this.btnTranscript.TabIndex = 48;
             this.btnTranscript.Text = "Transcript";
             this.btnTranscript.UseVisualStyleBackColor = false;
-            this.btnTranscript.Click += new System.EventHandler(this.btnTranscript_Click);
             // 
             // Student_Portal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1180, 572);
+            this.ClientSize = new System.Drawing.Size(1139, 572);
             this.Controls.Add(this.main);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(611, 0);
             this.Name = "Student_Portal";
             this.Text = "Student_Portal";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Student_Portal_FormClosed);

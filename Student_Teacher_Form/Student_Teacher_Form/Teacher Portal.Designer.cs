@@ -367,6 +367,7 @@
             this.middle_events.Dock = System.Windows.Forms.DockStyle.Fill;
             this.middle_events.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
             this.middle_events.Location = new System.Drawing.Point(0, 0);
+            this.middle_events.MinimumSize = new System.Drawing.Size(611, 0);
             this.middle_events.Name = "middle_events";
             // 
             // middle_events.Panel1
