@@ -192,7 +192,7 @@ namespace Student_Teacher_Form
 
         private void btnSchedule_Click(object sender, EventArgs e)
         {
-            Schedule f = new Schedule(teacher, this);
+            Schedule f = new Schedule(teacher.Id, this);
             f.Visible = true;
             this.Enabled = false;
         }

@@ -191,7 +191,7 @@ namespace Student_Teacher_Form
 
         private void btnSchedule_Click(object sender, EventArgs e)
         {
-            Schedule f = new Schedule(student, this);
+            Schedule f = new Schedule(student.Id, this);
             f.Visible = true;
             this.Enabled = false;
         }
@@ -234,6 +234,13 @@ namespace Student_Teacher_Form
         private void btnContact_Click(object sender, EventArgs e)
         {
             Contact_Us f = new Contact_Us(student.Id, this);
+            f.Visible = true;
+            this.Enabled = false;
+        }
+
+        private void btnTranscript_Click(object sender, EventArgs e)
+        {
+            Transcript f = new Transcript(student.Id, this);
             f.Visible = true;
             this.Enabled = false;
         }
