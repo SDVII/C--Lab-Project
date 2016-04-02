@@ -49,9 +49,10 @@
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(91)))), ((int)(((byte)(96)))));
             this.label6.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Snow;
-            this.label6.Location = new System.Drawing.Point(17, 8);
+            this.label6.Location = new System.Drawing.Point(26, 12);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(112, 33);
+            this.label6.Size = new System.Drawing.Size(173, 50);
             this.label6.TabIndex = 19;
             this.label6.Text = "Schedule";
             // 
@@ -68,9 +69,10 @@
             this.chSun});
             this.lvSchd.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvSchd.GridLines = true;
-            this.lvSchd.Location = new System.Drawing.Point(36, 90);
+            this.lvSchd.Location = new System.Drawing.Point(54, 138);
+            this.lvSchd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lvSchd.Name = "lvSchd";
-            this.lvSchd.Size = new System.Drawing.Size(887, 341);
+            this.lvSchd.Size = new System.Drawing.Size(1328, 556);
             this.lvSchd.TabIndex = 20;
             this.lvSchd.UseCompatibleStateImageBehavior = false;
             this.lvSchd.View = System.Windows.Forms.View.Details;
@@ -129,9 +131,10 @@
             this.btnAccSchd.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
             this.btnAccSchd.FlatAppearance.BorderSize = 0;
             this.btnAccSchd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccSchd.Location = new System.Drawing.Point(456, 442);
+            this.btnAccSchd.Location = new System.Drawing.Point(684, 716);
+            this.btnAccSchd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAccSchd.Name = "btnAccSchd";
-            this.btnAccSchd.Size = new System.Drawing.Size(45, 44);
+            this.btnAccSchd.Size = new System.Drawing.Size(68, 68);
             this.btnAccSchd.TabIndex = 29;
             this.btnAccSchd.UseVisualStyleBackColor = true;
             this.btnAccSchd.Click += new System.EventHandler(this.btnAccSchd_Click);
@@ -139,23 +142,25 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Student_Teacher_Form.Properties.Resources.banner1;
-            this.pictureBox1.Location = new System.Drawing.Point(-1, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(-2, -2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(958, 56);
+            this.pictureBox1.Size = new System.Drawing.Size(1437, 86);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
             // 
             // Schedule
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(957, 498);
+            this.ClientSize = new System.Drawing.Size(1436, 809);
             this.Controls.Add(this.btnAccSchd);
             this.Controls.Add(this.lvSchd);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Schedule";
             this.Text = "Schedule";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Schedule_FormClosed);

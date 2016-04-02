@@ -12,51 +12,63 @@ namespace Student_Teacher_Form
 {
     public partial class Schedule : Form
     {
-        private int teachID = 0;
+        private Teacher teacher = null;
         private Teacher_Portal teacher_Portal;
-        private int stuID = 0;
+        private Student student = null;
         private Student_Portal student_Portal;
+        private List<SectionTime> sectionTimeList;
 
-        public Schedule(int teachID, Teacher_Portal teacher_Portal)
+        public Schedule(Teacher teacher, List<SectionTime> sectionTimeList, Teacher_Portal teacher_Portal)
         {
             InitializeComponent();
-            this.teachID = teachID;
+            this.teacher = teacher;
+            this.sectionTimeList = sectionTimeList;
             this.teacher_Portal = teacher_Portal;
-            this.Text = teachID + "";
+            this.Text = teacher.Id + "";
+
+            populateSchedule(lvSchd);
+        }
+        public Schedule(Student student, List<SectionTime> sectionTimeList, Student_Portal student_Portal)
+        {
+            InitializeComponent();
+            this.student = student;
+            this.sectionTimeList = sectionTimeList;
+            this.student_Portal = student_Portal;
+            this.Text = student.Id + "";
 
             populateSchedule(lvSchd);
         }
 
         private void populateSchedule(ListView lvSchd)
-        {
-            /*
-             for (int i = 0; i < date and day; i++)
-             {
-                 ListViewItem lvi = new ListViewItem();
-                 lvi.Text = date;
-                 lvi.SubItems.Add(mon);
-                 lvi.SubItems.Add(tue);
-                 lvi.SubItems.Add(wen);
-                 lvi.SubItems.Add(thr);
-                 lvi.SubItems.Add(fri);
-                 lvi.SubItems.Add(sat);
-                 lvi.SubItems.Add(sun);
-                 lvSchedule.Items.Add(lvi);
-             }
-             */
+        {            
+            for(int  i = 0; i < 17; i++)
+            {
+                SectionTime[] arr = new SectionTime[7];
+                for(int j = 0; j < sectionTimeList.Count; j++)
+                {
+                    if (sectionTimeList[j].Time % 17 - 1 == i)
+                    {
+                        arr[sectionTimeList[j].Time / 17] = sectionTimeList[j];
+                    }                 
+                    
+                }
+                ListViewItem lvi = new ListViewItem();
+                lvi.Text = (8 + i) + ":30";
+                for (int k = 0; k < 7; k++)
+                {
+                    if (arr[k] != null)
+                        lvi.SubItems.Add(arr[k].Section.Course.Name + "(" + arr[k].Location + ")");
+                    else
+                        lvi.SubItems.Add("");
+                }
+                lvSchd.Items.Add(lvi);
+            }
         }
-
-        public Schedule(int stuID, Student_Portal student_Portal)
-        {
-            InitializeComponent();
-            this.stuID = stuID;
-            this.student_Portal = student_Portal;
-            this.Text = stuID + "";
-        }
+        
 
         private void Schedule_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if(teachID != 0)
+            if(teacher != null)
                 teacher_Portal.Enabled = true;
             else
                 student_Portal.Enabled = true;
@@ -64,7 +76,7 @@ namespace Student_Teacher_Form
 
         private void btnAccSchd_Click(object sender, EventArgs e)
         {
-            if (teachID != 0)
+            if (teacher != null)
             {
                 this.Close();
                 teacher_Portal.Enabled = true;

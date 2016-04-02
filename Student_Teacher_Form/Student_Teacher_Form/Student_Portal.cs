@@ -191,7 +191,7 @@ namespace Student_Teacher_Form
 
         private void btnSchedule_Click(object sender, EventArgs e)
         {
-            Schedule f = new Schedule(student.Id, this);
+            Schedule f = new Schedule(student, sectionTimeList, this);
             f.Visible = true;
             this.Enabled = false;
         }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Student_Teacher_Form
 {
-    class SectionTime
+    public class SectionTime
     {
         private int id, section_id, time;
         private String location;
@@ -51,7 +51,7 @@ namespace Student_Teacher_Form
         {
             String rtn = "";
 
-            int hour =  8 + (time % 17);
+            int hour =  8 + (time % 17 -1 );
 
             rtn = hour + ":30-" + (hour + 1) + ":30";
 
