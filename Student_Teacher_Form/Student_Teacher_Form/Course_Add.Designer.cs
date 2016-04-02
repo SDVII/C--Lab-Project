@@ -31,7 +31,7 @@
             this.lbAvlC = new System.Windows.Forms.ListBox();
             this.lbCurC = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbSections = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lbChanges = new System.Windows.Forms.Label();
@@ -76,19 +76,19 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Course Registration";
             // 
-            // comboBox1
+            // cbSections
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(14, 173);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(203, 26);
-            this.comboBox1.TabIndex = 14;
-            this.comboBox1.Text = "Sections";
+            this.cbSections.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSections.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSections.FormattingEnabled = true;
+            this.cbSections.Location = new System.Drawing.Point(14, 173);
+            this.cbSections.Name = "cbSections";
+            this.cbSections.Size = new System.Drawing.Size(203, 26);
+            this.cbSections.TabIndex = 14;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cbSections);
             this.groupBox1.Controls.Add(this.lbAvlC);
             this.groupBox1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(36, 87);
@@ -125,24 +125,28 @@
             this.btnAddC.BackgroundImage = global::Student_Teacher_Form.Properties.Resources.ic_keyboard_arrow_right_black_24dp_2x1;
             this.btnAddC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAddC.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
+            this.btnAddC.FlatAppearance.BorderSize = 0;
             this.btnAddC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddC.Location = new System.Drawing.Point(287, 126);
             this.btnAddC.Name = "btnAddC";
             this.btnAddC.Size = new System.Drawing.Size(45, 44);
             this.btnAddC.TabIndex = 13;
             this.btnAddC.UseVisualStyleBackColor = true;
+            this.btnAddC.Click += new System.EventHandler(this.btnAddC_Click);
             // 
             // btnRmvC
             // 
             this.btnRmvC.BackgroundImage = global::Student_Teacher_Form.Properties.Resources.ic_keyboard_arrow_left_black_24dp_2x1;
             this.btnRmvC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRmvC.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
+            this.btnRmvC.FlatAppearance.BorderSize = 0;
             this.btnRmvC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRmvC.Location = new System.Drawing.Point(287, 176);
             this.btnRmvC.Name = "btnRmvC";
             this.btnRmvC.Size = new System.Drawing.Size(45, 44);
             this.btnRmvC.TabIndex = 12;
             this.btnRmvC.UseVisualStyleBackColor = true;
+            this.btnRmvC.Click += new System.EventHandler(this.btnRmvC_Click);
             // 
             // pictureBox1
             // 
@@ -159,6 +163,7 @@
             this.btnAccC.BackgroundImage = global::Student_Teacher_Form.Properties.Resources.ic_check_black_24dp_2x1;
             this.btnAccC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAccC.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
+            this.btnAccC.FlatAppearance.BorderSize = 0;
             this.btnAccC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAccC.Location = new System.Drawing.Point(287, 226);
             this.btnAccC.Name = "btnAccC";
@@ -200,7 +205,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnRmvC;
         private System.Windows.Forms.Button btnAddC;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbSections;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lbChanges;

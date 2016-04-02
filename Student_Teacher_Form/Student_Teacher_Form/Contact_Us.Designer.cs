@@ -147,6 +147,7 @@
             this.btnAccR.BackgroundImage = global::Student_Teacher_Form.Properties.Resources.ic_check_black_24dp_2x1;
             this.btnAccR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAccR.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
+            this.btnAccR.FlatAppearance.BorderSize = 0;
             this.btnAccR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAccR.Location = new System.Drawing.Point(222, 298);
             this.btnAccR.Name = "btnAccR";

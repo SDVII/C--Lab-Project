@@ -21,11 +21,62 @@ namespace Student_Teacher_Form
             this.stuID = stuID;
             this.student_Portal = student_Portal;
             this.Text = stuID + "";
+
+            pouplateDocuments(cbDoc);
+            populateShipmentOptions(cbDocS);
+        }
+
+        private void populateShipmentOptions(ComboBox cbDocS)
+        {
+            /*
+            for (int i = 0; i < number of options; i++)
+            {
+                cbDocS.Items.Add(options);
+            }
+            */
+        }
+
+        private void pouplateDocuments(ComboBox cbDoc)
+        {
+            /*
+            for (int i = 0; i < number of documents; i++)
+            {
+                cbDoc.Items.Add(Docs);
+            }
+            */
         }
 
         private void btnAddCourse_Click(object sender, EventArgs e)
         {
-
+            if (cbDoc.SelectedIndex == -1)
+            {
+                lbChanges.Visible = true;
+                lbChanges.Text = "Select the document";
+                lbChanges.ForeColor = Color.Red;
+                return;
+            }
+            else if (cbDocS.SelectedIndex == -1)
+            {
+                lbChanges.Visible = true;
+                lbChanges.Text = "Select the document";
+                lbChanges.ForeColor = Color.Red;
+                return;
+            }
+            else if (cbEng.Checked == false && cbTr.Checked == false)
+            {
+                lbChanges.Visible = true;
+                lbChanges.Text = "Please select a langauge";
+                lbChanges.ForeColor = Color.Red;
+                return;
+            }
+            else
+            {
+                lbChanges.Visible = true;
+                lbChanges.Text = "Document request made";
+                lbChanges.ForeColor = Color.Black;
+                lbDocL.Items.Add(cbDoc.SelectedText + " : " + cbDocS.SelectedText + " : " + cbEng.Text + "," + cbTr.Text);
+                return;
+            }
         }
 
         private void btnClrD_Click(object sender, EventArgs e)

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -85,9 +86,18 @@ namespace Student_Teacher_Form
             */
         }
 
+
         private void Student_Portal_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+        private void callCourse(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            Course_info_Stu f = new Course_info_Stu(stuID, this, btn.Text);
+            f.Visible = true;
+            this.Enabled = false;
+
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
