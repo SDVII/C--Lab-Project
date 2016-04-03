@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Student_Teacher_Form
 {
-    
+
     public partial class Course_info_Tch : Form
     {
         String filename;
@@ -33,7 +33,7 @@ namespace Student_Teacher_Form
             lbCrsCd.Text = courseName;
             this.teachID = teachID;
             this.teacher_Portal = teacher_Portal;
-            this.courseName = courseName;   
+            this.courseName = courseName;
 
             pouplateCourses(cbCrsEx);
             //cbCrsEx.SelectedIndex = 0;
@@ -83,7 +83,7 @@ namespace Student_Teacher_Form
                 bName = "";
             }
 
-            if(uClicked == true)
+            if (uClicked == true)
             {
                 if (!Utilities.NullOrEmpty(txtPathD.Text))
                 {
@@ -127,7 +127,7 @@ namespace Student_Teacher_Form
                 lbChanges.ForeColor = Color.Red;
                 return;
             }
-            else if(Utilities.NullOrEmpty(tbBdyCM.Text))
+            else if (Utilities.NullOrEmpty(tbBdyCM.Text))
             {
                 lbChanges.Visible = true;
                 lbChanges.Text = "Body is missing";
@@ -145,7 +145,7 @@ namespace Student_Teacher_Form
 
         private void btnSbmtEx_Click(object sender, EventArgs e)
         {
-            if(cbCrsEx.SelectedIndex == -1)
+            if (cbCrsEx.SelectedIndex == -1)
             {
                 lbChanges.Visible = true;
                 lbChanges.Text = "Please select a course";
@@ -162,5 +162,6 @@ namespace Student_Teacher_Form
                 return;
             }
         }
+
     }
 }
