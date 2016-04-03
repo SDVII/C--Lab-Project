@@ -131,7 +131,7 @@ namespace Student_Teacher_Form
 
             for (int i = 0; i < courseList.Count; i++)
             {
-                var btn = new DataGridViewButtonColumn();
+                var btn = new DataGridViewButtonColumn();                
                 btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
                 btn.Name = "btn_" + i;
                 Console.WriteLine(courseList[i].Name);

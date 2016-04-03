@@ -33,19 +33,7 @@ namespace Student_Teacher_Form
             this.teacher = teacher;
             this.teacher_Portal = teacher_Portal;
             this.course = course;
-
-            pouplateCourses(cbCrsEx);
-            //cbCrsEx.SelectedIndex = 0;
-        }
-
-        private void pouplateCourses(ComboBox cbCrsEx)
-        {
-            /*
-            for (int i = 0; i < number of courses; i++)
-            {
-                cbCrsEx.Items.Add(courses);
-            }
-            */
+            
         }
 
         private void btnBrwsD_Click(object sender, EventArgs e)
@@ -135,6 +123,8 @@ namespace Student_Teacher_Form
             }
             else
             {
+                CourseAnnouncements coa = new CourseAnnouncements(teacher.Id, course.Id, txtTtCM.Text, tbBdyCM.Text, DateTime.Now);
+                CourseAnnouncementsDB.Add(coa);
                 lbChanges.Visible = true;
                 //send message
                 lbChanges.Text = "Message sent";
@@ -144,17 +134,20 @@ namespace Student_Teacher_Form
 
         private void btnSbmtEx_Click(object sender, EventArgs e)
         {
-            if (cbCrsEx.SelectedIndex == -1)
+            if (Utilities.NullOrEmpty(txtPlace.Text))
             {
                 lbChanges.Visible = true;
-                lbChanges.Text = "Please select a course";
+                lbChanges.Text = "Please enter a location for the exam.";
                 lbChanges.ForeColor = Color.Red;
                 return;
             }
             else
             {
                 //save to DB
-                //string theDate = dtpEx.Value.ToString("yyyy-MM-dd"); to get date value
+                string theDate = dtpEx.Value.ToString("yyyy-MM-dd");
+                Exam exam = new Exam(course.Id, theDate, txtPlace.Text);
+                ExamDB.Add(exam);
+
                 lbChanges.Visible = true;
                 lbChanges.Text = "Exam date submitted";
                 lbChanges.ForeColor = Color.Black;
@@ -162,5 +155,9 @@ namespace Student_Teacher_Form
             }
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

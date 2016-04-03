@@ -23,13 +23,13 @@ namespace Student_Teacher_Form
             this.student_Portal = student_Portal;
             lbCrsCd.Text = course.Name;
 
-            populateTeacherinfo(lbName,lbF,pbTchrP);
-            populateMessages(lvMsg);
-            populateAttachments(dgvAtch);
+            populateCourseinfo();
+            populateMessages();
+            populateAttachments();
 
         }
 
-        private void populateAttachments(DataGridView dgvAtch)
+        private void populateAttachments()
         {
 
             /*
@@ -67,30 +67,29 @@ namespace Student_Teacher_Form
         }
 
 
-         private void populateMessages(ListView lvMsg)
+         private void populateMessages()
         {
-            /*
-            for (int i = 0; i < number of messages; i++)
+            List<CourseAnnouncements> coAnnoList = CourseAnnouncementsDB.GetWithCourseId(course.Id);
+
+            foreach(CourseAnnouncements co in coAnnoList)
             {
                 ListViewItem lvi = new ListViewItem();
-                lvi.Text = title;
-                lvi.SubItems.Add(date);
-                lvi.SubItems.Add(instructor);
-                lvi.SubItems.Add(message);
-                lvSchedule.Items.Add(lvi);
+                lvi.Text = co.Title;
+                lvi.SubItems.Add(co.Time.ToShortDateString());
+                lvi.SubItems.Add(co.Teacher.Name + " " + co.Teacher.Surname);
+                lvi.SubItems.Add(co.Msg);
+                lvMsg.Items.Add(lvi);
             }
-            */
         }
 
-        private void populateTeacherinfo(Label lbName, Label lbF, PictureBox pbTchrP)
+        private void populateCourseinfo()
         {
-
-            /*
-            lbName.Text = "";
-            lbF.Text = "";
-            pbTchrP.Image = "";
-            pbTchrP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            */
+            lbName.Text = course.Name;
+            lbDep.Text = course.Department.Name;
+            lbCode.Text = course.Code;
+            //pbTchrP.Image = "";
+            //bTchrP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+           
         }
 
         private void Course_info_Stu_Load(object sender, EventArgs e)
@@ -109,6 +108,6 @@ namespace Student_Teacher_Form
         private void Course_info_Stu_FormClosed(object sender, FormClosedEventArgs e)
         {
             student_Portal.Enabled = true;
-        }
+        }        
     }
 }
