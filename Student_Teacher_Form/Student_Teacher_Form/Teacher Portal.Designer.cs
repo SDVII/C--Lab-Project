@@ -51,6 +51,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvCourses = new System.Windows.Forms.DataGridView();
+            this.courses = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lvSchedule = new System.Windows.Forms.ListView();
             this.chCrs = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -59,7 +60,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lbNotification = new System.Windows.Forms.ListBox();
             this.lable7 = new System.Windows.Forms.Label();
-            this.courses = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.main)).BeginInit();
             this.main.Panel1.SuspendLayout();
             this.main.Panel2.SuspendLayout();
@@ -184,7 +184,7 @@
             this.buttons.Panel2.Controls.Add(this.btnPower);
             this.buttons.Panel2.Controls.Add(this.btnSettings);
             this.buttons.Size = new System.Drawing.Size(913, 53);
-            this.buttons.SplitterDistance = 763;
+            this.buttons.SplitterDistance = 769;
             this.buttons.SplitterWidth = 1;
             this.buttons.TabIndex = 0;
             // 
@@ -438,6 +438,15 @@
             this.dgvCourses.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvCourses.Size = new System.Drawing.Size(327, 167);
             this.dgvCourses.TabIndex = 0;
+            this.dgvCourses.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCourses_CellContentClick);
+            // 
+            // courses
+            // 
+            this.courses.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.courses.HeaderText = "Column1";
+            this.courses.MinimumWidth = 327;
+            this.courses.Name = "courses";
+            this.courses.Width = 327;
             // 
             // panel2
             // 
@@ -516,14 +525,6 @@
             this.lable7.Size = new System.Drawing.Size(87, 18);
             this.lable7.TabIndex = 55;
             this.lable7.Text = "Notifications";
-            // 
-            // courses
-            // 
-            this.courses.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.courses.HeaderText = "Column1";
-            this.courses.MinimumWidth = 327;
-            this.courses.Name = "courses";
-            this.courses.Width = 327;
             // 
             // Teacher_Portal
             // 
