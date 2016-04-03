@@ -90,7 +90,10 @@ namespace Student_Teacher_Form
 
         private void lvSchd_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lvSchd.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            foreach (ColumnHeader column in lvSchd.Columns)
+            {
+                column.Width = -2;
+            }
         }
     }
 }
