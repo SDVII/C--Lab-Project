@@ -87,5 +87,13 @@ namespace Student_Teacher_Form
                 student_Portal.Enabled = true;
             }
         }
+
+        private void lvSchd_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (ColumnHeader column in lvSchd.Columns)
+            {
+                column.Width = -2;
+            }
+        }
     }
 }

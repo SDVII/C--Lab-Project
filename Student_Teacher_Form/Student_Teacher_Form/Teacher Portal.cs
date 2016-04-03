@@ -139,30 +139,15 @@ namespace Student_Teacher_Form
 
             for (int i = 0; i < courseList.Count; i++)
             {
-                DataGridViewRow row = (DataGridViewRow)dgvCourses.Rows[i].Clone();
-                Button btn = new Button();
-                btn.BackColor = System.Drawing.Color.White;
-                btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+                var btn = new DataGridViewButtonColumn();
                 btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-                btn.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                btn.ForeColor = System.Drawing.Color.Black;
                 btn.Name = "btn_" + i;
                 Console.WriteLine(courseList[i].Name);
+                btn.UseColumnTextForButtonValue = true;
                 btn.Text = courseList[i].Name;
-                btn.UseVisualStyleBackColor = false;
-                btn.Click += new System.EventHandler(this.callCourse);
-                row.Cells[0].Value = btn;
-                dgvCourses.Rows.Add(row);
+                dgvCourses.Rows.Add(btn);
+                dgvCourses[0, i].Value = courseList[i].Name; //for the renamming
             }
-        }
-
-        private void callCourse(object sender, EventArgs e)
-        {
-            Button btn = (Button)sender;
-            Course_info_Tch f = new Course_info_Tch(teacher.Id, this, btn.Text);
-            f.Visible = true;
-            this.Enabled = false;
-
         }
 
         private void Teacher_Portal_FormClosed(object sender, FormClosedEventArgs e)
@@ -234,5 +219,15 @@ namespace Student_Teacher_Form
             if (list.SelectedIndex % 2 == 0)
                 MessageBox.Show(annoList[list.SelectedIndex / 2].Msg, annoList[list.SelectedIndex / 2].Title);
         }
+
+        private void dgvCourses_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var dgv = (DataGridView)sender;
+            Course_info_Tch f = new Course_info_Tch(courseList[e.RowIndex], teacher, this);
+            f.Visible = true;
+            this.Enabled = false;
+
+        }
+
     }
 }

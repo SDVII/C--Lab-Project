@@ -50,10 +50,18 @@
             this.btnAccSS = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbChanges = new System.Windows.Forms.Label();
+            this.lvSrchRes = new System.Windows.Forms.ListView();
+            this.gbSrchRes = new System.Windows.Forms.GroupBox();
+            this.chName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chDepart = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chSuper = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chGPA = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbStuP)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.gbSrchRes.SuspendLayout();
             this.SuspendLayout();
             // 
             // label6
@@ -85,7 +93,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.pbStuP);
             this.groupBox1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(24, 189);
+            this.groupBox1.Location = new System.Drawing.Point(24, 398);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(558, 292);
             this.groupBox1.TabIndex = 20;
@@ -279,7 +287,7 @@
             this.btnAccSS.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
             this.btnAccSS.FlatAppearance.BorderSize = 0;
             this.btnAccSS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccSS.Location = new System.Drawing.Point(285, 488);
+            this.btnAccSS.Location = new System.Drawing.Point(285, 697);
             this.btnAccSS.Name = "btnAccSS";
             this.btnAccSS.Size = new System.Drawing.Size(45, 44);
             this.btnAccSS.TabIndex = 29;
@@ -300,18 +308,72 @@
             // 
             this.lbChanges.AutoSize = true;
             this.lbChanges.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbChanges.Location = new System.Drawing.Point(21, 505);
+            this.lbChanges.Location = new System.Drawing.Point(21, 714);
             this.lbChanges.Name = "lbChanges";
             this.lbChanges.Size = new System.Drawing.Size(25, 13);
             this.lbChanges.TabIndex = 27;
             this.lbChanges.Text = "null";
             this.lbChanges.Visible = false;
             // 
+            // lvSrchRes
+            // 
+            this.lvSrchRes.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.chName,
+            this.chID,
+            this.chDepart,
+            this.chSuper,
+            this.chGPA});
+            this.lvSrchRes.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvSrchRes.GridLines = true;
+            this.lvSrchRes.Location = new System.Drawing.Point(30, 33);
+            this.lvSrchRes.Name = "lvSrchRes";
+            this.lvSrchRes.Size = new System.Drawing.Size(496, 132);
+            this.lvSrchRes.TabIndex = 30;
+            this.lvSrchRes.UseCompatibleStateImageBehavior = false;
+            this.lvSrchRes.View = System.Windows.Forms.View.Details;
+            // 
+            // gbSrchRes
+            // 
+            this.gbSrchRes.Controls.Add(this.lvSrchRes);
+            this.gbSrchRes.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbSrchRes.Location = new System.Drawing.Point(22, 191);
+            this.gbSrchRes.Name = "gbSrchRes";
+            this.gbSrchRes.Size = new System.Drawing.Size(559, 190);
+            this.gbSrchRes.TabIndex = 31;
+            this.gbSrchRes.TabStop = false;
+            this.gbSrchRes.Text = "Search Results";
+            // 
+            // chName
+            // 
+            this.chName.Text = "Name";
+            this.chName.Width = 100;
+            // 
+            // chID
+            // 
+            this.chID.Text = "ID";
+            this.chID.Width = 100;
+            // 
+            // chDepart
+            // 
+            this.chDepart.Text = "Department";
+            this.chDepart.Width = 100;
+            // 
+            // chSuper
+            // 
+            this.chSuper.Text = "Supervisor";
+            this.chSuper.Width = 100;
+            // 
+            // chGPA
+            // 
+            this.chGPA.Text = "GPA";
+            this.chGPA.Width = 92;
+            // 
             // Search_Students
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(614, 538);
+            this.ClientSize = new System.Drawing.Size(614, 772);
+            this.Controls.Add(this.gbSrchRes);
             this.Controls.Add(this.lbChanges);
             this.Controls.Add(this.btnAccSS);
             this.Controls.Add(this.groupBox2);
@@ -328,6 +390,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.gbSrchRes.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -357,5 +420,12 @@
         private System.Windows.Forms.PictureBox pbStuP;
         private System.Windows.Forms.Label lbChanges;
         private System.Windows.Forms.ListBox lbCrsTkn;
+        private System.Windows.Forms.ListView lvSrchRes;
+        private System.Windows.Forms.ColumnHeader chName;
+        private System.Windows.Forms.ColumnHeader chID;
+        private System.Windows.Forms.ColumnHeader chDepart;
+        private System.Windows.Forms.ColumnHeader chSuper;
+        private System.Windows.Forms.ColumnHeader chGPA;
+        private System.Windows.Forms.GroupBox gbSrchRes;
     }
 }

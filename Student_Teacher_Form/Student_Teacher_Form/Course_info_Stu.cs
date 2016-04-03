@@ -14,17 +14,14 @@ namespace Student_Teacher_Form
     public partial class Course_info_Stu : Form
     {
         private Student_Portal student_Portal;
-        private int stuID;
-        private String cName;
+        private Course course;
 
-        public Course_info_Stu(int stuID, Student_Portal student_Portal, string cName)
+        public Course_info_Stu(Course course, Student_Portal student_Portal)
         {
             InitializeComponent();
-            this.stuID = stuID;
+            this.course = course;
             this.student_Portal = student_Portal;
-            this.cName = cName;
-            this.Text = stuID + "";
-            lbCrsCd.Text = cName;
+            lbCrsCd.Text = course.Name;
 
             populateTeacherinfo(lbName,lbF,pbTchrP);
             populateMessages(lvMsg);

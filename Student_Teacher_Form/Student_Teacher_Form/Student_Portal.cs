@@ -129,22 +129,16 @@ namespace Student_Teacher_Form
         {
             // For populating course GridViewList. just replace the counter and course name
 
-            for (int i = 0; i < courseList.Count ; i++)
+            for (int i = 0; i < courseList.Count; i++)
             {
-                DataGridViewRow row = (DataGridViewRow)dgvCourses.Rows[i].Clone();
-                Button btn = new Button();
-                btn.BackColor = System.Drawing.Color.White;
-                btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+                var btn = new DataGridViewButtonColumn();
                 btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-                btn.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                btn.ForeColor = System.Drawing.Color.Black;
                 btn.Name = "btn_" + i;
                 Console.WriteLine(courseList[i].Name);
+                btn.UseColumnTextForButtonValue = true;
                 btn.Text = courseList[i].Name;
-                btn.UseVisualStyleBackColor = false;
-                btn.Click += new System.EventHandler(this.callCourse);
-                row.Cells[0].Value = btn;
-                dgvCourses.Rows.Add(row);
+                dgvCourses.Rows.Add(btn);
+                dgvCourses[0, i].Value = courseList[i].Name; //for the renamming
             }
         }
 
@@ -156,7 +150,7 @@ namespace Student_Teacher_Form
         private void callCourse(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-            Course_info_Stu f = new Course_info_Stu(student.Id, this, btn.Text);
+            Course_info_Stu f = new Course_info_Stu(null, this);
             f.Visible = true;
             this.Enabled = false;
 
@@ -255,8 +249,12 @@ namespace Student_Teacher_Form
                 MessageBox.Show(annoList[list.SelectedIndex / 2].Msg, annoList[list.SelectedIndex / 2].Title);
         }
 
-        private void s(object sender, EventArgs e)
+        private void dgvCourses_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            var dgv = (DataGridView)sender;
+            Course_info_Stu f = new Course_info_Stu(courseList[e.RowIndex], this);
+            f.Visible = true;
+            this.Enabled = false;
 
         }
     }
