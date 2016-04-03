@@ -13,6 +13,8 @@ namespace Student_Teacher_Form
 {
     public partial class Student_Portal : Form
     {
+
+    
         private Student student;
         List<StudentSchedule> stuScheduleList;
         List<Section> sectionList;
@@ -21,9 +23,8 @@ namespace Student_Teacher_Form
         //List<Msg> msgList;
         List<Announcement> annoList;
         //List<CourseAnnouncements> coAnnoList;
-
         private bool clicked = false;
-
+            
         public Student_Portal(Student student)
         {
             InitializeComponent();
@@ -85,7 +86,7 @@ namespace Student_Teacher_Form
                 lbNotification.Items.Add(annoList[i].Title);
                 lbNotification.Items.Add("---------------------");
             }
-        }
+        }//f*ck you houmam  -Hani
 
         private void populateSchedule(ListView lvSchedule)
         {
