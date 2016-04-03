@@ -20,7 +20,7 @@ namespace Student_Teacher_Form
         {
             // query take variables $
             string query = $"INSERT INTO courseAnnouncements (courseAnnouncements_teacher_id, courseAnnouncements_course_id, courseAnnouncements_title, courseAnnouncements_msg, courseAnnouncements_time) " +
-                           $"Values ('{courseAnnouncements.TeacherId}','{courseAnnouncements.CourseId}'','{courseAnnouncements.Title}'','{courseAnnouncements.Msg }'','{courseAnnouncements.Time}')";
+                           $"Values ('{courseAnnouncements.TeacherId}','{courseAnnouncements.CourseId}','{courseAnnouncements.Title}','{courseAnnouncements.Msg }','{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}')";
             // check if the connection is open first
             if (databaseHandler.openConnection() == true)
             {
@@ -38,7 +38,7 @@ namespace Student_Teacher_Form
         public static bool Update(CourseAnnouncements courseAnnouncements)
         {
             string query = $"UPDATE courseAnnouncements SET courseAnnouncements_teacher_id='{courseAnnouncements.TeacherId}',courseAnnouncements_course_id='{courseAnnouncements.CourseId}',courseAnnouncements_title='{courseAnnouncements.Title}''" +
-                           $",courseAnnouncements_msg='{courseAnnouncements.Msg}',courseAnnouncements_time='{courseAnnouncements.Time}' WHERE courseAnnouncements_id='{courseAnnouncements.Id}'"; // create the query
+                           $",courseAnnouncements_msg='{courseAnnouncements.Msg}' WHERE courseAnnouncements_id='{courseAnnouncements.Id}'"; // create the query
 
 
             if (databaseHandler.openConnection()) // check the connection
