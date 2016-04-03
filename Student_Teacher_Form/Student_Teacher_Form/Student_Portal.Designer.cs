@@ -54,7 +54,6 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvCourses = new System.Windows.Forms.DataGridView();
-            this.courses = new System.Windows.Forms.DataGridViewButtonColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lvSchedule = new System.Windows.Forms.ListView();
@@ -64,6 +63,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lbNotification = new System.Windows.Forms.ListBox();
             this.lable7 = new System.Windows.Forms.Label();
+            this.courses = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.main)).BeginInit();
             this.main.Panel1.SuspendLayout();
             this.main.Panel2.SuspendLayout();
@@ -100,6 +100,7 @@
             // 
             this.main.Dock = System.Windows.Forms.DockStyle.Fill;
             this.main.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.main.IsSplitterFixed = true;
             this.main.Location = new System.Drawing.Point(0, 0);
             this.main.Margin = new System.Windows.Forms.Padding(6);
             this.main.Name = "main";
@@ -122,6 +123,7 @@
             this.topMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
             this.topMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.topMain.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.topMain.IsSplitterFixed = true;
             this.topMain.Location = new System.Drawing.Point(0, 0);
             this.topMain.Margin = new System.Windows.Forms.Padding(6);
             this.topMain.Name = "topMain";
@@ -185,6 +187,7 @@
             // 
             this.buttons.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttons.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
+            this.buttons.IsSplitterFixed = true;
             this.buttons.Location = new System.Drawing.Point(0, 0);
             this.buttons.Margin = new System.Windows.Forms.Padding(6);
             this.buttons.Name = "buttons";
@@ -195,7 +198,7 @@
             this.buttons.Panel2.Controls.Add(this.btnInfo);
             this.buttons.Panel2.Controls.Add(this.btnSettings);
             this.buttons.Size = new System.Drawing.Size(1960, 53);
-            this.buttons.SplitterDistance = 1815;
+            this.buttons.SplitterDistance = 1817;
             this.buttons.SplitterWidth = 2;
             this.buttons.TabIndex = 0;
             // 
@@ -247,6 +250,7 @@
             // 
             this.body.Dock = System.Windows.Forms.DockStyle.Fill;
             this.body.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.body.IsSplitterFixed = true;
             this.body.Location = new System.Drawing.Point(0, 0);
             this.body.Margin = new System.Windows.Forms.Padding(6);
             this.body.Name = "body";
@@ -269,6 +273,7 @@
             this.menu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.menu.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.menu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.menu.IsSplitterFixed = true;
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Margin = new System.Windows.Forms.Padding(6);
             this.menu.Name = "menu";
@@ -455,6 +460,7 @@
             // 
             this.middle_events.Dock = System.Windows.Forms.DockStyle.Fill;
             this.middle_events.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
+            this.middle_events.IsSplitterFixed = true;
             this.middle_events.Location = new System.Drawing.Point(0, 0);
             this.middle_events.Margin = new System.Windows.Forms.Padding(6);
             this.middle_events.Name = "middle_events";
@@ -469,7 +475,7 @@
             this.middle_events.Panel2.Controls.Add(this.lbNotification);
             this.middle_events.Panel2.Controls.Add(this.lable7);
             this.middle_events.Size = new System.Drawing.Size(2108, 1039);
-            this.middle_events.SplitterDistance = 1942;
+            this.middle_events.SplitterDistance = 1938;
             this.middle_events.SplitterWidth = 8;
             this.middle_events.TabIndex = 0;
             // 
@@ -483,7 +489,7 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(20, 19, 20, 19);
             this.flowLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1942, 1039);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1938, 1039);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // panel1
@@ -507,7 +513,7 @@
             this.dgvCourses.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvCourses.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvCourses.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            this.dgvCourses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCourses.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvCourses.ColumnHeadersVisible = false;
             this.dgvCourses.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.courses});
@@ -521,14 +527,6 @@
             this.dgvCourses.Size = new System.Drawing.Size(654, 322);
             this.dgvCourses.TabIndex = 2;
             this.dgvCourses.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCourses_CellContentClick);
-            // 
-            // courses
-            // 
-            this.courses.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.courses.HeaderText = "Column1";
-            this.courses.MinimumWidth = 327;
-            this.courses.Name = "courses";
-            this.courses.Width = 327;
             // 
             // label1
             // 
@@ -562,7 +560,7 @@
             this.chTime,
             this.chLocation});
             this.lvSchedule.GridLines = true;
-            this.lvSchedule.Location = new System.Drawing.Point(20, 84);
+            this.lvSchedule.Location = new System.Drawing.Point(32, 84);
             this.lvSchedule.Margin = new System.Windows.Forms.Padding(6);
             this.lvSchedule.Name = "lvSchedule";
             this.lvSchedule.Size = new System.Drawing.Size(662, 313);
@@ -625,6 +623,14 @@
             this.lable7.Size = new System.Drawing.Size(185, 37);
             this.lable7.TabIndex = 55;
             this.lable7.Text = "Notificatiions";
+            // 
+            // courses
+            // 
+            this.courses.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.courses.HeaderText = "Column1";
+            this.courses.MinimumWidth = 327;
+            this.courses.Name = "courses";
+            this.courses.Width = 327;
             // 
             // Student_Portal
             // 
@@ -712,7 +718,7 @@
         private System.Windows.Forms.ListBox lbNotification;
         private System.Windows.Forms.Label lable7;
         private System.Windows.Forms.DataGridView dgvCourses;
-        private System.Windows.Forms.DataGridViewButtonColumn courses;
         private System.Windows.Forms.Button btnTranscript;
+        private System.Windows.Forms.DataGridViewButtonColumn courses;
     }
 }
