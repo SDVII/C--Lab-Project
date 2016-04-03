@@ -352,7 +352,7 @@ namespace Student_Teacher_Form
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Course_info_Tch";
             this.Text = "Course_info_Tch";
-            this.Activated += new System.EventHandler(this.Course_info_Tch_Activated);
+            //this.Activated += new System.EventHandler(this.Course_info_Tch_Activated);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Course_info_Tch_FormClosed);
             this.Enter += new System.EventHandler(this.Course_info_Tch_Enter);
             this.groupBox1.ResumeLayout(false);

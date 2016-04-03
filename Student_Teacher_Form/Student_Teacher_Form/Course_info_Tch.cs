@@ -21,19 +21,18 @@ namespace Student_Teacher_Form
         Boolean bClicked = false;
         Boolean uClicked = false;
 
-        private int teachID;
+        private Course course;
+        private Teacher teacher;
         private Teacher_Portal teacher_Portal;
-        private String courseName;
 
 
-        public Course_info_Tch(int teachID, Teacher_Portal teacher_Portal, string courseName)
+        public Course_info_Tch(Course course, Teacher teacher, Teacher_Portal teacher_Portal)
         {
             InitializeComponent();
-            this.Text = teachID + "";
-            lbCrsCd.Text = courseName;
-            this.teachID = teachID;
+            lbCrsCd.Text = course.Name;
+            this.teacher = teacher;
             this.teacher_Portal = teacher_Portal;
-            this.courseName = courseName;
+            this.course = course;
 
             pouplateCourses(cbCrsEx);
             //cbCrsEx.SelectedIndex = 0;

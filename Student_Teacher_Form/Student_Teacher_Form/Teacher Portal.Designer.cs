@@ -541,6 +541,7 @@
             this.lbNotification.Name = "lbNotification";
             this.lbNotification.Size = new System.Drawing.Size(176, 551);
             this.lbNotification.TabIndex = 56;
+            this.lbNotification.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lbNotification_MouseDoubleClick);
             // 
             // lable7
             // 

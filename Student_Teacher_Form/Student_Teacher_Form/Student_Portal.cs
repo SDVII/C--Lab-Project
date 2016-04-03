@@ -150,7 +150,7 @@ namespace Student_Teacher_Form
         private void callCourse(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-            Course_info_Stu f = new Course_info_Stu(    , this, btn.Text);
+            Course_info_Stu f = new Course_info_Stu(null, this);
             f.Visible = true;
             this.Enabled = false;
 
@@ -252,7 +252,7 @@ namespace Student_Teacher_Form
         private void dgvCourses_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             var dgv = (DataGridView)sender;
-            Course_info_Tch f = new Course_info_Stu(student.Id, this, courseList[e.RowIndex].Name);
+            Course_info_Stu f = new Course_info_Stu(courseList[e.RowIndex], this);
             f.Visible = true;
             this.Enabled = false;
 

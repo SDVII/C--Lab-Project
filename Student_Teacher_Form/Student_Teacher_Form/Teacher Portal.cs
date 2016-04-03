@@ -223,7 +223,7 @@ namespace Student_Teacher_Form
         private void dgvCourses_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             var dgv = (DataGridView)sender;
-            Course_info_Tch f = new Course_info_Tch(teacher.Id, this, courseList[e.RowIndex].Name);
+            Course_info_Tch f = new Course_info_Tch(courseList[e.RowIndex], teacher, this);
             f.Visible = true;
             this.Enabled = false;
 
