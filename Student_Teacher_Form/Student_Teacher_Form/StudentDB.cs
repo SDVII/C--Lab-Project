@@ -74,7 +74,8 @@ namespace Student_Teacher_Form
 
                 while (reader.Read())
                 {
-                    stu = new Student(reader.GetInt32(0), reader.GetInt32(1), reader.GetInt32(2), reader.GetInt32(3), reader.GetInt32(4), reader.GetInt32(5), reader.GetString(6), reader.GetString(7), reader.GetString(8), reader.GetString(9), reader.GetString(10), reader.GetFloat(11));
+                    stu = new Student(reader.GetInt32(0), reader.GetInt32(7), reader.GetInt32(8), reader.GetInt32(9), reader.GetInt32(10),
+                        reader.GetInt32(11), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(6), reader.GetFloat(5));
                 }
             }
             return stu;
@@ -113,7 +114,8 @@ namespace Student_Teacher_Form
 
                 while (reader.Read())
                 {
-                    Student stu = new Student(reader.GetInt32(0), reader.GetInt32(1), reader.GetInt32(2), reader.GetInt32(3), reader.GetInt32(4), reader.GetInt32(5), reader.GetString(6), reader.GetString(7), reader.GetString(8), reader.GetString(9), reader.GetString(10), reader.GetFloat(11));
+                    Student stu = new Student(reader.GetInt32(0), reader.GetInt32(7), reader.GetInt32(8), reader.GetInt32(9), reader.GetInt32(10),
+                        reader.GetInt32(11), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(6), reader.GetFloat(5));
                     list.Add(stu);
                 }
             }

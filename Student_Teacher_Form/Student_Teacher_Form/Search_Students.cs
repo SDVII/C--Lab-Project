@@ -14,6 +14,8 @@ namespace Student_Teacher_Form
     {
         private Teacher_Portal teacher_Portal;
         private int teachID;
+        private Student stu;
+        List<Student> allStudents;
 
         public Search_Students(int teachID, Teacher_Portal teacher_Portal)
         {
@@ -21,7 +23,7 @@ namespace Student_Teacher_Form
             this.teachID = teachID;
             this.teacher_Portal = teacher_Portal;
             this.Text = teachID + "";
-
+            allStudents = StudentDB.GetAll();
             cbSrchTyp.SelectedIndex = 0;
         }
 
@@ -54,26 +56,72 @@ namespace Student_Teacher_Form
             }
             else
             {
+                List<Student> resultList = new List<Student>();
                 //search DB
-                searchResultInput(pbStuP, lbName, lbID, lbDep, lbSpr, lbGpa, lbCrsTkn);
+                if (cbSrchTyp.SelectedIndex == 0)
+                {
+
+                    //name
+                    // it works return a student object
+
+                    foreach (Student s in allStudents)
+                    {
+                        if ((s.Name + " " + s.Surname).ToLower().Contains(txtSrchK.Text.ToLower()))
+                        {
+                            resultList.Add(s);
+                            break;
+                        }
+                    }
+                }
+                else if (cbSrchTyp.SelectedIndex == 1)
+                {
+                    //id
+                    int id = 0;
+                    try
+                    {
+                        id = Convert.ToInt32(txtSrchK.Text);
+                        foreach (Student s in allStudents)
+                        {
+                            if ((""+s.Id).Contains(""+id))
+                            {
+                                resultList.Add(s);
+                                break;
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        lbChanges.Visible = true;
+                        lbChanges.Text = "Please enter a valid ID";
+                        lbChanges.ForeColor = Color.Red;
+                        return;
+                    }                    
+                }
+                else {
+                    //dep
+                }
+
+                if (resultList.Count == 1)
+                {
+                    searchResultInput(resultList[0]);
+                } 
+                
                 lbChanges.Visible = false;
             }
         }
 
-        private void searchResultInput(PictureBox pbStuP, Label lbName, Label lbID, Label lbDep, Label lbSpr, Label lbGpa, ListBox lbCrsTkn)
+        private void searchResultInput(Student student)
         {
-            /*
-             pbStuP.Image = "";
-            lbName.Text = "";
-            lbID.Text = "";
-            lbDep.Text = "";
-            lbSpr.Text = "";
-            lbGpa.Text = "";
-            for (int i = 0; i < number of courses; i++)
+            //pbStuP.Image = "";
+            lbName.Text = student.Name + " " + student.Surname;
+            lbID.Text = ""+student.Id;
+            lbDep.Text = ""+student.Department.Name;
+            lbSpr.Text = ""+student.Advisor.Name + " " +  student.Advisor.Surname;
+            lbGpa.Text = ""+student.Gpa;
+            /*for (int i = 0; i < number of courses; i++)
             {
                 lbCrsTkn.Items.Add("");
-            }
-            */
+            }*/
         }
     }
 }

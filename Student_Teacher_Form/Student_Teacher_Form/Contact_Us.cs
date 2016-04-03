@@ -12,25 +12,23 @@ namespace Student_Teacher_Form
 {
     public partial class Contact_Us : Form
     {
-        private Teacher_Portal teacher_Portal;
-        private int teachID = 0;
-        private int stuID = 0;
-        private Student_Portal student_Portal;
+        
+        private Teacher_Portal teacher_Portal = null;
+        private Student_Portal student_Portal = null;
 
-        public Contact_Us(int teachID, Teacher_Portal teacher_Portal)
+        public Contact_Us( Teacher_Portal teacher_Portal)
         {
             InitializeComponent();
-            this.teachID = teachID;
             this.teacher_Portal = teacher_Portal;
-            this.Text = teachID + "";
         }
 
-        public Contact_Us(int stuID, Student_Portal student_Portal)
+        public Contact_Us(Student_Portal student_Portal)
         {
             InitializeComponent();
-            this.stuID = stuID;
             this.student_Portal = student_Portal;
-            this.Text = stuID + "";
+            number.Text = "539-001-2345";
+            label8.Text = "help@bau.edu.tr";
+            label10.Text = "BAU";
         }
 
         private void label10_Click(object sender, EventArgs e)
@@ -45,7 +43,7 @@ namespace Student_Teacher_Form
 
         private void btnAccR_Click(object sender, EventArgs e)
         {
-            if (teachID != 0)
+            if (teacher_Portal != null)
             {
                 this.Close();
                 teacher_Portal.Enabled = true;
@@ -59,8 +57,9 @@ namespace Student_Teacher_Form
 
         private void Contact_Us_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (teachID != 0)
+            if (teacher_Portal != null)
                 teacher_Portal.Enabled = true;
+
             else
                 student_Portal.Enabled = true;
         }

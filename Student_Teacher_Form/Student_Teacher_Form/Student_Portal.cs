@@ -234,7 +234,7 @@ namespace Student_Teacher_Form
 
         private void btnContact_Click(object sender, EventArgs e)
         {
-            Contact_Us f = new Contact_Us(student.Id, this);
+            Contact_Us f = new Contact_Us(this);
             f.Visible = true;
             this.Enabled = false;
         }
