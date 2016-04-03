@@ -421,6 +421,8 @@
             // 
             // dgvCourses
             // 
+            this.dgvCourses.AllowUserToAddRows = false;
+            this.dgvCourses.AllowUserToDeleteRows = false;
             this.dgvCourses.AllowUserToResizeColumns = false;
             this.dgvCourses.AllowUserToResizeRows = false;
             this.dgvCourses.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
