@@ -16,27 +16,32 @@ namespace Student_Teacher_Form
         private Student student = null;
         private Teacher_Portal teacher_Portal;
         private Teacher teacher = null;
+        private SplitContainer sc;
 
         public Settings()
         {
             InitializeComponent();
         }
 
-        public Settings(Student student, Student_Portal student_Portal)
+        public Settings(Student student, Student_Portal student_Portal, SplitContainer sc)
         {
             InitializeComponent();
             this.student = student;
             this.student_Portal = student_Portal;
             this.Text = student.Id + "";
+            this.sc = sc;
+
             fillData();
         }
 
-        public Settings(Teacher teacher, Teacher_Portal teacher_Portal)
+        public Settings(Teacher teacher, Teacher_Portal teacher_Portal, SplitContainer sc)
         {
             InitializeComponent();
             this.teacher = teacher;
             this.teacher_Portal = teacher_Portal;
             this.Text = teacher.Id + "";
+            this.sc = sc;
+
             fillData();
         }
 
@@ -64,11 +69,28 @@ namespace Student_Teacher_Form
         {
             if(teacher!=null)
             {
+                if (rbHide.Checked == true)
+                {
+                    sc.Panel2Collapsed = true;
+                }
+                else if (rbShow.Checked == true)
+                {
+                    sc.Panel2Collapsed = false;
+                }
                 this.Close();
                 teacher_Portal.Enabled = true;
             }
             else
             {
+                if (rbHide.Checked == true)
+                {
+                    sc.Panel2Collapsed = true;
+                }
+                else if (rbShow.Checked == true)
+                {
+                    sc.Panel2Collapsed = false;
+                }
+
                 this.Close();
                 student_Portal.Enabled = true;
             }
@@ -89,7 +111,9 @@ namespace Student_Teacher_Form
 
                 if ((teacher!=null && oldPassword != teacher.Password) || (teacher == null && oldPassword != student.Password))
                 {
-                    MessageBox.Show("Wrong old password");
+                    lbChanges.Visible = true;
+                    lbChanges.Text = "Old Password is incorrect";
+                    lbChanges.ForeColor = Color.Red;
                     return;
                 }
 
@@ -97,13 +121,17 @@ namespace Student_Teacher_Form
 
                 if (newPassword != txtNwPC.Text.Trim())
                 {
-                    MessageBox.Show("Passwords doesn't match!");
+                    lbChanges.Visible = true;
+                    lbChanges.Text = "Passwords doesn't match";
+                    lbChanges.ForeColor = Color.Red;
                     return;
                 }
 
                 if (newPassword.Length < 6)
                 {
-                    MessageBox.Show("New password should be longer than 6 characters!");
+                    lbChanges.Visible = true;
+                    lbChanges.Text = "Password must be at least 6 characters long";
+                    lbChanges.ForeColor = Color.Red;
                     return;
                 }
 
@@ -111,12 +139,21 @@ namespace Student_Teacher_Form
                 {
                     teacher.Password = newPassword;
                     TeacherDB.Update(teacher);
+                
+                    lbChanges.Visible = true;
+                    lbChanges.Text = "Password changed";
+                    lbChanges.ForeColor = Color.Black;
+                    return;
                 }
                 else
                 {
                     student.Password = newPassword;
                     StudentDB.Update(student);
-                }
+                    lbChanges.Visible = true;
+                    lbChanges.Text = "Password changed";
+                    lbChanges.ForeColor = Color.Black;
+                    return;
+             }
 
             if (teacher != null)
             {

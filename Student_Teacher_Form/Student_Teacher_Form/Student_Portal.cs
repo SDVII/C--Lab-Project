@@ -185,7 +185,7 @@ namespace Student_Teacher_Form
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
-            Settings f = new Settings(student, this);
+            Settings f = new Settings(student, this, middle_events);
             f.Visible = true;
             this.Enabled = false;
         }
