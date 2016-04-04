@@ -15,8 +15,10 @@ namespace Student_Teacher_Form
         private Teacher_Portal teacher_Portal;
         private int teachID;
         private Student stu;
-        List<Student> allStudents;
+        List<Student> allStudents, resultList;
+        String targetName;
 
+        
         public Search_Students(int teachID, Teacher_Portal teacher_Portal)
         {
             InitializeComponent();
@@ -56,7 +58,9 @@ namespace Student_Teacher_Form
             }
             else
             {
-                List<Student> resultList = new List<Student>();
+                resultList = new List<Student>();
+                resultList.Clear();
+                lvSrchRes.Items.Clear();
                 //search DB
                 if (cbSrchTyp.SelectedIndex == 0)
                 {
@@ -69,7 +73,6 @@ namespace Student_Teacher_Form
                         if ((s.Name + " " + s.Surname).ToLower().Contains(txtSrchK.Text.ToLower()))
                         {
                             resultList.Add(s);
-                            break;
                         }
                     }
                 }
@@ -82,10 +85,9 @@ namespace Student_Teacher_Form
                         id = Convert.ToInt32(txtSrchK.Text);
                         foreach (Student s in allStudents)
                         {
-                            if ((""+s.Id).Contains(""+id))
+                            if (("" + s.Id).Contains("" + id))
                             {
                                 resultList.Add(s);
-                                break;
                             }
                         }
                     }
@@ -95,19 +97,41 @@ namespace Student_Teacher_Form
                         lbChanges.Text = "Please enter a valid ID";
                         lbChanges.ForeColor = Color.Red;
                         return;
-                    }                    
+                    }
                 }
                 else {
                     //dep
                 }
 
-                if (resultList.Count == 1)
+                /*if (resultList.Count == 1)
                 {
                     searchResultInput(resultList[0]);
-                } 
+                }else if (resultList.Count >= 1)
+                {
+                    
+                }*/
+
+                foreach (Student s in resultList)
+                {
+                    ListViewItem li = new ListViewItem();
+                    li.Text = s.Name + " " + s.Surname;
+                    li.SubItems.Add("" + s.Id);
+                    li.SubItems.Add(s.Department.Name);
+                    li.SubItems.Add(s.Advisor.Name);
+                    li.SubItems.Add(s.Gpa+"");
+                    lvSrchRes.Items.Add(li);
+                }
                 
+
                 lbChanges.Visible = false;
             }
+        }
+
+        private void lvSrchRes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // selected the row
+            searchResultInput(resultList[lvSrchRes.Items.IndexOf(lvSrchRes.SelectedItems[0])]);
+
         }
 
         private void searchResultInput(Student student)
