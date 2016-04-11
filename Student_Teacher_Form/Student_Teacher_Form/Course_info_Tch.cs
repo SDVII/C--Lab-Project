@@ -68,7 +68,7 @@ namespace Student_Teacher_Form
             NameValueCollection nvc = new NameValueCollection();
             nvc.Add("id", "TTR");
             nvc.Add("btn-submit-file", "Upload");
-            BackendHandler.HttpUploadFile("http://37.139.18.76:3010/coursefileupload", @location, "file", "multipart/form-data", nvc, uploadResult);
+            BackendHandler.HttpUploadFile("http://csproject.ml/coursefileupload", @location, "file", "multipart/form-data", nvc, uploadResult);
 
         }
 
