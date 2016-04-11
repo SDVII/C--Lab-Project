@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Announcement.cs" />
     <Compile Include="AnnouncementDB.cs" />
+    <Compile Include="BackendHandler.cs" />
     <Compile Include="Contact_Us.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -49,6 +51,41 @@ namespace Student_Teacher_Form
             uClicked = true;
             var btn = (Button)sender;
             uName = btn.Name;
+            String location = txtPathD.Text;//file location
+            //checks for file
+            if (!File.Exists(location))
+            {
+                MessageBox.Show("There is no such file!");
+                return;
+            }
+            if (new FileInfo(location).Length > (1024 * 1024 * 25))
+            {
+                MessageBox.Show("File size can't be bigger than 25 MB!");
+                return;
+            }
+
+            //upload
+            NameValueCollection nvc = new NameValueCollection();
+            nvc.Add("id", "TTR");
+            nvc.Add("btn-submit-file", "Upload");
+            BackendHandler.HttpUploadFile("http://37.139.18.76:3010/coursefileupload", @location, "file", "multipart/form-data", nvc, uploadResult);
+
+        }
+
+        private void uploadResult(String s)
+        {
+            switch (s)
+            {
+                case "success":
+                    MessageBox.Show("File upload was successful!");
+                    break;
+                case "error":
+                    MessageBox.Show("There was a problem while connecting to server. Please try again later!");
+                    break;
+                case "servererror":
+                    MessageBox.Show("There was a problem within the server. Please try again later! ");
+                    break;
+            }
         }
 
         private void Course_info_Tch_Enter(object sender, EventArgs e)
