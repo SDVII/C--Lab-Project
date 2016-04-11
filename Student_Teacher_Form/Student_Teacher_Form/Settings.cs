@@ -30,6 +30,14 @@ namespace Student_Teacher_Form
             this.student_Portal = student_Portal;
             this.Text = student.Id + "";
             this.sc = sc;
+            try
+            {
+                pbPrf.Load("http://csproject.ml/images/stu/" + student.Id + ".jpeg");
+            }
+            catch (Exception)
+            {
+                //no image
+            }
 
             fillData();
         }
@@ -41,6 +49,14 @@ namespace Student_Teacher_Form
             this.teacher_Portal = teacher_Portal;
             this.Text = teacher.Id + "";
             this.sc = sc;
+            try
+            {
+                pbPrf.Load("http://csproject.ml/images/tea/" + teacher.Id + ".jpeg");
+            }
+            catch (Exception)
+            {
+                //no image
+            }
 
             fillData();
         }
