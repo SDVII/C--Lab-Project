@@ -194,7 +194,7 @@ namespace Student_Teacher_Form
 
         private void btnAddCrs_Click(object sender, EventArgs e)
         {
-            Course_Add f = new Course_Add(student.Id, this);
+            Course_Add f = new Course_Add(student, courseList, this);
             f.Visible = true;
             this.Enabled = false;
         }

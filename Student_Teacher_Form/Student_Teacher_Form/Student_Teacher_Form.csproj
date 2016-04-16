@@ -77,6 +77,8 @@
     <Compile Include="CourseAnnouncements.cs" />
     <Compile Include="CourseAnnouncementsDB.cs" />
     <Compile Include="CourseDB.cs" />
+    <Compile Include="CourseFile.cs" />
+    <Compile Include="CourseFileDB.cs" />
     <Compile Include="Course_info_Stu.cs">
       <SubType>Form</SubType>
     </Compile>

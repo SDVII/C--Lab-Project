@@ -13,14 +13,16 @@ namespace Student_Teacher_Form
     public partial class Course_Add : Form
     {
         private Student_Portal student_Portal;
-        private int stuID;
+        private Student student;
+        private List<Course> courseListCur, courseListAva;
 
-        public Course_Add(int stuID, Student_Portal student_Portal)
+        public Course_Add(Student student, List<Course> courseList, Student_Portal student_Portal)
         {
             InitializeComponent();
-            this.stuID = stuID;
+            this.student = student;
+            this.courseListCur = courseList;
             this.student_Portal = student_Portal;
-            this.Text = stuID + "";
+            this.Text = student.Id + "";
 
             populateAvailableCourses(lbAvlC);
             populateCurrentCourses(lbCurC);

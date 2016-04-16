@@ -15,6 +15,7 @@ namespace Student_Teacher_Form
     {
         private Student_Portal student_Portal;
         private Course course;
+        private List<CourseFile> fileList;
 
         public Course_info_Stu(Course course, Student_Portal student_Portal)
         {
@@ -31,30 +32,33 @@ namespace Student_Teacher_Form
 
         private void populateAttachments()
         {
+            fileList = CourseFileDB.GetWithCourseId(course);
 
-            /*
-            for (int i = 0; i < attachments in db ; i++)
+            
+            for (int i = 0; i < fileList.Count ; i++)
             {
+                Console.WriteLine(fileList[i].Name);
                 DataGridViewRow row = (DataGridViewRow)dgvAtch.Rows[i].Clone();
-                String title = "";
-                String instructor = "";
+                String title = fileList[i].Name;
+                String info = fileList[i].Info;
                 LinkLabel ll = new LinkLabel();
                 ll.AutoSize = true;
                 ll.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
                 ll.Name = "ll";
                 ll.TabStop = true;
-                ll.Text = "file name";
+                ll.Text = "file link";
                 LinkLabel.Link link = new LinkLabel.Link();
-                link.LinkData = "link to the file";
+                link.LinkData = "http://csproject.ml/course/"+ fileList[i].Id+"-"+ fileList[i].Name;
                 ll.Links.Add(link);
                 ll.LinkClicked += new LinkLabelLinkClickedEventHandler(downloadLink);
+                DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
+                linkCell.Value = "http://csproject.ml/course/" + fileList[i].Id + "-" + fileList[i].Name;
 
                 row.Cells[0].Value = title;
-                row.Cells[1].Value = instructor;
-                row.Cells[2].Value = ll;
+                row.Cells[1].Value = info;
+                row.Cells[2] = linkCell;
                 dgvAtch.Rows.Add(row);
             }
-            */
 
 
         }
@@ -108,6 +112,14 @@ namespace Student_Teacher_Form
         private void Course_info_Stu_FormClosed(object sender, FormClosedEventArgs e)
         {
             student_Portal.Enabled = true;
-        }        
+        }
+
+        private void dgvAtch_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 2)
+            {
+                System.Diagnostics.Process.Start("http://csproject.ml/course/" + fileList[e.RowIndex].Id + "-" + fileList[e.RowIndex].Name);
+            }
+        }
     }
 }

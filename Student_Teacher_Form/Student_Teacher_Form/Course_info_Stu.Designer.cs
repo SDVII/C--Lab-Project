@@ -32,6 +32,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbCrsCd = new System.Windows.Forms.Label();
             this.gbTchrInfo = new System.Windows.Forms.GroupBox();
+            this.lbCode = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.lbDep = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,14 +45,12 @@
             this.chInst = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chMessage = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.dgvAtch = new System.Windows.Forms.DataGridView();
-            this.clTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clInstructor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clLink = new System.Windows.Forms.DataGridViewLinkColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnAccCrsInStu = new System.Windows.Forms.Button();
-            this.lbCode = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.clTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clInfo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clLink = new System.Windows.Forms.DataGridViewLinkColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbTchrInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTchrP)).BeginInit();
@@ -115,6 +115,28 @@
             this.gbTchrInfo.TabIndex = 25;
             this.gbTchrInfo.TabStop = false;
             this.gbTchrInfo.Text = "Course Info";
+            // 
+            // lbCode
+            // 
+            this.lbCode.AutoSize = true;
+            this.lbCode.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCode.Location = new System.Drawing.Point(304, 124);
+            this.lbCode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbCode.Name = "lbCode";
+            this.lbCode.Size = new System.Drawing.Size(42, 24);
+            this.lbCode.TabIndex = 10;
+            this.lbCode.Text = "null";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(159, 124);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(58, 24);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Code:";
             // 
             // lbDep
             // 
@@ -214,7 +236,7 @@
             this.dgvAtch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAtch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clTitle,
-            this.clInstructor,
+            this.clInfo,
             this.clLink});
             this.dgvAtch.Location = new System.Drawing.Point(17, 34);
             this.dgvAtch.Margin = new System.Windows.Forms.Padding(4);
@@ -223,31 +245,6 @@
             this.dgvAtch.RowHeadersVisible = false;
             this.dgvAtch.Size = new System.Drawing.Size(909, 142);
             this.dgvAtch.TabIndex = 27;
-            // 
-            // clTitle
-            // 
-            this.clTitle.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.clTitle.HeaderText = "Title";
-            this.clTitle.Name = "clTitle";
-            this.clTitle.ReadOnly = true;
-            this.clTitle.Width = 75;
-            // 
-            // clInstructor
-            // 
-            this.clInstructor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.clInstructor.HeaderText = "Instructor";
-            this.clInstructor.Name = "clInstructor";
-            this.clInstructor.ReadOnly = true;
-            this.clInstructor.Width = 118;
-            // 
-            // clLink
-            // 
-            this.clLink.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.clLink.HeaderText = "Download";
-            this.clLink.Name = "clLink";
-            this.clLink.ReadOnly = true;
-            this.clLink.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.clLink.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // groupBox1
             // 
@@ -290,27 +287,30 @@
             this.btnAccCrsInStu.UseVisualStyleBackColor = true;
             this.btnAccCrsInStu.Click += new System.EventHandler(this.btnAccCrsInStu_Click);
             // 
-            // lbCode
+            // clTitle
             // 
-            this.lbCode.AutoSize = true;
-            this.lbCode.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCode.Location = new System.Drawing.Point(304, 124);
-            this.lbCode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbCode.Name = "lbCode";
-            this.lbCode.Size = new System.Drawing.Size(42, 24);
-            this.lbCode.TabIndex = 10;
-            this.lbCode.Text = "null";
+            this.clTitle.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.clTitle.HeaderText = "Title";
+            this.clTitle.Name = "clTitle";
+            this.clTitle.ReadOnly = true;
+            this.clTitle.Width = 75;
             // 
-            // label4
+            // clInfo
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(159, 124);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 24);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Code:";
+            this.clInfo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.clInfo.HeaderText = "Info";
+            this.clInfo.Name = "clInfo";
+            this.clInfo.ReadOnly = true;
+            this.clInfo.Width = 70;
+            // 
+            // clLink
+            // 
+            this.clLink.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.clLink.HeaderText = "Download";
+            this.clLink.Name = "clLink";
+            this.clLink.ReadOnly = true;
+            this.clLink.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.clLink.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // Course_info_Stu
             // 
@@ -362,10 +362,10 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnAccCrsInStu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clTitle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clInstructor;
-        private System.Windows.Forms.DataGridViewLinkColumn clLink;
         private System.Windows.Forms.Label lbCode;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clTitle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clInfo;
+        private System.Windows.Forms.DataGridViewLinkColumn clLink;
     }
 }

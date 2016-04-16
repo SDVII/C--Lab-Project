@@ -11,15 +11,16 @@ namespace Student_Teacher_Form
 {
     class BackendHandler
     {
-        public static void HttpUploadFile(string url, string file, string paramName, string contentType, NameValueCollection nvc, Action<string> callback)
+        public static void HttpUploadFile(string url, int id, string file, string paramName, string contentType, NameValueCollection nvc, Action<string> callback)
         {
             Console.WriteLine(string.Format("Uploading {0} to {1}", file, url));
             string boundary = "---------------------------" + DateTime.Now.Ticks.ToString("x");
             byte[] boundarybytes = System.Text.Encoding.ASCII.GetBytes("\r\n--" + boundary + "\r\n");
 
             HttpWebRequest wr = (HttpWebRequest)WebRequest.Create(url);
-            wr.ContentType = "multipart/form-data; boundary=" + boundary;
+            wr.ContentType = "multipart/form-data;boundary=" + boundary;
             wr.Method = "POST";
+            wr.Headers.Add("file-id", id+"");
             wr.KeepAlive = true;
             wr.Credentials = System.Net.CredentialCache.DefaultCredentials;
 

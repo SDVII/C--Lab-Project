@@ -64,12 +64,17 @@ namespace Student_Teacher_Form
                 return;
             }
 
+            //Create and add to db
+            String name = Path.GetFileName(location);
+            String info = txtInfoD.Text;
+            int id = CourseFileDB.Add(new CourseFile(name, info, DateTime.Now, teacher, course));
+
             //upload
             NameValueCollection nvc = new NameValueCollection();
             nvc.Add("id", "TTR");
             nvc.Add("btn-submit-file", "Upload");
-            BackendHandler.HttpUploadFile("http://csproject.ml/coursefileupload", @location, "file", "multipart/form-data", nvc, uploadResult);
-
+            BackendHandler.HttpUploadFile("http://csproject.ml/coursefileupload", id, @location, "file", "multipart/form-data", nvc, uploadResult);
+            //http://csproject.ml/coursefileupload
         }
 
         private void uploadResult(String s)

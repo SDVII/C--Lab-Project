@@ -130,13 +130,23 @@ namespace Student_Teacher_Form
         private void lvSrchRes_SelectedIndexChanged(object sender, EventArgs e)
         {
             // selected the row
-            searchResultInput(resultList[lvSrchRes.Items.IndexOf(lvSrchRes.SelectedItems[0])]);
+            if(lvSrchRes.SelectedItems.Count>0)
+                searchResultInput(resultList[lvSrchRes.SelectedIndices[0]]);
 
         }
+        
 
         private void searchResultInput(Student student)
         {
-            //pbStuP.Image = "";
+            pbStuP.Image = global::Student_Teacher_Form.Properties.Resources.anon;
+            try
+            {
+                pbStuP.Load("http://csproject.ml/images/stu/" + student.Id + ".jpeg");
+            }
+            catch (Exception)
+            {
+                //no image
+            }
             lbName.Text = student.Name + " " + student.Surname;
             lbID.Text = ""+student.Id;
             lbDep.Text = ""+student.Department.Name;

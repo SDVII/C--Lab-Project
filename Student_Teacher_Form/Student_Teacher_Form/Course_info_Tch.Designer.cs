@@ -54,6 +54,8 @@ namespace Student_Teacher_Form
             this.btnAccCrsInTch = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbChanges = new System.Windows.Forms.Label();
+            this.txtInfoD = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -94,7 +96,7 @@ namespace Student_Teacher_Form
             // txtPathD
             // 
             this.txtPathD.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPathD.Location = new System.Drawing.Point(27, 38);
+            this.txtPathD.Location = new System.Drawing.Point(18, 100);
             this.txtPathD.Margin = new System.Windows.Forms.Padding(4);
             this.txtPathD.Name = "txtPathD";
             this.txtPathD.Size = new System.Drawing.Size(333, 30);
@@ -155,7 +157,7 @@ namespace Student_Teacher_Form
             this.btnBrwsD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBrwsD.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBrwsD.ForeColor = System.Drawing.Color.White;
-            this.btnBrwsD.Location = new System.Drawing.Point(389, 34);
+            this.btnBrwsD.Location = new System.Drawing.Point(380, 96);
             this.btnBrwsD.Margin = new System.Windows.Forms.Padding(4);
             this.btnBrwsD.Name = "btnBrwsD";
             this.btnBrwsD.Size = new System.Drawing.Size(137, 38);
@@ -172,7 +174,7 @@ namespace Student_Teacher_Form
             this.btnUpD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpD.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpD.ForeColor = System.Drawing.Color.White;
-            this.btnUpD.Location = new System.Drawing.Point(535, 34);
+            this.btnUpD.Location = new System.Drawing.Point(526, 96);
             this.btnUpD.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpD.Name = "btnUpD";
             this.btnUpD.Size = new System.Drawing.Size(137, 38);
@@ -253,6 +255,8 @@ namespace Student_Teacher_Form
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.txtInfoD);
             this.groupBox1.Controls.Add(this.btnUpD);
             this.groupBox1.Controls.Add(this.btnBrwsD);
             this.groupBox1.Controls.Add(this.txtPathD);
@@ -261,7 +265,7 @@ namespace Student_Teacher_Form
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(701, 96);
+            this.groupBox1.Size = new System.Drawing.Size(701, 155);
             this.groupBox1.TabIndex = 44;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Upload Documents";
@@ -288,7 +292,7 @@ namespace Student_Teacher_Form
             this.groupBox3.Controls.Add(this.btnBrwsM);
             this.groupBox3.Controls.Add(this.txtPathM);
             this.groupBox3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(51, 533);
+            this.groupBox3.Location = new System.Drawing.Point(51, 602);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
@@ -304,7 +308,7 @@ namespace Student_Teacher_Form
             this.groupBox4.Controls.Add(this.txtPlace);
             this.groupBox4.Controls.Add(this.dtpEx);
             this.groupBox4.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(120, 645);
+            this.groupBox4.Location = new System.Drawing.Point(120, 714);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
@@ -341,7 +345,7 @@ namespace Student_Teacher_Form
             this.btnAccCrsInTch.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
             this.btnAccCrsInTch.FlatAppearance.BorderSize = 0;
             this.btnAccCrsInTch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccCrsInTch.Location = new System.Drawing.Point(380, 785);
+            this.btnAccCrsInTch.Location = new System.Drawing.Point(380, 854);
             this.btnAccCrsInTch.Margin = new System.Windows.Forms.Padding(4);
             this.btnAccCrsInTch.Name = "btnAccCrsInTch";
             this.btnAccCrsInTch.Size = new System.Drawing.Size(60, 54);
@@ -364,7 +368,7 @@ namespace Student_Teacher_Form
             // 
             this.lbChanges.AutoSize = true;
             this.lbChanges.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbChanges.Location = new System.Drawing.Point(47, 807);
+            this.lbChanges.Location = new System.Drawing.Point(47, 876);
             this.lbChanges.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbChanges.Name = "lbChanges";
             this.lbChanges.Size = new System.Drawing.Size(28, 17);
@@ -372,11 +376,31 @@ namespace Student_Teacher_Form
             this.lbChanges.Text = "null";
             this.lbChanges.Visible = false;
             // 
+            // txtInfoD
+            // 
+            this.txtInfoD.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtInfoD.Location = new System.Drawing.Point(85, 38);
+            this.txtInfoD.Margin = new System.Windows.Forms.Padding(4);
+            this.txtInfoD.Name = "txtInfoD";
+            this.txtInfoD.Size = new System.Drawing.Size(578, 30);
+            this.txtInfoD.TabIndex = 38;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(24, 41);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 23);
+            this.label3.TabIndex = 36;
+            this.label3.Text = "Info:";
+            // 
             // Course_info_Tch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(820, 842);
+            this.ClientSize = new System.Drawing.Size(820, 914);
             this.Controls.Add(this.lbChanges);
             this.Controls.Add(this.btnAccCrsInTch);
             this.Controls.Add(this.groupBox4);
@@ -433,5 +457,7 @@ namespace Student_Teacher_Form
         private System.Windows.Forms.Label lbChanges;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtPlace;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtInfoD;
     }
 }
