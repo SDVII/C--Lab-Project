@@ -101,6 +101,15 @@ namespace Student_Teacher_Form
                 }
                 else {
                     //dep
+
+                    foreach (Student s in allStudents)
+                    {
+                        if ((s.Department.Name).ToLower().Contains(txtSrchK.Text.ToLower()))
+                        {
+                            resultList.Add(s);
+                        }
+                    }
+
                 }
 
                 /*if (resultList.Count == 1)
