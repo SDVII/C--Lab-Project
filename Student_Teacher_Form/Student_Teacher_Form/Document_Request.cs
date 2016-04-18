@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Collections;
 
 namespace Student_Teacher_Form
 {
@@ -59,6 +60,8 @@ namespace Student_Teacher_Form
 
         private void btnAddCourse_Click(object sender, EventArgs e)
         {
+            
+
             if (cbDoc.SelectedIndex == -1)
             {
                 lbChanges.Visible = true;
@@ -82,9 +85,12 @@ namespace Student_Teacher_Form
             }
             else
             {
+
                 lbChanges.Visible = true;
                 lbChanges.Text = "Document request made";
                 lbChanges.ForeColor = Color.Black;
+                
+               
                 lbDocL.Items.Add(cbDoc.Text + " : " + cbDocS.Text + " : " + cbEng.Text + "," + cbTr.Text);
                 return;
             }
@@ -109,7 +115,9 @@ namespace Student_Teacher_Form
 
         private void btnSbmD_Click(object sender, EventArgs e)
         {
+
             //add all items to DB
+
         }
 
         private void btnRmvD_Click(object sender, EventArgs e)

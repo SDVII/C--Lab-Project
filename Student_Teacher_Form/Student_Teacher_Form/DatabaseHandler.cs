@@ -212,8 +212,6 @@ namespace Student_Teacher_Form
 
 
 
-
-
         //update row from teacher_table method
         protected void updateTeacher(Teacher teacher)
         {
