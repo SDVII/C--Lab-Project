@@ -54,6 +54,8 @@ namespace Student_Teacher_Form
             else
             {
                 //send the message
+                DatabaseHandler db = new DatabaseHandler();
+                db.insertNewRequest(txtTilRq.Text,tbBdyRq.Text,cbCtgRq.SelectedItem.ToString());
                 lbChanges.Visible = true;
                 lbChanges.Text = "Request sent";
                 lbChanges.ForeColor = Color.Black;
