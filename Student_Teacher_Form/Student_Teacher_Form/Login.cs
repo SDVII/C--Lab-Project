@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,6 +14,7 @@ namespace Student_Teacher_Form
     public partial class Login : Form
     {
 
+        BackgroundWorker bw = new BackgroundWorker();
         Font watermark = new Font("Calibri", 12, FontStyle.Italic);
         Font defaultF = new Font("Calibri", 12);
         Boolean validated = true;
@@ -36,6 +38,11 @@ namespace Student_Teacher_Form
             cbUsrT.ForeColor = Color.Gray;
             cbUsrT.Font = watermark;
 
+        }
+
+        public void splashScreen()
+        {
+            Application.Run(new Loading());
         }
 
         public void checkInput(String uName, String pass)
@@ -117,6 +124,9 @@ namespace Student_Teacher_Form
             For testing reasons, i'll make a Boolean "validated" which is always true. delete it after you insert the validate function.
             I will also use a fake ID for testing as well.
             */
+
+            Thread t = new Thread(new ThreadStart(splashScreen));
+            t.Start();
             string username = txtUsername.Text;
             string password = txtPass.Text;
 
@@ -162,6 +172,7 @@ namespace Student_Teacher_Form
                     }
                 }
             }
+            t.Abort();
 
             /*if (validated==true)
             {
@@ -190,5 +201,6 @@ namespace Student_Teacher_Form
         {
             Application.Exit();
         }
+
     }
 }

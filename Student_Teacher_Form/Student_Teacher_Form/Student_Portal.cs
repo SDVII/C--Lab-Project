@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,7 +15,7 @@ namespace Student_Teacher_Form
     public partial class Student_Portal : Form
     {
 
-    
+        BackgroundWorker bw = new BackgroundWorker();
         private Student student;
         List<StudentSchedule> stuScheduleList;
         List<Section> sectionList;
@@ -45,6 +46,11 @@ namespace Student_Teacher_Form
             populateCourses(dgvCourses);
             populateSchedule(lvSchedule);
             populateNotification(lbNotification);
+        }
+
+        public void splashScreen()
+        {
+            Application.Run(new Loading());
         }
 
         private void fetchData()
@@ -150,10 +156,13 @@ namespace Student_Teacher_Form
         }
         private void callCourse(object sender, EventArgs e)
         {
+            Thread t = new Thread(new ThreadStart(splashScreen));
+            t.Start();
             Button btn = (Button)sender;
             Course_info_Stu f = new Course_info_Stu(null, this);
             f.Visible = true;
             this.Enabled = false;
+            t.Abort();
 
         }
 
@@ -173,48 +182,68 @@ namespace Student_Teacher_Form
 
         private void btnPower_Click(object sender, EventArgs e)
         {
-            Login f = new Login();
-            f.Visible = true;
-            this.Visible = false;
+            DialogResult r = MessageBox.Show("Are you sure you want to logout?", "Confirmation", MessageBoxButtons.YesNo);
+            if (r == System.Windows.Forms.DialogResult.Yes)
+            {
+                Login f = new Login();
+                f.Visible = true;
+                this.Visible = false;
+            }
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
+            Thread t = new Thread(new ThreadStart(splashScreen));
+            t.Start();
             Settings f = new Settings(student, this, middle_events);
             f.Visible = true;
             this.Enabled = false;
+            t.Abort();
         }
 
         private void btnSchedule_Click(object sender, EventArgs e)
         {
+            Thread t = new Thread(new ThreadStart(splashScreen));
+            t.Start();
             Schedule f = new Schedule(student, sectionTimeList, this);
             f.Visible = true;
             this.Enabled = false;
+            t.Abort();
         }
 
         private void btnAddCrs_Click(object sender, EventArgs e)
         {
+            Thread t = new Thread(new ThreadStart(splashScreen));
+            t.Start();
             Course_Add f = new Course_Add(student, courseList, this);
             f.Visible = true;
             this.Enabled = false;
+            t.Abort();
         }
 
         private void btnReqDoc_Click(object sender, EventArgs e)
         {
+            Thread t = new Thread(new ThreadStart(splashScreen));
+            t.Start();
             Document_Request f = new Document_Request(student.Id, this);
             f.Visible = true;
             this.Enabled = false;
+            t.Abort();
         }
 
         private void brnEx_Click(object sender, EventArgs e)
         {
+            Thread t = new Thread(new ThreadStart(splashScreen));
+            t.Start();
             Exam_Schedule f = new Exam_Schedule(courseList, this);
             f.Visible = true;
             this.Enabled = false;
+            t.Abort();
         }
 
         private void btnFinAff_Click(object sender, EventArgs e)
         {
+
             Financial_Affairs f = new Financial_Affairs(student.FinancialAffairs, this);
             f.Visible = true;
             this.Enabled = false;

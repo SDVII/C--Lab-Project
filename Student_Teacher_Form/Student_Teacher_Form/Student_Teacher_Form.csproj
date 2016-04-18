@@ -118,6 +118,12 @@
     <Compile Include="Financial_Affairs.Designer.cs">
       <DependentUpon>Financial_Affairs.cs</DependentUpon>
     </Compile>
+    <Compile Include="Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loading.Designer.cs">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manager.cs" />
     <Compile Include="ManagerDB.cs" />
     <Compile Include="Login.cs">
@@ -222,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Financial_Affairs.resx">
       <DependentUpon>Financial_Affairs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loading.resx">
+      <DependentUpon>Loading.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -503,6 +512,8 @@
     <Content Include="obj\Debug\student_teacher_form.exe.licenses" />
     <Content Include="obj\Debug\Student_Teacher_Form.pdb" />
     <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <None Include="Resources\pacman.gif" />
+    <None Include="Resources\hourglass.gif" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Release\" />

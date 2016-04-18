@@ -41,16 +41,7 @@ namespace Student_Teacher_Form
                 DataGridViewRow row = (DataGridViewRow)dgvAtch.Rows[i].Clone();
                 String title = fileList[i].Name;
                 String info = fileList[i].Info;
-                LinkLabel ll = new LinkLabel();
-                ll.AutoSize = true;
-                ll.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-                ll.Name = "ll";
-                ll.TabStop = true;
-                ll.Text = "file link";
-                LinkLabel.Link link = new LinkLabel.Link();
-                link.LinkData = "http://csproject.ml/course/"+ fileList[i].Id+"-"+ fileList[i].Name;
-                ll.Links.Add(link);
-                ll.LinkClicked += new LinkLabelLinkClickedEventHandler(downloadLink);
+                var ll = new DataGridViewLinkCell();
                 DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
                 linkCell.Value = "http://csproject.ml/course/" + fileList[i].Id + "-" + fileList[i].Name;
 
@@ -121,5 +112,6 @@ namespace Student_Teacher_Form
                 System.Diagnostics.Process.Start("http://csproject.ml/course/" + fileList[e.RowIndex].Id + "-" + fileList[e.RowIndex].Name);
             }
         }
+
     }
 }

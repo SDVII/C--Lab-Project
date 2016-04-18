@@ -30,12 +30,10 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
             this.lbID = new System.Windows.Forms.Label();
-            this.lbF = new System.Windows.Forms.Label();
             this.lbDep = new System.Windows.Forms.Label();
             this.lbSpr = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -82,21 +80,11 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "ID:";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(213, 104);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 19);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Faculty:";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(213, 140);
+            this.label4.Location = new System.Drawing.Point(212, 105);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 19);
             this.label4.TabIndex = 4;
@@ -106,7 +94,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(213, 177);
+            this.label5.Location = new System.Drawing.Point(212, 142);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(80, 19);
             this.label5.TabIndex = 5;
@@ -132,21 +120,11 @@
             this.lbID.TabIndex = 7;
             this.lbID.Text = "null";
             // 
-            // lbF
-            // 
-            this.lbF.AutoSize = true;
-            this.lbF.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbF.Location = new System.Drawing.Point(321, 104);
-            this.lbF.Name = "lbF";
-            this.lbF.Size = new System.Drawing.Size(33, 19);
-            this.lbF.TabIndex = 8;
-            this.lbF.Text = "null";
-            // 
             // lbDep
             // 
             this.lbDep.AutoSize = true;
             this.lbDep.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDep.Location = new System.Drawing.Point(321, 140);
+            this.lbDep.Location = new System.Drawing.Point(320, 105);
             this.lbDep.Name = "lbDep";
             this.lbDep.Size = new System.Drawing.Size(33, 19);
             this.lbDep.TabIndex = 9;
@@ -156,7 +134,7 @@
             // 
             this.lbSpr.AutoSize = true;
             this.lbSpr.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSpr.Location = new System.Drawing.Point(321, 177);
+            this.lbSpr.Location = new System.Drawing.Point(320, 142);
             this.lbSpr.Name = "lbSpr";
             this.lbSpr.Size = new System.Drawing.Size(33, 19);
             this.lbSpr.TabIndex = 10;
@@ -179,19 +157,17 @@
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox1.Controls.Add(this.lbSpr);
             this.groupBox1.Controls.Add(this.lbDep);
-            this.groupBox1.Controls.Add(this.lbF);
             this.groupBox1.Controls.Add(this.lbID);
             this.groupBox1.Controls.Add(this.lbName);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.pbPrf);
             this.groupBox1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(17, 75);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(558, 251);
+            this.groupBox1.Size = new System.Drawing.Size(558, 197);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Profile";
@@ -201,7 +177,7 @@
             this.pbPrf.Image = global::Student_Teacher_Form.Properties.Resources.anon;
             this.pbPrf.Location = new System.Drawing.Point(29, 39);
             this.pbPrf.Name = "pbPrf";
-            this.pbPrf.Size = new System.Drawing.Size(162, 181);
+            this.pbPrf.Size = new System.Drawing.Size(119, 122);
             this.pbPrf.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbPrf.TabIndex = 0;
             this.pbPrf.TabStop = false;
@@ -273,7 +249,7 @@
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(17, 346);
+            this.groupBox2.Location = new System.Drawing.Point(17, 297);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(335, 186);
             this.groupBox2.TabIndex = 20;
@@ -323,7 +299,7 @@
             this.groupBox3.Controls.Add(this.rbHide);
             this.groupBox3.Controls.Add(this.rbShow);
             this.groupBox3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(383, 383);
+            this.groupBox3.Location = new System.Drawing.Point(383, 334);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(192, 111);
             this.groupBox3.TabIndex = 23;
@@ -334,7 +310,7 @@
             // 
             this.lbChanges.AutoSize = true;
             this.lbChanges.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbChanges.Location = new System.Drawing.Point(14, 559);
+            this.lbChanges.Location = new System.Drawing.Point(14, 510);
             this.lbChanges.Name = "lbChanges";
             this.lbChanges.Size = new System.Drawing.Size(25, 13);
             this.lbChanges.TabIndex = 25;
@@ -348,7 +324,7 @@
             this.btnAccS.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
             this.btnAccS.FlatAppearance.BorderSize = 0;
             this.btnAccS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccS.Location = new System.Drawing.Point(275, 548);
+            this.btnAccS.Location = new System.Drawing.Point(275, 499);
             this.btnAccS.Name = "btnAccS";
             this.btnAccS.Size = new System.Drawing.Size(45, 44);
             this.btnAccS.TabIndex = 24;
@@ -369,7 +345,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(593, 604);
+            this.ClientSize = new System.Drawing.Size(593, 562);
             this.Controls.Add(this.lbChanges);
             this.Controls.Add(this.btnAccS);
             this.Controls.Add(this.groupBox3);
@@ -400,12 +376,10 @@
         private System.Windows.Forms.PictureBox pbPrf;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lbName;
         private System.Windows.Forms.Label lbID;
-        private System.Windows.Forms.Label lbF;
         private System.Windows.Forms.Label lbDep;
         private System.Windows.Forms.Label lbSpr;
         private System.Windows.Forms.Label label6;

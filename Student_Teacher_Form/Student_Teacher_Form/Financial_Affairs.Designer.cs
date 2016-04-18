@@ -38,7 +38,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.btnRfshP = new System.Windows.Forms.Button();
             this.btnAccFA = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -122,7 +121,6 @@
             // 
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.lbRmnDbt);
             this.groupBox1.Controls.Add(this.lbPaid);
             this.groupBox1.Controls.Add(this.lbSem);
@@ -156,16 +154,6 @@
             this.label5.Size = new System.Drawing.Size(18, 18);
             this.label5.TabIndex = 42;
             this.label5.Text = " $";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(298, 45);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(18, 18);
-            this.label4.TabIndex = 41;
-            this.label4.Text = " $";
             // 
             // btnRfshP
             // 
@@ -241,7 +229,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnAccFA;
         private System.Windows.Forms.Button btnRfshP;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
     }

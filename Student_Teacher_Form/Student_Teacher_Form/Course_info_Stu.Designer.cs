@@ -231,6 +231,7 @@
             this.dgvAtch.RowHeadersVisible = false;
             this.dgvAtch.Size = new System.Drawing.Size(682, 115);
             this.dgvAtch.TabIndex = 27;
+            this.dgvAtch.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAtch_CellContentClick);
             // 
             // clTitle
             // 
