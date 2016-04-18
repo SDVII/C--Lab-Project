@@ -73,6 +73,9 @@ namespace Student_Teacher_Form
             else
             {
                 //save to DB
+
+                DatabaseHandler db = new DatabaseHandler();
+                db.insertReportIssue(txtTtlR.Text, tbBdyR.Text,cbCtgR.SelectedItem.ToString());
                 lbChanges.Visible = true;
                 lbChanges.Text = "Report Submitted";
                 lbChanges.ForeColor = Color.Black;
