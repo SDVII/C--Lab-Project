@@ -162,6 +162,21 @@ namespace Student_Teacher_Form
             }
         }
 
+        // insert a new request From the teacher to the manager
+        public  void insertNewRequest(String title,String content,String selectedOpetion) {
+            string query = $"INSERT INTO teacherRequest (teacherRequest_title,teacherRequest_content,teacherRequest_select) Values ('{title}','{content}','{selectedOpetion}')";
+
+            if (this.openConnection() == true)
+            {
+                //fire the query with the connection
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                // send the query
+                cmd.ExecuteNonQuery();
+                // close the connection if it is open
+                this.closeConnection();
+            }
+        }
+
 
 
 
