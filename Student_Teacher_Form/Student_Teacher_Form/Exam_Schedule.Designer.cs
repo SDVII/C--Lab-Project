@@ -115,6 +115,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "Exam_Schedule";
             this.Text = "Exam_Schedule";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Exam_Schedule_FormClosed);

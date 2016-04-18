@@ -54,6 +54,7 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvCourses = new System.Windows.Forms.DataGridView();
+            this.courses = new System.Windows.Forms.DataGridViewButtonColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lvSchedule = new System.Windows.Forms.ListView();
@@ -63,7 +64,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lbNotification = new System.Windows.Forms.ListBox();
             this.lable7 = new System.Windows.Forms.Label();
-            this.courses = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.main)).BeginInit();
             this.main.Panel1.SuspendLayout();
             this.main.Panel2.SuspendLayout();
@@ -102,7 +102,6 @@
             this.main.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.main.IsSplitterFixed = true;
             this.main.Location = new System.Drawing.Point(0, 0);
-            this.main.Margin = new System.Windows.Forms.Padding(6);
             this.main.Name = "main";
             this.main.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -113,9 +112,8 @@
             // main.Panel2
             // 
             this.main.Panel2.Controls.Add(this.body);
-            this.main.Size = new System.Drawing.Size(2278, 1100);
+            this.main.Size = new System.Drawing.Size(958, 548);
             this.main.SplitterDistance = 53;
-            this.main.SplitterWidth = 8;
             this.main.TabIndex = 2;
             // 
             // topMain
@@ -125,7 +123,6 @@
             this.topMain.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.topMain.IsSplitterFixed = true;
             this.topMain.Location = new System.Drawing.Point(0, 0);
-            this.topMain.Margin = new System.Windows.Forms.Padding(6);
             this.topMain.Name = "topMain";
             // 
             // topMain.Panel1
@@ -137,9 +134,9 @@
             // topMain.Panel2
             // 
             this.topMain.Panel2.Controls.Add(this.buttons);
-            this.topMain.Size = new System.Drawing.Size(2278, 53);
+            this.topMain.Size = new System.Drawing.Size(958, 53);
             this.topMain.SplitterDistance = 316;
-            this.topMain.SplitterWidth = 2;
+            this.topMain.SplitterWidth = 1;
             this.topMain.TabIndex = 0;
             // 
             // btnMenu
@@ -149,10 +146,9 @@
             this.btnMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMenu.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
             this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenu.Location = new System.Drawing.Point(22, 11);
-            this.btnMenu.Margin = new System.Windows.Forms.Padding(6);
+            this.btnMenu.Location = new System.Drawing.Point(11, 6);
             this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(80, 75);
+            this.btnMenu.Size = new System.Drawing.Size(40, 39);
             this.btnMenu.TabIndex = 49;
             this.btnMenu.UseVisualStyleBackColor = false;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
@@ -163,10 +159,9 @@
             this.lbID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
             this.lbID.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbID.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbID.Location = new System.Drawing.Point(118, 61);
-            this.lbID.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lbID.Location = new System.Drawing.Point(59, 32);
             this.lbID.Name = "lbID";
-            this.lbID.Size = new System.Drawing.Size(32, 27);
+            this.lbID.Size = new System.Drawing.Size(17, 13);
             this.lbID.TabIndex = 51;
             this.lbID.Text = "ID";
             // 
@@ -176,10 +171,9 @@
             this.lbName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
             this.lbName.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold);
             this.lbName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbName.Location = new System.Drawing.Point(118, 17);
-            this.lbName.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lbName.Location = new System.Drawing.Point(59, 9);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(285, 46);
+            this.lbName.Size = new System.Drawing.Size(141, 23);
             this.lbName.TabIndex = 50;
             this.lbName.Text = "Name - Surname";
             // 
@@ -189,7 +183,6 @@
             this.buttons.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
             this.buttons.IsSplitterFixed = true;
             this.buttons.Location = new System.Drawing.Point(0, 0);
-            this.buttons.Margin = new System.Windows.Forms.Padding(6);
             this.buttons.Name = "buttons";
             // 
             // buttons.Panel2
@@ -197,9 +190,9 @@
             this.buttons.Panel2.Controls.Add(this.btnPower);
             this.buttons.Panel2.Controls.Add(this.btnInfo);
             this.buttons.Panel2.Controls.Add(this.btnSettings);
-            this.buttons.Size = new System.Drawing.Size(1960, 53);
-            this.buttons.SplitterDistance = 1817;
-            this.buttons.SplitterWidth = 2;
+            this.buttons.Size = new System.Drawing.Size(641, 53);
+            this.buttons.SplitterDistance = 486;
+            this.buttons.SplitterWidth = 1;
             this.buttons.TabIndex = 0;
             // 
             // btnPower
@@ -209,10 +202,9 @@
             this.btnPower.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPower.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
             this.btnPower.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPower.Location = new System.Drawing.Point(190, 11);
-            this.btnPower.Margin = new System.Windows.Forms.Padding(6);
+            this.btnPower.Location = new System.Drawing.Point(95, 6);
             this.btnPower.Name = "btnPower";
-            this.btnPower.Size = new System.Drawing.Size(80, 75);
+            this.btnPower.Size = new System.Drawing.Size(40, 39);
             this.btnPower.TabIndex = 52;
             this.btnPower.UseVisualStyleBackColor = false;
             this.btnPower.Click += new System.EventHandler(this.btnPower_Click);
@@ -224,10 +216,9 @@
             this.btnInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnInfo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
             this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInfo.Location = new System.Drawing.Point(18, 11);
-            this.btnInfo.Margin = new System.Windows.Forms.Padding(6);
+            this.btnInfo.Location = new System.Drawing.Point(9, 6);
             this.btnInfo.Name = "btnInfo";
-            this.btnInfo.Size = new System.Drawing.Size(80, 75);
+            this.btnInfo.Size = new System.Drawing.Size(40, 39);
             this.btnInfo.TabIndex = 54;
             this.btnInfo.UseVisualStyleBackColor = false;
             // 
@@ -238,10 +229,9 @@
             this.btnSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSettings.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(58)))), ((int)(((byte)(60)))));
             this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSettings.Location = new System.Drawing.Point(106, 11);
-            this.btnSettings.Margin = new System.Windows.Forms.Padding(6);
+            this.btnSettings.Location = new System.Drawing.Point(53, 6);
             this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(80, 75);
+            this.btnSettings.Size = new System.Drawing.Size(40, 39);
             this.btnSettings.TabIndex = 53;
             this.btnSettings.UseVisualStyleBackColor = false;
             this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
@@ -252,7 +242,6 @@
             this.body.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.body.IsSplitterFixed = true;
             this.body.Location = new System.Drawing.Point(0, 0);
-            this.body.Margin = new System.Windows.Forms.Padding(6);
             this.body.Name = "body";
             // 
             // body.Panel1
@@ -262,9 +251,9 @@
             // body.Panel2
             // 
             this.body.Panel2.Controls.Add(this.middle_events);
-            this.body.Size = new System.Drawing.Size(2278, 1039);
+            this.body.Size = new System.Drawing.Size(958, 491);
             this.body.SplitterDistance = 168;
-            this.body.SplitterWidth = 2;
+            this.body.SplitterWidth = 1;
             this.body.TabIndex = 0;
             // 
             // menu
@@ -275,7 +264,6 @@
             this.menu.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.menu.IsSplitterFixed = true;
             this.menu.Location = new System.Drawing.Point(0, 0);
-            this.menu.Margin = new System.Windows.Forms.Padding(6);
             this.menu.Name = "menu";
             this.menu.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -293,9 +281,9 @@
             // menu.Panel2
             // 
             this.menu.Panel2.Controls.Add(this.rights);
-            this.menu.Size = new System.Drawing.Size(168, 1039);
+            this.menu.Size = new System.Drawing.Size(168, 491);
             this.menu.SplitterDistance = 235;
-            this.menu.SplitterWidth = 2;
+            this.menu.SplitterWidth = 1;
             this.menu.TabIndex = 0;
             // 
             // btnTranscript
@@ -305,13 +293,13 @@
             this.btnTranscript.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTranscript.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTranscript.ForeColor = System.Drawing.Color.White;
-            this.btnTranscript.Location = new System.Drawing.Point(-12, 164);
-            this.btnTranscript.Margin = new System.Windows.Forms.Padding(6);
+            this.btnTranscript.Location = new System.Drawing.Point(-6, 85);
             this.btnTranscript.Name = "btnTranscript";
-            this.btnTranscript.Size = new System.Drawing.Size(350, 59);
+            this.btnTranscript.Size = new System.Drawing.Size(175, 31);
             this.btnTranscript.TabIndex = 48;
             this.btnTranscript.Text = "Transcript";
             this.btnTranscript.UseVisualStyleBackColor = false;
+            this.btnTranscript.Click += new System.EventHandler(this.btnTranscript_Click);
             // 
             // btnContact
             // 
@@ -320,10 +308,9 @@
             this.btnContact.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnContact.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnContact.ForeColor = System.Drawing.Color.White;
-            this.btnContact.Location = new System.Drawing.Point(-14, 389);
-            this.btnContact.Margin = new System.Windows.Forms.Padding(6);
+            this.btnContact.Location = new System.Drawing.Point(-7, 202);
             this.btnContact.Name = "btnContact";
-            this.btnContact.Size = new System.Drawing.Size(350, 59);
+            this.btnContact.Size = new System.Drawing.Size(175, 31);
             this.btnContact.TabIndex = 47;
             this.btnContact.Text = "Contact Us";
             this.btnContact.UseVisualStyleBackColor = false;
@@ -336,10 +323,9 @@
             this.brnEx.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.brnEx.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.brnEx.ForeColor = System.Drawing.Color.White;
-            this.brnEx.Location = new System.Drawing.Point(-12, 109);
-            this.brnEx.Margin = new System.Windows.Forms.Padding(6);
+            this.brnEx.Location = new System.Drawing.Point(-6, 57);
             this.brnEx.Name = "brnEx";
-            this.brnEx.Size = new System.Drawing.Size(350, 59);
+            this.brnEx.Size = new System.Drawing.Size(175, 31);
             this.brnEx.TabIndex = 43;
             this.brnEx.Text = "Exam Schedule";
             this.brnEx.UseVisualStyleBackColor = false;
@@ -352,10 +338,9 @@
             this.btnAddCrs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddCrs.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddCrs.ForeColor = System.Drawing.Color.White;
-            this.btnAddCrs.Location = new System.Drawing.Point(-12, 58);
-            this.btnAddCrs.Margin = new System.Windows.Forms.Padding(6);
+            this.btnAddCrs.Location = new System.Drawing.Point(-6, 30);
             this.btnAddCrs.Name = "btnAddCrs";
-            this.btnAddCrs.Size = new System.Drawing.Size(350, 59);
+            this.btnAddCrs.Size = new System.Drawing.Size(175, 31);
             this.btnAddCrs.TabIndex = 42;
             this.btnAddCrs.Text = "Add Courses";
             this.btnAddCrs.UseVisualStyleBackColor = false;
@@ -368,10 +353,9 @@
             this.btnRep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRep.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRep.ForeColor = System.Drawing.Color.White;
-            this.btnRep.Location = new System.Drawing.Point(-12, 331);
-            this.btnRep.Margin = new System.Windows.Forms.Padding(6);
+            this.btnRep.Location = new System.Drawing.Point(-6, 172);
             this.btnRep.Name = "btnRep";
-            this.btnRep.Size = new System.Drawing.Size(350, 59);
+            this.btnRep.Size = new System.Drawing.Size(175, 31);
             this.btnRep.TabIndex = 46;
             this.btnRep.Text = "Report an Issue";
             this.btnRep.UseVisualStyleBackColor = false;
@@ -384,10 +368,9 @@
             this.btnSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSchedule.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSchedule.ForeColor = System.Drawing.Color.White;
-            this.btnSchedule.Location = new System.Drawing.Point(-12, 0);
-            this.btnSchedule.Margin = new System.Windows.Forms.Padding(6);
+            this.btnSchedule.Location = new System.Drawing.Point(-6, 0);
             this.btnSchedule.Name = "btnSchedule";
-            this.btnSchedule.Size = new System.Drawing.Size(350, 59);
+            this.btnSchedule.Size = new System.Drawing.Size(175, 31);
             this.btnSchedule.TabIndex = 41;
             this.btnSchedule.Text = "Schedule";
             this.btnSchedule.UseVisualStyleBackColor = false;
@@ -400,10 +383,9 @@
             this.btnReqDoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReqDoc.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReqDoc.ForeColor = System.Drawing.Color.White;
-            this.btnReqDoc.Location = new System.Drawing.Point(-12, 222);
-            this.btnReqDoc.Margin = new System.Windows.Forms.Padding(6);
+            this.btnReqDoc.Location = new System.Drawing.Point(-6, 115);
             this.btnReqDoc.Name = "btnReqDoc";
-            this.btnReqDoc.Size = new System.Drawing.Size(350, 59);
+            this.btnReqDoc.Size = new System.Drawing.Size(175, 31);
             this.btnReqDoc.TabIndex = 44;
             this.btnReqDoc.Text = "Request Documents";
             this.btnReqDoc.UseVisualStyleBackColor = false;
@@ -416,10 +398,9 @@
             this.btnFinAff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFinAff.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFinAff.ForeColor = System.Drawing.Color.White;
-            this.btnFinAff.Location = new System.Drawing.Point(-12, 278);
-            this.btnFinAff.Margin = new System.Windows.Forms.Padding(6);
+            this.btnFinAff.Location = new System.Drawing.Point(-6, 145);
             this.btnFinAff.Name = "btnFinAff";
-            this.btnFinAff.Size = new System.Drawing.Size(350, 59);
+            this.btnFinAff.Size = new System.Drawing.Size(175, 31);
             this.btnFinAff.TabIndex = 45;
             this.btnFinAff.Text = "Financial Affairs";
             this.btnFinAff.UseVisualStyleBackColor = false;
@@ -430,16 +411,15 @@
             this.rights.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rights.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
             this.rights.Location = new System.Drawing.Point(0, 0);
-            this.rights.Margin = new System.Windows.Forms.Padding(6);
             this.rights.Name = "rights";
             this.rights.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
             // rights.Panel2
             // 
             this.rights.Panel2.Controls.Add(this.label3);
-            this.rights.Size = new System.Drawing.Size(168, 802);
-            this.rights.SplitterDistance = 775;
-            this.rights.SplitterWidth = 2;
+            this.rights.Size = new System.Drawing.Size(168, 255);
+            this.rights.SplitterDistance = 229;
+            this.rights.SplitterWidth = 1;
             this.rights.TabIndex = 0;
             // 
             // label3
@@ -448,11 +428,10 @@
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(91)))), ((int)(((byte)(96)))));
             this.label3.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(72, 16);
-            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label3.Location = new System.Drawing.Point(36, 8);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label3.Size = new System.Drawing.Size(183, 27);
+            this.label3.Size = new System.Drawing.Size(92, 13);
             this.label3.TabIndex = 55;
             this.label3.Text = "All Rights Reserved";
             // 
@@ -462,7 +441,6 @@
             this.middle_events.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
             this.middle_events.IsSplitterFixed = true;
             this.middle_events.Location = new System.Drawing.Point(0, 0);
-            this.middle_events.Margin = new System.Windows.Forms.Padding(6);
             this.middle_events.Name = "middle_events";
             // 
             // middle_events.Panel1
@@ -474,9 +452,8 @@
             this.middle_events.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(91)))), ((int)(((byte)(96)))));
             this.middle_events.Panel2.Controls.Add(this.lbNotification);
             this.middle_events.Panel2.Controls.Add(this.lable7);
-            this.middle_events.Size = new System.Drawing.Size(2108, 1039);
-            this.middle_events.SplitterDistance = 1938;
-            this.middle_events.SplitterWidth = 8;
+            this.middle_events.Size = new System.Drawing.Size(789, 491);
+            this.middle_events.SplitterDistance = 619;
             this.middle_events.TabIndex = 0;
             // 
             // flowLayoutPanel1
@@ -485,11 +462,11 @@
             this.flowLayoutPanel1.Controls.Add(this.panel2);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(40, 39, 40, 39);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(20);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(20, 19, 20, 19);
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(10);
             this.flowLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1938, 1039);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(619, 491);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
             // panel1
@@ -498,10 +475,9 @@
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.dgvCourses);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(26, 25);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6);
+            this.panel1.Location = new System.Drawing.Point(13, 13);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(698, 419);
+            this.panel1.Size = new System.Drawing.Size(349, 218);
             this.panel1.TabIndex = 0;
             // 
             // dgvCourses
@@ -518,15 +494,22 @@
             this.dgvCourses.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.courses});
             this.dgvCourses.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvCourses.Location = new System.Drawing.Point(20, 84);
-            this.dgvCourses.Margin = new System.Windows.Forms.Padding(6);
+            this.dgvCourses.Location = new System.Drawing.Point(10, 44);
             this.dgvCourses.Name = "dgvCourses";
             this.dgvCourses.RowHeadersVisible = false;
             this.dgvCourses.RowTemplate.Height = 30;
             this.dgvCourses.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCourses.Size = new System.Drawing.Size(654, 322);
+            this.dgvCourses.Size = new System.Drawing.Size(327, 167);
             this.dgvCourses.TabIndex = 2;
             this.dgvCourses.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCourses_CellContentClick);
+            // 
+            // courses
+            // 
+            this.courses.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.courses.HeaderText = "Column1";
+            this.courses.MinimumWidth = 327;
+            this.courses.Name = "courses";
+            this.courses.Width = 327;
             // 
             // label1
             // 
@@ -534,10 +517,9 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(91)))), ((int)(((byte)(96)))));
             this.label1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(270, 14);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Location = new System.Drawing.Point(135, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(159, 51);
+            this.label1.Size = new System.Drawing.Size(79, 26);
             this.label1.TabIndex = 1;
             this.label1.Text = "Courses";
             // 
@@ -547,10 +529,10 @@
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Controls.Add(this.lvSchedule);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(810, 25);
-            this.panel2.Margin = new System.Windows.Forms.Padding(80, 6, 6, 6);
+            this.panel2.Location = new System.Drawing.Point(50, 237);
+            this.panel2.Margin = new System.Windows.Forms.Padding(40, 3, 3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(712, 419);
+            this.panel2.Size = new System.Drawing.Size(356, 218);
             this.panel2.TabIndex = 2;
             // 
             // lvSchedule
@@ -560,10 +542,9 @@
             this.chTime,
             this.chLocation});
             this.lvSchedule.GridLines = true;
-            this.lvSchedule.Location = new System.Drawing.Point(32, 84);
-            this.lvSchedule.Margin = new System.Windows.Forms.Padding(6);
+            this.lvSchedule.Location = new System.Drawing.Point(16, 44);
             this.lvSchedule.Name = "lvSchedule";
-            this.lvSchedule.Size = new System.Drawing.Size(662, 313);
+            this.lvSchedule.Size = new System.Drawing.Size(333, 165);
             this.lvSchedule.TabIndex = 2;
             this.lvSchedule.UseCompatibleStateImageBehavior = false;
             this.lvSchedule.View = System.Windows.Forms.View.Details;
@@ -589,10 +570,9 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(91)))), ((int)(((byte)(96)))));
             this.label2.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(262, 14);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label2.Location = new System.Drawing.Point(131, 7);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(181, 51);
+            this.label2.Size = new System.Drawing.Size(91, 26);
             this.label2.TabIndex = 1;
             this.label2.Text = "Schedule";
             // 
@@ -603,11 +583,10 @@
             this.lbNotification.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNotification.ForeColor = System.Drawing.SystemColors.Info;
             this.lbNotification.FormattingEnabled = true;
-            this.lbNotification.ItemHeight = 32;
-            this.lbNotification.Location = new System.Drawing.Point(24, 84);
-            this.lbNotification.Margin = new System.Windows.Forms.Padding(6);
+            this.lbNotification.ItemHeight = 15;
+            this.lbNotification.Location = new System.Drawing.Point(12, 44);
             this.lbNotification.Name = "lbNotification";
-            this.lbNotification.Size = new System.Drawing.Size(264, 832);
+            this.lbNotification.Size = new System.Drawing.Size(132, 420);
             this.lbNotification.TabIndex = 56;
             this.lbNotification.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lbNotification_MouseDoubleClick);
             // 
@@ -617,30 +596,20 @@
             this.lable7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(91)))), ((int)(((byte)(96)))));
             this.lable7.Font = new System.Drawing.Font("Calibri", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lable7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lable7.Location = new System.Drawing.Point(62, 25);
-            this.lable7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lable7.Location = new System.Drawing.Point(31, 13);
             this.lable7.Name = "lable7";
-            this.lable7.Size = new System.Drawing.Size(185, 37);
+            this.lable7.Size = new System.Drawing.Size(91, 18);
             this.lable7.TabIndex = 55;
             this.lable7.Text = "Notificatiions";
             // 
-            // courses
-            // 
-            this.courses.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.courses.HeaderText = "Column1";
-            this.courses.MinimumWidth = 327;
-            this.courses.Name = "courses";
-            this.courses.Width = 327;
-            // 
             // Student_Portal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2278, 1100);
+            this.ClientSize = new System.Drawing.Size(958, 548);
             this.Controls.Add(this.main);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(6);
-            this.MinimumSize = new System.Drawing.Size(1200, 71);
+            this.MinimumSize = new System.Drawing.Size(608, 56);
             this.Name = "Student_Portal";
             this.Text = "Student_Portal";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Student_Portal_FormClosed);

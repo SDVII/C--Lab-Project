@@ -60,10 +60,9 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(91)))), ((int)(((byte)(96)))));
             this.label1.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Snow;
-            this.label1.Location = new System.Drawing.Point(24, 17);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(598, 66);
+            this.label1.Size = new System.Drawing.Size(301, 33);
             this.label1.TabIndex = 9;
             this.label1.Text = "Online Document Request";
             // 
@@ -81,20 +80,18 @@
             "Prep Transcript",
             "Prep Grade Document",
             "Disciplinary Record"});
-            this.cbDoc.Location = new System.Drawing.Point(32, 106);
-            this.cbDoc.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cbDoc.Location = new System.Drawing.Point(16, 55);
             this.cbDoc.Name = "cbDoc";
-            this.cbDoc.Size = new System.Drawing.Size(428, 44);
+            this.cbDoc.Size = new System.Drawing.Size(216, 26);
             this.cbDoc.TabIndex = 10;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(28, 63);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label2.Location = new System.Drawing.Point(14, 33);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(173, 27);
+            this.label2.Size = new System.Drawing.Size(88, 13);
             this.label2.TabIndex = 11;
             this.label2.Text = "Document Name:";
             // 
@@ -102,10 +99,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(28, 310);
-            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label3.Location = new System.Drawing.Point(14, 161);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 27);
+            this.label3.Size = new System.Drawing.Size(53, 13);
             this.label3.TabIndex = 12;
             this.label3.Text = "Language:";
             // 
@@ -113,10 +109,9 @@
             // 
             this.cbEng.AutoSize = true;
             this.cbEng.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbEng.Location = new System.Drawing.Point(34, 363);
-            this.cbEng.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cbEng.Location = new System.Drawing.Point(17, 189);
             this.cbEng.Name = "cbEng";
-            this.cbEng.Size = new System.Drawing.Size(102, 41);
+            this.cbEng.Size = new System.Drawing.Size(53, 22);
             this.cbEng.TabIndex = 13;
             this.cbEng.Text = "ENG";
             this.cbEng.UseVisualStyleBackColor = true;
@@ -125,10 +120,9 @@
             // 
             this.cbTr.AutoSize = true;
             this.cbTr.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbTr.Location = new System.Drawing.Point(176, 363);
-            this.cbTr.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cbTr.Location = new System.Drawing.Point(88, 189);
             this.cbTr.Name = "cbTr";
-            this.cbTr.Size = new System.Drawing.Size(80, 41);
+            this.cbTr.Size = new System.Drawing.Size(42, 22);
             this.cbTr.TabIndex = 14;
             this.cbTr.Text = "TR";
             this.cbTr.UseVisualStyleBackColor = true;
@@ -144,11 +138,9 @@
             this.groupBox1.Controls.Add(this.btnAddD);
             this.groupBox1.Controls.Add(this.cbDoc);
             this.groupBox1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(48, 154);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox1.Location = new System.Drawing.Point(24, 80);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.groupBox1.Size = new System.Drawing.Size(504, 444);
+            this.groupBox1.Size = new System.Drawing.Size(252, 231);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Request Document";
@@ -157,10 +149,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(34, 196);
-            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label4.Location = new System.Drawing.Point(17, 102);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(174, 27);
+            this.label4.Size = new System.Drawing.Size(87, 13);
             this.label4.TabIndex = 17;
             this.label4.Text = "Shipping Options:";
             // 
@@ -175,10 +166,9 @@
             "Hand-Delivery",
             "Post",
             "Email"});
-            this.cbDocS.Location = new System.Drawing.Point(38, 238);
-            this.cbDocS.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cbDocS.Location = new System.Drawing.Point(19, 124);
             this.cbDocS.Name = "cbDocS";
-            this.cbDocS.Size = new System.Drawing.Size(428, 44);
+            this.cbDocS.Size = new System.Drawing.Size(216, 26);
             this.cbDocS.TabIndex = 16;
             // 
             // btnAddD
@@ -187,10 +177,9 @@
             this.btnAddD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAddD.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
             this.btnAddD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddD.Location = new System.Drawing.Point(386, 346);
-            this.btnAddD.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnAddD.Location = new System.Drawing.Point(193, 180);
             this.btnAddD.Name = "btnAddD";
-            this.btnAddD.Size = new System.Drawing.Size(78, 73);
+            this.btnAddD.Size = new System.Drawing.Size(39, 38);
             this.btnAddD.TabIndex = 15;
             this.btnAddD.UseVisualStyleBackColor = true;
             this.btnAddD.Click += new System.EventHandler(this.btnAddCourse_Click);
@@ -199,11 +188,9 @@
             // 
             this.groupBox2.Controls.Add(this.lbDocL);
             this.groupBox2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(656, 154);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox2.Location = new System.Drawing.Point(328, 80);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.groupBox2.Size = new System.Drawing.Size(504, 444);
+            this.groupBox2.Size = new System.Drawing.Size(252, 231);
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Document List";
@@ -212,23 +199,21 @@
             // 
             this.lbDocL.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDocL.FormattingEnabled = true;
-            this.lbDocL.ItemHeight = 37;
-            this.lbDocL.Location = new System.Drawing.Point(34, 54);
-            this.lbDocL.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.lbDocL.HorizontalScrollbar = true;
+            this.lbDocL.ItemHeight = 18;
+            this.lbDocL.Location = new System.Drawing.Point(17, 28);
             this.lbDocL.Name = "lbDocL";
             this.lbDocL.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.lbDocL.Size = new System.Drawing.Size(434, 300);
+            this.lbDocL.Size = new System.Drawing.Size(219, 148);
             this.lbDocL.TabIndex = 0;
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.lbRdyD);
             this.groupBox3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(48, 706);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox3.Location = new System.Drawing.Point(24, 367);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.groupBox3.Size = new System.Drawing.Size(1112, 242);
+            this.groupBox3.Size = new System.Drawing.Size(556, 126);
             this.groupBox3.TabIndex = 21;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Ready Documents";
@@ -239,21 +224,19 @@
             this.lbRdyD.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lbRdyD.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbRdyD.FormattingEnabled = true;
-            this.lbRdyD.ItemHeight = 37;
-            this.lbRdyD.Location = new System.Drawing.Point(26, 54);
-            this.lbRdyD.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.lbRdyD.ItemHeight = 18;
+            this.lbRdyD.Location = new System.Drawing.Point(13, 28);
             this.lbRdyD.Name = "lbRdyD";
-            this.lbRdyD.Size = new System.Drawing.Size(1052, 111);
+            this.lbRdyD.Size = new System.Drawing.Size(526, 54);
             this.lbRdyD.TabIndex = 0;
             // 
             // lbChanges
             // 
             this.lbChanges.AutoSize = true;
             this.lbChanges.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbChanges.Location = new System.Drawing.Point(42, 994);
-            this.lbChanges.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lbChanges.Location = new System.Drawing.Point(21, 517);
             this.lbChanges.Name = "lbChanges";
-            this.lbChanges.Size = new System.Drawing.Size(44, 27);
+            this.lbChanges.Size = new System.Drawing.Size(25, 13);
             this.lbChanges.TabIndex = 26;
             this.lbChanges.Text = "null";
             this.lbChanges.Visible = false;
@@ -265,10 +248,9 @@
             this.btnAccD.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
             this.btnAccD.FlatAppearance.BorderSize = 0;
             this.btnAccD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccD.Location = new System.Drawing.Point(572, 967);
-            this.btnAccD.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnAccD.Location = new System.Drawing.Point(286, 503);
             this.btnAccD.Name = "btnAccD";
-            this.btnAccD.Size = new System.Drawing.Size(78, 75);
+            this.btnAccD.Size = new System.Drawing.Size(39, 39);
             this.btnAccD.TabIndex = 22;
             this.btnAccD.UseVisualStyleBackColor = true;
             this.btnAccD.Click += new System.EventHandler(this.btnAccD_Click);
@@ -279,10 +261,9 @@
             this.btnClrD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnClrD.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
             this.btnClrD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClrD.Location = new System.Drawing.Point(938, 550);
-            this.btnClrD.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnClrD.Location = new System.Drawing.Point(469, 286);
             this.btnClrD.Name = "btnClrD";
-            this.btnClrD.Size = new System.Drawing.Size(78, 73);
+            this.btnClrD.Size = new System.Drawing.Size(39, 38);
             this.btnClrD.TabIndex = 20;
             this.btnClrD.UseVisualStyleBackColor = true;
             this.btnClrD.Click += new System.EventHandler(this.btnClrD_Click);
@@ -293,10 +274,9 @@
             this.btnRmvD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnRmvD.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
             this.btnRmvD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRmvD.Location = new System.Drawing.Point(1028, 550);
-            this.btnRmvD.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnRmvD.Location = new System.Drawing.Point(514, 286);
             this.btnRmvD.Name = "btnRmvD";
-            this.btnRmvD.Size = new System.Drawing.Size(78, 73);
+            this.btnRmvD.Size = new System.Drawing.Size(39, 38);
             this.btnRmvD.TabIndex = 19;
             this.btnRmvD.UseVisualStyleBackColor = true;
             this.btnRmvD.Click += new System.EventHandler(this.btnRmvD_Click);
@@ -307,10 +287,9 @@
             this.btnSbmD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSbmD.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
             this.btnSbmD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSbmD.Location = new System.Drawing.Point(1118, 548);
-            this.btnSbmD.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnSbmD.Location = new System.Drawing.Point(559, 285);
             this.btnSbmD.Name = "btnSbmD";
-            this.btnSbmD.Size = new System.Drawing.Size(78, 73);
+            this.btnSbmD.Size = new System.Drawing.Size(39, 38);
             this.btnSbmD.TabIndex = 18;
             this.btnSbmD.UseVisualStyleBackColor = true;
             this.btnSbmD.Click += new System.EventHandler(this.btnSbmD_Click);
@@ -318,19 +297,18 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Student_Teacher_Form.Properties.Resources.Untitled_3;
-            this.pictureBox1.Location = new System.Drawing.Point(-2, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(-1, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1218, 108);
+            this.pictureBox1.Size = new System.Drawing.Size(609, 56);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
             // Document_Request
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1214, 1065);
+            this.ClientSize = new System.Drawing.Size(607, 548);
             this.Controls.Add(this.lbChanges);
             this.Controls.Add(this.btnAccD);
             this.Controls.Add(this.groupBox3);
@@ -342,7 +320,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.MaximizeBox = false;
             this.Name = "Document_Request";
             this.Text = "Document_Request";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Document_Request_FormClosed);

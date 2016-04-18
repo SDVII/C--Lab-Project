@@ -160,6 +160,7 @@
             this.Controls.Add(this.txtTilRq);
             this.Controls.Add(this.tbBdyRq);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "Send_Request";
             this.Text = "Send_Request";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Send_Request_FormClosed);

@@ -186,6 +186,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnAccC);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "Course_Add";
             this.Text = "laberl";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Course_Add_FormClosed);

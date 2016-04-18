@@ -155,6 +155,7 @@
             this.Controls.Add(this.txtTtlR);
             this.Controls.Add(this.tbBdyR);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "Report_Issue";
             this.Text = "Report_Issue";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Report_Issue_FormClosed);

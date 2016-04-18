@@ -85,17 +85,14 @@ namespace Student_Teacher_Form
                 lbChanges.Visible = true;
                 lbChanges.Text = "Document request made";
                 lbChanges.ForeColor = Color.Black;
-                lbDocL.Items.Add(cbDoc.SelectedText + " : " + cbDocS.SelectedText + " : " + cbEng.Text + "," + cbTr.Text);
+                lbDocL.Items.Add(cbDoc.Text + " : " + cbDocS.Text + " : " + cbEng.Text + "," + cbTr.Text);
                 return;
             }
         }
 
         private void btnClrD_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < lbDocL.Items.Count; i++)
-            {
-                lbDocL.Items.RemoveAt(i);
-            }
+            lbDocL.Items.Clear();
         }
 
         private void btnAccD_Click(object sender, EventArgs e)
@@ -120,6 +117,7 @@ namespace Student_Teacher_Form
             for (int i = 0; i < lbDocL.SelectedItems.Count; i++)
             {
                 lbDocL.Items.Remove(lbDocL.SelectedItems[i]);
+                i--;
             }
         }
     }

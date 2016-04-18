@@ -169,6 +169,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "Transcript";
             this.Text = "Transcript";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Transcript_FormClosed);
