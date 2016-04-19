@@ -150,7 +150,7 @@ namespace Student_Teacher_Form
             pbStuP.Image = global::Student_Teacher_Form.Properties.Resources.anon;
             try
             {
-                pbStuP.Load("http://csproject.ml/images/stu/" + student.Id + ".jpeg");
+                pbStuP.Load("http://37.139.18.76:3010/images/stu/" + student.Id + ".jpeg");
             }
             catch (Exception)
             {

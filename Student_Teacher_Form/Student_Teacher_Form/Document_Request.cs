@@ -15,6 +15,8 @@ namespace Student_Teacher_Form
     {
         private Student_Portal student_Portal;
         private int stuID;
+        private List<List<String>> documentList;
+        DatabaseHandler Db = new DatabaseHandler();
 
         public Document_Request(int stuID, Student_Portal student_Portal)
         {
@@ -22,6 +24,7 @@ namespace Student_Teacher_Form
             this.stuID = stuID;
             this.student_Portal = student_Portal;
             this.Text = stuID + "";
+            documentList = new List<List<string>>();
 
             pouplateDocuments(cbDoc);
             populateShipmentOptions(cbDocS);
@@ -30,12 +33,12 @@ namespace Student_Teacher_Form
 
         private void populateReadyDocuments(ListBox lbRdyD)
         {
-            /*
-            for (int i = 0; i < number of ready documents; i++)
+            List<List<String>> readyList = Db.getReadyDocuments(stuID);
+            
+            for (int i = 0; i < readyList.Count; i++)
             {
-                lbRdyD.Items.Add("");
+                lbRdyD.Items.Add(readyList[i][0]);
             }
-            */
         }
 
         private void populateShipmentOptions(ComboBox cbDocS)
@@ -89,7 +92,9 @@ namespace Student_Teacher_Form
                 lbChanges.Visible = true;
                 lbChanges.Text = "Document request made";
                 lbChanges.ForeColor = Color.Black;
-                
+
+                List<String> list = new List<string>() { cbDoc.Text, cbDocS.Text, (cbEng.Checked ? "TR" : "") + "-" + (cbTr.Checked? "ENG" : "")};
+                documentList.Add(list);
                
                 lbDocL.Items.Add(cbDoc.Text + " : " + cbDocS.Text + " : " + cbEng.Text + "," + cbTr.Text);
                 return;
@@ -98,6 +103,7 @@ namespace Student_Teacher_Form
 
         private void btnClrD_Click(object sender, EventArgs e)
         {
+            documentList.Clear();
             lbDocL.Items.Clear();
         }
 
@@ -115,8 +121,15 @@ namespace Student_Teacher_Form
 
         private void btnSbmD_Click(object sender, EventArgs e)
         {
-
+            
+            for (int i = 0; i < lbDocL.Items.Count; i++)
+            {
+                List<String> list = documentList[i];
+                Db.insertDocumentRequest(stuID, list[0], list[1], list[2]);
+            }
             //add all items to DB
+            lbDocL.Items.Clear();
+            documentList.Clear();
 
         }
 
@@ -124,6 +137,7 @@ namespace Student_Teacher_Form
         {
             for (int i = 0; i < lbDocL.SelectedItems.Count; i++)
             {
+                documentList.RemoveAt(lbDocL.Items.IndexOf(lbDocL.SelectedItems[i]));
                 lbDocL.Items.Remove(lbDocL.SelectedItems[i]);
                 i--;
             }

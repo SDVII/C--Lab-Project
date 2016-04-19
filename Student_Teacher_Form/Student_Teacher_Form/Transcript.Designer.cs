@@ -49,18 +49,20 @@
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(91)))), ((int)(((byte)(96)))));
             this.label6.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Snow;
-            this.label6.Location = new System.Drawing.Point(17, 9);
+            this.label6.Location = new System.Drawing.Point(34, 17);
+            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(121, 33);
+            this.label6.Size = new System.Drawing.Size(244, 66);
             this.label6.TabIndex = 21;
             this.label6.Text = "Transcript";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Student_Teacher_Form.Properties.Resources.banner1;
-            this.pictureBox1.Location = new System.Drawing.Point(-1, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(-2, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(481, 56);
+            this.pictureBox1.Size = new System.Drawing.Size(962, 108);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
@@ -70,9 +72,13 @@
             this.cbSemster.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSemster.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSemster.FormattingEnabled = true;
-            this.cbSemster.Location = new System.Drawing.Point(151, 31);
+            this.cbSemster.Items.AddRange(new object[] {
+            "Fall",
+            "Spring"});
+            this.cbSemster.Location = new System.Drawing.Point(302, 60);
+            this.cbSemster.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.cbSemster.Name = "cbSemster";
-            this.cbSemster.Size = new System.Drawing.Size(121, 26);
+            this.cbSemster.Size = new System.Drawing.Size(238, 45);
             this.cbSemster.TabIndex = 22;
             // 
             // cbYear
@@ -80,9 +86,10 @@
             this.cbYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbYear.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbYear.FormattingEnabled = true;
-            this.cbYear.Location = new System.Drawing.Point(24, 31);
+            this.cbYear.Location = new System.Drawing.Point(48, 60);
+            this.cbYear.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.cbYear.Name = "cbYear";
-            this.cbYear.Size = new System.Drawing.Size(121, 26);
+            this.cbYear.Size = new System.Drawing.Size(238, 45);
             this.cbYear.TabIndex = 23;
             // 
             // lvGrades
@@ -92,10 +99,12 @@
             this.chInst,
             this.chGrade});
             this.lvGrades.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvGrades.FullRowSelect = true;
             this.lvGrades.GridLines = true;
-            this.lvGrades.Location = new System.Drawing.Point(24, 68);
+            this.lvGrades.Location = new System.Drawing.Point(48, 131);
+            this.lvGrades.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.lvGrades.Name = "lvGrades";
-            this.lvGrades.Size = new System.Drawing.Size(334, 175);
+            this.lvGrades.Size = new System.Drawing.Size(664, 333);
             this.lvGrades.TabIndex = 24;
             this.lvGrades.UseCompatibleStateImageBehavior = false;
             this.lvGrades.View = System.Windows.Forms.View.Details;
@@ -103,12 +112,12 @@
             // chCourse
             // 
             this.chCourse.Text = "Course";
-            this.chCourse.Width = 110;
+            this.chCourse.Width = 211;
             // 
             // chInst
             // 
             this.chInst.Text = "Instructor";
-            this.chInst.Width = 110;
+            this.chInst.Width = 196;
             // 
             // chGrade
             // 
@@ -122,9 +131,11 @@
             this.groupBox1.Controls.Add(this.cbYear);
             this.groupBox1.Controls.Add(this.cbSemster);
             this.groupBox1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(42, 78);
+            this.groupBox1.Location = new System.Drawing.Point(84, 150);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(399, 262);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox1.Size = new System.Drawing.Size(798, 504);
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Semster Search";
@@ -137,9 +148,10 @@
             this.btnSbmSem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSbmSem.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSbmSem.ForeColor = System.Drawing.Color.White;
-            this.btnSbmSem.Location = new System.Drawing.Point(278, 31);
+            this.btnSbmSem.Location = new System.Drawing.Point(556, 60);
+            this.btnSbmSem.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnSbmSem.Name = "btnSbmSem";
-            this.btnSbmSem.Size = new System.Drawing.Size(80, 28);
+            this.btnSbmSem.Size = new System.Drawing.Size(160, 54);
             this.btnSbmSem.TabIndex = 29;
             this.btnSbmSem.Text = "Submit";
             this.btnSbmSem.UseVisualStyleBackColor = false;
@@ -152,23 +164,25 @@
             this.btnAccTrn.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
             this.btnAccTrn.FlatAppearance.BorderSize = 0;
             this.btnAccTrn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccTrn.Location = new System.Drawing.Point(219, 348);
+            this.btnAccTrn.Location = new System.Drawing.Point(438, 669);
+            this.btnAccTrn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnAccTrn.Name = "btnAccTrn";
-            this.btnAccTrn.Size = new System.Drawing.Size(45, 44);
+            this.btnAccTrn.Size = new System.Drawing.Size(90, 85);
             this.btnAccTrn.TabIndex = 30;
             this.btnAccTrn.UseVisualStyleBackColor = true;
             this.btnAccTrn.Click += new System.EventHandler(this.btnAccTrn_Click);
             // 
             // Transcript
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(480, 400);
+            this.ClientSize = new System.Drawing.Size(960, 769);
             this.Controls.Add(this.btnAccTrn);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MaximizeBox = false;
             this.Name = "Transcript";
             this.Text = "Transcript";

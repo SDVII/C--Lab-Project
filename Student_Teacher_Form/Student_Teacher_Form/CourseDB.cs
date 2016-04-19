@@ -103,5 +103,25 @@ namespace Student_Teacher_Form
 
             return list;
         }
+        public static List<Course> GetWithDepartmentId(int id)
+        {
+            String query = "SELECT * FROM course WHERE course_department_id = " + id;
+            List<Course> list = new List<Course>();
+
+            if (databaseHandler.openConnection())
+            {
+                MySqlCommand cmd = new MySqlCommand(query, databaseHandler.connection);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Course course = new Course(reader.GetInt32(0), reader.GetInt32(1), reader.GetString(2), reader.GetString(3), reader.GetString(4));
+                    list.Add(course);
+
+                }
+            }
+
+            return list;
+        }
     }
 }

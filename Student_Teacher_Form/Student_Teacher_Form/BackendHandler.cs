@@ -11,7 +11,7 @@ namespace Student_Teacher_Form
 {
     class BackendHandler
     {
-        public static void HttpUploadFile(string url, int id, string file, string paramName, string contentType, NameValueCollection nvc, Action<string> callback)
+        public static void HttpUploadFile(string url, int id, string file, string paramName, string contentType, NameValueCollection nvc, Action<string, int> callback)
         {
             Console.WriteLine(string.Format("Uploading {0} to {1}", file, url));
             string boundary = "---------------------------" + DateTime.Now.Ticks.ToString("x");
@@ -32,7 +32,7 @@ namespace Student_Teacher_Form
             }
             catch (Exception)
             {
-                callback("error");
+                callback("error", id);
                 return;
             }
 
@@ -72,14 +72,14 @@ namespace Student_Teacher_Form
                 StreamReader reader2 = new StreamReader(stream2);
                 Console.WriteLine(string.Format("File uploaded, server response is: {0}", reader2.ReadToEnd()));
                 if (reader2.ReadToEnd() == "error")
-                    callback("servererror");
+                    callback("servererror", id);
                 else
-                    callback("success");
+                    callback("success", id);
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Error uploading file");
-                callback("error");
+                callback("error", id);
                 if (wresp != null)
                 {
                     wresp.Close();

@@ -154,7 +154,7 @@ namespace Student_Teacher_Form
         {
             Application.Exit();
         }
-        private void callCourse(object sender, EventArgs e)
+        /*private void callCourse(object sender, EventArgs e)
         {
             Thread t = new Thread(new ThreadStart(splashScreen));
             t.Start();
@@ -164,7 +164,7 @@ namespace Student_Teacher_Form
             this.Enabled = false;
             t.Abort();
 
-        }
+        }*/
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
@@ -215,10 +215,11 @@ namespace Student_Teacher_Form
         {
             Thread t = new Thread(new ThreadStart(splashScreen));
             t.Start();
-            Course_Add f = new Course_Add(student, courseList, this);
+            Course_Add f = new Course_Add(student, courseList, sectionList, this);
             f.Visible = true;
             this.Enabled = false;
             t.Abort();
+           // MessageBox.Show("System is closed right now!");
         }
 
         private void btnReqDoc_Click(object sender, EventArgs e)
@@ -244,7 +245,7 @@ namespace Student_Teacher_Form
         private void btnFinAff_Click(object sender, EventArgs e)
         {
 
-            Financial_Affairs f = new Financial_Affairs(student.FinancialAffairs, this);
+            Financial_Affairs f = new Financial_Affairs(student.Semester, student.FinancialAffairs, this);
             f.Visible = true;
             this.Enabled = false;
         }
@@ -265,7 +266,7 @@ namespace Student_Teacher_Form
 
         private void btnTranscript_Click(object sender, EventArgs e)
         {
-            Transcript f = new Transcript(student.Id, this);
+            Transcript f = new Transcript(student.Id, student.Semester, this);
             f.Visible = true;
             this.Enabled = false;
         }
@@ -282,7 +283,17 @@ namespace Student_Teacher_Form
         private void dgvCourses_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             var dgv = (DataGridView)sender;
-            Course_info_Stu f = new Course_info_Stu(courseList[e.RowIndex], this);
+            int courseId = courseList[e.RowIndex].Id;
+            Teacher teacher = null;
+            foreach(Section s in sectionList)
+            {
+                if(s.Course.Id == courseId)
+                {
+                    teacher = s.Teacher;
+                    break;
+                }
+            }
+            Course_info_Stu f = new Course_info_Stu(teacher, courseList[e.RowIndex], this);
             f.Visible = true;
             this.Enabled = false;
 

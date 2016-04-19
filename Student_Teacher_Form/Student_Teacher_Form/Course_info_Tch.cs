@@ -73,11 +73,11 @@ namespace Student_Teacher_Form
             NameValueCollection nvc = new NameValueCollection();
             nvc.Add("id", "TTR");
             nvc.Add("btn-submit-file", "Upload");
-            BackendHandler.HttpUploadFile("http://csproject.ml/coursefileupload", id, @location, "file", "multipart/form-data", nvc, uploadResult);
+            BackendHandler.HttpUploadFile("http://37.139.18.76:3010/coursefileupload", id, @location, "file", "multipart/form-data", nvc, uploadResult);
             //http://csproject.ml/coursefileupload
         }
 
-        private void uploadResult(String s)
+        private void uploadResult(String s, int id)
         {
             switch (s)
             {
@@ -86,9 +86,11 @@ namespace Student_Teacher_Form
                     break;
                 case "error":
                     MessageBox.Show("There was a problem while connecting to server. Please try again later!");
+                    CourseFileDB.Delete(id);
                     break;
                 case "servererror":
                     MessageBox.Show("There was a problem within the server. Please try again later! ");
+                    CourseFileDB.Delete(id);
                     break;
             }
         }
@@ -105,8 +107,6 @@ namespace Student_Teacher_Form
                     path = System.IO.Path.GetDirectoryName(ofd.FileName);
                     if (bName.Equals(btnBrwsD.Name))
                         txtPathD.Text = path + "//" + filename;
-                    else
-                        txtPathM.Text = path + "//" + filename;
                 }
                 bClicked = false;
                 bName = "";
@@ -186,7 +186,7 @@ namespace Student_Teacher_Form
             else
             {
                 //save to DB
-                string theDate = dtpEx.Value.ToString("yyyy-MM-dd");
+                string theDate = dtpEx.Value.ToString("yyyy-MM-dd hh:mm")+":00";
                 Exam exam = new Exam(course.Id, theDate, txtPlace.Text);
                 ExamDB.Add(exam);
 

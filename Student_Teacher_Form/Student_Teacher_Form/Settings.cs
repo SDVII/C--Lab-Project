@@ -32,7 +32,7 @@ namespace Student_Teacher_Form
             this.sc = sc;
             try
             {
-                pbPrf.Load("http://csproject.ml/images/stu/" + student.Id + ".jpeg");
+                pbPrf.Load("http://37.139.18.76:3010/images/stu/" + student.Id + ".jpeg");
             }
             catch (Exception)
             {
@@ -51,7 +51,7 @@ namespace Student_Teacher_Form
             this.sc = sc;
             try
             {
-                pbPrf.Load("http://csproject.ml/images/tea/" + teacher.Id + ".jpeg");
+                pbPrf.Load("http://37.139.18.76:3010/images/tea/" + teacher.Id + ".jpeg");
             }
             catch (Exception)
             {

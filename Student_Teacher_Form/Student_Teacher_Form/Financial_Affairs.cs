@@ -14,10 +14,12 @@ namespace Student_Teacher_Form
     {
         private Student_Portal student_Portal;
         private FinancialAffairs fa;
+        private int semester;
 
-        public Financial_Affairs(FinancialAffairs fa, Student_Portal student_Portal)
+        public Financial_Affairs(int semester, FinancialAffairs fa, Student_Portal student_Portal)
         {
             InitializeComponent();
+            this.semester = semester;
             this.fa = fa;
             this.student_Portal = student_Portal;
             //this.Text = stuID + "";
@@ -27,7 +29,7 @@ namespace Student_Teacher_Form
 
         private void populateFinancialStatus(Label lbSem, Label lbPaid, Label lbRmnDbt)
         {
-            lbSem.Text = "";
+            lbSem.Text = ""+ semester;
             lbPaid.Text = ""+fa.Paid;
             lbRmnDbt.Text = ""+fa.Rest;
         }

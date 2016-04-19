@@ -15,12 +15,14 @@ namespace Student_Teacher_Form
     {
         private Student_Portal student_Portal;
         private Course course;
+        private Teacher teacher;
         private List<CourseFile> fileList;
 
-        public Course_info_Stu(Course course, Student_Portal student_Portal)
+        public Course_info_Stu(Teacher teacher,Course course, Student_Portal student_Portal)
         {
             InitializeComponent();
             this.course = course;
+            this.teacher = teacher;
             this.student_Portal = student_Portal;
             lbCrsCd.Text = course.Name;
 
@@ -43,7 +45,7 @@ namespace Student_Teacher_Form
                 String info = fileList[i].Info;
                 var ll = new DataGridViewLinkCell();
                 DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
-                linkCell.Value = "http://csproject.ml/course/" + fileList[i].Id + "-" + fileList[i].Name;
+                linkCell.Value = "http://37.139.18.76:3010/course/" + fileList[i].Id + "-" + fileList[i].Name;
 
                 row.Cells[0].Value = title;
                 row.Cells[1].Value = info;
@@ -79,11 +81,17 @@ namespace Student_Teacher_Form
 
         private void populateCourseinfo()
         {
-            lbName.Text = course.Name;
+            lbName.Text = teacher.Name + " " + teacher.Surname;
             lbDep.Text = course.Department.Name;
             lbCode.Text = course.Code;
-            //pbTchrP.Image = "";
-            //bTchrP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            try {
+                pbTchrP.Load("http://37.139.18.76:3010/images/tea/" + teacher.Id + ".jpeg");
+            }
+            catch (Exception e)
+            {
+                //nothing
+            }
+            pbTchrP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
            
         }
 
@@ -109,7 +117,7 @@ namespace Student_Teacher_Form
         {
             if (e.ColumnIndex == 2)
             {
-                System.Diagnostics.Process.Start("http://csproject.ml/course/" + fileList[e.RowIndex].Id + "-" + fileList[e.RowIndex].Name);
+                System.Diagnostics.Process.Start("http://37.139.18.76:3010/course/" + fileList[e.RowIndex].Id + "-" + fileList[e.RowIndex].Name);
             }
         }
 

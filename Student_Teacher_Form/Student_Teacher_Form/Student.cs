@@ -8,7 +8,7 @@ namespace Student_Teacher_Form
 {
     public class Student
     {
-        private int id,national_id;
+        private int id,semester;
         private String username, name, surname, password, email;
         private float gpa;
         private Department department;
@@ -16,7 +16,7 @@ namespace Student_Teacher_Form
         private Teacher advisor;
         private Msgr msgr;
 
-        public Student(int id, int nationalId, string username, string name, string surname, string password, string email, float gpa, Department dep, FinancialAffairs fa, Msgr msgr, Teacher tea) {
+        public Student(int id, int semester, string username, string name, string surname, string password, string email, float gpa, Department dep, FinancialAffairs fa, Msgr msgr, Teacher tea) {
             this.id = id;
             this.username = username;
             this.name = name;
@@ -24,15 +24,15 @@ namespace Student_Teacher_Form
             this.password = password;
             this.email = email;
             this.gpa = gpa;
-            national_id = nationalId;
+            this.semester = semester;
             this.department = dep;
             this.financialAffairs = fa;
             this.advisor = tea;
             this.msgr = msgr;
         }
-        public Student(int nationalId, string username, string name, string surname, string password, string email, float gpa, Department dep, FinancialAffairs fa, Msgr msgr, Teacher tea)
+        public Student(int semester, string username, string name, string surname, string password, string email, float gpa, Department dep, FinancialAffairs fa, Msgr msgr, Teacher tea)
         {
-            national_id = nationalId;
+            this.semester = semester;
             this.username = username;
             this.name = name;
             this.surname = surname;
@@ -59,10 +59,10 @@ namespace Student_Teacher_Form
             set { id = value; }
         }
 
-        public int NationalId
+        public int Semester
         {
-            get { return national_id; }
-            set { national_id = value; }
+            get { return semester; }
+            set { semester = value; }
         }
 
         public string Username

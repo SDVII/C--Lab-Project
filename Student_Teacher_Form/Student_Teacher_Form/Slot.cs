@@ -8,28 +8,29 @@ namespace Student_Teacher_Form
 {
     public class Slot
     {
-        private int id, student_id, course_id;
-        private String slotResult;
+        private int id, student_id, semester;
+        private String courseCode, slotResult, teacherName;
         private Student student;
-        private Course course;
 
-        public Slot(int id, int studentId, int courseId, string slotResult)
+        public Slot(int id, int studentId, int semester, string slotResult, string courseCode, string teacherName)
         {
             this.id = id;
             student_id = studentId;
-            course_id = courseId;
             this.slotResult = slotResult;
-            this.course = null;
+            this.semester = semester;
+            this.courseCode = courseCode;
+            this.teacherName = teacherName;
             this.student = null;
         }
 
-        public Slot(int studentId, int courseId, string slotResult)
+        public Slot(int studentId, int semester, string slotResult, string courseCode, string teacherName)
         {
             student_id = studentId;
-            course_id = courseId;
             this.slotResult = slotResult;
+            this.semester = semester;
+            this.courseCode = courseCode;
+            this.teacherName = teacherName;
             this.student = null;
-            this.course = null;
         }
 
         public int Id
@@ -44,10 +45,10 @@ namespace Student_Teacher_Form
             set { student_id = value; }
         }
 
-        public int CourseId
+        public int Semester
         {
-            get { return course_id; }
-            set { course_id = value; }
+            get { return semester; }
+            set { semester = value; }
         }
 
         public string SlotResult
@@ -66,7 +67,35 @@ namespace Student_Teacher_Form
             set { student = value; }
         }
 
-        public Course Course
+        public string CourseCode
+        {
+            get
+            {
+                return courseCode;
+            }
+
+            set
+            {
+                courseCode = value;
+            }
+        }
+
+        public string TeacherName
+        {
+            get
+            {
+                return teacherName;
+            }
+
+            set
+            {
+                teacherName = value;
+            }
+        }
+
+
+
+        /*public Course Course
         {
             get {
                 if (course == null)
@@ -74,6 +103,6 @@ namespace Student_Teacher_Form
                 return course;
             }
             set { course = value; }
-        }
+        }*/
     }
 }

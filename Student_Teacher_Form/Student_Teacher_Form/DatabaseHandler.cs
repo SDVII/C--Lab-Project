@@ -190,6 +190,38 @@ namespace Student_Teacher_Form
             }
         }
 
+        public void insertDocumentRequest(int studentId, String name, String option, String language)
+        {
+            string query = $"INSERT INTO DocumentRequest (DocumentRequest_student_id,DocumentRequest_documentName,DocumentRequest_shippingOption, DocumentRequest_language) Values ('{studentId}','{name}','{option}','{language}')";
+
+            if (this.openConnection() == true)
+            {
+                //fire the query with the connection
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                // send the query
+                cmd.ExecuteNonQuery();
+                // close the connection if it is open
+                this.closeConnection();
+            }
+        }
+        public List<List<String>> getReadyDocuments(int studentId) {
+            List<List<String>> documentList = new List<List<string>>();
+
+            string query = $"SELECT DocumentRequest_documentName,DocumentRequest_shippingOption,DocumentRequest_language FROM DocumentRequest WHERE DocumentRequest_student_id='{studentId}' AND DocumentRequest_ready = '{1}'";
+
+            if (openConnection())
+            {
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    List<String> list = new List<string>() { reader.GetString(0), reader.GetString(1), reader.GetString(2) };
+                    documentList.Add(list);
+                }
+            }
+            return documentList;
+        }
 
 
 

@@ -19,7 +19,7 @@ namespace Student_Teacher_Form
         public static bool Add(Student student)
         {
             // query take variables $
-            string query = $"INSERT INTO teacher (student_username,student_name,student_surname,student_password,student_gpa,student_email,student_department_id,student_national_id,student_financialAffairs_id,student_advisor_id,student_msgr_id) Values ('{student.Username}','{student.Name}','{student.Surname}','{student.Password}','{student.Gpa}','{student.Email}','{student.Department.Id}','{student.NationalId}','{student.FinancialAffairs.Id}','{student.Advisor.Id}','{student.Msgr.Id}')";
+            string query = $"INSERT INTO teacher (student_username,student_name,student_surname,student_password,student_gpa,student_email,student_department_id,student_semester,student_financialAffairs_id,student_advisor_id,student_msgr_id) Values ('{student.Username}','{student.Name}','{student.Surname}','{student.Password}','{student.Gpa}','{student.Email}','{student.Department.Id}','{student.Semester}','{student.FinancialAffairs.Id}','{student.Advisor.Id}','{student.Msgr.Id}')";
             // check if the connection is open first
             if (databaseHandler.openConnection() == true)
             {
@@ -36,7 +36,7 @@ namespace Student_Teacher_Form
 
         public static bool Update(Student student)
         {
-            string query = $"UPDATE student SET student_username='{student.Username}',student_name='{student.Name}',student_surname='{student.Surname}',student_password='{student.Password}',student_gpa='{student.Gpa}',student_email='{student.Email}',student_department_id='{student.Department.Id}',student_national_id={student.NationalId},student_financialAffairs_id='{student.FinancialAffairs.Id}',student_advisor_id='{student.Advisor.Id}',student_msgr_id='{student.Msgr.Id}' WHERE student_id='{student.Id}'";
+            string query = $"UPDATE student SET student_username='{student.Username}',student_name='{student.Name}',student_surname='{student.Surname}',student_password='{student.Password}',student_gpa='{student.Gpa}',student_email='{student.Email}',student_department_id='{student.Department.Id}',student_semester={student.Semester},student_financialAffairs_id='{student.FinancialAffairs.Id}',student_advisor_id='{student.Advisor.Id}',student_msgr_id='{student.Msgr.Id}' WHERE student_id='{student.Id}'";
 
             if (databaseHandler.openConnection() == true) // check the connection
             {
@@ -64,7 +64,7 @@ namespace Student_Teacher_Form
 
         public static Student Get(int id)
         {
-            String query = "SELECT student.student_id, student.student_username, student.student_name, student.student_surname, student.student_password, student.student_gpa,student.student_email, student.student_national_id, "+
+            String query = "SELECT student.student_id, student.student_username, student.student_name, student.student_surname, student.student_password, student.student_gpa,student.student_email, student.student_semester, "+
                 "department.department_id, department.department_name, department.department_number_of_students, "+
                 "financialAffairs.financialAffairs_id,financialAffairs.financialAffairs_paid, financialAffairs.financialAffairs_rest,"+
                 " msgr.msgr_id, msgr.msgr_name,"+
@@ -93,7 +93,7 @@ namespace Student_Teacher_Form
 
         public static Student GetWithUsername(String username)
         {
-            String query = "SELECT student.student_id, student.student_username, student.student_name, student.student_surname, student.student_password, student.student_gpa,student.student_email, student.student_national_id, " +
+            String query = "SELECT student.student_id, student.student_username, student.student_name, student.student_surname, student.student_password, student.student_gpa,student.student_email, student.student_semester, " +
                 "department.department_id, department.department_name, department.department_number_of_students, " +
                 "financialAffairs.financialAffairs_id,financialAffairs.financialAffairs_paid, financialAffairs.financialAffairs_rest," +
                 " msgr.msgr_id, msgr.msgr_name," +
@@ -123,7 +123,7 @@ namespace Student_Teacher_Form
         public static List<Student> GetAll()
         {
 
-            String query = "SELECT student.student_id, student.student_username, student.student_name, student.student_surname, student.student_password, student.student_gpa,student.student_email, student.student_national_id, " +
+            String query = "SELECT student.student_id, student.student_username, student.student_name, student.student_surname, student.student_password, student.student_gpa,student.student_email, student.student_semester, " +
                 "department.department_id, department.department_name, department.department_number_of_students, " +
                 "financialAffairs.financialAffairs_id,financialAffairs.financialAffairs_paid, financialAffairs.financialAffairs_rest," +
                 " msgr.msgr_id, msgr.msgr_name," +

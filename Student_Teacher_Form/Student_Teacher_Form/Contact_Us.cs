@@ -20,6 +20,9 @@ namespace Student_Teacher_Form
         {
             InitializeComponent();
             this.teacher_Portal = teacher_Portal;
+            number.Text = "539-001-2345";
+            label8.Text = "help@bau.edu.tr";
+            label10.Text = "BAU";
         }
 
         public Contact_Us(Student_Portal student_Portal)

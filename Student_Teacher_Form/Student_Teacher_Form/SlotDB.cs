@@ -19,8 +19,8 @@ namespace Student_Teacher_Form
         public static bool Add(Slot slot)
         {
             // query take variables $
-            string query = $"INSERT INTO slot (slot_student_id, slot_course_id, slot_result) " +
-                           $"Values ('{slot.StudentId}','{slot.CourseId}','{slot.SlotResult}')";
+            string query = $"INSERT INTO slot (slot_student_id, slot_course_code, slot_result, slot_semester, slot_teacher_name) " +
+                           $"Values ('{slot.StudentId}','{slot.CourseCode}','{slot.SlotResult}','{slot.Semester}','{slot.TeacherName}')";
             // check if the connection is open first
             if (databaseHandler.openConnection() == true)
             {
@@ -35,7 +35,7 @@ namespace Student_Teacher_Form
             return false;
         }
 
-        public static bool Update(Slot slot)
+        /*public static bool Update(Slot slot)
         {
             string query = $"UPDATE slot SET slot_student_id='{slot.StudentId}',slot_course_id='{slot.CourseId}',slot_result='{slot.SlotResult}'" +
                            $" WHERE slot_id='{slot.Id}'"; // create the query
@@ -52,9 +52,9 @@ namespace Student_Teacher_Form
                 return true;
             }
             return false;
-        }
+        }*/
 
-        public static void Delete(int id)
+        /*public static void Delete(int id)
         {
             databaseHandler.Delete("slot", "slot_id", id);
         }
@@ -62,9 +62,9 @@ namespace Student_Teacher_Form
         public static void Delete(Slot slot)
         {
             Delete(slot.Id);
-        }
+        }*/
 
-        public static Slot Get(int id)
+        /*public static Slot Get(int id)
         {
             String query = "SELECT * FROM slot WHERE slot_id = '" + id + "'";
             Slot slot = null;
@@ -95,6 +95,26 @@ namespace Student_Teacher_Form
                 while (reader.Read())
                 {
                     Slot slot = new Slot(reader.GetInt32(0), reader.GetInt32(1), reader.GetInt32(2), reader.GetString(3));
+                    list.Add(slot);
+
+                }
+            }
+
+            return list;
+        }*/
+        public static List<Slot> GetWithStudentId(int studentId, int semester )
+        {
+            String query = $"SELECT slot_course_code, slot_result, slot_semester, slot_teacher_name FROM slot WHERE slot_student_id='{studentId}' AND slot_semester='{semester}'";
+            List<Slot> list = new List<Slot>();
+
+            if (databaseHandler.openConnection())
+            {
+                MySqlCommand cmd = new MySqlCommand(query, databaseHandler.connection);
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Slot slot = new Slot(studentId, reader.GetInt32(2), reader.GetString(1), reader.GetString(0), reader.GetString(3));
                     list.Add(slot);
 
                 }
