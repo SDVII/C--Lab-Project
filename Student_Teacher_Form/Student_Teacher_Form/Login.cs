@@ -135,12 +135,14 @@ namespace Student_Teacher_Form
                 Student stu = StudentDB.GetWithUsername(username);
                 if (stu == null)
                 {
+                    t.Abort();
                     MessageBox.Show("No such student");
                 }
                 else
                 {
                     if (stu.Password != password)
                     {
+                        t.Abort();
                         MessageBox.Show("Wrong password");
                     }
                     else
@@ -156,12 +158,14 @@ namespace Student_Teacher_Form
                 Teacher tea = TeacherDB.GetWithUsername(username);
                 if (tea == null)
                 {
+                    t.Abort();
                     MessageBox.Show("No such teacher");
                 }
                 else
                 {
                     if (tea.Password != password)
                     {
+                        t.Abort();
                         MessageBox.Show("Wrong password", "Error");
                     }
                     else

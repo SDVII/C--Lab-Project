@@ -38,14 +38,6 @@ namespace Student_Teacher_Form
             
         }
 
-        private void btnBrwsD_Click(object sender, EventArgs e)
-        {
-            bClicked = true;
-            var btn = (Button)sender;
-            bName = btn.Name;
-
-        }
-
         private void btnUpD_Click(object sender, EventArgs e)
         {
             uClicked = true;
@@ -197,9 +189,30 @@ namespace Student_Teacher_Form
             }
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void btnBrwsD_Click(object sender, EventArgs e)
         {
+            OpenFileDialog ofd = new OpenFileDialog();
+            if (ofd.ShowDialog() == DialogResult.Cancel)
+                return;
+            txtPathD.Text= ofd.InitialDirectory + ofd.FileName;
+        }
 
+        private void panel1_DragEnter(object sender, DragEventArgs e)
+        {
+            e.Effect = DragDropEffects.All;
+        }
+
+        private void panel1_DragDrop(object sender, DragEventArgs e)
+        {
+            string[] filenames = (string[])e.Data.GetData(DataFormats.FileDrop);
+            if (filenames.Length>1)
+            {
+                lbChanges.Visible = true;
+                lbChanges.Text = "You can only upload one file at a time!";
+                lbChanges.ForeColor = Color.Red;
+                return;
+            }
+            txtPathD.Text = filenames[0];
         }
     }
 }
