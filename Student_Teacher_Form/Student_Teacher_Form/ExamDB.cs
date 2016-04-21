@@ -38,7 +38,7 @@ namespace Student_Teacher_Form
         public static bool Update(Exam exam)
         {
             string query = $"UPDATE exam SET exam_course_id='{exam.CourseId}',exam_time='{exam.Time}',exam_place='{exam.Place}'" +
-                           $" WHERE exam_id='{exam.Id}'"; // create the query
+                           $" WHERE exam_id='{exam.Id}' LIMIT 1"; // create the query
 
 
             if (databaseHandler.openConnection()) // check the connection
@@ -66,7 +66,7 @@ namespace Student_Teacher_Form
 
         public static Exam Get(int id)
         {
-            String query = "SELECT * FROM exam WHERE exam_id = '" + id + "'";
+            String query = "SELECT * FROM exam WHERE exam_id = '" + id + "' LIMIT 1";
             Exam exam = null;
 
             if (databaseHandler.openConnection())
