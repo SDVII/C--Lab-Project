@@ -66,7 +66,7 @@ namespace Student_Teacher_Form
 
         public static Teacher Get(int id)
         {
-            String query = "SELECT * FROM teacher WHERE teacher_id = " + id;
+            String query = "SELECT * FROM teacher WHERE teacher_id = " + id + " LIMIT 1";
             Teacher teacher = null;
 
             if (databaseHandler.openConnection())
@@ -84,7 +84,7 @@ namespace Student_Teacher_Form
 
         public static Teacher GetWithUsername(string username)
         {
-            String query = "SELECT * FROM teacher WHERE teacher_username = '" + username.Trim() + "'";
+            String query = "SELECT * FROM teacher WHERE teacher_username = '" + username.Trim() + "'LIMIT 1";
             Teacher teacher = null;
 
             if (databaseHandler.openConnection())

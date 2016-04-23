@@ -37,7 +37,7 @@ namespace Student_Teacher_Form
 
         public static bool Update(Department department)
         {
-            string query = $"UPDATE department SET department_name='{department.Name}',department_number_of_students='{department.NumberOfStudents}' WHERE department_id='{department.Id}'"; // create the query
+            string query = $"UPDATE department SET department_name='{department.Name}',department_number_of_students='{department.NumberOfStudents}' WHERE department_id='{department.Id}' LIMIT 1"; // create the query
 
 
             if (databaseHandler.openConnection()) // check the connection
@@ -65,7 +65,7 @@ namespace Student_Teacher_Form
 
         public static Department Get(int id)
         {
-            String query = "SELECT * FROM department WHERE department_id = '" + id + "'";
+            String query = "SELECT * FROM department WHERE department_id = '" + id + "' LIMIT 1";
             Department department = null;
 
             if (databaseHandler.openConnection())

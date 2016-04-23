@@ -22,7 +22,6 @@ namespace Student_Teacher_Form
             this.semester = semester;
             this.fa = fa;
             this.student_Portal = student_Portal;
-            //this.Text = stuID + "";
 
             populateFinancialStatus(lbSem, lbPaid, lbRmnDbt);
         }

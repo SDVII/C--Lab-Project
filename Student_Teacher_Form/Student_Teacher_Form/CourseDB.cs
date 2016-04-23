@@ -39,7 +39,7 @@ namespace Student_Teacher_Form
         public static bool Update(Course course)
         {
             string query = $"UPDATE course SET course_department_id='{course.DepartmentId}',course_name='{course.Name}',course_code='{course.Code}''" +
-                           $",course_info='{course.Info}' WHERE course_id='{course.Id}'"; // create the query
+                           $",course_info='{course.Info}' WHERE course_id='{course.Id}' LIMIT 1"; // create the query
 
 
             if (databaseHandler.openConnection()) // check the connection
@@ -67,7 +67,7 @@ namespace Student_Teacher_Form
 
         public static Course Get(int id)
         {
-            String query = "SELECT * FROM course WHERE course_id = '" + id + "'";
+            String query = "SELECT * FROM course WHERE course_id = '" + id + "' LIMIT 1";
             Course course = null;
 
             if (databaseHandler.openConnection())

@@ -38,7 +38,7 @@ namespace Student_Teacher_Form
         public static bool Update(SectionTime sectionTime)
         {
             string query = $"UPDATE sectionTime SET sectionTime_section_id='{sectionTime.SectionId}',sectionTime_time='{sectionTime.Time}',sectionTime_location='{sectionTime.Location}'" +
-                           $" WHERE sectionTime_id='{sectionTime.Id}'"; // create the query
+                           $" WHERE sectionTime_id='{sectionTime.Id}' LIMIT 1"; // create the query
 
 
             if (databaseHandler.openConnection()) // check the connection

@@ -33,17 +33,15 @@ namespace Student_Teacher_Form
             this.Text = student.Id + "";
             lbName.Text = student.Name + " " + student.Surname;
             lbID.Text = student.Id + "";
+            pnlCourses.HorizontalScroll.Maximum = 0;
+            pnlCourses.AutoScroll = false;
+            pnlCourses.VerticalScroll.Visible = false;
+            pnlCourses.AutoScroll = true;
             fetchData();
 
             body.Panel1Collapsed = true;
 
-            foreach (DataGridViewRow r in dgvCourses.Rows) //To set the column hight!
-            {
-                r.Height = 30;
-            }
-
-
-            populateCourses(dgvCourses);
+            populateCourses(pnlCourses);
             populateSchedule(lvSchedule);
             populateNotification(lbNotification);
         }
@@ -132,20 +130,28 @@ namespace Student_Teacher_Form
             }
         }
 
-        private void populateCourses(DataGridView dgvCourses)
+        private void populateCourses(Panel pnl)
         {
             // For populating course GridViewList. just replace the counter and course name
 
             for (int i = 0; i < courseList.Count; i++)
             {
-                var btn = new DataGridViewButtonColumn();                
+                Button btn = new Button();
+                btn.Location = new Point(0, 30 * i);
+                btn.Width = pnl.Width;
+                btn.Height = 30;
+                btn.TextAlign = ContentAlignment.MiddleLeft;
+                btn.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+                btn.BackColor = System.Drawing.Color.White;
+                btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
                 btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+                btn.Font = new System.Drawing.Font("Calibri", 11.25F);
+                btn.ForeColor = System.Drawing.Color.Black;
+                btn.UseVisualStyleBackColor = false;
                 btn.Name = "btn_" + i;
-                Console.WriteLine(courseList[i].Name);
-                btn.UseColumnTextForButtonValue = true;
                 btn.Text = courseList[i].Name;
-                dgvCourses.Rows.Add(btn);
-                dgvCourses[0, i].Value = courseList[i].Name; //for the renamming
+                btn.Click += new System.EventHandler(this.callCourse);
+                pnl.Controls.Add(btn);
             }
         }
 
@@ -154,17 +160,29 @@ namespace Student_Teacher_Form
         {
             Application.Exit();
         }
-        /*private void callCourse(object sender, EventArgs e)
+
+        private void callCourse(object sender, EventArgs e)
         {
             Thread t = new Thread(new ThreadStart(splashScreen));
             t.Start();
             Button btn = (Button)sender;
-            Course_info_Stu f = new Course_info_Stu(null, this);
+            string[] words = btn.Name.Split('_');
+            int courseId = courseList[Convert.ToInt32(words[1])].Id;
+            Teacher teacher = null;
+            foreach (Section s in sectionList)
+            {
+                if (s.Course.Id == courseId)
+                {
+                    teacher = s.Teacher;
+                    break;
+                }
+            }
+            Course_info_Stu f = new Course_info_Stu(teacher, courseList[Convert.ToInt32(words[1])], this);
             f.Visible = true;
             this.Enabled = false;
             t.Abort();
 
-        }*/
+        }
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
@@ -278,25 +296,6 @@ namespace Student_Teacher_Form
             // This is your selected item
             if(list.SelectedIndex%2==0)
                 MessageBox.Show(annoList[list.SelectedIndex / 2].Msg, annoList[list.SelectedIndex / 2].Title);
-        }
-
-        private void dgvCourses_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            var dgv = (DataGridView)sender;
-            int courseId = courseList[e.RowIndex].Id;
-            Teacher teacher = null;
-            foreach(Section s in sectionList)
-            {
-                if(s.Course.Id == courseId)
-                {
-                    teacher = s.Teacher;
-                    break;
-                }
-            }
-            Course_info_Stu f = new Course_info_Stu(teacher, courseList[e.RowIndex], this);
-            f.Visible = true;
-            this.Enabled = false;
-
         }
 
     }

@@ -312,3 +312,213 @@ C:\Users\houma\Documents\GitHub\C--Lab-Project\Student_Teacher_Form\Student_Teac
 C:\Users\houma\Documents\GitHub\C--Lab-Project\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.exe.licenses
 C:\Users\houma\Documents\GitHub\C--Lab-Project\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Loading.resources
 C:\Users\Hani Al keddah\Documents\GitHub\C--Lab-Project\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Loading.resources
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\Student_Teacher_Form.exe.config
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.exe
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.pdb
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\Student_Teacher_Form.exe
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\Student_Teacher_Form.pdb
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.RichEdit.v15.2.Core.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.XtraTreeList.v15.2.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.XtraLayout.v15.2.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.Office.v15.2.Core.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.Pdf.v15.2.Core.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.Pdf.v15.2.Drawing.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.Data.v15.2.xml
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.Map.v15.2.Core.xml
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.Printing.v15.2.Core.xml
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.Sparkline.v15.2.Core.xml
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.SpellChecker.v15.2.Core.xml
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.Utils.v15.2.xml
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.XtraBars.v15.2.xml
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.XtraEditors.v15.2.xml
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.XtraMap.v15.2.xml
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.XtraPrinting.v15.2.xml
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.XtraSpellChecker.v15.2.xml
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.RichEdit.v15.2.Core.xml
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.XtraTreeList.v15.2.xml
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.XtraLayout.v15.2.xml
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.Office.v15.2.Core.xml
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.Pdf.v15.2.Core.xml
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.Pdf.v15.2.Drawing.xml
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\de\DevExpress.Data.v15.2.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\es\DevExpress.Data.v15.2.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ja\DevExpress.Data.v15.2.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ru\DevExpress.Data.v15.2.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\de\DevExpress.Map.v15.2.Core.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\es\DevExpress.Map.v15.2.Core.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ja\DevExpress.Map.v15.2.Core.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ru\DevExpress.Map.v15.2.Core.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\de\DevExpress.Printing.v15.2.Core.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\es\DevExpress.Printing.v15.2.Core.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ja\DevExpress.Printing.v15.2.Core.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ru\DevExpress.Printing.v15.2.Core.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\de\DevExpress.Sparkline.v15.2.Core.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\es\DevExpress.Sparkline.v15.2.Core.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ja\DevExpress.Sparkline.v15.2.Core.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ru\DevExpress.Sparkline.v15.2.Core.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\de\DevExpress.Utils.v15.2.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\es\DevExpress.Utils.v15.2.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ja\DevExpress.Utils.v15.2.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ru\DevExpress.Utils.v15.2.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\de\DevExpress.XtraBars.v15.2.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\es\DevExpress.XtraBars.v15.2.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ja\DevExpress.XtraBars.v15.2.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ru\DevExpress.XtraBars.v15.2.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\de\DevExpress.XtraEditors.v15.2.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\es\DevExpress.XtraEditors.v15.2.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ja\DevExpress.XtraEditors.v15.2.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ru\DevExpress.XtraEditors.v15.2.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\de\DevExpress.XtraPrinting.v15.2.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\es\DevExpress.XtraPrinting.v15.2.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ja\DevExpress.XtraPrinting.v15.2.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ru\DevExpress.XtraPrinting.v15.2.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\de\DevExpress.XtraSpellChecker.v15.2.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\es\DevExpress.XtraSpellChecker.v15.2.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ja\DevExpress.XtraSpellChecker.v15.2.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ru\DevExpress.XtraSpellChecker.v15.2.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\de\DevExpress.RichEdit.v15.2.Core.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\es\DevExpress.RichEdit.v15.2.Core.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ja\DevExpress.RichEdit.v15.2.Core.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ru\DevExpress.RichEdit.v15.2.Core.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\de\DevExpress.XtraTreeList.v15.2.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\es\DevExpress.XtraTreeList.v15.2.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ja\DevExpress.XtraTreeList.v15.2.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ru\DevExpress.XtraTreeList.v15.2.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\de\DevExpress.XtraLayout.v15.2.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\es\DevExpress.XtraLayout.v15.2.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ja\DevExpress.XtraLayout.v15.2.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ru\DevExpress.XtraLayout.v15.2.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\de\DevExpress.Office.v15.2.Core.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\es\DevExpress.Office.v15.2.Core.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ja\DevExpress.Office.v15.2.Core.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ru\DevExpress.Office.v15.2.Core.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\de\DevExpress.Pdf.v15.2.Core.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\es\DevExpress.Pdf.v15.2.Core.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ja\DevExpress.Pdf.v15.2.Core.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ru\DevExpress.Pdf.v15.2.Core.resources.dll
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.csprojResolveAssemblyReference.cache
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Contact_Us.resources
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Course_Add.resources
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Course_info_Stu.resources
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Course_info_Tch.resources
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Document_Request.resources
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Exam_Schedule.resources
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Financial_Affairs.resources
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Loading.resources
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Login.resources
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Properties.Resources.resources
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Report_Issue.resources
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Schedule.resources
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Search_Students.resources
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Send_Request.resources
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Settings.resources
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Student_Portal.resources
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Teacher_Portal.resources
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Transcript.resources
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.csproj.GenerateResource.Cache
+C:\Users\Hani Al keddah\Documents\GitHub\cp\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.exe.licenses
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\Student_Teacher_Form.exe.config
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.exe
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.pdb
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\Student_Teacher_Form.exe
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\Student_Teacher_Form.pdb
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.RichEdit.v15.2.Core.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.XtraTreeList.v15.2.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.XtraLayout.v15.2.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.Office.v15.2.Core.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.Pdf.v15.2.Core.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.Pdf.v15.2.Drawing.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.Data.v15.2.xml
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.Map.v15.2.Core.xml
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.Printing.v15.2.Core.xml
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.Sparkline.v15.2.Core.xml
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.SpellChecker.v15.2.Core.xml
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.Utils.v15.2.xml
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.XtraBars.v15.2.xml
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.XtraEditors.v15.2.xml
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.XtraMap.v15.2.xml
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.XtraPrinting.v15.2.xml
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.XtraSpellChecker.v15.2.xml
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.RichEdit.v15.2.Core.xml
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.XtraTreeList.v15.2.xml
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.XtraLayout.v15.2.xml
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.Office.v15.2.Core.xml
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.Pdf.v15.2.Core.xml
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\DevExpress.Pdf.v15.2.Drawing.xml
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\de\DevExpress.Data.v15.2.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\es\DevExpress.Data.v15.2.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ja\DevExpress.Data.v15.2.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ru\DevExpress.Data.v15.2.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\de\DevExpress.Map.v15.2.Core.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\es\DevExpress.Map.v15.2.Core.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ja\DevExpress.Map.v15.2.Core.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ru\DevExpress.Map.v15.2.Core.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\de\DevExpress.Printing.v15.2.Core.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\es\DevExpress.Printing.v15.2.Core.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ja\DevExpress.Printing.v15.2.Core.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ru\DevExpress.Printing.v15.2.Core.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\de\DevExpress.Sparkline.v15.2.Core.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\es\DevExpress.Sparkline.v15.2.Core.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ja\DevExpress.Sparkline.v15.2.Core.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ru\DevExpress.Sparkline.v15.2.Core.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\de\DevExpress.Utils.v15.2.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\es\DevExpress.Utils.v15.2.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ja\DevExpress.Utils.v15.2.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ru\DevExpress.Utils.v15.2.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\de\DevExpress.XtraBars.v15.2.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\es\DevExpress.XtraBars.v15.2.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ja\DevExpress.XtraBars.v15.2.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ru\DevExpress.XtraBars.v15.2.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\de\DevExpress.XtraEditors.v15.2.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\es\DevExpress.XtraEditors.v15.2.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ja\DevExpress.XtraEditors.v15.2.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ru\DevExpress.XtraEditors.v15.2.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\de\DevExpress.XtraPrinting.v15.2.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\es\DevExpress.XtraPrinting.v15.2.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ja\DevExpress.XtraPrinting.v15.2.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ru\DevExpress.XtraPrinting.v15.2.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\de\DevExpress.XtraSpellChecker.v15.2.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\es\DevExpress.XtraSpellChecker.v15.2.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ja\DevExpress.XtraSpellChecker.v15.2.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ru\DevExpress.XtraSpellChecker.v15.2.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\de\DevExpress.RichEdit.v15.2.Core.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\es\DevExpress.RichEdit.v15.2.Core.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ja\DevExpress.RichEdit.v15.2.Core.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ru\DevExpress.RichEdit.v15.2.Core.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\de\DevExpress.XtraTreeList.v15.2.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\es\DevExpress.XtraTreeList.v15.2.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ja\DevExpress.XtraTreeList.v15.2.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ru\DevExpress.XtraTreeList.v15.2.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\de\DevExpress.XtraLayout.v15.2.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\es\DevExpress.XtraLayout.v15.2.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ja\DevExpress.XtraLayout.v15.2.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ru\DevExpress.XtraLayout.v15.2.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\de\DevExpress.Office.v15.2.Core.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\es\DevExpress.Office.v15.2.Core.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ja\DevExpress.Office.v15.2.Core.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ru\DevExpress.Office.v15.2.Core.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\de\DevExpress.Pdf.v15.2.Core.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\es\DevExpress.Pdf.v15.2.Core.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ja\DevExpress.Pdf.v15.2.Core.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\bin\Debug\ru\DevExpress.Pdf.v15.2.Core.resources.dll
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.csprojResolveAssemblyReference.cache
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Contact_Us.resources
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Course_Add.resources
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Course_info_Stu.resources
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Course_info_Tch.resources
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Document_Request.resources
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Exam_Schedule.resources
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Financial_Affairs.resources
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Loading.resources
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Login.resources
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Properties.Resources.resources
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Report_Issue.resources
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Schedule.resources
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Search_Students.resources
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Send_Request.resources
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Settings.resources
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Student_Portal.resources
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Teacher_Portal.resources
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Transcript.resources
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.csproj.GenerateResource.Cache
+C:\Users\houma\Desktop\C--Lab-Project-Database-Hani\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.exe.licenses

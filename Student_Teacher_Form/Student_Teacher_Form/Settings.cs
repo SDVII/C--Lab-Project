@@ -81,7 +81,7 @@ namespace Student_Teacher_Form
             }
         }
 
-        private void btnAccS_Click(object sender, EventArgs e)
+        private void btnAccS_Click(object sender, EventArgs e) //notification bar handlling
         {
             if(teacher!=null)
             {
