@@ -49,6 +49,7 @@
             this.middle_events = new System.Windows.Forms.SplitContainer();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlCourses = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lvSchedule = new System.Windows.Forms.ListView();
@@ -58,7 +59,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lbNotification = new System.Windows.Forms.ListBox();
             this.lable7 = new System.Windows.Forms.Label();
-            this.pnlCourses = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.main)).BeginInit();
             this.main.Panel1.SuspendLayout();
             this.main.Panel2.SuspendLayout();
@@ -184,7 +184,7 @@
             this.buttons.Panel2.Controls.Add(this.btnPower);
             this.buttons.Panel2.Controls.Add(this.btnSettings);
             this.buttons.Size = new System.Drawing.Size(873, 53);
-            this.buttons.SplitterDistance = 731;
+            this.buttons.SplitterDistance = 734;
             this.buttons.SplitterWidth = 1;
             this.buttons.TabIndex = 0;
             // 
@@ -200,6 +200,7 @@
             this.btnInfo.Size = new System.Drawing.Size(40, 39);
             this.btnInfo.TabIndex = 54;
             this.btnInfo.UseVisualStyleBackColor = false;
+            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
             // 
             // btnPower
             // 
@@ -409,6 +410,13 @@
             this.panel1.Size = new System.Drawing.Size(349, 218);
             this.panel1.TabIndex = 0;
             // 
+            // pnlCourses
+            // 
+            this.pnlCourses.Location = new System.Drawing.Point(7, 44);
+            this.pnlCourses.Name = "pnlCourses";
+            this.pnlCourses.Size = new System.Drawing.Size(333, 165);
+            this.pnlCourses.TabIndex = 4;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -499,13 +507,6 @@
             this.lable7.Size = new System.Drawing.Size(87, 18);
             this.lable7.TabIndex = 55;
             this.lable7.Text = "Notifications";
-            // 
-            // pnlCourses
-            // 
-            this.pnlCourses.Location = new System.Drawing.Point(7, 44);
-            this.pnlCourses.Name = "pnlCourses";
-            this.pnlCourses.Size = new System.Drawing.Size(333, 165);
-            this.pnlCourses.TabIndex = 4;
             // 
             // Teacher_Portal
             // 

@@ -627,3 +627,4 @@ C:\Users\houma\Desktop\C--Lab-Project-59c65eab6239b6f157cd1215caad5221f92f9370\S
 C:\Users\houma\Desktop\C--Lab-Project-59c65eab6239b6f157cd1215caad5221f92f9370\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.Transcript.resources
 C:\Users\houma\Desktop\C--Lab-Project-59c65eab6239b6f157cd1215caad5221f92f9370\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.csproj.GenerateResource.Cache
 C:\Users\houma\Desktop\C--Lab-Project-59c65eab6239b6f157cd1215caad5221f92f9370\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.exe.licenses
+C:\Users\houma\Documents\GitHub\C--Lab-Project\Student_Teacher_Form\Student_Teacher_Form\obj\Debug\Student_Teacher_Form.About.resources

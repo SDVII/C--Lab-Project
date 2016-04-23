@@ -136,7 +136,6 @@ namespace Student_Teacher_Form
                 searchResultInput(resultList[lvSrchRes.SelectedIndices[0]]);
 
         }
-        
 
         private void searchResultInput(Student student)
         {

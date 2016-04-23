@@ -30,9 +30,7 @@
         {
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lbCrsTkn = new System.Windows.Forms.ListBox();
             this.lbGpa = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.lbSpr = new System.Windows.Forms.Label();
             this.lbDep = new System.Windows.Forms.Label();
@@ -79,9 +77,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox1.Controls.Add(this.lbCrsTkn);
             this.groupBox1.Controls.Add(this.lbGpa);
-            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.lbSpr);
             this.groupBox1.Controls.Add(this.lbDep);
@@ -95,47 +91,26 @@
             this.groupBox1.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(24, 398);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(558, 292);
+            this.groupBox1.Size = new System.Drawing.Size(558, 250);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Student Info";
-            // 
-            // lbCrsTkn
-            // 
-            this.lbCrsTkn.BackColor = System.Drawing.SystemColors.Menu;
-            this.lbCrsTkn.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lbCrsTkn.FormattingEnabled = true;
-            this.lbCrsTkn.ItemHeight = 18;
-            this.lbCrsTkn.Location = new System.Drawing.Point(320, 206);
-            this.lbCrsTkn.Name = "lbCrsTkn";
-            this.lbCrsTkn.Size = new System.Drawing.Size(220, 54);
-            this.lbCrsTkn.TabIndex = 14;
             // 
             // lbGpa
             // 
             this.lbGpa.AutoSize = true;
             this.lbGpa.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbGpa.Location = new System.Drawing.Point(322, 172);
+            this.lbGpa.Location = new System.Drawing.Point(322, 191);
             this.lbGpa.Name = "lbGpa";
             this.lbGpa.Size = new System.Drawing.Size(33, 19);
             this.lbGpa.TabIndex = 13;
             this.lbGpa.Text = "null";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(213, 206);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(101, 19);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Couses Taken:";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(213, 172);
+            this.label7.Location = new System.Drawing.Point(213, 191);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(39, 19);
             this.label7.TabIndex = 11;
@@ -145,7 +120,7 @@
             // 
             this.lbSpr.AutoSize = true;
             this.lbSpr.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSpr.Location = new System.Drawing.Point(322, 136);
+            this.lbSpr.Location = new System.Drawing.Point(322, 155);
             this.lbSpr.Name = "lbSpr";
             this.lbSpr.Size = new System.Drawing.Size(33, 19);
             this.lbSpr.TabIndex = 10;
@@ -155,7 +130,7 @@
             // 
             this.lbDep.AutoSize = true;
             this.lbDep.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDep.Location = new System.Drawing.Point(322, 99);
+            this.lbDep.Location = new System.Drawing.Point(322, 118);
             this.lbDep.Name = "lbDep";
             this.lbDep.Size = new System.Drawing.Size(33, 19);
             this.lbDep.TabIndex = 9;
@@ -165,7 +140,7 @@
             // 
             this.lbID.AutoSize = true;
             this.lbID.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbID.Location = new System.Drawing.Point(322, 69);
+            this.lbID.Location = new System.Drawing.Point(322, 88);
             this.lbID.Name = "lbID";
             this.lbID.Size = new System.Drawing.Size(33, 19);
             this.lbID.TabIndex = 7;
@@ -175,7 +150,7 @@
             // 
             this.lbName.AutoSize = true;
             this.lbName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbName.Location = new System.Drawing.Point(322, 37);
+            this.lbName.Location = new System.Drawing.Point(322, 56);
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(33, 19);
             this.lbName.TabIndex = 6;
@@ -185,7 +160,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(213, 136);
+            this.label5.Location = new System.Drawing.Point(213, 155);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(80, 19);
             this.label5.TabIndex = 5;
@@ -195,7 +170,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(213, 99);
+            this.label4.Location = new System.Drawing.Point(213, 118);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 19);
             this.label4.TabIndex = 4;
@@ -205,7 +180,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(218, 69);
+            this.label2.Location = new System.Drawing.Point(218, 88);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(27, 19);
             this.label2.TabIndex = 2;
@@ -215,7 +190,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(213, 37);
+            this.label1.Location = new System.Drawing.Point(213, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 19);
             this.label1.TabIndex = 1;
@@ -287,7 +262,7 @@
             this.btnAccSS.FlatAppearance.BorderColor = System.Drawing.SystemColors.Menu;
             this.btnAccSS.FlatAppearance.BorderSize = 0;
             this.btnAccSS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccSS.Location = new System.Drawing.Point(285, 697);
+            this.btnAccSS.Location = new System.Drawing.Point(285, 660);
             this.btnAccSS.Name = "btnAccSS";
             this.btnAccSS.Size = new System.Drawing.Size(45, 44);
             this.btnAccSS.TabIndex = 29;
@@ -308,7 +283,7 @@
             // 
             this.lbChanges.AutoSize = true;
             this.lbChanges.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbChanges.Location = new System.Drawing.Point(21, 714);
+            this.lbChanges.Location = new System.Drawing.Point(21, 677);
             this.lbChanges.Name = "lbChanges";
             this.lbChanges.Size = new System.Drawing.Size(25, 13);
             this.lbChanges.TabIndex = 27;
@@ -375,7 +350,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(614, 751);
+            this.ClientSize = new System.Drawing.Size(614, 712);
             this.Controls.Add(this.gbSrchRes);
             this.Controls.Add(this.lbChanges);
             this.Controls.Add(this.btnAccSS);
@@ -418,12 +393,10 @@
         private System.Windows.Forms.Button btnSrchS;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lbGpa;
         private System.Windows.Forms.Button btnAccSS;
         private System.Windows.Forms.PictureBox pbStuP;
         private System.Windows.Forms.Label lbChanges;
-        private System.Windows.Forms.ListBox lbCrsTkn;
         private System.Windows.Forms.ListView lvSrchRes;
         private System.Windows.Forms.ColumnHeader chName;
         private System.Windows.Forms.ColumnHeader chID;

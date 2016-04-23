@@ -64,6 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
     <Compile Include="Announcement.cs" />
     <Compile Include="AnnouncementDB.cs" />
     <Compile Include="BackendHandler.cs" />
@@ -208,6 +214,9 @@
       <DependentUpon>Transcript.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilities.cs" />
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Contact_Us.resx">
       <DependentUpon>Contact_Us.cs</DependentUpon>
     </EmbeddedResource>
@@ -512,6 +521,13 @@
     <Content Include="obj\Debug\student_teacher_form.exe.licenses" />
     <Content Include="obj\Debug\Student_Teacher_Form.pdb" />
     <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <None Include="Resources\sad.png" />
+    <None Include="Resources\Untitled-4.png" />
+    <None Include="Resources\Untitled-5.png" />
+    <None Include="Resources\Untitled-31.png" />
+    <None Include="Resources\the-ribbon-287142_960_720.png" />
+    <None Include="Resources\5773445-black-graduate-hat-isolated-over-white-background-vector2.png" />
+    <None Include="Resources\5773445-black-graduate-hat-isolated-over-white-background-vector.png" />
     <None Include="Resources\pacman.gif" />
     <None Include="Resources\hourglass.gif" />
   </ItemGroup>

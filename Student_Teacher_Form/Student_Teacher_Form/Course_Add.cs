@@ -150,52 +150,51 @@ namespace Student_Teacher_Form
         private void btnAddC_Click(object sender, EventArgs e)
         {
 
-            if (lbAvlC.SelectedIndex == -1) 
+            if (lbAvlC.SelectedIndex == -1)
             {
                 lbChanges.Visible = true;
                 lbChanges.Text = "Please select a course";
                 lbChanges.ForeColor = Color.Red;
                 return;
             }
+            else if (cbSections.SelectedIndex == -1)
+            {
+                lbChanges.Visible = true;
+                lbChanges.Text = "Please select a section";
+                lbChanges.ForeColor = Color.Red;
+                return;
+            }
             else
             {
+                Boolean check = false;
                 for (int i = 0; i < lbCurC.Items.Count; i++)
                 {
                     if (lbCurC.Items[i].Equals(lbAvlC.SelectedValue))
                     {
                         lbChanges.Visible = true;
                         lbChanges.Text = "This course is already added";
+                        check = true;
                         lbChanges.ForeColor = Color.Red;
                         return;
                     }
-                    else
-                    {
 
-                        if (cbSections.SelectedIndex == -1)
-                        {
-                            lbChanges.Visible = true;
-                            lbChanges.Text = "Please select a section";
-                            lbChanges.ForeColor = Color.Red;
-                            return;
-                        }
-                        else
-                        {
-                            lbChanges.Visible = true;
-                            lbCurC.Items.Add(lbAvlC.SelectedItem);
-                            courseListCur.Add(courseListAva[lbAvlC.SelectedIndex]);
-                            selectedSections.Add(currSections[cbSections.SelectedIndex]);
-                            courseListAva.RemoveAt(lbAvlC.SelectedIndex);
-                            lbAvlC.Items.RemoveAt(lbAvlC.SelectedIndex);
-                            
+                }
+                if (!check)
+                {
+                    lbChanges.Visible = true;
+                    lbCurC.Items.Add(lbAvlC.SelectedItem);
+                    courseListCur.Add(courseListAva[lbAvlC.SelectedIndex]);
+                    selectedSections.Add(currSections[cbSections.SelectedIndex]);
+                    courseListAva.RemoveAt(lbAvlC.SelectedIndex);
+                    lbAvlC.Items.RemoveAt(lbAvlC.SelectedIndex);
 
-                            currSections.Clear();
-                            cbSections.Items.Clear();
 
-                            lbChanges.Text = "Course added";
-                            lbChanges.ForeColor = Color.Black;
-                            return;
-                        }
-                    }
+                    currSections.Clear();
+                    cbSections.Items.Clear();
+
+                    lbChanges.Text = "Course added";
+                    lbChanges.ForeColor = Color.Black;
+                    return;
                 }
             }
         }

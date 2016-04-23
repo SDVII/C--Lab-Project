@@ -298,5 +298,11 @@ namespace Student_Teacher_Form
                 MessageBox.Show(annoList[list.SelectedIndex / 2].Msg, annoList[list.SelectedIndex / 2].Title);
         }
 
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+            About f = new About(true , this);
+            f.Visible = true;
+            this.Enabled = false;
+        }
     }
 }

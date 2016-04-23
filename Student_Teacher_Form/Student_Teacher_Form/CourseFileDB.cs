@@ -50,48 +50,10 @@ namespace Student_Teacher_Form
             Delete(courseFile.Id);
         }
 
-        /*public static CourseAnnouncements Get(int id)
-        {
-            String query = "SELECT * FROM courseAnnouncements WHERE courseAnnouncements_id = '" + id + "'";
-            CourseAnnouncements courseAnnouncements = null;
-
-            if (databaseHandler.openConnection())
-            {
-                MySqlCommand cmd = new MySqlCommand(query, databaseHandler.connection);
-                MySqlDataReader reader = cmd.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    courseAnnouncements = new CourseAnnouncements(reader.GetInt32(0), reader.GetInt32(1), reader.GetInt32(2), reader.GetString(3), reader.GetString(4), reader.GetDateTime(5));
-                }
-            }
-            return courseAnnouncements;
-        }*/
-
-        /*public static List<CourseAnnouncements> GetAll()
-        {
-            String query = "SELECT * FROM courseAnnouncements";
-            List<CourseAnnouncements> list = new List<CourseAnnouncements>();
-
-            if (databaseHandler.openConnection())
-            {
-                MySqlCommand cmd = new MySqlCommand(query, databaseHandler.connection);
-                MySqlDataReader reader = cmd.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    CourseAnnouncements courseAnnouncements = new CourseAnnouncements(reader.GetInt32(0), reader.GetInt32(1), reader.GetInt32(2), reader.GetString(3), reader.GetString(4), reader.GetDateTime(5));
-                    list.Add(courseAnnouncements);
-
-                }
-            }
-
-            return list;
-        }*/
 
         public static List<CourseFile> GetWithCourseId(Course course)
         {
-            String query = "SELECT * FROM courseFile WHERE courseFile_course_id = '" + course.Id + "' LIMIT 1";
+            String query = "SELECT * FROM courseFile WHERE courseFile_course_id = " + course.Id;
             List<CourseFile> list = new List<CourseFile>();
 
             if (databaseHandler.openConnection())

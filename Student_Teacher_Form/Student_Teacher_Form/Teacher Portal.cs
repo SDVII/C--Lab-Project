@@ -266,5 +266,11 @@ namespace Student_Teacher_Form
 
         }
 
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+            About f = new About(false, this);
+            f.Visible = true;
+            this.Enabled = false;
+        }
     }
 }

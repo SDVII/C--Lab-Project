@@ -196,8 +196,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(66, 28);
+            this.pictureBox1.Image = global::Student_Teacher_Form.Properties.Resources._5773445_black_graduate_hat_isolated_over_white_background_vector;
+            this.pictureBox1.Location = new System.Drawing.Point(69, 15);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(144, 147);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

@@ -63,6 +63,26 @@ namespace Student_Teacher_Form.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _5773445_black_graduate_hat_isolated_over_white_background_vector {
+            get {
+                object obj = ResourceManager.GetObject("5773445-black-graduate-hat-isolated-over-white-background-vector", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _5773445_black_graduate_hat_isolated_over_white_background_vector2 {
+            get {
+                object obj = ResourceManager.GetObject("5773445-black-graduate-hat-isolated-over-white-background-vector2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap anon {
             get {
                 object obj = ResourceManager.GetObject("anon", resourceCulture);
@@ -93,16 +113,6 @@ namespace Student_Teacher_Form.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap hourglass {
-            get {
-                object obj = ResourceManager.GetObject("hourglass", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap ic_add_circle_outline_black_24dp_2x {
             get {
                 object obj = ResourceManager.GetObject("ic_add_circle_outline_black_24dp_2x", resourceCulture);
@@ -116,16 +126,6 @@ namespace Student_Teacher_Form.Properties {
         internal static System.Drawing.Bitmap ic_check_black_24dp_2x1 {
             get {
                 object obj = ResourceManager.GetObject("ic_check_black_24dp_2x1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap ic_clear_black_48dp_2x {
-            get {
-                object obj = ResourceManager.GetObject("ic_clear_black_48dp_2x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,16 +223,6 @@ namespace Student_Teacher_Form.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap LoginPic {
-            get {
-                object obj = ResourceManager.GetObject("LoginPic", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap menu {
             get {
                 object obj = ResourceManager.GetObject("menu", resourceCulture);
@@ -256,16 +246,6 @@ namespace Student_Teacher_Form.Properties {
         internal static System.Drawing.Bitmap menu2 {
             get {
                 object obj = ResourceManager.GetObject("menu2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap pacman {
-            get {
-                object obj = ResourceManager.GetObject("pacman", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -303,6 +283,16 @@ namespace Student_Teacher_Form.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap sad {
+            get {
+                object obj = ResourceManager.GetObject("sad", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap settings {
             get {
                 object obj = ResourceManager.GetObject("settings", resourceCulture);
@@ -313,29 +303,19 @@ namespace Student_Teacher_Form.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap table {
-            get {
-                object obj = ResourceManager.GetObject("table", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap table1 {
-            get {
-                object obj = ResourceManager.GetObject("table1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap table2 {
             get {
                 object obj = ResourceManager.GetObject("table2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap the_ribbon_287142_960_720 {
+            get {
+                object obj = ResourceManager.GetObject("the-ribbon-287142_960_720", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -386,6 +366,36 @@ namespace Student_Teacher_Form.Properties {
         internal static System.Drawing.Bitmap Untitled_3 {
             get {
                 object obj = ResourceManager.GetObject("Untitled-3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitled_31 {
+            get {
+                object obj = ResourceManager.GetObject("Untitled-31", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitled_4 {
+            get {
+                object obj = ResourceManager.GetObject("Untitled-4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitled_5 {
+            get {
+                object obj = ResourceManager.GetObject("Untitled-5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
