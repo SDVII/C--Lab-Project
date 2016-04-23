@@ -112,13 +112,6 @@ namespace Student_Teacher_Form
 
                 }
 
-                /*if (resultList.Count == 1)
-                {
-                    searchResultInput(resultList[0]);
-                }else if (resultList.Count >= 1)
-                {
-                    
-                }*/
 
                 foreach (Student s in resultList)
                 {
@@ -161,10 +154,6 @@ namespace Student_Teacher_Form
             lbDep.Text = ""+student.Department.Name;
             lbSpr.Text = ""+student.Advisor.Name + " " +  student.Advisor.Surname;
             lbGpa.Text = ""+student.Gpa;
-            /*for (int i = 0; i < number of courses; i++)
-            {
-                lbCrsTkn.Items.Add("");
-            }*/
         }
 
     }

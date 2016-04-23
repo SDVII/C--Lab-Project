@@ -104,7 +104,7 @@ namespace Student_Teacher_Form
         }*/
         public static List<Slot> GetWithStudentId(int studentId, int semester )
         {
-            String query = $"SELECT slot_course_code, slot_result, slot_semester, slot_teacher_name FROM slot WHERE slot_student_id='{studentId}' AND slot_semester='{semester}'";
+            String query = $"SELECT slot_course_code, slot_result, slot_semester, slot_teacher_name FROM slot WHERE slot_student_id='{studentId}' AND slot_semester='{semester}' LIMIT 1";
             List<Slot> list = new List<Slot>();
 
             if (databaseHandler.openConnection())

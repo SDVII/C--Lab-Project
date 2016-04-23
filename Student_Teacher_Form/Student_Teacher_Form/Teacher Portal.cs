@@ -31,16 +31,15 @@ namespace Student_Teacher_Form
             lbName.Text = teacher.Name + " " + teacher.Surname;
             lbID.Text = teacher.Id + "";
             this.Text = teacher.Id + "";
+            pnlCourses.HorizontalScroll.Maximum = 0;
+            pnlCourses.AutoScroll = false;
+            pnlCourses.VerticalScroll.Visible = false;
+            pnlCourses.AutoScroll = true;
             body.Panel1Collapsed = true;
 
             fetchData();
 
-            foreach (DataGridViewRow r in dgvCourses.Rows) //To set the column hight!
-            {
-                r.Height = 30;
-            }
-
-            populateCourses(dgvCourses);
+            populateCourses(pnlCourses);
             populateSchedule(lvSchedule);
             populateNotification(lbNotification);
 
@@ -139,22 +138,43 @@ namespace Student_Teacher_Form
             }
         }
 
-        private void populateCourses(DataGridView dgvCourses)
+        private void populateCourses(Panel pnl)
         {
             // For populating course GridViewList. just replace the counter and course name
 
-            for (int i = 0; i < courseList.Count; i++)
-            {
-                var btn = new DataGridViewButtonColumn();
-                btn.Resizable = DataGridViewTriState.False;
-                btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-                btn.Name = "btn_" + i;
-                Console.WriteLine(courseList[i].Name);
-                btn.UseColumnTextForButtonValue = true;
-                btn.Text = courseList[i].Name;
-                dgvCourses.Rows.Add(btn);
-                dgvCourses[0, i].Value = courseList[i].Name; //for the renamming
-            }
+                for (int i = 0; i < courseList.Count; i++)
+                {
+                    Button btn = new Button();
+                    btn.Location = new Point(0, 30 * i);
+                    btn.Width = pnl.Width;
+                    btn.Height = 30;
+                    btn.TextAlign = ContentAlignment.MiddleLeft;
+                    btn.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+                    btn.BackColor = System.Drawing.Color.White;
+                    btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+                    btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+                    btn.Font = new System.Drawing.Font("Calibri", 11.25F);
+                    btn.ForeColor = System.Drawing.Color.Black;
+                    btn.UseVisualStyleBackColor = false;
+                    btn.Name = "btn_" + i;
+                    btn.Text = courseList[i].Name;
+                    btn.Click += new System.EventHandler(this.callCourse);
+                    pnl.Controls.Add(btn);
+                }
+        }
+
+        private void callCourse(object sender, EventArgs e)
+        {
+            Thread t = new Thread(new ThreadStart(splashScreen));
+            t.Start();
+            Button btn = (Button)sender;
+            string[] words = btn.Name.Split('_');
+            int courseId = courseList[Convert.ToInt32(words[1])].Id;
+            Course_info_Tch f = new Course_info_Tch(courseList[Convert.ToInt32(words[1])], teacher, this);
+            f.Visible = true;
+            this.Enabled = false;
+            t.Abort();
+
         }
 
         private void Teacher_Portal_FormClosed(object sender, FormClosedEventArgs e)

@@ -38,7 +38,7 @@ namespace Student_Teacher_Form
         public static bool Update(CourseAnnouncements courseAnnouncements)
         {
             string query = $"UPDATE courseAnnouncements SET courseAnnouncements_teacher_id='{courseAnnouncements.TeacherId}',courseAnnouncements_course_id='{courseAnnouncements.CourseId}',courseAnnouncements_title='{courseAnnouncements.Title}''" +
-                           $",courseAnnouncements_msg='{courseAnnouncements.Msg}' WHERE courseAnnouncements_id='{courseAnnouncements.Id}'"; // create the query
+                           $",courseAnnouncements_msg='{courseAnnouncements.Msg}' WHERE courseAnnouncements_id='{courseAnnouncements.Id}' LIMIT 1"; // create the query
 
 
             if (databaseHandler.openConnection()) // check the connection

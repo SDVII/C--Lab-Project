@@ -14,7 +14,7 @@ namespace Student_Teacher_Form
     public partial class Login : Form
     {
 
-        BackgroundWorker bw = new BackgroundWorker();
+        BackgroundWorker bw = new BackgroundWorker(); //in order to work in the background
         Font watermark = new Font("Calibri", 12, FontStyle.Italic);
         Font defaultF = new Font("Calibri", 12);
         Boolean validated = true;
@@ -42,7 +42,14 @@ namespace Student_Teacher_Form
 
         public void splashScreen()
         {
-            Application.Run(new Loading());
+            try
+            {
+                Application.Run(new Loading());
+            }
+            catch(Exception)
+            {
+
+            }
         }
 
         public void checkInput(String uName, String pass)

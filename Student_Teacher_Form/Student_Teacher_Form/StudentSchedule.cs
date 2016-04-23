@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Student_Teacher_Form
 {
-    class StudentSchedule
+    class StudentSchedule //StudentSchedule object class
     {
         private int id, student_id, teacher_id, course_id, section_id;
         private Student student;
