@@ -71,7 +71,7 @@ namespace Student_Teacher_Form
                 " teacher.teacher_id, teacher.teacher_username, teacher.teacher_name, teacher.teacher_surname, teacher.teacher_password, teacher.teacher_email,"+
                 " tm.msgr_id, tm.msgr_name"+
                 " FROM student INNER JOIN department ON department.department_id=student.student_department_id INNER JOIN financialAffairs ON financialAffairs.financialAffairs_id = student.student_financialAffairs_id INNER JOIN msgr ON msgr.msgr_id = student.student_msgr_id INNER JOIN teacher ON teacher.teacher_id = student.student_advisor_id INNER JOIN msgr tm ON tm.msgr_id = teacher.teacher_msgr_id"+
-                " WHERE student.student_id='"+id+"' LIMIT 1";
+                " WHERE student.student_id='"+id+"'";
             Student stu = null;
 
             if (databaseHandler.openConnection())
@@ -100,7 +100,7 @@ namespace Student_Teacher_Form
                 " teacher.teacher_id, teacher.teacher_username, teacher.teacher_name, teacher.teacher_surname, teacher.teacher_password, teacher.teacher_email," +
                 " tm.msgr_id, tm.msgr_name" +
                 " FROM student INNER JOIN department ON department.department_id=student.student_department_id INNER JOIN financialAffairs ON financialAffairs.financialAffairs_id = student.student_financialAffairs_id INNER JOIN msgr ON msgr.msgr_id = student.student_msgr_id INNER JOIN teacher ON teacher.teacher_id = student.student_advisor_id INNER JOIN msgr tm ON tm.msgr_id = teacher.teacher_msgr_id" +
-                " WHERE student.student_username='" + username + "' LIMIT 1";
+                " WHERE student.student_username='" + username + "'";
             Student stu = null;
 
             if (databaseHandler.openConnection())

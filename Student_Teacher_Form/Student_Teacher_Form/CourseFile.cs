@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Student_Teacher_Form
 {
-    class CourseFile //CourseFile object class
+    class CourseFile
     {
         private int id;
         private String name, info;

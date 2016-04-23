@@ -37,7 +37,7 @@ namespace Student_Teacher_Form
             fileList = CourseFileDB.GetWithCourseId(course);
 
             
-            for (int i = 0; i < fileList.Count ; i++) //Dianmically adding attachments
+            for (int i = 0; i < fileList.Count ; i++)
             {
                 Console.WriteLine(fileList[i].Name);
                 DataGridViewRow row = (DataGridViewRow)dgvAtch.Rows[i].Clone();
@@ -68,7 +68,7 @@ namespace Student_Teacher_Form
         {
             List<CourseAnnouncements> coAnnoList = CourseAnnouncementsDB.GetWithCourseId(course.Id);
 
-            foreach(CourseAnnouncements co in coAnnoList) //Dianmically adding Announcements
+            foreach(CourseAnnouncements co in coAnnoList)
             {
                 ListViewItem lvi = new ListViewItem();
                 lvi.Text = co.Title;
@@ -81,20 +81,13 @@ namespace Student_Teacher_Form
 
         private void populateCourseinfo()
         {
-            try
-            {
-                lbName.Text = teacher.Name + " " + teacher.Surname;
-            }
-            catch(Exception e1)
-            {
-                lbName.Text = "not mentioned";
-            }
+            lbName.Text = teacher.Name + " " + teacher.Surname;
             lbDep.Text = course.Department.Name;
             lbCode.Text = course.Code;
             try {
                 pbTchrP.Load("http://37.139.18.76:3010/images/tea/" + teacher.Id + ".jpeg");
             }
-            catch (Exception e2)
+            catch (Exception e)
             {
                 //nothing
             }

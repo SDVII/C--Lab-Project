@@ -21,6 +21,7 @@ namespace Student_Teacher_Form
             InitializeComponent();
             this.courceList = courceList;
             this.student_Portal = student_Portal;
+            //this.Text = stuID + "";
 
             populateExams(lvExSchd);
         }

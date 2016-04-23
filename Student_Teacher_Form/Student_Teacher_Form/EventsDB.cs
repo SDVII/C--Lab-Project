@@ -66,7 +66,7 @@ namespace Student_Teacher_Form
 
         public static Events Get(int id)
         {
-            String query = "SELECT * FROM events WHERE events_id = '" + id + "' LIMIT 1";
+            String query = "SELECT * FROM events WHERE events_id = '" + id + "'";
             Events events = null;
 
             if (databaseHandler.openConnection())

@@ -33,7 +33,7 @@ namespace Student_Teacher_Form
 
             courseListAva = CourseDB.GetWithDepartmentId(student.Department.Id);
 
-            foreach (Course c in courseListCur) { //to avoid selected courses
+            foreach (Course c in courseListCur) {
                 foreach (Course ca in courseListAva) {
                     if(c.Id == ca.Id)
                     {
@@ -46,6 +46,7 @@ namespace Student_Teacher_Form
 
             populateAvailableCourses(lbAvlC);
             populateCurrentCourses(lbCurC);
+            //populateSections(cbSections);
         }
 
         private void populateSections()
@@ -150,7 +151,7 @@ namespace Student_Teacher_Form
         private void btnAddC_Click(object sender, EventArgs e)
         {
 
-            if (lbAvlC.SelectedIndex == -1) 
+            if (lbAvlC.SelectedIndex == -1)
             {
                 lbChanges.Visible = true;
                 lbChanges.Text = "Please select a course";

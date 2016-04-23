@@ -66,7 +66,7 @@ namespace Student_Teacher_Form
 
         public static FinancialAffairs Get(int id)
         {
-            String query = "SELECT * FROM financialAffairs WHERE financialAffairs_id = '" + id + "' LIMIT 1";
+            String query = "SELECT * FROM financialAffairs WHERE financialAffairs_id = '" + id + "'";
             FinancialAffairs financialAffairs = null;
 
             if (databaseHandler.openConnection())

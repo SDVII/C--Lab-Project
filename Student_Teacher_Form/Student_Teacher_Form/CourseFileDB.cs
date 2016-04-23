@@ -91,7 +91,7 @@ namespace Student_Teacher_Form
 
         public static List<CourseFile> GetWithCourseId(Course course)
         {
-            String query = "SELECT * FROM courseFile WHERE courseFile_course_id = '" + course.Id + "' LIMIT 1";
+            String query = "SELECT * FROM courseFile WHERE courseFile_course_id = '" + course.Id + "'";
             List<CourseFile> list = new List<CourseFile>();
 
             if (databaseHandler.openConnection())

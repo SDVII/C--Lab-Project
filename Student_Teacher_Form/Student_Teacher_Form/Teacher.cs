@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Student_Teacher_Form
 {
-    public class Teacher //Teacher object class
+    public class Teacher
     {
         private int id, msgr_id;
         private String username, name, surname, password, email;

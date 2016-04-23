@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Student_Teacher_Form
 {
-    public class SectionTime //SectionTime object class
+    public class SectionTime
     {
         private int id, section_id, time;
         private String location;

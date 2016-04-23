@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Student_Teacher_Form
 {
-    public class FinancialAffairs //FinancialAffairs object class
+    public class FinancialAffairs
     {
         private int id, paid, rest;
 

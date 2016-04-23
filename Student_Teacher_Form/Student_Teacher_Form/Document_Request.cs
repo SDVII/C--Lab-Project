@@ -26,6 +26,8 @@ namespace Student_Teacher_Form
             this.Text = stuID + "";
             documentList = new List<List<string>>();
 
+            pouplateDocuments(cbDoc);
+            populateShipmentOptions(cbDocS);
             populateReadyDocuments(lbRdyD);
         }
 
@@ -39,7 +41,25 @@ namespace Student_Teacher_Form
             }
         }
 
+        private void populateShipmentOptions(ComboBox cbDocS)
+        {
+            /*
+            for (int i = 0; i < number of options; i++)
+            {
+                cbDocS.Items.Add(options);
+            }
+            */
+        }
 
+        private void pouplateDocuments(ComboBox cbDoc)
+        {
+            /*
+            for (int i = 0; i < number of documents; i++)
+            {
+                cbDoc.Items.Add(Docs);
+            }
+            */
+        }
 
         private void btnAddCourse_Click(object sender, EventArgs e)
         {
