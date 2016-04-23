@@ -11,7 +11,8 @@ using System.Collections;
 
 namespace Student_Teacher_Form
 {
-    public partial class Document_Request : Form
+    public partial class 
+        Document_Request : Form
     {
         private Student_Portal student_Portal;
         private int stuID;

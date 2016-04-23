@@ -11,6 +11,7 @@ namespace Student_Teacher_Form
 {
     class BackendHandler
     {
+        //Upload file function, taken from stackoverflow
         public static void HttpUploadFile(string url, int id, string file, string paramName, string contentType, NameValueCollection nvc, Action<string, int> callback)
         {
             Console.WriteLine(string.Format("Uploading {0} to {1}", file, url));
@@ -20,6 +21,7 @@ namespace Student_Teacher_Form
             HttpWebRequest wr = (HttpWebRequest)WebRequest.Create(url);
             wr.ContentType = "multipart/form-data;boundary=" + boundary;
             wr.Method = "POST";
+            //send the file id from database
             wr.Headers.Add("file-id", id+"");
             wr.KeepAlive = true;
             wr.Credentials = System.Net.CredentialCache.DefaultCredentials;
