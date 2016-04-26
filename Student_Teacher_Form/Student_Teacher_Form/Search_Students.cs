@@ -16,6 +16,7 @@ namespace Student_Teacher_Form
         private int teachID;
         private Student stu;
         List<Student> allStudents, resultList;
+        private StudentTree tree;
         String targetName;
 
         
@@ -26,6 +27,13 @@ namespace Student_Teacher_Form
             this.teacher_Portal = teacher_Portal;
             this.Text = teachID + "";
             allStudents = StudentDB.GetAll();
+
+            tree = new StudentTree();
+            foreach (Student s in allStudents)
+            {
+                tree.insert(s);
+            }
+
             cbSrchTyp.SelectedIndex = 0;
         }
 
@@ -83,13 +91,9 @@ namespace Student_Teacher_Form
                     try
                     {
                         id = Convert.ToInt32(txtSrchK.Text);
-                        foreach (Student s in allStudents)
-                        {
-                            if (("" + s.Id).Contains("" + id))
-                            {
-                                resultList.Add(s);
-                            }
-                        }
+                        Student s = tree.search(id);
+                        if(s!=null)
+                            resultList.Add(s);
                     }
                     catch (Exception ex)
                     {

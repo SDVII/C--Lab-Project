@@ -40,8 +40,8 @@ namespace Student_Teacher_Form
         }
 
         private void populateSchedule(ListView lvSchd)
-        {            
-            for(int  i = 0; i < 17; i++)
+        {
+            /*for(int  i = 0; i < 17; i++)
             {
                 SectionTime[] arr = new SectionTime[7];
                 for(int j = 0; j < sectionTimeList.Count; j++)
@@ -62,7 +62,30 @@ namespace Student_Teacher_Form
                         lvi.SubItems.Add("");
                 }
                 lvSchd.Items.Add(lvi);
+            }*/
+
+            SectionTime[] arr = new SectionTime[119];
+            foreach (SectionTime s in sectionTimeList)
+            {
+                arr[s.Time-1] = s;
             }
+
+            for (int i = 0; i < 17; i++)
+            {
+                ListViewItem lvi = new ListViewItem();
+                lvi.Text = (8 + i) + ":30";
+                for (int j = 0; j < 7; j++)
+                {
+                    SectionTime sc = arr[j*17 + i];
+                    if (sc != null)
+                        lvi.SubItems.Add(sc.Section.Course.Name + "(" + sc.Location + ")");
+                    else
+                        lvi.SubItems.Add("");
+                }
+                lvSchd.Items.Add(lvi);
+            }
+
+
         }
         
 
