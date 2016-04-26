@@ -19,7 +19,7 @@ namespace Student_Teacher_Form
         public static bool Add(Announcement announcement)
         {
             // query take variables $
-            string query = $"INSERT INTO Announcements (Announcements_title, Announcements_msg,Announcements_time) Values ('{announcement.Title}','{announcement.Msg}','{announcement.Time}')";
+            string query = "INSERT INTO Announcements (Announcements_title, Announcements_msg,Announcements_time) Values ('"+announcement.Title+"','"+announcement.Msg+"','"+announcement.Time+"')";
             // check if the connection is open first
             if (databaseHandler.openConnection() == true)
             {

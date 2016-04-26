@@ -103,10 +103,10 @@ namespace Student_Teacher_Form
             return list;
         }
 
-        public static List<CourseAnnouncements> GetWithCourseId(int courseId)
+        public static AnnoStack GetWithCourseId(int courseId)
         {
             String query = "SELECT * FROM courseAnnouncements WHERE courseAnnouncements_course_id = '" + courseId + "'";
-            List<CourseAnnouncements> list = new List<CourseAnnouncements>();
+            AnnoStack stack = new AnnoStack();
 
             if (databaseHandler.openConnection())
             {
@@ -116,12 +116,12 @@ namespace Student_Teacher_Form
                 while (reader.Read())
                 {
                     CourseAnnouncements courseAnnouncements = new CourseAnnouncements(reader.GetInt32(0), reader.GetInt32(1), reader.GetInt32(2), reader.GetString(3), reader.GetString(4), reader.GetDateTime(5));
-                    list.Add(courseAnnouncements);
+                    stack.push(courseAnnouncements);
 
                 }
             }
 
-            return list;
+            return stack;
         }
 
         public static List<CourseAnnouncements> GetLimited(int courseId, int amount)

@@ -66,16 +66,17 @@ namespace Student_Teacher_Form
 
          private void populateMessages()
         {
-            List<CourseAnnouncements> coAnnoList = CourseAnnouncementsDB.GetWithCourseId(course.Id);
+            AnnoStack stack = CourseAnnouncementsDB.GetWithCourseId(course.Id);
 
-            foreach(CourseAnnouncements co in coAnnoList) //Dianmically adding Announcements
+            while (stack.Top != null) //Dianmically adding Announcements
             {
-                ListViewItem lvi = new ListViewItem();
-                lvi.Text = co.Title;
-                lvi.SubItems.Add(co.Time.ToShortDateString());
-                lvi.SubItems.Add(co.Teacher.Name + " " + co.Teacher.Surname);
-                lvi.SubItems.Add(co.Msg);
-                lvMsg.Items.Add(lvi);
+                 ListViewItem lvi = new ListViewItem();
+                 lvi.Text = stack.Top.Title;
+                 lvi.SubItems.Add(stack.Top.Time.ToShortDateString());
+                 lvi.SubItems.Add(stack.Top.Teacher.Name + " " + stack.Top.Teacher.Surname);
+                 lvi.SubItems.Add(stack.Top.Msg);
+                 lvMsg.Items.Add(lvi);
+                stack.pop();
             }
         }
 
