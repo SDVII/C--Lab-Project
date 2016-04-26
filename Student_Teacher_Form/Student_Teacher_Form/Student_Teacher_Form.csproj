@@ -71,6 +71,8 @@
     <Compile Include="About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
+    <Compile Include="AnnoNode.cs" />
+    <Compile Include="AnnoStack.cs" />
     <Compile Include="Announcement.cs" />
     <Compile Include="AnnouncementDB.cs" />
     <Compile Include="BackendHandler.cs" />
