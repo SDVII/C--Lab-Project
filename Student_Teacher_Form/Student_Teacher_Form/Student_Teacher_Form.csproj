@@ -106,8 +106,6 @@
     <Compile Include="Document_Request.Designer.cs">
       <DependentUpon>Document_Request.cs</DependentUpon>
     </Compile>
-    <Compile Include="Events.cs" />
-    <Compile Include="EventsDB.cs" />
     <Compile Include="Exam.cs" />
     <Compile Include="ExamDB.cs" />
     <Compile Include="Exam_Schedule.cs">
@@ -130,8 +128,6 @@
     <Compile Include="Loading.Designer.cs">
       <DependentUpon>Loading.cs</DependentUpon>
     </Compile>
-    <Compile Include="Manager.cs" />
-    <Compile Include="ManagerDB.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,8 +140,6 @@
     <Compile Include="Course_Add.Designer.cs">
       <DependentUpon>Course_Add.cs</DependentUpon>
     </Compile>
-    <Compile Include="Msg.cs" />
-    <Compile Include="MsgDB.cs" />
     <Compile Include="Msgr.cs" />
     <Compile Include="MsgrDB.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />

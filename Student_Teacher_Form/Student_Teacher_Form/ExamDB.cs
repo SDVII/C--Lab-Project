@@ -19,8 +19,8 @@ namespace Student_Teacher_Form
         public static bool Add(Exam exam)
         {
             // query take variables $
-            string query = $"INSERT INTO exam (exam_course_id, exam_time, exam_place) " +
-                           $"Values ('{exam.CourseId}','{exam.Time}','{exam.Place}')";
+            string query = "INSERT INTO exam (exam_course_id, exam_time, exam_place) " +
+                           "Values ('"+exam.CourseId+"','"+exam.Time+"','"+exam.Place+"')";
             // check if the connection is open first
             if (databaseHandler.openConnection() == true)
             {
@@ -35,7 +35,7 @@ namespace Student_Teacher_Form
             return false;
         }
 
-        public static bool Update(Exam exam)
+        /*public static bool Update(Exam exam)
         {
             string query = $"UPDATE exam SET exam_course_id='{exam.CourseId}',exam_time='{exam.Time}',exam_place='{exam.Place}'" +
                            $" WHERE exam_id='{exam.Id}' LIMIT 1"; // create the query
@@ -62,7 +62,7 @@ namespace Student_Teacher_Form
         public static void Delete(Exam exam)
         {
             Delete(exam.Id);
-        }
+        }*/
 
         public static Exam Get(int id)
         {

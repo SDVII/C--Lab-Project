@@ -19,8 +19,8 @@ namespace Student_Teacher_Form
         public static bool Add(StudentSchedule studentSchedule)
         {
             // query take variables $
-            string query = $"INSERT INTO studentSchedule (studentSchedule_student_id, studentSchedule_teacher_id, studentSchedule_course_id, studentSchedule_section_id) " +
-                           $"Values ('{studentSchedule.StudentId}','{studentSchedule.TeacherId}','{studentSchedule.CourseId}','{studentSchedule.SectionId}')";
+            string query = "INSERT INTO studentSchedule (studentSchedule_student_id, studentSchedule_teacher_id, studentSchedule_course_id, studentSchedule_section_id) " +
+                           "Values ('"+studentSchedule.StudentId+"','"+studentSchedule.TeacherId+"','"+studentSchedule.CourseId+"','"+studentSchedule.SectionId+"')";
             // check if the connection is open first
             if (databaseHandler.openConnection() == true)
             {
@@ -37,8 +37,8 @@ namespace Student_Teacher_Form
 
         public static bool Update(StudentSchedule studentSchedule)
         {
-            string query = $"UPDATE studentSchedule SET studentSchedule_student_id='{studentSchedule.StudentId}',studentSchedule_teacher_id='{studentSchedule.TeacherId}',studentSchedule_course_id='{studentSchedule.CourseId}',studentSchedule_section_id='{studentSchedule.SectionId}'" +
-                           $" WHERE studentSchedule_id='{studentSchedule.Id}'"; // create the query
+            string query = "UPDATE studentSchedule SET studentSchedule_student_id='"+studentSchedule.StudentId+"',studentSchedule_teacher_id='"+studentSchedule.TeacherId+"',studentSchedule_course_id='"+studentSchedule.CourseId+"',studentSchedule_section_id='"+studentSchedule.SectionId+"'" +
+                           " WHERE studentSchedule_id='"+studentSchedule.Id+"'"; // create the query
 
 
             if (databaseHandler.openConnection()) // check the connection

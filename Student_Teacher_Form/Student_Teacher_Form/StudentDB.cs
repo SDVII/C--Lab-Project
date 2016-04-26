@@ -16,7 +16,7 @@ namespace Student_Teacher_Form
             return databaseHandler.connectionError;
         }
 
-        public static bool Add(Student student)
+        /*public static bool Add(Student student)
         {
             // query take variables $
             string query = $"INSERT INTO teacher (student_username,student_name,student_surname,student_password,student_gpa,student_email,student_department_id,student_semester,student_financialAffairs_id,student_advisor_id,student_msgr_id) Values ('{student.Username}','{student.Name}','{student.Surname}','{student.Password}','{student.Gpa}','{student.Email}','{student.Department.Id}','{student.Semester}','{student.FinancialAffairs.Id}','{student.Advisor.Id}','{student.Msgr.Id}')";
@@ -32,11 +32,11 @@ namespace Student_Teacher_Form
                 return true;
             }
             return false;
-        }
+        }*/
 
         public static bool Update(Student student)
         {
-            string query = $"UPDATE student SET student_username='{student.Username}',student_name='{student.Name}',student_surname='{student.Surname}',student_password='{student.Password}',student_gpa='{student.Gpa}',student_email='{student.Email}',student_department_id='{student.Department.Id}',student_semester={student.Semester},student_financialAffairs_id='{student.FinancialAffairs.Id}',student_advisor_id='{student.Advisor.Id}',student_msgr_id='{student.Msgr.Id}' WHERE student_id='{student.Id}'";
+            string query = "UPDATE student SET student_username='"+student.Username+"',student_name='"+student.Name+"',student_surname='"+student.Surname+"',student_password='"+student.Password+"',student_gpa='"+student.Gpa+"',student_email='"+student.Email+"',student_department_id='"+student.Department.Id+"',student_semester="+student.Semester+",student_financialAffairs_id='"+student.FinancialAffairs.Id+"',student_advisor_id='"+student.Advisor.Id+"',student_msgr_id='"+student.Msgr.Id+"' WHERE student_id='"+student.Id+"'";
 
             if (databaseHandler.openConnection() == true) // check the connection
             {
@@ -52,7 +52,7 @@ namespace Student_Teacher_Form
         }
 
 
-        public static void Delete(int id)
+        /*public static void Delete(int id)
         {
             databaseHandler.Delete("student", "student_id", id);
         }
@@ -60,7 +60,7 @@ namespace Student_Teacher_Form
         public static void DeleteStudent(Student student)
         {
             Delete(student.Id);
-        }
+        }*/
 
         public static Student Get(int id)
         {

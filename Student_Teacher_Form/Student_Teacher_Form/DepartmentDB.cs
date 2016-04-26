@@ -16,7 +16,7 @@ namespace Student_Teacher_Form
             return databaseHandler.connectionError;
         }
 
-        public static bool Add(Department department)
+        /*public static bool Add(Department department)
         {
             // query take variables $
             string query = $"INSERT INTO department(department_name, department_number_of_students)" +
@@ -61,7 +61,7 @@ namespace Student_Teacher_Form
         public static void Delete(Department department)
         {
             Delete(department.Id);
-        }
+        }*/
 
         public static Department Get(int id)
         {

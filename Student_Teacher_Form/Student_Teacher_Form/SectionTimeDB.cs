@@ -16,7 +16,7 @@ namespace Student_Teacher_Form
             return databaseHandler.connectionError;
         }
 
-        public static bool Add(SectionTime sectionTime)
+        /*public static bool Add(SectionTime sectionTime)
         {
             // query take variables $
             string query = $"INSERT INTO sectionTime (sectionTime_section_id, sectionTime_time, sectionTime_location) " +
@@ -62,7 +62,7 @@ namespace Student_Teacher_Form
         public static void Delete(SectionTime sectionTime)
         {
             Delete(sectionTime.Id);
-        }
+        }*/
 
         public static SectionTime Get(int id)
         {

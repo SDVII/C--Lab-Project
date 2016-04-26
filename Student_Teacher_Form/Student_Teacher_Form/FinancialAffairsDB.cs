@@ -16,7 +16,7 @@ namespace Student_Teacher_Form
             return databaseHandler.connectionError;
         }
 
-        public static bool Add(FinancialAffairs financialAffairs)
+        /*public static bool Add(FinancialAffairs financialAffairs)
         {
             // query take variables $
             string query = $"INSERT INTO financialAffairs (financialAffairs_paid, financialAffairs_rest) " +
@@ -62,7 +62,7 @@ namespace Student_Teacher_Form
         public static void Delete(FinancialAffairs financialAffairs)
         {
             Delete(financialAffairs.Id);
-        }
+        }*/
 
         public static FinancialAffairs Get(int id)
         {

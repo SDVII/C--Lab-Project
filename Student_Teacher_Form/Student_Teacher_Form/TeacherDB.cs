@@ -18,7 +18,7 @@ namespace Student_Teacher_Form
         }
 
 
-        public static bool Add(Teacher teacher)
+        /*public static bool Add(Teacher teacher)
         {
             // query take variables $
             string query = $"INSERT INTO teacher (teacher_username,teacher_name,teacher_surname,teacher_password,teacher_email,teacher_msgr_id) Values ('{teacher.Username}','{teacher.Name}','{teacher.Surname}','{teacher.Password}','{teacher.Email}','{teacher.MsgrId}')";
@@ -34,11 +34,11 @@ namespace Student_Teacher_Form
                 return true;
             }
             return false;
-        }
+        }*/
 
         public static bool Update(Teacher teacher)
         {
-            string query = $"UPDATE teacher SET teacher_username='{teacher.Username}',teacher_name='{teacher.Name}',teacher_surname='{teacher.Surname}',teacher_password='{teacher.Password}',teacher_email='{teacher.Email}',teacher_msgr_id='{teacher.MsgrId}' WHERE teacher_id='{teacher.Id}'"; // create the query
+            string query = "UPDATE teacher SET teacher_username='"+teacher.Username+"',teacher_name='"+teacher.Name+"',teacher_surname='"+teacher.Surname+"',teacher_password='"+teacher.Password+"',teacher_email='"+teacher.Email+"',teacher_msgr_id='"+teacher.MsgrId+"' WHERE teacher_id='"+teacher.Id+"'"; // create the query
 
 
             if (databaseHandler.openConnection()) // check the connection

@@ -16,7 +16,7 @@ namespace Student_Teacher_Form
             return databaseHandler.connectionError;
         }
 
-        public static bool Add(Slot slot)
+        /*public static bool Add(Slot slot)
         {
             // query take variables $
             string query = $"INSERT INTO slot (slot_student_id, slot_course_code, slot_result, slot_semester, slot_teacher_name) " +

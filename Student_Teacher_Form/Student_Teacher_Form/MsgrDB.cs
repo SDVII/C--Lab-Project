@@ -16,7 +16,7 @@ namespace Student_Teacher_Form
             return databaseHandler.connectionError;
         }
 
-        public static bool Add(Msgr msgr)
+        /*public static bool Add(Msgr msgr)
         {
             // query take variables $
             string query = $"INSERT INTO msgr (msgr_name) " +
@@ -62,7 +62,7 @@ namespace Student_Teacher_Form
         public static void Delete(Msgr msgr)
         {
             Delete(msgr.Id);
-        }
+        }*/
 
         public static Msgr Get(int id)
         {

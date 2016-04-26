@@ -20,9 +20,9 @@ namespace Student_Teacher_Form
         {
             int rtn =0;
             // query take variables $
-            string query = $"INSERT INTO courseFile (courseFile_teacher_id, courseFile_course_id, courseFile_name, courseFile_info, courseFile_time) " +
-                           $"Values ('{courseFile.Teacher.Id}','{courseFile.Course.Id}','{courseFile.Name}','{courseFile.Info }','{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}');" +
-                           $"SELECT LAST_INSERT_ID()";
+            string query = "INSERT INTO courseFile (courseFile_teacher_id, courseFile_course_id, courseFile_name, courseFile_info, courseFile_time) " +
+                           "Values ('"+courseFile.Teacher.Id+"','"+courseFile.Course.Id+"','"+courseFile.Name+"','"+courseFile.Info +"','"+DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")+"');" +
+                           "SELECT LAST_INSERT_ID()";
             // check if the connection is open first
             if (databaseHandler.openConnection() == true)
             {

@@ -146,7 +146,7 @@ namespace Student_Teacher_Form
 
 
         //INSERT into teacher table
-        protected void InsertNewTeacher(Teacher teacher)
+        /*protected void InsertNewTeacher(Teacher teacher)
         {
             // query take variables $
             string query = $"INSERT INTO teacher (teacher_username,teacher_name,teacher_surname,teacher_password,teacher_email,teacher_msgr_id) Values ('{teacher.Username}','{teacher.Name}','{teacher.Surname}','{teacher.Password}','{teacher.Email}','{teacher.MsgrId}')";
@@ -160,7 +160,7 @@ namespace Student_Teacher_Form
                 // close the connection if it is open
                 this.closeConnection();
             }
-        }
+        }*/
 
 
 
@@ -177,7 +177,7 @@ namespace Student_Teacher_Form
 
         // insert a new request From the teacher to the manager
         public  void insertNewRequest(String title,String content,String selectedOpetion) {
-            string query = $"INSERT INTO teacherRequest (teacherRequest_title,teacherRequest_content,teacherRequest_select) Values ('{title}','{content}','{selectedOpetion}')";
+            string query = "INSERT INTO teacherRequest (teacherRequest_title,teacherRequest_content,teacherRequest_select) Values ('"+title+"','"+content+"','"+selectedOpetion+"')";
 
             if (this.openConnection() == true)
             {
@@ -192,7 +192,7 @@ namespace Student_Teacher_Form
 
         public void insertDocumentRequest(int studentId, String name, String option, String language)
         {
-            string query = $"INSERT INTO DocumentRequest (DocumentRequest_student_id,DocumentRequest_documentName,DocumentRequest_shippingOption, DocumentRequest_language) Values ('{studentId}','{name}','{option}','{language}')";
+            string query = "INSERT INTO DocumentRequest (DocumentRequest_student_id,DocumentRequest_documentName,DocumentRequest_shippingOption, DocumentRequest_language) Values ("+studentId+"','"+name+"','"+option+"','"+language+"')";
 
             if (this.openConnection() == true)
             {
@@ -207,7 +207,7 @@ namespace Student_Teacher_Form
         public List<List<String>> getReadyDocuments(int studentId) {
             List<List<String>> documentList = new List<List<string>>();
 
-            string query = $"SELECT DocumentRequest_documentName,DocumentRequest_shippingOption,DocumentRequest_language FROM DocumentRequest WHERE DocumentRequest_student_id='{studentId}' AND DocumentRequest_ready = '{1}'";
+            string query = "SELECT DocumentRequest_documentName,DocumentRequest_shippingOption,DocumentRequest_language FROM DocumentRequest WHERE DocumentRequest_student_id='"+studentId+"' AND DocumentRequest_ready = '1'";
 
             if (openConnection())
             {
@@ -228,7 +228,7 @@ namespace Student_Teacher_Form
         // insert a new reportIssue 
         public void insertReportIssue(String title, String content, String selectedOpetion)
         {
-            string query = $"INSERT INTO reportIssue (reportIssue_title,reportIssue_content,reportIssue_select) Values ('{title}','{content}','{selectedOpetion}')";
+            string query = "INSERT INTO reportIssue (reportIssue_title,reportIssue_content,reportIssue_select) Values ('"+title+"','"+content+"','"+selectedOpetion+"')";
 
             if (this.openConnection() == true)
             {
@@ -245,7 +245,7 @@ namespace Student_Teacher_Form
 
 
         //update row from teacher_table method
-        protected void updateTeacher(Teacher teacher)
+        /*protected void updateTeacher(Teacher teacher)
         {
 
 
@@ -261,7 +261,7 @@ namespace Student_Teacher_Form
                 cmd.ExecuteNonQuery(); //Execute the Query
                 this.closeConnection(); // close the connection
             }
-        }
+        }*/
 
 
 
@@ -269,7 +269,7 @@ namespace Student_Teacher_Form
 
         public void Delete(String tableName, String columnName, int columnValue)
         {
-            string query = $"DELETE FROM {tableName} WHERE {columnName} = {columnValue} "; // the query
+            string query = "DELETE FROM "+tableName+" WHERE "+columnName+" = "+columnValue+" "; // the query
 
             if (this.openConnection() == true) // check if the connection is open first
             {

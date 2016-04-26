@@ -17,7 +17,7 @@ namespace Student_Teacher_Form
             return databaseHandler.connectionError;
         }
 
-        public static bool Add(Course course)
+        /*public static bool Add(Course course)
         {
             // query take variables $
             string query = $"INSERT INTO course (course_department_id, course_name, course_code, course_info) " +
@@ -63,7 +63,7 @@ namespace Student_Teacher_Form
         public static void Delete(Course course)
         {
             Delete(course.Id);
-        }
+        }*/
 
         public static Course Get(int id)
         {
